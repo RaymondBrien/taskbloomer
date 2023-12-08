@@ -9,9 +9,37 @@
 </head>
 
 <body>
+    <header>
+        <h1>TaskBloomer</h1>
+        <div id="instructions">
+            <button id="instructions-button">Click for Instructions</button>
+        </div>
+    </header>
 
-    
+    <main>
+        <div id="tasks-area">
+            <label for="task-a">3 Points</label>
+            <input name="task-a" type="text-area" class="task" id="task-a" autofocus>
+            <br>
+            <label for="task-b">2 Points</label>
+            <input name="task-b" type="text-area" class="task" id="task-b">
+            <br>
+            <label for="task-c">1 Point</label>
+            <input name="task-c" type="text-area" class="task" id="task-c">
+        </div>
+        <div id="plant-area">
+            <div id="next-growth"></div>
+            <div id="plant"><img src="" alt="plant-image"></div>
+        </div>
+        <div id="points-total"></div>
+        <div id="today-points"></div>
 
+    </main>
+    <footer>
+        <div id="footer">
+            <p>Copyright 2023 - R Brien</p>
+        </div>
+    </footer>
     <script src="assets/script.js"></script>
 </body>
 </html>
