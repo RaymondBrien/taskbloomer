@@ -12,6 +12,9 @@
     <header>
         <h1>TaskBloomer</h1>
         <p>Watch your productivity grow</p>
+    </header>
+    <section>
+        
         <div id="instructions">
             <button id="instructions-button">Click for Instructions</button>
             <p>
@@ -49,7 +52,7 @@
             </p>
         </div>
         
-    </header>
+    </section>
 
     <main>
         <div id="tasks-area">
@@ -65,13 +68,16 @@
             <input name="task-c" type="text-area" class="task" id="task-c">
             <input type="checkbox" id="task-c-check" name="task-c-check" value="1">
         </div>
+        <!-- Plant area -->
         <div id="plant-area">
             <div id="next-growth">
                 <p><em>Next growth in:</em></p>
                 <p>0</p>
             </div>
+             <!-- Add plant images/animations later for below -->
             <div id="plant"><img src="" alt="plant-image"></div>
-            <p id="plant-name">a</p>
+            <label for="plant-name">Plant Name:</label>   
+            <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here">
         </div>
         <div id="points-total">0</div>
         <div id="today-points">0</div>
