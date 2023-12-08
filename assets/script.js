@@ -1,36 +1,22 @@
 // Wait for DOM to finish loading before running the game
-
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+    let checkboxes = document.getElementsByClassName("checkbox");
 
-    for (let button of buttons) {
+    for (let checkbox of checkboxes) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
-            } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
+            if (this.getAttribute("data-type") === "checkbox") {
+                calculateTotalScore();
             }
         });
     }
-    document.getElementById('answer-box').addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        checkAnswer();
-    }     
-    })
-    runGame("addition");
-
 });
 
-
-// GLOBAL VARIABLES
-let totalscore = 0;
-let dayScore = 0;
 
 /**
  * Calculates today's score only.
  */
 function calculateDayScore() {
+    let dayScore = parseInt(document.getElementById('today-points').innerText);
 
 }
 
@@ -64,6 +50,7 @@ function untilNextGrowth() {
  * Event listener for taskboxes and adds relevant points, once completed by user, to total points score.
  */
 function taskComplete() {
+
     let completedThreePoints = document.getElementById('task-a-check');
     let completedTwoPoints = document.getElementById('task-b-check');
     let completedOnePoint = document.getElementById('task-c-check');
@@ -80,6 +67,7 @@ function taskComplete() {
         throw(`Unknown task value ${taskValue.value}. Aborting!`);
     }
     return calculateTotalScore();
+
 }
 
 /**
