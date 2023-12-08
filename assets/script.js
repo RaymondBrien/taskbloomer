@@ -38,6 +38,7 @@ function calculateDayScore() {
  * Calculates total score.
  */
 function calculateTotalScore() {
+    
 
 }
 
@@ -62,12 +63,22 @@ function untilNextGrowth() {
  * Event listener for taskboxes and adds relevant points, once completed by user, to total points score.
  */
 function taskComplete() {
+    let completedThreePoints = document.getElementById('task-a-check');
+    let completedTwoPoints = document.getElementById('task-b-check');
+    let completedOnePoint = document.getElementById('task-c-check');
 
+    if (completedThreePoints.addEventListener('click')) {
+        return parseInt(calculateTotalScore.value) + 3;
+    } else if (completedTwoPoints.addEventListener('click')) {
+        return parseInt(calculateTotalScore.value) + 2;
+    } else if (completedOnePoint.addEventListener('click')) {
+        return parseInt(calculateTotalScore.value) + 1;
+    }
 }
 
 /**
  * Allows user to reset the tasks at a specific time.
  */
  function setGoalResetTime() {
-    
+
  }
