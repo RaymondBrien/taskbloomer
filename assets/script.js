@@ -38,7 +38,8 @@ function calculateDayScore() {
  * Calculates total score.
  */
 function calculateTotalScore() {
-    
+    let totalPoints = parseInt(document.getElementById('total-points').innerHTML);
+    totalPoints + taskComplete();
 
 }
 
@@ -66,14 +67,19 @@ function taskComplete() {
     let completedThreePoints = document.getElementById('task-a-check');
     let completedTwoPoints = document.getElementById('task-b-check');
     let completedOnePoint = document.getElementById('task-c-check');
+    let taskValue = document.getElementsByClassName('checkbox');
 
     if (completedThreePoints.addEventListener('click')) {
-        return parseInt(calculateTotalScore.value) + 3;
+         parseInt(calculateTotalScore.value) + 3;
     } else if (completedTwoPoints.addEventListener('click')) {
-        return parseInt(calculateTotalScore.value) + 2;
+         parseInt(calculateTotalScore.value) + 2;
     } else if (completedOnePoint.addEventListener('click')) {
-        return parseInt(calculateTotalScore.value) + 1;
+         parseInt(calculateTotalScore.value) + 1;
+    } else {
+        alert(`Unknown task value ${taskValue.value}`);
+        throw(`Unknown task value ${taskValue.value}. Aborting!`);
     }
+    return calculateTotalScore();
 }
 
 /**
