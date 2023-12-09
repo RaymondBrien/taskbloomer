@@ -48,6 +48,9 @@
                     <br>
                     In the words of Michael Scott, K.I.S.S - keep it simple, stupid. (set as footer of instructions section in block color)
                     Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.
+
+                    <label for="plant-name">Plant Name:</label>   
+                    <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here">
                 </p>
             </div>
         </section>
@@ -55,43 +58,39 @@
         <main>
             <form action="POST" id="tasks-area">
                 <label for="task-a">3 Points</label>
-                <input name="task-a" type="text-area" class="task" id="task-a" autofocus>
+                <input name="task-a" type="text" class="task" id="task-a" autofocus maxlength="25">
                 <input type="checkbox" class="checkbox" id="task-a-check" name="task-a-check" value="3">
-                <br id="break-one">
                 <label for="task-b">2 Points</label>
-                <input name="task-b" type="text-area" class="task" id="task-b">
+                <input name="task-b" type="text" class="task" id="task-b" maxlength="25">
                 <input type="checkbox" class="checkbox" id="task-b-check" name="task-b-check" value="2">
-                <br id="break-two">
                 <label for="task-c">1 Point</label>
-                <input name="task-c" type="text-area" class="task" id="task-c">
+                <input name="task-c" type="text" class="task" id="task-c" maxlength="25">
                 <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">
                 <br>
                 <!-- Today's Points -->
-                <div>
+                <div id="today-section">
                     <p>Today's Points:</p>
                     <span id="today-points">0</span>
                 </div>
                 <!-- New Day Button -->
                 <button type="reset" name="new-day" id="new-day" onclick="newDay()">New Day</button>
-            </form>
-            
-            <!-- Plant area -->
-            <div id="plant-area">
+                
                 <div>
                     <p><em>Next growth in:</em></p>
                     <span id="next-growth">0</span>
                 </div>
-                <!-- Add plant images/animations later for below -->
+                <!-- Points Total -->
+                <div id="total-section">
+                    <p>Total Points:</p>
+                    <span id="total-points">0</span>
+                </div>
+            </form>
+            <!-- Plant area -->
+            <div id="plant-area">
                 <span id="plant-image">
                     <img src="" alt="seed-image">
                 </span>
-                <label for="plant-name">Plant Name:</label>   
-                <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here">
-            </div>
-            <!-- Points Total -->
-            <div>
-                <p>Total Points:</p>
-                <span id="total-points">0</span>
+
             </div>
 
 

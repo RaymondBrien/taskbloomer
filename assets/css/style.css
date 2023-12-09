@@ -14,16 +14,38 @@ body {
 #instructions::after {
     width: 66%;
     justify-content: center;
-    border: black  2px dotted;
+    border: 2px dotted black;
     margin-top: 50px;
 }
 
+form {
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+form > input {
+    padding: 10px;
+}
+
+form > checkbox {
+    position: inline;
+}
+
+form > label, form #today-section {
+    position: relative;
+    align-self: center;
+}
 
 #plant-image {
    max-height: 100px;
    max-width: 100px;
-   position: absolute; 
+   position: relative; 
    background-size: cover;
+   background-position: center;
 }
 
 footer {
