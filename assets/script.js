@@ -40,26 +40,29 @@ function setGoalResetTime() {
 }
 
 /**
- * Calculates today's score only.
-*/
-function calculateDayScore() {
-    let dayScore = parseInt(document.getElementById('today-points').innerText);
-    
-}
-
-/**
- * Calculates total score.
+ * Calculates total score without being reset.
 */
 function taskComplete(value) {
     
     console.log(value);
     let totalPointsElement = document.getElementById('total-points');
     let totalPoints = parseInt(totalPointsElement.innerHTML);
+    let dayScoreElement = document.getElementById('today-points');
+    let dayScore = parseInt(dayScoreElement.innerHTML);
+
     totalPoints += value;
+    dayScore += value;
     
     totalPointsElement.innerHTML = totalPoints;
+    dayScoreElement.innerHTML = dayScore;
+
     growPlant(totalPoints);
 }
+
+/**
+ * Calculates today's score only. Reset to 0 by the New Day Button.
+*/
+
 
 /**
  * Checks if total points are equal or greater to any of the growth points defined.
@@ -82,13 +85,12 @@ function growPlant(value) {
 function newDay() {
     
     let newDayButton = document.getElementById('new-day');
+    dayScoreElement = document.getElementById('today-points');
     
-    if (newDayButton.addEventListener('submit')) {
-        document.getElementById('tody-points').innerHTML = 0;
-        document.getElementsByClassName('checkbox').checked = false;
-
-    }
-
+    newDayButton.addEventListener('click', function() {
+        dayScoreElement.innerHTML = 0;
+        console.log("new day");
+    });
 }
 
     
