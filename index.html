@@ -48,14 +48,12 @@
                     <br>
                     In the words of Michael Scott, K.I.S.S - keep it simple, stupid. (set as footer of instructions section in block color)
                     Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.
-
                 </p>
             </div>
-            
         </section>
 
         <main>
-            <div id="tasks-area">
+            <form action="POST" id="tasks-area">
                 <label for="task-a">3 Points</label>
                 <input name="task-a" type="text-area" class="task" id="task-a" autofocus>
                 <input type="checkbox" class="checkbox" id="task-a-check" name="task-a-check" value="3">
@@ -67,7 +65,13 @@
                 <label for="task-c">1 Point</label>
                 <input name="task-c" type="text-area" class="task" id="task-c">
                 <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">
-            </div>
+
+                <!-- New Day Button -->
+                <div>
+                    <button type="reset" name="new-day" id="new-day">New Day</button>
+                </div>
+    
+            </form>
             <!-- Plant area -->
             <div id="plant-area">
                 <div>
@@ -76,7 +80,7 @@
                 </div>
                 <!-- Add plant images/animations later for below -->
                 <span id="plant-image">
-                    <img src="assets/images/ seed0.png" alt="seed-image">
+                    <img src="" alt="seed-image">
                 </span>
                 <label for="plant-name">Plant Name:</label>   
                 <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here">

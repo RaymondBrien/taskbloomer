@@ -1,12 +1,21 @@
+* {
+    background-color: #e4dfda;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    width: 90%;
+}
 
 
 
 
 
-
-img {
-   height: 100px;
-   width: 100px;
-   position: relative; 
-   background-size: contain;
+#plant-image {
+   max-height: 100px;
+   max-width: 100px;
+   position: absolute; 
+   background-size: cover;
 }

@@ -76,5 +76,19 @@ function growPlant(value) {
 
 }
 
+/**
+ * New day resets the day score count, clears goals and unchecks all checkboxes.
+ */
+function newDay() {
+    
+    let newDayButton = document.getElementById('new-day');
+    
+    if (newDayButton.addEventListener('submit')) {
+        document.getElementById('tody-points').innerHTML = 0;
+        document.getElementsByClassName('checkbox').checked = false;
+
+    }
+
+}
 
     
