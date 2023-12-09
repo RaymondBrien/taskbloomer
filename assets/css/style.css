@@ -36,14 +36,21 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 16em;
 }
 
 form > input {
     padding: 10px;
 }
 
+#new-day {
+    max-width: 80px;
+    align-self: center;
+}
+
 form > checkbox {
     position: inline;
+    /* SORT THIS */
 }
 
 form > label, form #today-section {
@@ -51,10 +58,13 @@ form > label, form #today-section {
     align-self: center;
 }
 
+
 #plant-image {
+
+   display: flex; 
    max-height: 100px;
    max-width: 100px;
-   position: relative; 
+
    background-size: cover;
    background-position: center;
 }
