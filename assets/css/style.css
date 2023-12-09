@@ -10,6 +10,17 @@ body {
     width: 90%;
 }
 
+h1 {
+    font-size: 3rem;
+    width: 100%;
+    justify-self: flex-start;
+}
+
+#slogan {
+    font-stretch: expanded;
+    position: relative;
+    text-align: center;
+}
 
 #instructions::after {
     width: 66%;
@@ -51,4 +62,5 @@ form > label, form #today-section {
 footer {
     position: fixed;
     bottom: 0;
+    font-size: 15px;
 }
