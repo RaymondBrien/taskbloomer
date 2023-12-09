@@ -1,101 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Document</title>
+    </head>
 
-<body>
-    <header>
-        <h1>TaskBloomer</h1>
-        <p>Watch your productivity blossom</p>
-    </header>
+    <body>
+        <header>
+            <h1>TaskBloomer</h1>
+            <p>Watch your productivity blossom</p>
+        </header>
 
-    <section>
-        <button popovertarget="instructions">Instructions</button>
-        <div id="instructions" popover>
-            <p>
-                Welcome to TaskBloomer, the app designed to help with overwhelm, decision fatigue and workaholism.
-                <br>
-                <b>Step 1:</b> (fontawesome icon)
-                List three concise goals you want to achieve in your day. Make these achievable within your day. Remember, be specific and intentional: there’s a type limit for a reason.
+        <section>
+            <button popovertarget="instructions">Instructions</button>
+            <div id="instructions" popover>
+                <p>
+                    Welcome to TaskBloomer, the app designed to help with overwhelm, decision fatigue and workaholism.
+                    <br>
+                    <b>Step 1:</b> (fontawesome icon)
+                    List three concise goals you want to achieve in your day. Make these achievable within your day. Remember, be specific and intentional: there’s a type limit for a reason.
 
-                Task A earns you the big money - 3 points! 
-                This should be your biggest task of the day, due first or most important.
+                    Task A earns you the big money - 3 points! 
+                    This should be your biggest task of the day, due first or most important.
 
-                Task B earns you 2 points.
+                    Task B earns you 2 points.
 
-                Task C earns you 1 point.
+                    Task C earns you 1 point.
 
-                Can’t think of three? Put an intention instead! 
-                How about: drink 6 glasses of water // meditate for 10 minutes // make time for a walk.
+                    Can’t think of three? Put an intention instead! 
+                    How about: drink 6 glasses of water // meditate for 10 minutes // make time for a walk.
 
-                <br>
-                <b>Step 2:</b> (fontawesome icon)
-                Each time you complete a goal, click the ‘done’ icon and you earn points. Earn enough points and your plant will grow. 
+                    <br>
+                    <b>Step 2:</b> (fontawesome icon)
+                    Each time you complete a goal, click the ‘done’ icon and you earn points. Earn enough points and your plant will grow. 
 
-                Your goals self-destruct at 10pm each night. (insert fontawesome spy icon/emoji).
+                    Your goals self-destruct at 10pm each night. (insert fontawesome spy icon/emoji).
 
-                <br>
-                <b>Step 3:</b> (fontawesome icon)
-                Take a deep breath and focus on your tasks and watch your plant continue to grow!
+                    <br>
+                    <b>Step 3:</b> (fontawesome icon)
+                    Take a deep breath and focus on your tasks and watch your plant continue to grow!
 
-                <br>
-                Finished them all already? Go you! Celebrate, knowing you’ve done what you set out to do today. (boxed text to separate from rest of instructions)
-                <br>
-                In the words of Michael Scott, K.I.S.S - keep it simple, stupid. (set as footer of instructions section in block color)
-                Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.
+                    <br>
+                    Finished them all already? Go you! Celebrate, knowing you’ve done what you set out to do today. (boxed text to separate from rest of instructions)
+                    <br>
+                    In the words of Michael Scott, K.I.S.S - keep it simple, stupid. (set as footer of instructions section in block color)
+                    Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.
 
-            </p>
-        </div>
-        
-    </section>
-
-    <main>
-        <div id="tasks-area">
-            <label for="task-a">3 Points</label>
-            <input name="task-a" type="text-area" class="task" id="task-a" autofocus>
-            <input type="checkbox" class="checkbox" id="task-a-check" name="task-a-check" value="3">
-            <br id="break-one">
-            <label for="task-b">2 Points</label>
-            <input name="task-b" type="text-area" class="task" id="task-b">
-            <input type="checkbox" class="checkbox" id="task-b-check" name="task-b-check" value="2">
-            <br id="break-two">
-            <label for="task-c">1 Point</label>
-            <input name="task-c" type="text-area" class="task" id="task-c">
-            <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">
-        </div>
-        <!-- Plant area -->
-        <div id="plant-area">
-            <div>
-                <p><em>Next growth in:</em></p>
-                <span id="next-growth">0</span>
+                </p>
             </div>
-             <!-- Add plant images/animations later for below -->
-            <div id="plant"><img src="" alt="plant-image"></div>
-            <label for="plant-name">Plant Name:</label>   
-            <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here">
-        </div>
-        <!-- Points Total -->
-        <div>
-            <p>Total Points:</p>
-            <span id="total-points">0</span>
-        </div>
-        <!-- Today's Points -->
-        <div>
-            <p>Today you have earned:</p>
-            <span id="today-points">0</span>
-        </div>
+            
+        </section>
 
-    </main>
-    <footer>
-        <div id="footer">
-            <p>Copyright 2023 - R Brien</p>
-        </div>
-    </footer>
-    <script src="assets/script.js"></script>
-</body>
+        <main>
+            <div id="tasks-area">
+                <label for="task-a">3 Points</label>
+                <input name="task-a" type="text-area" class="task" id="task-a" autofocus>
+                <input type="checkbox" class="checkbox" id="task-a-check" name="task-a-check" value="3">
+                <br id="break-one">
+                <label for="task-b">2 Points</label>
+                <input name="task-b" type="text-area" class="task" id="task-b">
+                <input type="checkbox" class="checkbox" id="task-b-check" name="task-b-check" value="2">
+                <br id="break-two">
+                <label for="task-c">1 Point</label>
+                <input name="task-c" type="text-area" class="task" id="task-c">
+                <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">
+            </div>
+            <!-- Plant area -->
+            <div id="plant-area">
+                <div>
+                    <p><em>Next growth in:</em></p>
+                    <span id="next-growth">0</span>
+                </div>
+                <!-- Add plant images/animations later for below -->
+                <div id="plant"><img src="" alt="plant-image"></div>
+                <label for="plant-name">Plant Name:</label>   
+                <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here">
+            </div>
+            <!-- Points Total -->
+            <div>
+                <p>Total Points:</p>
+                <span id="total-points">0</span>
+            </div>
+            <!-- Today's Points -->
+            <div>
+                <p>Today you have earned:</p>
+                <span id="today-points">0</span>
+            </div>
+
+        </main>
+        <footer>
+            <div id="footer">
+                <p>Copyright 2023 - R Brien</p>
+            </div>
+        </footer>
+        <script src="assets/script.js"></script>
+    </body>
 </html>
