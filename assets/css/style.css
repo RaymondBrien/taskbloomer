@@ -35,7 +35,7 @@ h1 {
     animation: 3s alternate slidein;      
 }
 
-#instructions::after {
+#instructions {
     width: 66%;
     justify-content: center;
     border: 2px dotted black;
