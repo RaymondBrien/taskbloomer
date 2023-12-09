@@ -2,6 +2,18 @@
     background-color: #e4dfda;
 }
 
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
 body {
     display: flex;
     flex-wrap: wrap;
@@ -20,6 +32,7 @@ h1 {
     font-stretch: expanded;
     position: relative;
     text-align: center;
+    animation: 3s alternate slidein;      
 }
 
 #instructions::after {
