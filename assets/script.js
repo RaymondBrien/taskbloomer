@@ -19,16 +19,17 @@ document.addEventListener("DOMContentLoaded", function() {
  * Returns a random number between min (inclusive) and max (exclusive)
  */
 function getRandomInt(min, max) {
-    return Math.floor(Math.random() * max);
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
-
+  
 /**
  * Checks if total points are equal or greater to any of the growth points defined.
  */
 function growPlant() {
-    let growthPoints = [6, 12, 18, 26, 33, 40, 50, (getRandomInt(51, 60)), (getRandomInt(61, 80), (getRandomInt(81, 120)))];
+    let growthPoints = [6, 12, 18, 26, 33, 40, 50, (getRandomInt(51, 80), (getRandomInt(81, 100)))];
     
-    console.log(growthPoints);
     
 }
 
