@@ -15,13 +15,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+/**
+ * Returns a random number between min (inclusive) and max (exclusive)
+ */
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * max);
+  }
 
 /**
  * Checks if total points are equal or greater to any of the growth points defined.
  */
 function growPlant() {
-    let growthPoints = [1,2,3,4,6,8,10,12,14,16,18,20,23,26,30];
+    let growthPoints = [6, 12, 18, 26, 33, 40, 50, (getRandomInt(51, 60)), (getRandomInt(61, 80), (getRandomInt(81, 120)))];
     
+    console.log(growthPoints);
     
 }
 
