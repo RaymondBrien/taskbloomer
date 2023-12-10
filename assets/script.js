@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
  
     }
-});
+}); 
 
 /**
  * Returns a random number between min (inclusive) and max (exclusive)
@@ -44,44 +44,42 @@ function taskComplete(value) {
     let totalPoints = parseInt(totalPointsElement.innerHTML);
     let dayScoreElement = document.getElementById('today-points');
     let dayScore = parseInt(dayScoreElement.innerHTML);
+    
 
     totalPoints += value;
     dayScore += value;
+    
     
     totalPointsElement.innerHTML = totalPoints;
     dayScoreElement.innerHTML = dayScore;
 
     growPlant(totalPoints);
-    untilNextGrowth(totalPoints);
+    untilNextGrowth(x);
 }
-
-/**
- * Calculates today's score only. Reset to 0 by the New Day Button.
-*/
 
 
 /**
  * Checks if total points are equal or greater to any of the growth points defined and displays relevant plant image.
  * TODO: plantImage HTML not being set - fix.
  */
-function growPlant(value) {
+function growPlant(totalPoints) {
     
     let growthPoints = [6, 12, 18, 26, 33, 40, 50, getRandomInt(51, 80), getRandomInt(81, 100)];
     let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];        
     let plantImage = document.getElementById('plant-image');
-    let newImage = '';
 
     for (let i=0; i < growthPoints.length; i++) {
-        if (value >= growthPoints[i]) {
-            newImage = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
-            console.log(newImage);
-            plantImage.innerHTML = newImage;
+        if (totalPoints >= growthPoints[i]) {
+            plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
             console.log(plantImage);
             
+            let y = growthPoints[i + 1];
+            console.log(`next in array is ${y}`);
+            
+            untilNextGrowth(totalPoints, y);
         }
-    }
-    
-}
+    } 
+} 
 
 
 
@@ -102,12 +100,12 @@ function newDay() {
 /**
  * Finds the distance to the next growth points value from total points and displays to user.
  */
-function untilNextGrowth(totalPoints) {
+function untilNextGrowth(x, y) {
 
     let nextGrowthElement = document.getElementById('next-growth');
-    nextGrowthElement.innerHTML = growthPoints[i +1] - totalPoints;
-    console.log(nextGrowthElement.innerHTML);
-
+    
+    nextGrowthElement.innerHTML = (y - x);
+    
 }
 
     
