@@ -25,12 +25,7 @@ function getRandomInt(min, max) {
   }
   
   
-  /**
-   * Finds the distance to the next growth points value from total points and displays to user.
-  */
- function untilNextGrowth() {
-    
-}
+
 
 /**
  * Allows user to reset the tasks at a specific time.
@@ -40,7 +35,7 @@ function setGoalResetTime() {
 }
 
 /**
- * Calculates total score without being reset.
+ * Calculates total score and day score. Day score will be reset, total points will not.
 */
 function taskComplete(value) {
     
@@ -57,6 +52,7 @@ function taskComplete(value) {
     dayScoreElement.innerHTML = dayScore;
 
     growPlant(totalPoints);
+    untilNextGrowth(totalPoints);
 }
 
 /**
@@ -81,9 +77,12 @@ function growPlant(value) {
             console.log(newImage);
             plantImage.innerHTML = newImage;
             console.log(plantImage);
+            
         }
     }
+    
 }
+
 
 
 /**
@@ -98,6 +97,17 @@ function newDay() {
         dayScoreElement.innerHTML = 0;
         console.log("new day");
     });
+}
+
+/**
+ * Finds the distance to the next growth points value from total points and displays to user.
+ */
+function untilNextGrowth(totalPoints) {
+
+    let nextGrowthElement = document.getElementById('next-growth');
+    nextGrowthElement.innerHTML = growthPoints[i +1] - totalPoints;
+    console.log(nextGrowthElement.innerHTML);
+
 }
 
     
