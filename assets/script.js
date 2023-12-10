@@ -66,20 +66,21 @@ function taskComplete(value) {
 
 /**
  * Checks if total points are equal or greater to any of the growth points defined and displays relevant plant image.
+ * TODO: plantImage HTML not being set - fix.
  */
 function growPlant(value) {
-
+    
     let growthPoints = [6, 12, 18, 26, 33, 40, 50, getRandomInt(51, 80), getRandomInt(81, 100)];
+    let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];        
     let plantImage = document.getElementById('plant-image');
-    let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];
-    
-    
+    let newImage = '';
+
     for (let i=0; i < growthPoints.length; i++) {
         if (value >= growthPoints[i]) {
-            let newImage = document.createElement('img');
-            newImage.src = "assets/images/" + images[i]; // Concatenates the path to the image file name
-            newImage.setAttribute("alt", "seed image"); // Adds alt text to each image
-            plantImage.appendChild(newImage);
+            newImage = `<img src="assets/images/${images[i]} alt="seed-image"`; // Concatenates the path to the image file name
+            console.log(newImage);
+            plantImage.innerHTML = newImage;
+            console.log(plantImage);
         }
     }
 }
