@@ -69,20 +69,21 @@ function taskComplete(value) {
  */
 function growPlant(value) {
 
-    let growthPoints = [6, 12, 18, 26, 33, 40, 50, (getRandomInt(51, 80), (getRandomInt(81, 100)))];
+    let growthPoints = [6, 12, 18, 26, 33, 40, 50, getRandomInt(51, 80), getRandomInt(81, 100)];
     let plantImage = document.getElementById('plant-image');
     let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];
-    const newImage = document.createElement('img');
     
-    newImage.src = "assets/images/" + images[i]; // Concatenates the path to the image file name
-    newImage.setAttribute("alt", "seed image"); // Adds alt text to each image
-
-    for (i=0; i < growthPoints.length; i++) {
+    
+    for (let i=0; i < growthPoints.length; i++) {
         if (value >= growthPoints[i]) {
+            let newImage = document.createElement('img');
+            newImage.src = "assets/images/" + images[i]; // Concatenates the path to the image file name
+            newImage.setAttribute("alt", "seed image"); // Adds alt text to each image
             plantImage.appendChild(newImage);
         }
     }
 }
+
 
 /**
  * New day resets the day score count, clears goals and unchecks all checkboxes.
