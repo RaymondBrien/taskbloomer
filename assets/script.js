@@ -54,7 +54,7 @@ function taskComplete(value) {
     dayScoreElement.innerHTML = dayScore;
 
     growPlant(totalPoints);
-    untilNextGrowth(x);
+    
 }
 
 
