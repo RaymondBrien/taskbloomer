@@ -77,7 +77,7 @@ function growPlant(value) {
 
     for (let i=0; i < growthPoints.length; i++) {
         if (value >= growthPoints[i]) {
-            newImage = `<img src="assets/images/${images[i]} alt="seed-image"`; // Concatenates the path to the image file name
+            newImage = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
             console.log(newImage);
             plantImage.innerHTML = newImage;
             console.log(plantImage);
