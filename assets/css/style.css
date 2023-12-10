@@ -72,7 +72,7 @@ form > label, form #today-section {
 }
 
 
-#plant-image {
+img {
 
    display: flex; 
    max-height: 100px;
