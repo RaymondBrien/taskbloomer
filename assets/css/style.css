@@ -50,6 +50,7 @@ form {
     flex-direction: column;
     text-align: center;
     width: 16em;
+    z-index: 99;
 }
 
 form > input {
@@ -63,7 +64,6 @@ form > input {
 
 form > checkbox {
     position: inline;
-    /* SORT THIS */
 }
 
 form > label, form #today-section {
@@ -71,16 +71,20 @@ form > label, form #today-section {
     align-self: center;
 }
 
-
-img {
-
-   display: flex; 
-   max-height: 100px;
-   max-width: 100px;
-
-   background-size: cover;
-   background-position: center;
+#plant-image {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    position: relative;
+    max-width: inherit;
+    max-height: 300px;
+    background-size: cover;
+    z-index: 0;
 }
+
+
 
 footer {
     position: fixed;
