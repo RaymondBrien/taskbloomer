@@ -162,4 +162,5 @@ let resetCalled = (function() {
         called = true;
       }
     }
-  });
+  })
+}
