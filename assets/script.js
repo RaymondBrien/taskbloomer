@@ -1,5 +1,4 @@
-// Wait for DOM to finish loading before running the game
-
+// Wait for DOM to finish loading before running the game. Finds checkbox value.
 document.addEventListener("DOMContentLoaded", function() {
     let checkboxes = document.getElementsByClassName("checkbox");
 
@@ -24,15 +23,13 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
   
-  
 
+// global variables
+let randomArray1 = getRandomInt(51, 80);
+let randomArray2 = getRandomInt(81, 100);
+let growthPoints = [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2];
+let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];   
 
-/**
- * Allows user to reset the tasks at a specific time.
-*/
-function setGoalResetTime() {
-    
-}
 
 /**
  * Calculates total score and day score. Day score will be reset, total points will not.
@@ -59,28 +56,46 @@ function taskComplete(value) {
 
 
 /**
- * Checks if total points are equal or greater to any of the growth points defined and displays relevant plant image.
- * TODO: plantImage HTML not being set - fix.
+ * Checks if total points are equal or greater to any of the growth points defined and displays relevant plant image respectively.
  */
 function growPlant(totalPoints) {
     
-    let growthPoints = [6, 12, 18, 26, 33, 40, 50, getRandomInt(51, 80), getRandomInt(81, 100)];
-    let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];        
     let plantImage = document.getElementById('plant-image');
 
-    for (let i=0; i < growthPoints.length; i++) {
+    // loop through array until end.
+    for (let i=0; i < growthPoints.length -1; i++) {
         if (totalPoints >= growthPoints[i]) {
             plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
             console.log(plantImage);
-            
-            let y = growthPoints[i + 1];
-            console.log(`next in array is ${y}`);
-            
-            untilNextGrowth(totalPoints, y);
+        } else if (i === randomArray2) {
+            endOfGame();
         }
-    } 
-} 
 
+    }
+     
+} findNextGrowthPoint();
+
+/**
+ * Finds the next integer in array.
+ */
+function findNextGrowthPoint() {
+
+    let nextInArray = growthPoints[i + 1];
+    console.log(`next in array is ${nextInArray}`);
+    
+    untilNextGrowth(totalPoints, nextInArray);
+}
+
+
+/**
+ * Finds the distance to the next growth points value from total points and displays to user.
+*/
+function untilNextGrowth(totalPoints, nextInArray) {
+
+    let nextGrowthElement = document.getElementById('next-growth');
+    nextGrowthElement.innerHTML = (nextInArray - totalPoints);
+    
+}
 
 
 /**
@@ -98,14 +113,14 @@ function newDay() {
 }
 
 /**
- * Finds the distance to the next growth points value from total points and displays to user.
- */
-function untilNextGrowth(x, y) {
-
-    let nextGrowthElement = document.getElementById('next-growth');
-    
-    nextGrowthElement.innerHTML = (y - x);
+ * Allows user to reset the tasks at a specific time.
+*/
+function setGoalResetTime() {
     
 }
 
-    
+function endOfGame() {
+    let body = document.getElementsByTagName('body');
+    body.innerHTML ='';
+
+}

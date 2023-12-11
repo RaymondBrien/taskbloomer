@@ -62,9 +62,7 @@ form > input {
     align-self: center;
 }
 
-form > checkbox {
-    position: inline;
-}
+
 
 form > label, form #today-section {
     position: relative;
