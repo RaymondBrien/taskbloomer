@@ -16,6 +16,7 @@
 main {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 body {
@@ -34,6 +35,9 @@ font-family: 'Playfair Display', serif; */
 
 header {
     width: 100%;
+    display: flex;    
+    flex-flow: column wrap;
+    justify-content: space-between;
 }
 
 h1 {
@@ -41,35 +45,41 @@ h1 {
     text-align: center;
     text-transform: lowercase;
     letter-spacing: 5px;
+    order: 1;
 }
 
 
 #slogan {
-    font-stretch: expanded;
+    order: 2;
     position: relative;
     text-align: center;
+    justify-content: flex-start;
+    font-stretch: expanded;
     animation: 3s alternate slidein;      
 }
 
 .instructions-section {
-    position: absolute;
+    justify-content: flex-end;
+    order: 3;
 }
 
 #instructions {
     width: 66%;
+    margin-top: 50px;
+    position: fixed;
     justify-content: center;
     border: 2px dotted black;
-    margin-top: 50px;
 }
 
 form {
-    margin: 10px;
+    width: 16em;
+    margin-top: 40px;
     padding: 10px;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 16em;
+    align-items: center;
     z-index: 99;
 }
 
