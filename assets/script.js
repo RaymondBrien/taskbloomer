@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 }); 
 
+// Reset game when reset-confirmed button clicked
+document.getElementById("reset-confirmed").addEventListener("click", function() {
+    document.getElementById('tasks-area').reset();
+});
+
+
 /**
  * Returns a random number between min (inclusive) and max (exclusive)
  */
@@ -128,4 +134,13 @@ function endOfGame() {
     let body = document.getElementsByTagName('body');
     body.innerHTML ='';
 
+}
+
+function reset() {
+ 
+   
+
+    function myFunction() {
+      console.log("heyqueen");
+    }
 }

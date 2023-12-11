@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-        <title>Document</title>
+        <!-- Fontawesome -->
+        <!-- Fonts -->
+        <!-- Favicon -->
+        <title>Welcome to TaskBloomer</title>
     </head>
 
     <body>
@@ -14,7 +17,7 @@
             <p id="slogan">Watch your productivity blossom</p>
         </header>
 
-        <section>
+        <section class="instructions-section">
             <button popovertarget="instructions">Instructions</button>
             <div id="instructions" popover>
                 <p>
@@ -87,9 +90,17 @@
                 </div>
             </form>
             <!-- Plant area -->
-            <span id="plant-image">
-                
-            </span>
+            <span id="plant-image"></span>
+            <!-- Reset The Game -->
+            <button id="reset-game" popovertarget="reset-popover"><strong>Reset</strong></button>
+            <div id="reset-popover" popover>
+                <p>Would you like to reset the game?</p>
+                <p><em>(This will reset your total points to 0)</em></p>
+                <br>
+                <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide">Yes</button>
+                <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide">No, return to game</button>
+            </div>
+
         </main>
         <footer>
             <div id="footer">
