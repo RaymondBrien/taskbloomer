@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <!-- Fontawesome -->
         <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
         <title>Welcome to TaskBloomer</title>
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon/icons8-potted-plant-ios-16-filled-16.png">
@@ -52,10 +55,11 @@
                     <br>
                     In the words of Michael Scott, K.I.S.S - keep it simple, stupid. (set as footer of instructions section in block color)
                     Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.
-
+                </p>
+                <div id="set-plant-name">
                     <label for="plant-name">Plant Name:</label>   
                     <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here">
-                </p>
+                </div>
             </div>
         </section>
 
@@ -73,14 +77,13 @@
                 <br>
                 <!-- Today's Points -->
                 <div id="today-section">
-                    <p>Today you have earned:&#160;<span id="today-points">0</span>/6 Points</p>
+                    <p>Today you have earned:&#160;<span id="today-points">0</span>/6 points</p>
                 </div>
                 <!-- New Day Button -->
                 <button type="reset" name="new-day" id="new-day" onclick="newDay()">New Day</button>
-                
+                <!-- Next Growth -->
                 <div id="next-growth">
                     <p>Next growth point at:&#160;<span id="next-growth-point">6</span>&#160;points</p>
-                    <br>
                     <span id="next-growth-in">(in 6 points)</span></em></p>
                 </div>
                 <!-- Points Total -->
@@ -88,18 +91,18 @@
                     <p>Total Points:</p>
                     <span id="total-points">0</span>
                 </div>
+                <!-- Reset The Game -->
+                <button id="reset-game" popovertarget="reset-popover"><strong>Reset</strong></button>
+                <div id="reset-popover" popover>
+                    <p>Would you like to reset the game?</p>
+                    <p><em>(This will reset your total points to 0)</em></p>
+                    <br>
+                    <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide">Yes</button>
+                    <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide">No, return to game</button>
+                </div>
             </form>
             <!-- Plant area -->
             <span id="plant-image"></span>
-            <!-- Reset The Game -->
-            <button id="reset-game" popovertarget="reset-popover"><strong>Reset</strong></button>
-            <div id="reset-popover" popover>
-                <p>Would you like to reset the game?</p>
-                <p><em>(This will reset your total points to 0)</em></p>
-                <br>
-                <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide">Yes</button>
-                <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide">No, return to game</button>
-            </div>
 
         </main>
         <footer>

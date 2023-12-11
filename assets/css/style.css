@@ -13,6 +13,10 @@
       width: 100%;
     }
   }
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 body {
     display: flex;
@@ -20,19 +24,35 @@ body {
     justify-content: center;
     margin: 15px;
     width: 90%;
+    font-family: 'EB Garamond', serif;    
+}
+
+/* font-family: 'EB Garamond', serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Playfair Display', serif; */
+
+header {
+    width: 100%;
 }
 
 h1 {
     font-size: 3rem;
-    width: 100%;
-    justify-self: flex-start;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 5px;
 }
+
 
 #slogan {
     font-stretch: expanded;
     position: relative;
     text-align: center;
     animation: 3s alternate slidein;      
+}
+
+.instructions-section {
+    position: absolute;
 }
 
 #instructions {
@@ -73,16 +93,24 @@ form > label, form #today-section {
     display: flex;
     flex-direction: column;
     align-content: center;
-    flex-wrap: wrap;
     background-repeat: no-repeat;
+    background-position: center;
     position: relative;
-    max-width: 100px;
-    max-height: 100px;
-    background-size: cover;
+    max-width: 16rem;
+    max-height: 2rem;
+    background-size: contain;
     z-index: 0;
+    float: left;
+    left: 1rem;
+    margin: 25px;
+    padding: 10px;
 }
 
 
+#reset-game {
+    
+    /* display: contents; - takes the box of the button away */
+}
 
 footer {
     position: fixed;
