@@ -79,13 +79,15 @@ function growPlant(totalPoints) {
      
 
 /**
- * Finds the next integer in array.
+ * Finds the next integer in array and display to user.
  */
 function findNextGrowthPoint(totalPoints , i) {
 
+    let nextGrowthPoint = document.getElementById('next-growth-point');
     let nextInArray = growthPoints[i + 1];
     console.log(`next in array is ${nextInArray}`);
     
+    nextGrowthPoint.innerHTML = nextInArray;
     untilNextGrowth(totalPoints, nextInArray);
 }
 
