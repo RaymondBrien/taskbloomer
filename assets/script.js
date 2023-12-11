@@ -28,7 +28,7 @@ function getRandomInt(min, max) {
 let randomArray1 = getRandomInt(51, 80);
 let randomArray2 = getRandomInt(81, 100);
 let growthPoints = [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2];
-let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];   
+let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];
 
 
 /**
@@ -61,24 +61,27 @@ function taskComplete(value) {
 function growPlant(totalPoints) {
     
     let plantImage = document.getElementById('plant-image');
+  
 
     // loop through array until end.
     for (let i=0; i < growthPoints.length -1; i++) {
+        
         if (totalPoints >= growthPoints[i]) {
             plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
             console.log(plantImage);
+            findNextGrowthPoint(totalPoints, i)
         } else if (i === randomArray2) {
             endOfGame();
-        }
-
+        } 
+        
     }
+} 
      
-} findNextGrowthPoint();
 
 /**
  * Finds the next integer in array.
  */
-function findNextGrowthPoint() {
+function findNextGrowthPoint(totalPoints , i) {
 
     let nextInArray = growthPoints[i + 1];
     console.log(`next in array is ${nextInArray}`);
@@ -92,8 +95,8 @@ function findNextGrowthPoint() {
 */
 function untilNextGrowth(totalPoints, nextInArray) {
 
-    let nextGrowthElement = document.getElementById('next-growth');
-    nextGrowthElement.innerHTML = (nextInArray - totalPoints);
+    let nextGrowthElement = document.getElementById('next-growth-in');
+    nextGrowthElement.innerHTML = `(in ${(nextInArray - totalPoints)} points)`;
     
 }
 
