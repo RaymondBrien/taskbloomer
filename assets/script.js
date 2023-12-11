@@ -70,15 +70,15 @@ function growPlant(totalPoints) {
             plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
             console.log(plantImage);
             findNextGrowthPoint(totalPoints, i)
+            break;
         } else if (i === randomArray2) {
-            endOfGame();
-        // } else if () { SORT so only triggers if reset() is called
-        //     i=-1; continue;            
-        // } 
-        
-        
-    }
-} 
+            // } else if () { SORT so only triggers if reset() is called
+            //     i=-1; continue;            
+            // } 
+            
+            
+        }
+} endOfGame();
 
 
      
@@ -133,9 +133,7 @@ function setGoalResetTime() {
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
  */
 function endOfGame() {
-    let body = document.getElementsByTagName('body');
-    // SHOW new HTML page
-
+    window.location.href = "end.html";
 }
 
 /**
