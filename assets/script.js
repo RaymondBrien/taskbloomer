@@ -70,15 +70,15 @@ function growPlant(totalPoints) {
             plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
             console.log(plantImage);
             findNextGrowthPoint(totalPoints, i)
-            break;
-        } else if (i === randomArray2) {
+        }
+        // } else if (i === randomArray2) {
             // } else if () { SORT so only triggers if reset() is called
             //     i=-1; continue;            
             // } 
             
             
         }
-} endOfGame();
+}
 
 
      
@@ -161,4 +161,3 @@ let resetCalled = (function() {
       }
     }
   })
-}
