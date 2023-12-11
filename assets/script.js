@@ -14,12 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 }); 
 
-// Reset game when reset-confirmed button clicked
-document.getElementById("reset-confirmed").addEventListener("click", function() {
-    document.getElementById('tasks-area').reset();
-});
-
-
 /**
  * Returns a random number between min (inclusive) and max (exclusive)
  */
@@ -78,10 +72,15 @@ function growPlant(totalPoints) {
             findNextGrowthPoint(totalPoints, i)
         } else if (i === randomArray2) {
             endOfGame();
-        } 
+        // } else if () { SORT so only triggers if reset() is called
+        //     i=-1; continue;            
+        // } 
+        
         
     }
 } 
+
+
      
 
 /**
@@ -130,17 +129,37 @@ function setGoalResetTime() {
     
 }
 
+/**
+ * Once last growth point has been reached, plant is fully grown. Brings up new html page.
+ */
 function endOfGame() {
     let body = document.getElementsByTagName('body');
-    body.innerHTML ='';
+    // SHOW new HTML page
 
 }
+
+/**
+ * Starts game from beginning: resets form inputs and returns all scores to 0.
+ */
+
+document.getElementById("reset-confirmed").addEventListener("click", reset());
 
 function reset() {
- 
-   
+    document.getElementById('tasks-area').reset();
+    document.getElementById('total-points').innerHTML = 0;
+    document.getElementById('next-growth-in').innerHTML = "(in 6 points)";
+    document.getElementById('next-growth-point').innerHTML = 6;
 
-    function myFunction() {
-      console.log("heyqueen");
-    }
+    
 }
+
+// need to set growplant function i=0 again
+let resetCalled = (function() {
+    let called = false;
+    return function() {
+      if (!called) {
+        console.log("I've been called");
+        called = true;
+      }
+    }
+  });
