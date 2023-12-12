@@ -132,17 +132,17 @@ function setGoalResetTime() {
 /**
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
  */
-function endOfGame() {
-    window.location.href = "end.html";
-}
+// function endOfGame() {
+//     window.location.href = "end.html";
+//}
 
 /**
  * Starts game from beginning: resets form inputs and returns all scores to 0.
  */
 
-document.getElementById("reset-confirmed").addEventListener("click", reset());
+document.getElementById("reset-game").addEventListener("click", resetGame());
 
-function reset() {
+function resetGame() {
     document.getElementById('tasks-area').reset();
     document.getElementById('total-points').innerHTML = 0;
     document.getElementById('next-growth-in').innerHTML = "(in 6 points)";
@@ -152,12 +152,12 @@ function reset() {
 }
 
 // need to set growplant function i=0 again
-let resetCalled = (function() {
-    let called = false;
-    return function() {
-      if (!called) {
-        console.log("I've been called");
-        called = true;
-      }
-    }
-  })
+// let resetCalled = (function() {
+//     let called = false;
+//     return function() {
+//       if (!called) {
+//         console.log("I've been called");
+//         called = true;
+//       }
+//     }
+//   })

@@ -117,10 +117,10 @@ form > label, form #today-section {
 }
 
 
-#reset-game {
+
     
-    /* display: contents; - takes the box of the button away */
-}
+/* display: contents; - takes the box of the button away */
+
 
 footer {
     position: fixed;
