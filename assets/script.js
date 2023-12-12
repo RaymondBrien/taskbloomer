@@ -65,21 +65,26 @@ function growPlant(totalPoints) {
 
     // loop through array until end.
     for (let i=0; i < growthPoints.length -1; i++) {
-        
-        if (totalPoints >= growthPoints[i]) {
+        if (totalPoints >= growthPoints[8]) {
+            endOfGame();
+        } else if (totalPoints >= growthPoints[i]) {
             plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
             console.log(plantImage);
             findNextGrowthPoint(totalPoints, i)
-        }
-        // } else if (i === randomArray2) {
-            // } else if () { SORT so only triggers if reset() is called
-            //     i=-1; continue;            
-            // } 
+            // continue;
+        // } else if (i === 8) {
+        //     console.log('end of array');
+        //     endOfGame();
+            
+            
+        //     // } else if () { SORT so only triggers if reset() is called
+        //     //     i=-1; continue;            
+        //     // } 
             
             
         }
+    }
 }
-
 
      
 
@@ -97,7 +102,7 @@ function findNextGrowthPoint(totalPoints , i) {
 }
 
 
-/**
+/**Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.
  * Finds the distance to the next growth points value from total points and displays to user.
 */
 function untilNextGrowth(totalPoints, nextInArray) {
@@ -129,9 +134,10 @@ function setGoalResetTime() {
 /**
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
  */
-// function endOfGame() {
-//     window.location.href = "end.html";
-//}
+    function endOfGame() {
+        console.log('end of game running');
+        window.location.href = "end.html";
+    }
 
 /**
  * Starts game from beginning: resets form inputs and returns all scores to 0.
@@ -144,4 +150,9 @@ function resetGame() {
     document.getElementById('next-growth-point').innerHTML = 6;
     console.log("Game reset");
     
+}
+
+function plantNameUpdate() {
+
+    document.getElementById('plant-name').innerText = document.getElementById('nametag-for-plant').innerText;
 }
