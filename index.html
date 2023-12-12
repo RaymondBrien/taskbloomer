@@ -91,16 +91,16 @@
                     <p>Total Points:</p>
                     <span id="total-points">0</span>
                 </div>
-                <!-- Reset The Game -->
-                <button type="button" id="reset-game" popovertarget="reset-popover"><strong>Reset</strong></button>
-                <div id="reset-popover" popover>
-                    <p>Would you like to reset the game?</p>
-                    <p><em>(This will reset your total points to 0)</em></p>
-                    <br>
-                    <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide">Yes</button>
-                    <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide">No, return to game</button>
-                </div>
             </form>
+            <!-- Reset The Game -->
+            <button type="button" id="reset-game" popovertarget="reset-popover"><strong>Reset</strong></button>
+            <div id="reset-popover" popover>
+                <p>Would you like to reset the game?</p>
+                <p><em>(This will reset your total points to 0)</em></p>
+                <br>
+                <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide" onclick="resetGame()">Yes</button>
+                <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide">No, return to game</button>
+            </div>
             <!-- Plant area -->
             <span id="plant-image"></span>
 

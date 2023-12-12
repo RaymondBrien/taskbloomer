@@ -139,12 +139,10 @@ function setGoalResetTime() {
 /**
  * Starts game from beginning: resets form inputs and returns all scores to 0.
  */
-
-document.getElementById("reset-game").addEventListener("click", resetGame());
-
 function resetGame() {
     document.getElementById('tasks-area').reset();
     document.getElementById('total-points').innerHTML = 0;
+    document.getElementById('today-points').innerHTML = 0;
     document.getElementById('next-growth-in').innerHTML = "(in 6 points)";
     document.getElementById('next-growth-point').innerHTML = 6;
 
