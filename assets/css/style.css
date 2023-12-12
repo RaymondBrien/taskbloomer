@@ -108,24 +108,25 @@ form > label, form #today-section {
 
 #plant-image-area {
     border: 2px solid black ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-content: center;
     /* add animation to slide up from bottom as you scroll and have seperate background color for visibility */
 }
 
 #plant-image {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
-    max-width: 16rem;
-    max-height: 2rem;
-    background-size: contain;
     z-index: 0;
     float: left;
     left: 1rem;
+    max-height: 2rem;
+    max-width: 16rem;
     margin: 25px;
     padding: 10px;
+    z-index: -1;
 }
 
 #plant-name {
