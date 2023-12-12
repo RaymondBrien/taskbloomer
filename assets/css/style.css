@@ -45,12 +45,12 @@ h1 {
     text-align: center;
     text-transform: lowercase;
     letter-spacing: 5px;
-    order: 1;
+    order: 2;
 }
 
 
 #slogan {
-    order: 2;
+    order: 3;
     position: relative;
     text-align: center;
     justify-content: flex-start;
@@ -60,7 +60,7 @@ h1 {
 
 .instructions-section {
     justify-content: flex-end;
-    order: 3;
+    order: 1;
 }
 
 #instructions {
@@ -126,4 +126,5 @@ footer {
     position: fixed;
     bottom: 0;
     font-size: 15px;
+    z-index: 0;
 }
