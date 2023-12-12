@@ -53,7 +53,6 @@ h1 {
     order: 3;
     position: relative;
     text-align: center;
-    justify-content: flex-start;
     font-stretch: expanded;
     animation: 3s alternate slidein;      
 }
@@ -74,7 +73,7 @@ h1 {
 }
 
 form {
-    width: 16em;
+    width: 85vw;
     margin-top: 40px;
     padding: 10px;
     display: flex;
@@ -87,6 +86,8 @@ form {
 
 form > input {
     padding: 10px;
+    width: 90%;
+    
 }
 
 #new-day {
@@ -99,6 +100,10 @@ form > input {
 form > label, form #today-section {
     position: relative;
     align-self: center;
+}
+
+#today-section > p, #next-growth > p {
+    font-family: "Playfair Display", serif;
 }
 
 #plant-image {
