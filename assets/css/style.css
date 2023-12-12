@@ -64,7 +64,9 @@ h1 {
 }
 
 #instructions {
-    width: 66%;
+    height: 90%;
+    overflow-y: auto;
+    width: 90%;
     margin-top: 50px;
     position: fixed;
     justify-content: center;

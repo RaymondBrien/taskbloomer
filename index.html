@@ -25,38 +25,39 @@
         </header>
         
         <div id="instructions" popover>
-            <p>
-                Welcome to TaskBloomer, the app designed to help with overwhelm, decision fatigue and workaholism.
+            <div>
+                <h2 id="instructions-popover-title">Welcome to TaskBloomer, the app designed to help with overwhelm, decision fatigue and workaholism</h2>
                 <br>
-                <b>Step 1:</b> (fontawesome icon)
-                List three concise goals you want to achieve in your day. Make these achievable within your day. Remember, be specific and intentional: there’s a type limit for a reason.
-
-                Task A earns you the big money - 3 points! 
-                This should be your biggest task of the day, due first or most important.
-
-                Task B earns you 2 points.
-
-                Task C earns you 1 point.
-
-                Can’t think of three? Put an intention instead! 
-                How about: drink 6 glasses of water // meditate for 10 minutes // make time for a walk.
-
+                <h3 class="instructions-subtitle">Step 1 (fontawesome icon)</h3>
+                <p>List three concise goals you want to achieve in your day. Make these achievable within your day</p>
                 <br>
-                <b>Step 2:</b> (fontawesome icon)
-                Each time you complete a goal, click the ‘done’ icon and you earn points. Earn enough points and your plant will grow. 
-
-                Your goals self-destruct at 10pm each night. (insert fontawesome spy icon/emoji).
-
+                <p>Remember, be specific and intentional: there’s a character limit for a reason.</p>
+                <ul>
+                    <li>Task <b>A</b> earns you the big money - 3 points! 
+                        This should be your biggest task of the day, due first or most important.</li>
+                    <li>Task <b>B</b> earns you 2 points.</li>
+                    <li>Task <b>C</b> earns you 1 point.</li>
+                </ul>
+                <br>    
+                <p>Can’t think of three? Put an intention instead!</p> 
+                <p><em>How about: drink 6 glasses of water today // meditate for 10 minutes // make time for a walk.</em></p>
                 <br>
-                <b>Step 3:</b> (fontawesome icon)
-                Take a deep breath and focus on your tasks and watch your plant continue to grow!
-
+                <h3 class="instructions-heading">Step 2 (fontawesome icon)</h3>
+                <p>Each time you complete a goal, click the ‘done’ icon and you earn points. Earn enough points and your plant will grow.</p> 
+                <div>
+                    <p>Your goals self-destruct at <span></span>each night. (insert fontawesome spy icon/emoji).</p>
+                </div>
                 <br>
-                Finished them all already? Go you! Celebrate, knowing you’ve done what you set out to do today. (boxed text to separate from rest of instructions)
+                <h3 class="instructions-heading">Step 3 (fontawesome icon)</h3>
+                <p>Take a deep breath and focus on your tasks and watch your plant continue to grow!</p>
                 <br>
-                In the words of Michael Scott, K.I.S.S - keep it simple, stupid. (set as footer of instructions section in block color)
-                Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.
-            </p>
+                <p><em>Finished them all already? Go you! Celebrate, knowing you’ve done what you set out to do today. (boxed text to separate from rest of instructions)</em></p>
+                <br>
+                <div>
+                    <p id="instructions-footer">In the words of Michael Scott, K.I.S.S - keep it simple, stupid. (set as footer of instructions section in block color)</p>
+                    <p>Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.</p>
+                </div>   
+            </div>
             <div id="set-plant-name">
                 <label for="plant-name">Plant Name:</label>   
                 <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here">
@@ -102,7 +103,10 @@
                 <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide">No, return to game</button>
             </div>
             <!-- Plant area -->
-            <span id="plant-image"></span>
+            <div id="plant-image-area">
+                <h3><span id="nametag-for-plant"></span></h3>
+                <span id="plant-image"></span>
+            </div>
 
         </main>
         <footer>
