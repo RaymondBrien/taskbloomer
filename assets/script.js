@@ -115,11 +115,8 @@ function newDay() {
     
     let newDayButton = document.getElementById('new-day');
     dayScoreElement = document.getElementById('today-points');
-    
-    newDayButton.addEventListener('click', function() {
-        dayScoreElement.innerHTML = 0;
-        console.log("new day");
-    });
+    dayScoreElement.innerHTML = 0;
+    console.log("new day");
 }
 
 /**
