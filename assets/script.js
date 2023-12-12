@@ -142,17 +142,6 @@ function resetGame() {
     document.getElementById('today-points').innerHTML = 0;
     document.getElementById('next-growth-in').innerHTML = "(in 6 points)";
     document.getElementById('next-growth-point').innerHTML = 6;
-
+    console.log("Game reset");
     
 }
-
-// need to set growplant function i=0 again
-// let resetCalled = (function() {
-//     let called = false;
-//     return function() {
-//       if (!called) {
-//         console.log("I've been called");
-//         called = true;
-//       }
-//     }
-//   })
