@@ -27,13 +27,31 @@ function getRandomInt(min, max) {
 // global variables
 let randomArray1 = getRandomInt(51, 70);
 let randomArray2 = getRandomInt(70, 100);
+let growthPoints = '';
 let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];
-let growthPoints = {
+let growthPointsLevel = {
 
-    growthPointsEasy: [1, 6, 9, 15, 19, 24, 30, 33, 36],
-    growthPointsMedium: [3, 6, 9, 15, 18, 24, 30, 40, 52],
-    growthPointsHard: [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2]
+    easy: [1, 6, 9, 15, 19, 24, 30, 33, 36],
+    medium: [3, 6, 9, 15, 18, 24, 30, 40, 52],
+    hard: [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2]
 };
+
+
+/**
+ * Sets difficulty by choosing which GrowthPoints array to use (easy, medium or hard)
+ */
+function setDifficulty() {
+    if (document.getElementById('easy').addEventListener('click')) {
+        growthPoints = growthPointsLevel.easy;
+        console.log(growthPoints);
+    } else if (document.getElementById('medium').addEventListener('click')) {
+        growthPoints = growthPointsLevel.medium; 
+        console.log(growthPoints);
+    } else if (document.getElementById('hard').addEventListener('click')) {
+        growthPoints = growthPointsLevel.hard; 
+        console.log(growthPoints);
+    }
+}
 
 
 /**
