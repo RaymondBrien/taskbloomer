@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Settings</h1>
+
+    <div id="settings">
+        <div id="levels">
+            <button id="easy" onclick="setDifficulty()">Easy</button>
+            <button id="medium" onclick="setDifficulty()">Medium</button>
+            <button id="hard" onclick="setDifficulty()">Hard</button>
+        </div>
+        <br>
+        <div id="set-plant-name">
+            <label for="plant-name">Plant Name:</label>   
+            <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here" oninput="plantNameUpdate()">
+        </div>
+        <a href="index.html" aria-label="start-game-here">Start Game</a>
+    </div>
+</body>
+</html>
