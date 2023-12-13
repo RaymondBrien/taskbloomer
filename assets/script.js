@@ -147,21 +147,27 @@ function newDay() {
     console.log("new day");
 }
 
+
 /**
- * Gets data from time user asks to reset each day.
- * Allows user to reset the tasks at a specific time of day.
+ * Gets new reset time changed in settings by user.
+ * Displays new reset time on the main page.
 */
-function getGoalResetTime() {
-    //   (displays reset time on main page)
-    let resetTime = document.getElementById('time-setting').value;
-    console.log(resetTime);
-}
+document.getElementById('time-setting').addEventListener('change', function() {
+    let resetTime = document.getElementById('set-time');
+    let displayTime = document.getElementById('reset-time-main');
+    displayTime.innerText = resetTime.value;
+    console.log('goalResetTime running');
+});   
+
+
+
 
 /**
  *  Triggers new day button if user has not already triggered:
  */ 
 function triggerGoalResetTime() {
-    
+    console.log('Reached triggerGoalResetTime');
+
 }
 
 /**
@@ -185,7 +191,13 @@ function resetGame() {
     
 }
 
-function plantNameUpdate() {
-
-    document.getElementById('plant-name').innerText = document.getElementById('nametag-for-plant').innerText;
-}
+/**
+ * Gets new plant name from user in settings.html and sets innerText 
+ * as name label in index.html  
+ */
+let plantName = document.getElementById('plant-name');
+let nameTag = document.getElementById('nametag-for-plant');
+document.getElementById('plant-name').addEventListener('change', function() {
+    plantName.innerText = nameTag.innerText;
+})
+ 
