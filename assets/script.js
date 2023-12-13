@@ -148,18 +148,20 @@ function newDay() {
 }
 
 /**
- * Gets data from time user asks to reset each day
- * Allows user to reset the tasks at a specific time.
+ * Gets data from time user asks to reset each day.
+ * Allows user to reset the tasks at a specific time of day.
 */
 function getGoalResetTime() {
-      
+    //   (displays reset time on main page)
+    let resetTime = document.getElementById('time-setting').value;
+    console.log(resetTime);
 }
 
 /**
  *  Triggers new day button if user has not already triggered:
  */ 
 function triggerGoalResetTime() {
-
+    
 }
 
 /**
