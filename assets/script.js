@@ -62,9 +62,6 @@ function setDifficulty() {
     }
     
 
-
-
-
 /**
  * Calculates total score and day score. Day score will be reset, total points will not.
 */
@@ -151,10 +148,18 @@ function newDay() {
 }
 
 /**
+ * Gets data from time user asks to reset each day
  * Allows user to reset the tasks at a specific time.
 */
-function setGoalResetTime() {
-    
+function getGoalResetTime() {
+      
+}
+
+/**
+ *  Triggers new day button if user has not already triggered:
+ */ 
+function triggerGoalResetTime() {
+
 }
 
 /**
