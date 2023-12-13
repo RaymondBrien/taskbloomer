@@ -25,10 +25,15 @@ function getRandomInt(min, max) {
   
 
 // global variables
-let randomArray1 = getRandomInt(51, 80);
-let randomArray2 = getRandomInt(81, 100);
-let growthPoints = [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2];
+let randomArray1 = getRandomInt(51, 70);
+let randomArray2 = getRandomInt(70, 100);
 let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];
+let growthPoints = {
+
+    growthPointsEasy: [1, 6, 9, 15, 19, 24, 30, 33, 36],
+    growthPointsMedium: [3, 6, 9, 15, 18, 24, 30, 40, 52],
+    growthPointsHard: [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2]
+};
 
 
 /**
@@ -67,24 +72,16 @@ function growPlant(totalPoints) {
     for (let i=0; i < growthPoints.length -1; i++) {
         if (totalPoints >= growthPoints[8]) {
             endOfGame();
-        } else if (totalPoints >= growthPoints[i]) {
+        } else if (totalPoints >= growthPoints[i])
             plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
             console.log(plantImage);
             findNextGrowthPoint(totalPoints, i)
-            // continue;
-        // } else if (i === 8) {
-        //     console.log('end of array');
-        //     endOfGame();
-            
-            
+        }
         //     // } else if () { SORT so only triggers if reset() is called
         //     //     i=-1; continue;            
-        //     // } 
-            
-            
-        }
-    }
+        //     // }  
 }
+    
 
      
 
