@@ -38,20 +38,31 @@ let growthPointsLevel = {
 
 
 /**
- * Sets difficulty by choosing which GrowthPoints array to use (easy, medium or hard)
+ * Sets growthPoints variable to relevant growthPointsLevel array.
  */
 function setDifficulty() {
-    if (document.getElementById('easy').addEventListener('click')) {
-        growthPoints = growthPointsLevel.easy;
-        console.log(growthPoints);
-    } else if (document.getElementById('medium').addEventListener('click')) {
-        growthPoints = growthPointsLevel.medium; 
-        console.log(growthPoints);
-    } else if (document.getElementById('hard').addEventListener('click')) {
-        growthPoints = growthPointsLevel.hard; 
-        console.log(growthPoints);
+
+        document.getElementById('easy').addEventListener('click', function() {
+            growthPoints = growthPointsLevel.easy;
+            console.log("Easy level is" + growthPoints);
+        });
+    
+        document.getElementById('medium').addEventListener('click', function() {
+            growthPoints = growthPointsLevel.medium;
+            console.log("Medium level is" + growthPoints);
+        });
+    
+        document.getElementById('hard').addEventListener('click', function() {
+            growthPoints = growthPointsLevel.hard;
+            console.log("Hard level is" + growthPoints);
+        });
+    
+      
+        return growthPoints;
     }
-}
+    
+
+
 
 
 /**

@@ -20,7 +20,7 @@
             <h1>TaskBloomer</h1>
             <p id="slogan">Watch your productivity blossom</p>
             <div class="instructions-section">
-                <button popovertarget="instructions">Settings / How to Play</button>
+                <button popovertarget="instructions">How to Play</button>
             </div>
         </header>
         
@@ -58,6 +58,15 @@
                     <p>Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.</p>
                 </div>   
             </div>
+        </div>
+        <div id="settings">
+            <h3>Settings</h3>
+            <div id="levels">
+                <button id="easy" onclick="setDifficulty()">Easy</button>
+                <button id="medium" onclick="setDifficulty()">Medium</button>
+                <button id="hard" onclick="setDifficulty()">Hard</button>
+            </div>
+            <br>
             <div id="set-plant-name">
                 <label for="plant-name">Plant Name:</label>   
                 <input type="text" name="plant-name" id="plant-name" placeholder="Set your plant's name here" oninput="plantNameUpdate()">
