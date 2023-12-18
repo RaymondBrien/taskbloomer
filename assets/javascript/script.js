@@ -1,5 +1,6 @@
 // Wait for DOM to finish loading before running the game. Finds checkbox value.
 document.addEventListener("DOMContentLoaded", function() {
+
     let checkboxes = document.getElementsByClassName("checkbox");
 
     for (let checkbox of checkboxes) {
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
  
     }
 }); 
+
 
 /**
  * Returns a random number between min (inclusive) and max (exclusive)
@@ -191,21 +193,16 @@ function resetGame() {
     
 }
 
- function colourFunction(){
+ function colourFunction() {
     let colorToggle = document.getElementById('btn-check-5'); 
-    var C=[['000000','ffffff'],['000000','808080'],['ffffff','FF0000'],
-    ['000000','0000FF'],['00FFFF','008000']]; 
-    for(var i=0; i< 5; i++){
-    if (f[i].checked){
-    document.body.style.backgroundColor= '#'+C[i][1];
-    document.body.style.color= '#'+C[i][0];
-    return true;
-    } 
+    let colours =[['e4dfda','ffffff'],['00FFFF','008000']]; 
+    for(var i=0; i< 2; i++) {
+        if (colorToggle.checked) {
+        document.body.style.backgroundColor= '#'+ colours[i][0];
+        document.body.style.color= '#'+ colours[i][1];
+        return true;
+        } 
+    }
  }
- alert("Please choose a colour");
- }
-onload= function(){
-var A=document.getElementsByName('colour');
-for(var i=0;i<5; i++)A[i].onclick=colourFunction;
-}
+
     
