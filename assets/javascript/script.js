@@ -191,5 +191,21 @@ function resetGame() {
     
 }
 
-
- 
+ function colourFunction(){
+    let colorToggle = document.getElementById('btn-check-5'); 
+    var C=[['000000','ffffff'],['000000','808080'],['ffffff','FF0000'],
+    ['000000','0000FF'],['00FFFF','008000']]; 
+    for(var i=0; i< 5; i++){
+    if (f[i].checked){
+    document.body.style.backgroundColor= '#'+C[i][1];
+    document.body.style.color= '#'+C[i][0];
+    return true;
+    } 
+ }
+ alert("Please choose a colour");
+ }
+onload= function(){
+var A=document.getElementsByName('colour');
+for(var i=0;i<5; i++)A[i].onclick=colourFunction;
+}
+    
