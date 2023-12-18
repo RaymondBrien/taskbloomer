@@ -191,13 +191,5 @@ function resetGame() {
     
 }
 
-/**
- * Gets new plant name from user in settings.html and sets innerText 
- * as name label in index.html  
- */
-let plantName = document.getElementById('plant-name');
-let nameTag = document.getElementById('nametag-for-plant');
-document.getElementById('plant-name').addEventListener('change', function() {
-    plantName.innerText = nameTag.innerText;
-})
+
  
