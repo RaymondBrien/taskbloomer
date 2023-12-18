@@ -26,6 +26,9 @@
             </div>
         </header>
         
+        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+          </div>
 
         <div id="settings">
             <a href="settings.html" class="page-link">Settings</a>
@@ -71,10 +74,10 @@
             </div>
             <div id="plant-image-area">
                 <span id="plant-image"></span>
-                <h3><span id="nametag-for-plant">NAME</span></h3>
             </div>
             
             <!-- Reset The Game -->
+        <div>
             <button type="button" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
             <div id="reset-popover" popover>
                 <p>Would you like to reset the game?</p>
@@ -83,6 +86,26 @@
                 <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide" onclick="resetGame()">Yes</button>
                 <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide">No, return to game</button>
             </div>
+        </div>
+        <div>
+            <h1>Settings</h1>
+
+            <div>
+                <div id="levels">
+                    <button id="easy" onclick="setDifficulty()">Easy</button>
+                    <button id="medium" onclick="setDifficulty()">Medium</button>
+                    <button id="hard" onclick="setDifficulty()">Hard</button>
+                </div>
+                <br>
+                <div id="set-time">
+                    <label for="time-setting">Reset today's goals at:</label>
+                    <input id="time-setting" type="time" value="20:00">
+                </div>
+                <div>
+                    <a href="index.html" aria-label="start-game-here">Start Game</a>
+                </div>
+            </div>
+        </div>    
         </main>
         <section id="about">
             <div>
