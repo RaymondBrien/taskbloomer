@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 }); 
 
+// if no difficulty selected, have a warning pop up first asking user to choose a difficulty setting
 
 /**
  * Returns a random number between min (inclusive) and max (exclusive)
@@ -115,14 +116,15 @@ function growPlant(totalPoints) {
 /**
  * Finds the next integer in array and display to user.
  */
-function findNextGrowthPoint(totalPoints , i) {
+function findNextGrowthPoint(totalPoints, i) {
 
     let nextGrowthPoint = document.getElementById('next-growth-point');
     let nextInArray = growthPoints[i + 1];
     console.log(`next in array is ${nextInArray}`);
     
     nextGrowthPoint.innerHTML = nextInArray;
-    untilNextGrowth(totalPoints, nextInArray) && updateProgress(totalPoints, nextInArray);
+    untilNextGrowth(totalPoints, nextInArray);
+    updateProgress(totalPoints, nextInArray);
 }
 
 
@@ -136,9 +138,10 @@ function untilNextGrowth(totalPoints, nextInArray) {
 
 }
 
+// TODO
 function updateProgress(totalPoints, nextInArray) {
     progressPercentage = parseInt(nextInArray/totalPoints);
-    document.querySelector('.progress[style]').innerHTML = `${progressPercentage}%`;
+    document.querySelector('.progress-bar[style]').innerHTML = `width: ${progressPercentage}%`;
 }
 
 // $("input[placeholder]").each( function () {
