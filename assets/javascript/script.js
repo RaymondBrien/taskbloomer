@@ -36,6 +36,7 @@ let growthPointsLevel = {
     easy: [1, 6, 9, 15, 19, 24, 30, 33, 36],
     medium: [3, 6, 9, 15, 18, 24, 30, 40, 52],
     hard: [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2]
+
 };
 
 
@@ -121,7 +122,7 @@ function findNextGrowthPoint(totalPoints , i) {
     console.log(`next in array is ${nextInArray}`);
     
     nextGrowthPoint.innerHTML = nextInArray;
-    untilNextGrowth(totalPoints, nextInArray);
+    untilNextGrowth(totalPoints, nextInArray) && updateProgress(totalPoints, nextInArray);
 }
 
 
@@ -130,15 +131,19 @@ function findNextGrowthPoint(totalPoints , i) {
  */
 function untilNextGrowth(totalPoints, nextInArray) {
 
-    let nextGrowthElement = document.getElementById('next-growth-in');
+    let nextGrowthElement = document.getElementById('next-growth-in').innerHTML;
     nextGrowthElement.innerHTML = `(in ${(nextInArray - totalPoints)} points)`;
-    // Sends value to progress bar
-    nextGrowthElement.innerHTML = document.getElementsByTagName('progress').value;
+
 }
 
-function updateProgress(i) {
-   document.getElementsByTagName('progress').value = i; 
+function updateProgress(totalPoints, nextInArray) {
+    progressPercentage = parseInt(nextInArray/totalPoints);
+    document.querySelector('.progress[style]').innerHTML = `${progressPercentage}%`;
 }
+
+// $("input[placeholder]").each( function () {
+//     $(this).val( $(this).attr("placeholder") );
+// });
 
 /**
  * On button click, new day resets the day score count, clears goals and unchecks all checkboxes.
@@ -190,16 +195,16 @@ document.getElementById('time-setting').addEventListener('change', function() {
 
 
 
- function colourFunction() {
-    let colorToggle = document.getElementById('btn-check-5'); 
-    let colours =[['e4dfda','ffffff'],['00FFFF','008000']]; 
-    for(var i=0; i< 2; i++) {
-        if (colorToggle.checked) {
-        document.body.style.backgroundColor= '#'+ colours[i][0];
-        document.body.style.color= '#'+ colours[i][1];
-        return true;
-        } 
-    }
- }
+//  function colourFunction() {
+//     let colorToggle = document.getElementById('btn-check-5'); 
+//     let colours =[['e4dfda','ffffff'],['00FFFF','008000']]; 
+//     for(var i=0; i< 2; i++) {
+//         if (colorToggle.checked) {
+//         document.body.style.backgroundColor= '#'+ colours[i][0];
+//         document.body.style.color= '#'+ colours[i][1];
+//         return true;
+//         } 
+//     }
+//  }
 
     

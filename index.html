@@ -26,14 +26,18 @@
             </div>
         </header>
 
-        <input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
-        <label class="btn" for="btn-check-5">Dark Mode</label>
-
-        <!-- Progress bar -->
-        <progress class="progress" value="growthPoints[i]" max="8" hidden></progress>
-        <div class="progress" role="progressbar" aria-label="Until art set complete" [attr.aria-valuenow]="growthPoints[i]"  aria-valuemin="0" aria-valuemax="8">
-            <div class="progress-bar bg-success" [style.width.%]="growthPoints[i]" style="min-width: 20%"></div>
+        <div class="container">
+            <input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
+            <label class="btn" for="btn-check-5">Dark Mode</label>
         </div>
+        
+        <div class="container">
+            <!-- Progress bar -->
+            <div class="progress" role="progressbar" aria-label="Until next art" aria-valuenow="0"  aria-valuemin="0" aria-valuemax="8">
+                <div class="progress-bar bg-success" style="width: 0%" style="min-width: 20%">0%</div>
+            </div>
+        </div>
+
         <main>
             <!-- Loading spinner -->
             <div class="d-flex justify-content-center">
