@@ -85,14 +85,13 @@
                 <p>Would you like to reset the game?</p>
                 <p><em>(This will reset your total points to 0)</em></p>
                 <br>
-                <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide" onclick="resetGame()">Yes</button>
+                <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide"><a href="index.html">Yes</a></button>
                 <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide">No, return to game</button>
             </div>
         </div>
         <div>
             <h1>Settings</h1>
-
-            <div>
+            <div class="container">
                 <div id="levels">
                     <button id="easy" onclick="setDifficulty()">Easy</button>
                     <button id="medium" onclick="setDifficulty()">Medium</button>
@@ -103,14 +102,11 @@
                     <label for="time-setting">Reset today's goals at:</label>
                     <input id="time-setting" type="time" value="20:00">
                 </div>
-                <div>
-                    <a href="index.html" aria-label="start-game-here">Start Game</a>
-                </div>
             </div>
         </div>    
         </main>
         <section id="about">
-            <div>
+            <div class="container">
                 <!-- Add links to github etc -->
                 <h2>About the developer</h2>
                 <p>Hi, I am Raymond Brien, a student of Code Institute, learning full stack development. You are looking at my second project combined with HTML, CSS, JavaScript, and several libraries as well as external tools. You can read more about it <a href="https://github.com/RaymondBrien/taskbloomer" target="_blank">here.</a>

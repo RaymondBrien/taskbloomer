@@ -104,10 +104,7 @@ function growPlant(totalPoints) {
             plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
             console.log(plantImage);
             findNextGrowthPoint(totalPoints, i)
-        }
-        //     // } else if () { SORT so only triggers if reset() is called
-        //     //     i=-1; continue;            
-        //     // }  
+        } 
 }
     
 
@@ -127,19 +124,19 @@ function findNextGrowthPoint(totalPoints , i) {
 }
 
 
-/**Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.
+/**
  * Finds the distance to the next growth points value from total points and displays to user.
-*/
+ */
 function untilNextGrowth(totalPoints, nextInArray) {
 
     let nextGrowthElement = document.getElementById('next-growth-in');
     nextGrowthElement.innerHTML = `(in ${(nextInArray - totalPoints)} points)`;
-    
+    // display as progress bar?
 }
 
 
 /**
- * New day resets the day score count, clears goals and unchecks all checkboxes.
+ * On button click, new day resets the day score count, clears goals and unchecks all checkboxes.
  */
 function newDay() {
     
@@ -180,18 +177,7 @@ function triggerGoalResetTime() {
         window.location.href = "end.html";
     }
 
-/**
- * Starts game from beginning: resets form inputs and returns all scores to 0.
- */
-function resetGame() {
-    document.getElementById('tasks-area').reset();
-    document.getElementById('total-points').innerHTML = 0;
-    document.getElementById('today-points').innerHTML = 0;
-    document.getElementById('next-growth-in').innerHTML = "(in 6 points)";
-    document.getElementById('next-growth-point').innerHTML = 6;
-    console.log("Game reset");
-    
-}
+
 
  function colourFunction() {
     let colorToggle = document.getElementById('btn-check-5'); 
