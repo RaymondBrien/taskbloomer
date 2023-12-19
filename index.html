@@ -28,11 +28,12 @@
 
         <input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
         <label class="btn" for="btn-check-5">Dark Mode</label>
-        
-        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+
+        <!-- Progress bar -->
+        <progress class="progress" value="growthPoints[i]" max="8" hidden></progress>
+        <div class="progress" role="progressbar" aria-label="Until art set complete" [attr.aria-valuenow]="growthPoints[i]"  aria-valuemin="0" aria-valuemax="8">
+            <div class="progress-bar bg-success" [style.width.%]="growthPoints[i]" style="min-width: 20%"></div>
         </div>
-        
         <main>
             <!-- Loading spinner -->
             <div class="d-flex justify-content-center">

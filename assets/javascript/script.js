@@ -89,7 +89,8 @@ function taskComplete(value) {
 
 
 /**
- * Checks if total points are equal or greater to any of the growth points defined and displays relevant plant image respectively.
+ * Checks if total points are equal or greater to any of the growth points defined.
+ * Displays relevant plant image respectively.
  */
 function growPlant(totalPoints) {
     
@@ -131,9 +132,13 @@ function untilNextGrowth(totalPoints, nextInArray) {
 
     let nextGrowthElement = document.getElementById('next-growth-in');
     nextGrowthElement.innerHTML = `(in ${(nextInArray - totalPoints)} points)`;
-    // display as progress bar?
+    // Sends value to progress bar
+    nextGrowthElement.innerHTML = document.getElementsByTagName('progress').value;
 }
 
+function updateProgress(i) {
+   document.getElementsByTagName('progress').value = i; 
+}
 
 /**
  * On button click, new day resets the day score count, clears goals and unchecks all checkboxes.
