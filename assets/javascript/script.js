@@ -26,7 +26,7 @@ function getRandomInt(min, max) {
   }
   
 
-// global variables
+// global variable
 let randomArray1 = getRandomInt(51, 70);
 let randomArray2 = getRandomInt(70, 100);
 let growthPoints = '';
@@ -144,35 +144,41 @@ function updateProgress(i) {
  * On button click, new day resets the day score count, clears goals and unchecks all checkboxes.
  */
 function newDay() {
-    
-    let newDayButton = document.getElementById('new-day');
-    dayScoreElement = document.getElementById('today-points');
-    dayScoreElement.innerHTML = 0;
+    document.getElementById('today-points').innerHTML = 0;
     console.log("new day");
 }
 
 
 /**
- * Gets new reset time changed in settings by user.
- * Displays new reset time on the main page.
+ * Triggers new day button at custom time set by user.
 */
 document.getElementById('time-setting').addEventListener('change', function() {
-    let resetTime = document.getElementById('set-time');
-    let displayTime = document.getElementById('reset-time-main');
-    displayTime.innerText = resetTime.value;
-    console.log('goalResetTime running');
-});   
+    
+    // get custom time value and parse to total minutes
+    let customTime = this.value;
+    let tValues = customTime.split(':');
+    let customMinutes = parseInt(tValues[0])*60+parseInt(tValues[1]);
+    console.log('custom minutes is ' + customMinutes);
 
+    // get current time and parse to integers (todayMinutes will have a max value of 1440)
+    let d = new Date();
+    let todayMinutes = parseInt((d.getHours()*60)) + parseInt(d.getMinutes());
+    console.log('today minutes is ' + todayMinutes);
 
+    // if custom time later than current time, trigger new day function for same day
+    if (todayMinutes < customMinutes) {
+        // find number of minutes until custom times, convert to milliseconds
+        let untilCustom = ((customMinutes-todayMinutes)*60)*100;
+        setNewDayTrigger(untilCustom);
+    } 
 
+    let intervalID;
+    function setNewDayTrigger(untilCustom) {
+        intervalID = setInterval(newDay(), untilCustom);
 
-/**
- *  Triggers new day button if user has not already triggered:
- */ 
-function triggerGoalResetTime() {
-    console.log('Reached triggerGoalResetTime');
+    }
 
-}
+}); 
 
 /**
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
