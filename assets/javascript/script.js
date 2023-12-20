@@ -92,7 +92,9 @@ function taskComplete(value) {
     totalPointsElement.innerHTML = totalPoints;
     dayScoreElement.innerHTML = dayScore;
 
+    console.log('total points are' + totalPoints)
     growPlant(totalPoints);
+
     
 }
 
@@ -105,19 +107,19 @@ function growPlant(totalPoints) {
     
     let plantImage = document.getElementById('plant-image');
   
-
+    console.log('growPlant invoked, ')
     // loop through array until end.
     for (let i=0; i < growthPoints.length -1; i++) {
-        if (totalPoints >= growthPoints[8]) {
-            endOfGame();
-        } else if (totalPoints >= growthPoints[i])
-            plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
-            console.log(plantImage);
-            findNextGrowthPoint(totalPoints, i)
-        } 
+        if (totalPoints >= growthPoints[i]) {
+        console.log('i is ' + i);
+        plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
+        console.log(plantImage);
+        findNextGrowthPoint(totalPoints, i);
+    } else if (totalPoints >= growthPoints[8]) {
+        endOfGame();
+    }
+} 
 }
-    
-
      
 
 /**
@@ -139,8 +141,8 @@ function findNextGrowthPoint(totalPoints, i) {
  * Finds the distance to the next growth points value from total points and displays to user.
  */
 function untilNextGrowth(totalPoints, nextInArray) {
-
-    let nextGrowthElement = document.getElementById('next-growth-in').innerHTML;
+    console.log('untilNextGrowth reached!');
+    let nextGrowthElement = document.getElementById('next-growth-in');
     nextGrowthElement.innerHTML = `(in ${(nextInArray - totalPoints)} points)`;
 
 }
