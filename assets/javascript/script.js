@@ -221,12 +221,4 @@ document.getElementById('time-setting').addEventListener('change', function() {
 //  }
 
 
-/**
- * Check if difficulty setting chosen. 
- * If not, select medium as default.
- */
-document.getElementsByClassName('level-setting').addEventListener('click', function() {
-    // if no difficulty selected, have a warning pop up first asking user to choose a difficulty setting
-})
-
     
