@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     let checkboxes = document.getElementsByClassName("checkbox");
-
+    
     for (let checkbox of checkboxes) {
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 taskComplete(-checkbox.value);
             }
         });
- 
+        
     }
 }); 
 
-// if no difficulty selected, have a warning pop up first asking user to choose a difficulty setting
+
+
 
 /**
  * Returns a random number between min (inclusive) and max (exclusive)
@@ -40,6 +41,12 @@ let growthPointsLevel = {
 
 };
 
+/**
+ * Automatically sets difficulty to medium. User can change if desired.
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    growthPoints = growthPointsLevel.medium;
+});
 
 /**
  * Sets growthPoints variable to relevant growthPointsLevel array.
@@ -197,7 +204,10 @@ document.getElementById('time-setting').addEventListener('change', function() {
     }
 
 
-
+/**
+ * TODO
+ * Invert colors for dark mode?
+ */
 //  function colourFunction() {
 //     let colorToggle = document.getElementById('btn-check-5'); 
 //     let colours =[['e4dfda','ffffff'],['00FFFF','008000']]; 
@@ -209,5 +219,14 @@ document.getElementById('time-setting').addEventListener('change', function() {
 //         } 
 //     }
 //  }
+
+
+/**
+ * Check if difficulty setting chosen. 
+ * If not, select medium as default.
+ */
+document.getElementsByClassName('level-setting').addEventListener('click', function() {
+    // if no difficulty selected, have a warning pop up first asking user to choose a difficulty setting
+})
 
     
