@@ -107,18 +107,25 @@ function growPlant(totalPoints) {
     
     let plantImage = document.getElementById('plant-image');
   
-    console.log('growPlant invoked, ')
+    console.log('growPlant invoked, totalPoints : ', totalPoints);
     // loop through array until end.
-    for (let i=0; i < growthPoints.length -1; i++) {
+    for (let i=0; i < growthPoints.length; i++) {
         if (totalPoints >= growthPoints[i]) {
         console.log('i is ' + i);
-        plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
+        console.log('growthPoints[i] :', growthPoints[i]);
+        console.log('totalPoints : ', totalPoints);
+        console.log('growthPoints.length :', growthPoints.length);
+        console.log('growthPoints[8] :', growthPoints[8]);
+        console.log(growthPoints);
+        console.log(i);
+        plantImage.innerHTML = `<img src="/assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
         console.log(plantImage);
         findNextGrowthPoint(totalPoints, i);
-    } else if (totalPoints >= growthPoints[8]) {
-        endOfGame();
-    }
-} 
+        } if (totalPoints >= growthPoints[8]) {
+            console.log('end of array, now to end of game');
+            endOfGame();
+        }
+    } 
 }
      
 
@@ -126,6 +133,8 @@ function growPlant(totalPoints) {
  * Finds the next integer in array and display to user.
  */
 function findNextGrowthPoint(totalPoints, i) {
+
+    console.log('findNextGrowthPoint invoked', totalPoints, i);
 
     let nextGrowthPoint = document.getElementById('next-growth-point');
     let nextInArray = growthPoints[i + 1];
@@ -189,7 +198,7 @@ document.getElementById('time-setting').addEventListener('change', function() {
         setNewDayTrigger(untilCustom);
     } 
 
-    let intervalID;
+    let intervalID = '';
     function setNewDayTrigger(untilCustom) {
         intervalID = setInterval(newDay(), untilCustom);
 

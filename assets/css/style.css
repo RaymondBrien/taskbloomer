@@ -121,15 +121,14 @@ form > label, form #today-section {
 #plant-image {
     display: flex;
     flex-direction: column;
-    position: relative;
-    z-index: 50;
+    /* position: relative; */
+    z-index: 999;
     float: left;
     left: 1rem;
     max-height: 2rem;
     max-width: 16rem;
     margin: 25px;
     padding: 10px;
-    z-index: -1;
 }
 
 #plant-name {
