@@ -17,7 +17,7 @@
         <link rel="icon" type="image/x-icon" href="assets/images/favicon/icons8-potted-plant-ios-16-filled-16.png">
     </head>
 
-    <body>
+    <body class="">
 
 
         <header>
@@ -119,28 +119,42 @@
                     <input id="time-setting" type="time" value="20:00">
                 </div>
             </div>
-        </div>    
+        </div>
+   
         </main>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">About the developer</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Hi, I am Raymond Brien, a student of Code Institute, learning full stack development. You are looking at my second project combined with HTML, CSS, JavaScript, and several libraries as well as external tools. You can read more about it <a href="https://github.com/RaymondBrien/taskbloomer" target="_blank">here.</a>
+                
+                It was a pleasure developing thi project - I hope you will enjoy using it as much as I did creating it.
+                
+                Feel free to contact me via <a href="https://www.linkedin.com/in/raymond-brien-97861a97/" target="_blank">LinkedIn</a> if you have any questions or sugestions.</p>
+            <!-- Add links to github and LinkedIn as icons -->
+            <h4>Links</h4>
+            <p>GitHub</p>
+            <p>LinkedIn</p>
+        </div>
+        </div>
         <section id="about">
             <div class="container">
-                <!-- Add links to github etc -->
-                <h2>About the developer</h2>
-                <p>Hi, I am Raymond Brien, a student of Code Institute, learning full stack development. You are looking at my second project combined with HTML, CSS, JavaScript, and several libraries as well as external tools. You can read more about it <a href="https://github.com/RaymondBrien/taskbloomer" target="_blank">here.</a>
-                    
-                    It was a pleasure developing thi project - I hope you will enjoy using it as much as I did creating it.
-                    
-                    Feel free to contact me via <a href="https://www.linkedin.com/in/raymond-brien-97861a97/" target="_blank">LinkedIn</a> if you have any questions or sugestions.</p>
-                <!-- Add links to github and LinkedIn as icons -->
-                <h4>Links</h4>
-                <p>GitHub</p>
-                <p>LinkedIn</p>
-            </div>
+
         </section>
         <footer>
             <div id="footer-text">
                 <p>Copyright 2023 - R Brien</p>
             </div>
         </footer>
+        <nav class="navbar sticky-bottom bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Sticky bottom</a>
+            </div>
+        </nav> 
         <script defer src="/assets/javascript/script.js"></script>
         <!-- Bootstrap js -->
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
