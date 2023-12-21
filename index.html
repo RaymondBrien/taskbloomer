@@ -22,7 +22,7 @@
 
         <header>
             <!-- Loading spinner -->
-            <div class="d-flex justify-content-center fade show" id="spinner">
+            <div class="d-flex justify-content-center fade" id="spinner">
                 <div class="spinner-border" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
@@ -66,7 +66,7 @@
                     <p>Today you have earned:&#160;<span id="today-points">0</span>/6 points</p>
                 </div>
                 <!-- New Day Button -->
-                <button type="reset" name="new-day" id="new-day" onclick="newDay()">New Day</button>
+                <button type="reset" class="btn btn-light" name="new-day" id="new-day" onclick="newDay()">New Day</button>
                 <!-- Next Growth -->
                 <div id="next-growth">
                     <p>Next growth point at:&#160;<span id="next-growth-point">6</span>&#160;points</p>
@@ -102,9 +102,9 @@
             <h1>Settings</h1>
             <div class="container">
                 <div id="levels">
-                    <button id="easy" class="level-setting" onclick="setDifficulty()">Easy</button>
-                    <button id="medium" class="level-setting" onclick="setDifficulty()">Medium</button>
-                    <button id="hard" class="level-setting" onclick="setDifficulty()">Hard</button>
+                    <button id="easy" class="level-setting btn btn-outline-success" data-bs-toggle="button" onclick="setDifficulty()">Easy</button>
+                    <button id="medium" class="level-setting btn active btn-outline-warning" data-bs-toggle="button" aria-pressed="true" onclick="setDifficulty()">Medium</button>
+                    <button id="hard" class="level-setting btn btn-outline-danger" data-bs-toggle="button" onclick="setDifficulty()">Hard</button>
                 </div>
                 <br>
                 <div id="set-time">

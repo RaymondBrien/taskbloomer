@@ -1,9 +1,8 @@
 
-
-    $(document).ready(function(){
-      $("#spinner").hide();
-    })
-
+// Once document is loaded, hide spinner
+    // $(document).ready(function(){
+    //   $("#spinner").hide();
+    // })
 
 
 // Wait for DOM to finish loading before running the game. Finds checkbox value.
