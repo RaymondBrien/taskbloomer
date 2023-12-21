@@ -61,17 +61,17 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function setDifficulty() {
 
-        document.getElementById('easy').addEventListener('click', function() {
+        document.getElementById('btnradio1').addEventListener('click', function() {
             growthPoints = growthPointsLevel.easy;
             console.log("Easy level is" + growthPoints);
         });
     
-        document.getElementById('medium').addEventListener('click', function() {
+        document.getElementById('btnradio2').addEventListener('click', function() {
             growthPoints = growthPointsLevel.medium;
             console.log("Medium level is" + growthPoints);
         });
     
-        document.getElementById('hard').addEventListener('click', function() {
+        document.getElementById('btnradio3').addEventListener('click', function() {
             growthPoints = growthPointsLevel.hard;
             console.log("Hard level is" + growthPoints);
         });
