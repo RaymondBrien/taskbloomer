@@ -18,7 +18,16 @@
     </head>
 
     <body>
+
+
         <header>
+            <!-- Loading spinner -->
+            <div class="d-flex justify-content-center fade show" id="spinner">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <!-- Header Content -->
             <h1>TaskBloomer</h1>
             <p id="slogan">Watch your productivity blossom</p>
             <div>
@@ -39,12 +48,7 @@
         </div>
 
         <main>
-            <!-- Loading spinner -->
-            <div class="d-flex justify-content-center">
-                <div class="spinner-border" role="status">
-                  <span class="visually-hidden">Loading...</span>
-                </div>
-              </div>
+
 
             <form action="POST" id="tasks-area">
                 <label for="task-a">3 Points</label>

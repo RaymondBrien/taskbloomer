@@ -1,7 +1,16 @@
+
+
+    $(document).ready(function(){
+      $("#spinner").hide();
+    })
+
+
+
 // Wait for DOM to finish loading before running the game. Finds checkbox value.
 document.addEventListener("DOMContentLoaded", function() {
 
     let checkboxes = document.getElementsByClassName("checkbox");
+
     
     for (let checkbox of checkboxes) {
         checkbox.addEventListener("change", function() {
