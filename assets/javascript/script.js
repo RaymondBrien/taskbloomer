@@ -239,5 +239,11 @@ document.getElementById('time-setting').addEventListener('change', function() {
 //     }
 //  }
 
-
-    
+/**
+ * Blurs the rest of the body when the 
+ * reset game popover is triggered to appear.
+ */
+document.getElementById('reset-game').addEventListener('click', function() {
+    console.log('blurring body!');
+    document.body.style.opacity = 0.25;
+});
