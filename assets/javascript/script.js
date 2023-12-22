@@ -245,5 +245,13 @@ document.getElementById('time-setting').addEventListener('change', function() {
  */
 document.getElementById('reset-game').addEventListener('click', function() {
     console.log('blurring body!');
-    document.body.style.opacity = 0.25;
+    document.body.style.opacity = 0.15;
+});
+
+/**
+ * If reset is cancelled, body returns to normal opacity for visibility.
+ */
+document.getElementById('reset-cancelled').addEventListener('click', function() {
+    console.log('resetting body to normal!');
+    document.body.style.opacity = 1;
 });
