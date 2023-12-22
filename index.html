@@ -48,8 +48,6 @@
         </div>
 
         <main>
-
-
             <form action="POST" id="tasks-area">
                 <label for="task-a">3 Points</label>
                 <input name="task-a" type="text" class="task" id="task-a" autofocus maxlength="25">
@@ -88,48 +86,48 @@
             </div>
             
             <!-- Reset The Game -->
-        <div>
-            <button type="button" class="btn" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
-            <div id="reset-popover" popover>
-                <p>Would you like to reset the game?</p>
-                <p>
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    <b class="">This will reset your total points to 0</b>
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                </p>
-                <br>
-                <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide"><a href="index.html" class="link-underline btn btn-secondary">Yes</a></button>
-                <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide" class="link-underline btn btn-secondary">No, return to game</button>
+            <div>
+                <button type="button" class="btn" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
+                <div id="reset-popover" popover>
+                    <p class="display-5">Would you like to reset the game?</p>
+                    <p>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <b class="">This will reset your total points to 0</b>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </p>
+                    <br>
+                    <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide"><a href="index.html" class="link-underline btn btn-secondary">Yes</a></button>
+                    <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide" class="link-underline btn btn-secondary">No, return to game</button>
+                </div>
             </div>
-        </div>
-        <div>
-            <h1>Settings</h1>
-            <div class="container">
-                <div id="levels">
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check " name="btnradio" id="btnradio1"  onclick="setDifficulty()" autocomplete="off">
-                        <label class="btn btn-outline-success" for="btnradio1">Easy</label>
+            <div id="settings-section">
+                <h1>Settings</h1>
+                <div class="container">
+                    <div id="levels">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check " name="btnradio" id="btnradio1"  onclick="setDifficulty()" autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradio1">Easy</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" onclick="setDifficulty()" autocomplete="off" checked>
-                        <label class="btn btn-outline-warning" for="btnradio2">Medium</label>
-                      
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" onclick="setDifficulty()" autocomplete="off">
-                        <label class="btn btn-outline-danger" for="btnradio3">Hard</label>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" onclick="setDifficulty()" autocomplete="off" checked>
+                            <label class="btn btn-outline-warning" for="btnradio2">Medium</label>
+                        
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" onclick="setDifficulty()" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="btnradio3">Hard</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="set-time">
+                        <label for="time-setting">Reset today's goals at:</label>
+                        <input id="time-setting" type="time" value="20:00">
+                    </div>
+                    <div class="container">
+                        <input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
+                        <label class="btn" for="btn-check-5">Dark Mode</label>
                     </div>
                 </div>
-                <br>
-                <div id="set-time">
-                    <label for="time-setting">Reset today's goals at:</label>
-                    <input id="time-setting" type="time" value="20:00">
-                </div>
-                <div class="container">
-                    <input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
-                    <label class="btn" for="btn-check-5">Dark Mode</label>
-                </div>
             </div>
-        </div>
-   
         </main>
+
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
 
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
@@ -145,8 +143,8 @@
                 Feel free to contact me via <a class="link-underline" href="https://www.linkedin.com/in/raymond-brien-97861a97/" target="_blank">LinkedIn</a> if you have any questions or sugestions.</p>
             <!-- Add links to github and LinkedIn as icons -->
             <h4>Links</h4>
-            <p>GitHub</p>
-            <p>LinkedIn</p>
+            <p class="h4"><i class="fa-brands fa-square-github" aria-label="GitHub"></i></p>
+            <p><i class="fa-brands fa-linkedin" aria-label="LinkedIn"></i></p>
         </div>
         </div>
         <section id="about">

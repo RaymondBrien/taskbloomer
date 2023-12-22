@@ -72,10 +72,12 @@ p {
     font-size: 1.3rem;
 }
 
-@keyframes linkHover {
-    from {text-decoration: none;}
-    to {text-decoration: underline;}
+a {
+    text-decoration: none;
+    color: black;
+    border: none;
 }
+
 
 /* Credit for lines 81-96: https://stackoverflow.com/questions/54616139/how-to-animate-underline-from-left-to-right */
 .link-underline {
@@ -172,8 +174,14 @@ form > label, form #today-section {
 
 
 #reset-popover {
-    
+    text-align: center;
 }
+
+#reset-confirmed {
+    border: none;
+}
+
+
 
 /* display: contents; - takes the box of the button away */
 
