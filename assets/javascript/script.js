@@ -239,7 +239,6 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
             document.documentElement.setAttribute('data-bs-theme', 'light');
             break;
         case 'dark':
-        default:
             document.documentElement.setAttribute('data-bs-theme', 'dark');
             break;
     }
