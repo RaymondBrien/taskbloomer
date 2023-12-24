@@ -23,8 +23,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 }); 
 
-
-
+/**
+ * Automatically sets difficulty to medium. User can change if desired.
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    growthPoints = growthPointsLevel.medium;
+    console.log('difficulty level default initiated (medium): ' + growthPoints);
+});
 
 /**
  * Returns a random number between min (inclusive) and max (exclusive)
@@ -48,14 +53,6 @@ let growthPointsLevel = {
     hard: [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2]
 
 };
-
-/**
- * Automatically sets difficulty to medium. User can change if desired.
- */
-document.addEventListener('DOMContentLoaded', function() {
-    growthPoints = growthPointsLevel.medium;
-    console.log('difficulty level default initiated (medium): ' + growthPoints);
-});
 
 /**
  * Sets growthPoints variable to relevant growthPointsLevel easy array.
@@ -122,18 +119,11 @@ function growPlant(totalPoints) {
     // loop through array until end.
     for (let i=0; i < growthPoints.length; i++) {
         if (totalPoints >= growthPoints[i]) {
-        console.log('i is ' + i);
-        console.log('growthPoints[i] :', growthPoints[i]);
-        console.log('totalPoints : ', totalPoints);
-        console.log('growthPoints.length :', growthPoints.length);
-        console.log('growthPoints[8] :', growthPoints[8]);
-        console.log(growthPoints);
-        console.log(i);
         plantImage.innerHTML = `<img src="/assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
         console.log(plantImage);
         findNextGrowthPoint(totalPoints, i);
         } if (totalPoints >= growthPoints[8]) {
-            console.log('end of array, now to end of game');
+            console.log('end of array, triggering endOfGame()');
             endOfGame();
         }
     } 
@@ -153,7 +143,9 @@ function findNextGrowthPoint(totalPoints, i) {
     
     nextGrowthPoint.innerHTML = nextInArray;
     untilNextGrowth(totalPoints, nextInArray);
+    console.log('triggering updateProgress function');
     updateProgress(totalPoints, nextInArray);
+
 }
 
 
@@ -162,15 +154,20 @@ function findNextGrowthPoint(totalPoints, i) {
  */
 function untilNextGrowth(totalPoints, nextInArray) {
     console.log('untilNextGrowth reached!');
-    let nextGrowthElement = document.getElementById('next-growth-in');
-    nextGrowthElement.innerHTML = `(in ${(nextInArray - totalPoints)} points)`;
+    let nextGrowth = document.getElementById('next-growth-in');
+    nextGrowth.innerHTML = `(in ${(nextInArray - totalPoints)} points)`;
 
 }
 
-// TODO
+/**
+ * Feeds level of completion until next growth point 
+ * as percentage to progress bar for user.
+ */
 function updateProgress(totalPoints, nextInArray) {
-    progressPercentage = parseInt(nextInArray/totalPoints);
-    document.querySelector('.progress-bar[style]').innerHTML = `width: ${progressPercentage}%`;
+    console.log('update progress reached with two values: ' + totalPoints + ' and ' + nextInArray);
+    progressPercentage = parseInt((totalPoints/nextInArray) * 100);
+    let progressLog = document.getElementById('progress-log');
+    progressLog.setAttribute('style', `width: ${progressPercentage}%`);
 }
 
 // $("input[placeholder]").each( function () {
