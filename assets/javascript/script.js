@@ -54,32 +54,35 @@ let growthPointsLevel = {
  */
 document.addEventListener('DOMContentLoaded', function() {
     growthPoints = growthPointsLevel.medium;
+    console.log('difficulty level default initiated (medium): ' + growthPoints);
 });
 
 /**
- * Sets growthPoints variable to relevant growthPointsLevel array.
+ * Sets growthPoints variable to relevant growthPointsLevel easy array.
  */
-function setDifficulty() {
+document.getElementById('btnradio1').addEventListener('click', function() {
+    growthPoints = growthPointsLevel.easy;
+    console.log("Easy level is" + growthPoints);
+    return growthPoints;
+});
 
-        document.getElementById('btnradio1').addEventListener('click', function() {
-            growthPoints = growthPointsLevel.easy;
-            console.log("Easy level is" + growthPoints);
-        });
-    
-        document.getElementById('btnradio2').addEventListener('click', function() {
-            growthPoints = growthPointsLevel.medium;
-            console.log("Medium level is" + growthPoints);
-        });
-    
-        document.getElementById('btnradio3').addEventListener('click', function() {
-            growthPoints = growthPointsLevel.hard;
-            console.log("Hard level is" + growthPoints);
-        });
-    
-      
-        return growthPoints;
-    }
-    
+/**
+ * Sets growthPoints variable to relevant growthPointsLevel medium array.
+ */
+document.getElementById('btnradio2').addEventListener('click', function() {
+    growthPoints = growthPointsLevel.medium;
+    console.log("Medium level is" + growthPoints);
+    return growthPoints;
+});
+
+/**
+ * Sets growthPoints variable to relevant growthPointsLevel hard array.
+ */
+document.getElementById('btnradio3').addEventListener('click', function() {
+    growthPoints = growthPointsLevel.hard;
+    console.log("Hard level is" + growthPoints);
+    return growthPoints;
+});
 
 /**
  * Calculates total score and day score. Day score will be reset, total points will not.
