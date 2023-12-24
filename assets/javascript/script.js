@@ -224,20 +224,28 @@ document.getElementById('time-setting').addEventListener('change', function() {
 
 
 /**
- * TODO
- * Invert colors for dark mode?
+ * BS light theme set to document if user clicks light mode button on index.html
  */
-//  function colourFunction() {
-//     let colorToggle = document.getElementById('btn-check-5'); 
-//     let colours =[['e4dfda','ffffff'],['00FFFF','008000']]; 
-//     for(var i=0; i< 2; i++) {
-//         if (colorToggle.checked) {
-//         document.body.style.backgroundColor= '#'+ colours[i][0];
-//         document.body.style.color= '#'+ colours[i][1];
-//         return true;
-//         } 
-//     }
-//  }
+document.getElementById('btn-check-5').addEventListener('change', function() {
+    console.log('checkbox clicked');
+
+    let colorCheckbox = document.getElementById("btn-check-5");
+    let theme = colorCheckbox.checked ? 'light' : 'dark';
+
+    console.log('currently theme is: ' + theme);
+
+    switch (theme) {
+        case 'light':
+            document.documentElement.setAttribute('data-bs-theme', 'light');
+            break;
+        case 'dark':
+        default:
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+            break;
+    }
+});
+
+
 
 /**
  * Blurs the rest of the body when the 
