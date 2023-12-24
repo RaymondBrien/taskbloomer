@@ -46,6 +46,10 @@ main {
     flex-direction: column;
 }
 
+#quote {
+    padding: 1rem;
+}
+
 /* #spinner {
     position: absolute;
     width: 100%;
@@ -178,19 +182,24 @@ form > label, form #today-section {
     border: none;
 }
 
-
-
-/* display: contents; - takes the box of the button away */
-
+#lets-play-button {
+    position: absolute;
+    bottom: 2rem;
+}
 
 footer {
-    padding-top: 5px;
-    bottom: 0;
-    font-size: 15px;
-    z-index: 0;
     display: flex;
     flex-direction: row;
-    --bs-align-items: none;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    position: absolute;
+    padding-top: 5px;
+    font-size: 15px;
+    z-index: 0;
+    
+
 
 }
 
