@@ -69,25 +69,12 @@
             <div id="plant-image-area">
                 <span id="plant-image"></span>
             </div>
-            <div class="container" id="plant-gallery"></div>
-            <!-- Reset The Game -->
+            <div class="container-fluid" id="plant-gallery"></div>
+
+            <!-- Settings section -->
             <div>
-                <button type="button" class="btn btn-danger" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
-                <div id="reset-popover" popover>
-                    <p class="display-5">Would you like to reset the game?</p>
-                    <p>
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        <b class="h4">This will reset your total points to 0</b>
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                    </p>
-                    <br>
-                    <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide"><a href="index.html" class="link-underline btn btn-secondary">Yes</a></button>
-                    <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide" class="link-underline btn btn-secondary">No, return to game</button>
-                </div>
-            </div>
-            <div id="settings-section">
-                <h1>Settings</h1>
-                <div class="container">
+                <h2>Settings</h2>
+                <div  id="settings-section">
                     <div id="levels">
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off">
@@ -105,57 +92,74 @@
                         <label for="time-setting">Reset today's goals at:</label>
                         <input id="time-setting" type="time" value="20:00">
                     </div>
-                    <div class="container">
+                    <div>
                         <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
                         <label class="btn btn-outline-warning" for="btn-check-5" id="dark-toggle">Light Mode</label>
+                    </div>
+                    <!-- Settings Popover -->
+                    <div id="settings-popover">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">YOUR STATS</button>
+        
+                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">About the developer</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                
+                            <fieldset id="stats">
+                                <!-- Next Growth -->
+                                <div id="next-growth">
+                                    <p>Next growth point at:&#160;<span id="next-growth-point">6</span>&#160;points</p>
+                                    <span id="next-growth-in">(in 6 points)</span></em></p>
+                                </div>
+                                <!-- Points Total -->
+                                <div id="total-section">
+                                    <p>Total Points:</p>
+                                    <span id="total-points">0</span>
+                                </div>
+                            </fieldset>
+                            
+                            <div>
+                                <p>Hi, I am Raymond Brien, a student of Code Institute, learning full stack development. You are looking at my second project combined with HTML, CSS, JavaScript, and several libraries as well as external tools. You can read more about it <a href="https://github.com/RaymondBrien/taskbloomer" target="_blank">here.</a>
+                                
+                                    It was a pleasure developing thi project - I hope you will enjoy using it as much as I did creating it.
+                                    
+                                    Feel free to contact me via <a class="link-underline" href="https://www.linkedin.com/in/raymond-brien-97861a97/" target="_blank">LinkedIn</a> if you have any questions or sugestions.</p>
+                                <!-- Add links to github and LinkedIn as icons -->
+                                <h4>Links</h4>
+                                <p class="h4"><i class="fa-brands fa-square-github" aria-label="GitHub"></i></p>
+                                <p><i class="fa-brands fa-linkedin" aria-label="LinkedIn"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Reset The Game -->
+                    <div id="reset">
+                        <button type="button" class="btn btn-danger" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
+                        <div id="reset-popover" popover>
+                            <p class="display-5">Would you like to reset the game?</p>
+                            <p>
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <b class="h4">This will reset your total points to 0</b>
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </p>
+                            <br>
+                            <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide"><a href="index.html" class="link-underline btn btn-secondary">Yes</a></button>
+                            <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide" class="link-underline btn btn-secondary">No, return to game</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <section>
-            <div id="main-settings">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">YOUR STATS</button>
-
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">About the developer</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
         
-                    <fieldset id="stats">
-                        <!-- Next Growth -->
-                        <div id="next-growth">
-                            <p>Next growth point at:&#160;<span id="next-growth-point">6</span>&#160;points</p>
-                            <span id="next-growth-in">(in 6 points)</span></em></p>
-                        </div>
-                        <!-- Points Total -->
-                        <div id="total-section">
-                            <p>Total Points:</p>
-                            <span id="total-points">0</span>
-                        </div>
-                    </fieldset>
-                    
-                    <div>
-                        <p>Hi, I am Raymond Brien, a student of Code Institute, learning full stack development. You are looking at my second project combined with HTML, CSS, JavaScript, and several libraries as well as external tools. You can read more about it <a href="https://github.com/RaymondBrien/taskbloomer" target="_blank">here.</a>
-                        
-                            It was a pleasure developing thi project - I hope you will enjoy using it as much as I did creating it.
-                            
-                            Feel free to contact me via <a class="link-underline" href="https://www.linkedin.com/in/raymond-brien-97861a97/" target="_blank">LinkedIn</a> if you have any questions or sugestions.</p>
-                        <!-- Add links to github and LinkedIn as icons -->
-                        <h4>Links</h4>
-                        <p class="h4"><i class="fa-brands fa-square-github" aria-label="GitHub"></i></p>
-                        <p><i class="fa-brands fa-linkedin" aria-label="LinkedIn"></i></p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+        
         <footer>
             <nav class="navbar bg-body-territory sticky-bottom form-control">
                 <div class="container-fluid">
                     <a class="navbar-brand link-underline" href="instructions.html">Instructions</a>
-                    <p class="navbar-brand">Copyright 2023 - R Brien</p>
+
                     <a class="navbar-brand link-underline" href="#">About the developer</a>
                 </div>
             </nav> 

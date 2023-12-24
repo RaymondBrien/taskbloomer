@@ -22,10 +22,12 @@
 body {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     margin: 15px;
     width: 90%;
-    font-family: 'EB Garamond', serif;    
+    font-family: 'EB Garamond', serif; 
+    font-size: 18px;   
 }
 
 /* font-family: 'EB Garamond', serif;
@@ -99,6 +101,7 @@ a {
   }
 
 
+/* Main Page */
 #instructions-button {
     text-decoration: none;
     color: white;
@@ -136,8 +139,6 @@ form > input {
     align-self: center;
 }
 
-
-
 form > label, form #today-section {
     position: relative;
     align-self: center;
@@ -173,6 +174,13 @@ form > label, form #today-section {
     width: 20em;
 }
 
+/* Reset Section */
+#reset {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 #reset-popover {
     text-align: center;
@@ -182,10 +190,22 @@ form > label, form #today-section {
     border: none;
 }
 
+
+#settings-section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
 #lets-play-button {
     position: absolute;
     bottom: 2rem;
 }
+
+
 
 footer {
     display: flex;
