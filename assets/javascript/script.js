@@ -168,6 +168,7 @@ function updateProgress(totalPoints, nextInArray) {
     progressPercentage = parseInt((totalPoints/nextInArray) * 100);
     let progressLog = document.getElementById('progress-log');
     progressLog.setAttribute('style', `width: ${progressPercentage}%`);
+    progressLog.innerHTML = `${progressPercentage}%`;
 }
 
 // $("input[placeholder]").each( function () {
