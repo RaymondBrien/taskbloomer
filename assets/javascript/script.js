@@ -156,7 +156,7 @@ function untilNextGrowth(totalPoints, nextInArray) {
     console.log('untilNextGrowth reached!');
     let nextGrowth = document.getElementById('next-growth-in');
     nextGrowth.innerHTML = `(in ${(nextInArray - totalPoints)} points)`;
-
+    // (change to event listeners for values of the html so always updated?)
 }
 
 /**
@@ -164,7 +164,6 @@ function untilNextGrowth(totalPoints, nextInArray) {
  * as percentage to progress bar for user.
  */
 function updateProgress(totalPoints, nextInArray) {
-    console.log('update progress reached with two values: ' + totalPoints + ' and ' + nextInArray);
     progressPercentage = parseInt((totalPoints/nextInArray) * 100);
     let progressLog = document.getElementById('progress-log');
     progressLog.setAttribute('style', `width: ${progressPercentage}%`);

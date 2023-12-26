@@ -1,6 +1,8 @@
 /* Bootstrap link */
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css);
 
+/* General styles */
+
 
 /* @keyframes slidein {
     from {
@@ -117,9 +119,8 @@ a {
 }
 
 form {
-    width: 85vw;
-    margin-top: 40px;
-    padding: 10px;
+    width: 90vw;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -128,21 +129,40 @@ form {
     z-index: 99;
 }
 
-form > input {
-    padding: 10px;
-    width: 90%;
 
+fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content:  space-around;
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 90%;
+    border: solid 12px gold;
+    border-radius: 5px;
 }
+
+.checkbox {
+    size: 2rem;
+}
+
+.characters {
+    font-size: 15px;
+}
+
+fieldset > input, p, label {
+    padding: 0.5rem;
+}
+
+fieldset > .task {
+    width: 90%;
+}
+
 
 #new-day {
     max-width: 80px;
     align-self: center;
 }
 
-form > label, form #today-section {
-    position: relative;
-    align-self: center;
-}
 
 #today-section > p, #next-growth > p {
     font-weight: 600;
@@ -174,12 +194,27 @@ form > label, form #today-section {
     width: 20em;
 }
 
+/* Settings area */
+#settings-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2%;
+    border: solid 2px gold;
+    width: 90vw;
+    padding: 1%;
+    
+}
+
+
 /* Reset Section */
 #reset {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
 }
 
 #reset-popover {
@@ -211,7 +246,7 @@ footer {
     display: flex;
     flex-direction: row;
     bottom: 0;
-    width: 100%;
+    width: 90vw;
     justify-content: space-between;
     align-content: center;
     position: absolute;

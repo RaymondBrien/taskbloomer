@@ -38,25 +38,118 @@
             </div>
         </header>
 
-        <!-- Progress bar -->
-        <div class="container">
-            <div class="progress" role="progressbar" aria-label="Until next art" aria-valuenow="0"  aria-valuemin="0" aria-valuemax="8">
-                <div class="progress-bar bg-success" id="progress-log" style="width: 0%" style="min-width: 20%">0%</div>
+        <!-- Settings section -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="instructions.html">Instructions</a>
+                  </li>
+
+
+                  
+                  <h5>Settings</h5>
+                  <div>
+                      <div id="levels">
+                          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                              <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off">
+                              <label class="btn btn-outline-success" for="btnradio1">Easy</label>
+                              
+                              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
+                              <label class="btn btn-outline-warning" for="btnradio2">Medium</label>
+                              
+                              <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                              <label class="btn btn-outline-danger" for="btnradio3">Hard</label>
+                            </div>
+                        </div>
+                        
+                        <!-- Light Mode Toggle -->
+                        <div>
+                            <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                            <label class="btn btn-outline-warning" for="btn-check-5" id="dark-toggle"><i class="fa-solid fa-lightbulb"></i>&#160;Light Mode</label>
+                        </div>
+                        <!-- Time Setting -->
+                        <div id="set-time">
+                        <label for="time-setting">Reset today's goals at:</label>
+                        <input id="time-setting" type="time" value="20:00">
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+                        
+
+        <!-- Stats Popover -->
+        <div id="stats-popover">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">YOUR STATS</button>
+
+            <div class="offcanvas offcanvas-top" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">STATS</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+    
+                <div id="stats">
+                    <!-- Next Growth -->
+                    <div id="next-growth">
+                        <p>Next growth point at:&#160;<span id="next-growth-point">6</span>&#160;points</p>
+                        <span id="next-growth-in">(in 6 points)</span></em></p>
+                    </div>
+                    <!-- Points Total -->
+                    <div id="total-section">
+                        <p>Total Points:</p>
+                        <span id="total-points">0</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <p>Hi, I am Raymond Brien, a student of Code Institute, learning full stack development. You are looking at my second project combined with HTML, CSS, JavaScript, and several libraries as well as external tools. You can read more about it <a href="https://github.com/RaymondBrien/taskbloomer" target="_blank">here.</a>
+                    
+                        It was a pleasure developing thi project - I hope you will enjoy using it as much as I did creating it.
+                        
+                        Feel free to contact me via <a class="link-underline" href="https://www.linkedin.com/in/raymond-brien-97861a97/" target="_blank">LinkedIn</a> if you have any questions or sugestions.</p>
+                    <!-- Add links to github and LinkedIn as icons -->
+                    <h4>Links</h4>
+                    <p class="h4"><i class="fa-brands fa-square-github" aria-label="GitHub"></i></p>
+                    <p><i class="fa-brands fa-linkedin" aria-label="LinkedIn"></i></p>
+                </div>
             </div>
         </div>
 
         <!-- Main content -->
         <main>
+            <img src="" alt="">
             <form action="POST" id="tasks-area">
-                <label for="task-a">3 Points</label>
-                <input name="task-a" type="text" class="task" id="task-a" autofocus maxlength="25">
-                <input type="checkbox" class="checkbox" id="task-a-check" name="task-a-check" value="3">
-                <label for="task-b">2 Points</label>
-                <input name="task-b" type="text" class="task" id="task-b" maxlength="25">
-                <input type="checkbox" class="checkbox" id="task-b-check" name="task-b-check" value="2">
-                <label for="task-c">1 Point</label>
-                <input name="task-c" type="text" class="task" id="task-c" maxlength="25">
-                <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">
+                <fieldset>
+                    <label for="task-a">3 Points</label>
+                    <input name="task-a" type="text" class="task" id="task-a" maxlength="25" autofocus>
+                    <p class="characters">(<span></span>/25)</p>
+                    <input type="checkbox" class="checkbox" id="task-a-check" name="task-a-check" value="3">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="task-b">2 Points</label>
+                    <input name="task-b" type="text" class="task" id="task-b" maxlength="25">
+                    <p class="characters">(<span></span>/25)</p>
+                    <input type="checkbox" class="checkbox" id="task-b-check" name="task-b-check" value="2">
+                </fieldset>
+
+                <fieldset>
+                    <label for="task-c">1 Point</label>
+                    <input name="task-c" type="text" class="task" id="task-c" maxlength="25">
+                    <p class="characters">(<span></span>/25)</p>
+                    <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">
+                    
+                </fieldset>
                 <br>
                 <!-- Today's Points -->
                 <div id="today-section">
@@ -64,75 +157,21 @@
                 </div>
                 <!-- New Day Button -->
                 <button type="reset" class="btn btn-light" name="new-day" id="new-day" onclick="newDay()">New Day</button>
+            
+                <!-- Progress bar -->
+                <div class="container">
+                    <label for="progress-log">Progress to next painting:</label>
+                    <div class="progress" role="progressbar" aria-label="Until next art" aria-valuenow="0"  aria-valuemin="0" aria-valuemax="8">
+                        <div class="progress-bar bg-success" id="progress-log" style="width: 0%" style="min-width: 20%">0%</div>
+                    </div>
+                </div>
+                    <!-- Plant area -->
+                <div id="plant-image-area" class="container-fluid">
+                    <span id="plant-image"></span>
+                </div>
+                <div class="container-fluid" id="plant-gallery"></div>
             </form>
-            <!-- Plant area -->
-            <div id="plant-image-area">
-                <span id="plant-image"></span>
-            </div>
-            <div class="container-fluid" id="plant-gallery"></div>
 
-            <!-- Settings section -->
-            <div>
-                <h2>Settings</h2>
-                <div  id="settings-section">
-                    <div id="levels">
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off">
-                            <label class="btn btn-outline-success" for="btnradio1">Easy</label>
-
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
-                            <label class="btn btn-outline-warning" for="btnradio2">Medium</label>
-                        
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                            <label class="btn btn-outline-danger" for="btnradio3">Hard</label>
-                        </div>
-                    </div>
-                    <br>
-                    <div id="set-time">
-                        <label for="time-setting">Reset today's goals at:</label>
-                        <input id="time-setting" type="time" value="20:00">
-                    </div>
-                    <div>
-                        <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
-                        <label class="btn btn-outline-warning" for="btn-check-5" id="dark-toggle">Light Mode</label>
-                    </div>
-                    <!-- Settings Popover -->
-                    <div id="settings-popover">
-                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">YOUR STATS</button>
-        
-                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">About the developer</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                
-                            <fieldset id="stats">
-                                <!-- Next Growth -->
-                                <div id="next-growth">
-                                    <p>Next growth point at:&#160;<span id="next-growth-point">6</span>&#160;points</p>
-                                    <span id="next-growth-in">(in 6 points)</span></em></p>
-                                </div>
-                                <!-- Points Total -->
-                                <div id="total-section">
-                                    <p>Total Points:</p>
-                                    <span id="total-points">0</span>
-                                </div>
-                            </fieldset>
-                            
-                            <div>
-                                <p>Hi, I am Raymond Brien, a student of Code Institute, learning full stack development. You are looking at my second project combined with HTML, CSS, JavaScript, and several libraries as well as external tools. You can read more about it <a href="https://github.com/RaymondBrien/taskbloomer" target="_blank">here.</a>
-                                
-                                    It was a pleasure developing thi project - I hope you will enjoy using it as much as I did creating it.
-                                    
-                                    Feel free to contact me via <a class="link-underline" href="https://www.linkedin.com/in/raymond-brien-97861a97/" target="_blank">LinkedIn</a> if you have any questions or sugestions.</p>
-                                <!-- Add links to github and LinkedIn as icons -->
-                                <h4>Links</h4>
-                                <p class="h4"><i class="fa-brands fa-square-github" aria-label="GitHub"></i></p>
-                                <p><i class="fa-brands fa-linkedin" aria-label="LinkedIn"></i></p>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Reset The Game -->
                     <div id="reset">
                         <button type="button" class="btn btn-danger" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
@@ -148,15 +187,14 @@
                             <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide" class="link-underline btn btn-secondary">No, return to game</button>
                         </div>
                     </div>
-                </div>
-            </div>
+            
         </main>
 
         
 
         
         <footer>
-            <nav class="navbar bg-body-territory sticky-bottom form-control">
+            <nav class="navbar bg-body-territory fixed-bottom form-control">
                 <div class="container-fluid">
                     <a class="navbar-brand link-underline" href="instructions.html">Instructions</a>
 
