@@ -103,6 +103,11 @@ a {
   }
 
 
+nav {
+    width: 90vw;
+    padding: 1rem 5rem;
+}  
+
 /* Main Page */
 #instructions-button {
     text-decoration: none;

@@ -38,50 +38,53 @@
             </div>
         </header>
 
-        <!-- Settings section -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- Navbar with settings section -->
+        <nav class="navbar navbar-expand-xlg bg-body-tertiary" id="nav-settings">
             <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                      <img src="/assets/images/seed5.PNG" alt="seed2" width="30" height="24">
+                    </a>
+                </div>
+              <a class="display-6" href="index.html">Navbar</a>
+              <button class="navbar-toggler d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="instructions.html">Instructions</a>
-                  </li>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="instructions.html">Instructions</a>
+                    </li>
 
-
-                  
-                  <h5>Settings</h5>
-                  <div>
-                      <div id="levels">
-                          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                              <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off">
-                              <label class="btn btn-outline-success" for="btnradio1">Easy</label>
-                              
-                              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
-                              <label class="btn btn-outline-warning" for="btnradio2">Medium</label>
-                              
-                              <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                              <label class="btn btn-outline-danger" for="btnradio3">Hard</label>
+                    <h5>Settings</h5>
+                    <div>
+                        <div id="levels">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off">
+                                <label class="btn btn-outline-success" for="btnradio1">Easy</label>
+                                
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
+                                <label class="btn btn-outline-warning" for="btnradio2">Medium</label>
+                                
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                <label class="btn btn-outline-danger" for="btnradio3">Hard</label>
+                                </div>
                             </div>
+                            
+                            <!-- Light Mode Toggle -->
+                            <div>
+                                <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                                <label class="btn btn-outline-warning" for="btn-check-5" id="dark-toggle"><i class="fa-solid fa-lightbulb"></i>&#160;Light Mode</label>
+                            </div>
+                            <!-- Time Setting -->
+                            <div id="set-time">
+                            <label for="time-setting">Reset today's goals at:</label>
+                            <input id="time-setting" type="time" value="20:00">
                         </div>
-                        
-                        <!-- Light Mode Toggle -->
-                        <div>
-                            <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
-                            <label class="btn btn-outline-warning" for="btn-check-5" id="dark-toggle"><i class="fa-solid fa-lightbulb"></i>&#160;Light Mode</label>
-                        </div>
-                        <!-- Time Setting -->
-                        <div id="set-time">
-                        <label for="time-setting">Reset today's goals at:</label>
-                        <input id="time-setting" type="time" value="20:00">
                     </div>
-                    
                 </div>
             </div>
         </nav>
@@ -194,7 +197,7 @@
 
         
         <footer>
-            <nav class="navbar bg-body-territory fixed-bottom form-control">
+            <nav class="navbar bg-body-territory fixed-bottom">
                 <div class="container-fluid">
                     <a class="navbar-brand link-underline" href="instructions.html">Instructions</a>
 
