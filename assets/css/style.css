@@ -102,6 +102,9 @@ a {
     background-size: 100% 2px;
   }
 
+#landing-name {
+    letter-spacing: 4px;
+}
 
 nav {
     width: 90vw;
