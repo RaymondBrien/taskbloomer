@@ -124,6 +124,7 @@ nav {
 .hero-block {
     border: solid 1px gold;
     border-radius: 5px;
+    display: flex;
     background-color: #fffce1;
     color: #0e100f;
     max-height: 10rem;
@@ -131,12 +132,29 @@ nav {
     flex-wrap: wrap;
     padding: 0 5px;
     margin: 0 5px;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+    padding: 0.25em;
     
 }
 
-.hero-block:hover {
-    background-color: #0e100f;
+.info-blocks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    border: solid 2px gold;
+    transition: transform 1s, opacity 1s;
+    background-color: #fffce1;
+    color: #0e100f; 
 }
+
+.section-hidden {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  
 
 .block-title {
     display: flex;
@@ -144,12 +162,18 @@ nav {
     top: 0;
     font-size: 1.5em;
     font-weight: 400;
+    vertical-align: auto;
+    justify-content: center;
 }
 
+#block-title-name {
+    margin: 0;
+}
 
 #block-content {
     font-size: 0.2em;
 }
+
 
 #instructions-button {
     text-decoration: none;
