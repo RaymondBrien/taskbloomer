@@ -262,7 +262,7 @@
                         <!-- Next Growth -->
                         <div id="next-growth">
                             <p>Next growth point at:&#160;<span id="next-growth-point">6</span>&#160;points</p>
-                            <span id="next-growth-in">(in 6 points)</span></em></p>
+                            <span id="next-growth-in">(in 6 points)</span></p>
                         </div>
                         <!-- Points Total -->
                         <div id="total-section">
@@ -286,6 +286,7 @@
             </div>
         
             <form action="POST" id="tasks-area">
+                <!-- 3 point task -->
                 <fieldset class="main-input">
                     <input name="task-a" type="text" class="task" id="task-a" maxlength="25" placeholder="Write today's biggest goal here:" autofocus>
                     <label for="task-a">3 Points</label>
@@ -296,10 +297,10 @@
                         <input type="checkbox" class="checkbox" id="task-a-check" name="task-a-check" value="3">
                     </div>
                     <div class="subset-c">
-                        <p class="characters"><span></span>/25 characters</p>
+                        <p class="characters"><span id="characters-a"></span></p>
                     </div>
                 </fieldset>
-                
+                <!-- 2 point task -->
                 <fieldset class="main-input">
                     <input name="task-b" type="text" class="task" id="task-b" maxlength="25" placeholder="Write today's second goal here:">
                     <label for="task-b">2 Points</label>
@@ -310,10 +311,10 @@
                         <input type="checkbox" class="checkbox" id="task-b-check" name="task-b-check" value="2">
                     </div>
                     <div class="subset-c">
-                        <p class="characters"><span></span>/25 characters</p>
+                        <p class="characters"><span id="characters-b"></span></p>
                     </div>
                 </fieldset>
-
+                <!-- 1 point task -->
                 <fieldset class="main-input">
                     <input name="task-c" type="text" class="task" id="task-c" maxlength="25" placeholder="Write today's third goal here:">
                     <label for="task-c">1 Point</label>
@@ -324,7 +325,7 @@
                         <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">  
                     </div>
                     <div class="subset-c">
-                        <p class="characters"><span></span>/25 characters</p>
+                        <p class="characters"><span id="characters-c"></span></p>
                     </div>
                 </fieldset>
             

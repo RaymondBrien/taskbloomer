@@ -244,8 +244,6 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
     }
 });
 
-
-
 /**
  * Blurs the rest of the body when the 
  * reset game popover is triggered to appear.
@@ -261,4 +259,21 @@ document.getElementById('reset-game').addEventListener('click', function() {
 document.getElementById('reset-cancelled').addEventListener('click', function() {
     console.log('resetting body to normal!');
     document.body.style.opacity = 1;
+});
+
+/**
+ * Displays character count of task A input to user.
+ */
+document.getElementById('task-a').addEventListener('input', function() {
+    let input = document.getElementById('task-a').value;
+    let count = document.getElementById('characters-a');
+    console.log(input.length);
+    count.innerHTML = `${input.length}/25 characters`;
+
+     if (input.length <= 21) {
+         count.style.color = 'green';
+     } if (input.length >= 25) {
+         count.style.color = 'red';
+         alert.window('Woah there hun, try to keep your goals as concise as possible! 25 characters or less!');
+     }
 });
