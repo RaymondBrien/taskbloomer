@@ -159,16 +159,26 @@ fieldset > .task {
     width: 90%;
 }
 
-.subset-field {
+.subset-field-a {
     padding: 0;
     margin-top: 0.1rem;
     margin-bottom: 3rem;
-    width: 30%;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    font-size: 15px;
 }
 
-.characters {
-    font-size: 15px;
-    margin: 0;
+.subset-b {
+    order: 0;
+    align-self: flex-start;
+    border: solid 2px gold;
+}
+
+.subset-c {
+    order: 1;
+    align-self: flex-end;
+    border: solid 2px gold;
 }
 
 
