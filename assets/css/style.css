@@ -65,9 +65,11 @@ main {
 } */
     
 
-h1 {
+#hero-text {
     font-size: 3rem;
     text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
     text-transform: lowercase;
     letter-spacing: 5px;
     order: 2;
