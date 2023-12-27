@@ -3,24 +3,6 @@
 
 /* General styles */
 
-
-/* @keyframes slidein {
-    from {
-      margin-bottom: 100%;
-      width: 300%;
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  } */
-
-/* :root {
-    /* --data-bs-theme=light */
-
-
-
 body {
     display: flex;
     flex-wrap: wrap;
@@ -31,11 +13,6 @@ body {
     font-family: 'EB Garamond', serif; 
     font-size: 18px;   
 }
-
-/* font-family: 'EB Garamond', serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Oswald', sans-serif;
-font-family: 'Playfair Display', serif; */
 
 header {
     width: 100%;
@@ -54,16 +31,6 @@ main {
     padding: 1rem;
 }
 
-/* #spinner {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    /* z-index: 999; */
-    /* background-color: black;
-    align-items: center;
-    display: none;
-} */
-    
 p {
     font-size: 1.3rem;
 }
@@ -94,8 +61,18 @@ a {
   }
 
 
-/* index.html header */
+/* #spinner {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    /* z-index: 999; */
+    /* background-color: black;
+    align-items: center;
+    display: none;
+} */
+    
 
+/* HEADER */
 #landing-name {
     letter-spacing: 4px;
 }
@@ -116,42 +93,71 @@ nav {
     padding-top: 4rem;
     padding-bottom: 1rem;
     text-transform: lowercase;
-    letter-spacing: 5px;
-    
+    letter-spacing: 5px; 
 }
 
 #hero-image img {
     max-width: 100%;
-    max-height: 16rem;
     position: relative;
-
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
-    z-index: -2;
-    margin: 1rem;
-    padding: 0 1rem;
+    padding: 1rem 4rem 4rem 1rem;
     order: 5;
-    
 }
-
 
 #slogan {
     position: relative;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: center;
     font-stretch: expanded;
     animation: 3s alternate slidein;      
 }
 
+#hero-blocks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
 
-/* Main Page */
+.hero-block {
+    border: solid 1px gold;
+    border-radius: 5px;
+    background-color: #fffce1;
+    color: #0e100f;
+    max-height: 10rem;
+    max-width: 10rem;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    margin: 0 5px;
+    
+}
+
+.hero-block:hover {
+    background-color: #0e100f;
+}
+
+.block-title {
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+
+#block-content {
+    font-size: 0.2em;
+}
+
 #instructions-button {
     text-decoration: none;
     color: white;
     background-color: black;
 }
 
-
+/* MAIN PAGE */
 form {
     width: 90vw;
     margin-top: 2rem;
@@ -162,7 +168,6 @@ form {
     align-items: center;
     z-index: 99;
 }
-
 
 fieldset {
     display: flex;
@@ -180,7 +185,7 @@ fieldset {
 }
 
 fieldset > .task {
-    width: 90%;
+    width: 88%;
 }
 
 .subset-field-a, .subset-field-a p {
@@ -196,22 +201,18 @@ fieldset > .task {
 .subset-b {
     order: 0;
     align-self: flex-start;
-    border: solid 2px gold;
 }
 
 .subset-c p {
     order: 1;
     align-self: flex-end;
-    border: solid 2px gold;
     margin: 0;
 }
-
 
 #new-day {
     max-width: 80px;
     align-self: center;
 }
-
 
 #today-section > p, #next-growth > p {
     font-weight: 600;
@@ -255,8 +256,7 @@ fieldset > .task {
     
 }
 
-
-/* Reset Section */
+/* RESET SECTION */
 #reset {
     display: flex;
     flex-direction: column;
@@ -276,20 +276,15 @@ fieldset > .task {
 
 
 #settings-section {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-
 }
 
 #lets-play-button {
     position: absolute;
     bottom: 2rem;
 }
-
-
 
 footer {
     display: flex;
@@ -301,8 +296,5 @@ footer {
     padding-top: 5px;
     font-size: 15px;
     z-index: 0;
-    
-
-
 }
 

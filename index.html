@@ -34,7 +34,7 @@
                 <div class="container-fluid">
                         <a class="navbar-brand" href="index.html">
                             <img src="/assets/images/icons8-potted-plant-100-light-filled.png" alt="favicon-image-light" width="30" height="24">
-                            <a class="display-6" id="landing-name" href="index.html">taskbloomer</a>
+                            <a class="h4" id="landing-name" href="index.html">taskbloomer</a>
                         </a>
                 
                     <button class="navbar-toggler d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
                                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="instructions.html">Instructions</a>
+                                <a class="nav-link link-underline" href="instructions.html">Instructions</a>
                             </li>
                             <li class="nav-item">
                                 <h5>Settings</h5>
@@ -86,21 +86,45 @@
             </nav>
 
             <!-- Hero Content -->
-            <div id="her-text">
+            <div id="hero-text">
                 <h1 id="hero-text-a">Where priorities blossom</h1>
-                <p id="slogan">Define today's goals, watch them grow, collect your first NFT set. </p>
+                <p id="slogan">Define today's goals,<br>watch them grow with NFT's.</p>
             </div>
-            <div id="hero-image" class="container-fluid">
+            <div id="hero-image" >
                 <img src="/assets/images/AdobeStock_495247185.png" alt="plant-hero-image">
             </div>
 
-            <div id="hero-blocks">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
         </header>                        
+        
+        <!-- Hero-Blocks -->
+        <div id="hero-blocks">
+            <div class="hero-block">
+                <div class="block-title d-inline-block">
+                    <p><i class="fa-solid fa-bullseye" style="color: #5b96fb;"></i>&nbsp;Goals</p>
+                </div>
+                <div class="block-content">
+                    <p>Set your goals in order of priority.</p>
+                </div>
+            </div>
+            <div class="hero-block">
+                <div class="block-title d-inline-block">
+                    <p><i class="fa-solid fa-circle-check" style="color: #dbc533;"></i>&nbsp;Tracking</p>
+                </div>
+                <div class="block-content">
+                    <p></p>
+                </div>
+            </div>
+            <div class="hero-block">
+                <div class="block-title d-inline-block">
+                    <p><i class="fa-solid fa-vector-square" style="color: #e76b18;"></i>&nbsp;NFT's</p>
+                </div>
+                <div class="block-content">
+                    <p></p>
+                </div>
+            </div>
+        </div>
 
+    
         <!-- Stats Popover -->
         <div id="stats-popover">
             <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">YOUR STATS</button>
@@ -145,7 +169,6 @@
             <div>
                 <a class="btn btn-dark link-underline" href="instructions.html" id="instructions-button">How to Play</a>
             </div>
-            <img src="" alt="">
             <form action="POST" id="tasks-area">
                 <fieldset class="main-input">
                     <input name="task-a" type="text" class="task" id="task-a" maxlength="25" placeholder="Write today's biggest goal here:" autofocus>
@@ -167,7 +190,7 @@
                 </fieldset>
                 <fieldset class="subset-field-a">
                     <div class="subset-b">
-                        <label for="task-a-check">Done:</label>
+                        <label for="task-b-check">Done:</label>
                         <input type="checkbox" class="checkbox" id="task-b-check" name="task-b-check" value="2">
                     </div>
                     <div class="subset-c">
@@ -176,12 +199,12 @@
                 </fieldset>
 
                 <fieldset class="main-input">
-                    <label for="task-c">1 Point</label>
                     <input name="task-c" type="text" class="task" id="task-c" maxlength="25" placeholder="Write today's third goal here:">
+                    <label for="task-c">1 Point</label>
                 </fieldset>
                 <fieldset class="subset-field-a">
                     <div class="subset-b">
-                        <label for="task-a-check">Done:</label>
+                        <label for="task-c-check">Done:</label>
                         <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">  
                     </div>
                     <div class="subset-c">
