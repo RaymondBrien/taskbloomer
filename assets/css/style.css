@@ -144,27 +144,31 @@ fieldset {
     display: flex;
     flex-direction: row;
     justify-content:  space-around;
-    margin: 0.5rem;
-    padding: 1rem;
-    width: 90%;
-    border: solid 12px gold;
+    margin: 0.5rem 0.5rem 3px 0.5rem ;
+    padding: 0.5rem;
+    width: 100%;
+    border: solid 2px gold;
     border-radius: 5px;
 }
 
-.checkbox {
-    size: 2rem;
-}
-
-.characters {
-    font-size: 15px;
-}
-
-fieldset > input, p, label {
-    padding: 0.5rem;
+.main-input {
+    padding: 0.5rem 0.5rem;
 }
 
 fieldset > .task {
     width: 90%;
+}
+
+.subset-field {
+    padding: 0;
+    margin-top: 0.1rem;
+    margin-bottom: 3rem;
+    width: 30%;
+}
+
+.characters {
+    font-size: 15px;
+    margin: 0;
 }
 
 

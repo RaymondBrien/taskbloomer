@@ -139,27 +139,33 @@
             </div>
             <img src="" alt="">
             <form action="POST" id="tasks-area">
-                <fieldset>
+                <fieldset class="main-input">
+                    <input name="task-a" type="text" class="task" id="task-a" maxlength="25" placeholder="Write today's biggest goal here:" autofocus>
                     <label for="task-a">3 Points</label>
-                    <input name="task-a" type="text" class="task" id="task-a" maxlength="25" autofocus>
+                </fieldset>
+                <fieldset class="subset-field">
                     <p class="characters">(<span></span>/25)</p>
                     <input type="checkbox" class="checkbox" id="task-a-check" name="task-a-check" value="3">
                 </fieldset>
                 
-                <fieldset>
+                <fieldset class="main-input">
+                    <input name="task-b" type="text" class="task" id="task-b" maxlength="25" placeholder="Write today's second goal here:">
                     <label for="task-b">2 Points</label>
-                    <input name="task-b" type="text" class="task" id="task-b" maxlength="25">
+                </fieldset>
+                <fieldset class="subset-field">
                     <p class="characters">(<span></span>/25)</p>
                     <input type="checkbox" class="checkbox" id="task-b-check" name="task-b-check" value="2">
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="main-input">
                     <label for="task-c">1 Point</label>
-                    <input name="task-c" type="text" class="task" id="task-c" maxlength="25">
-                    <p class="characters">(<span></span>/25)</p>
-                    <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">
-                    
+                    <input name="task-c" type="text" class="task" id="task-c" maxlength="25" placeholder="Write today's third goal here:">
                 </fieldset>
+                <fieldset class="subset-field">
+                    <p class="characters">(<span></span>/25)</p>
+                    <input type="checkbox" class="checkbox" id="task-c-check" name="task-c-check" value="1">  
+                </fieldset>
+                    
                 <br>
                 <!-- Today's Points -->
                 <div id="today-section">
@@ -204,7 +210,7 @@
 
         
         <footer>
-            <nav class="navbar bg-body-territory fixed-bottom">
+            <nav class="navbar">
                 <div class="container-fluid">
                     <a class="navbar-brand link-underline" href="instructions.html">Instructions</a>
 
