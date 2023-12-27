@@ -248,17 +248,21 @@ fieldset > .task {
 }
 
 #plant-image-area {
-    border: 2px solid black ;
+    position: relative;
+    display: flex;
+    flex: content;
+    size: 5rem 5rem;
+    border: 5px solid orange;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     align-content: center;
+    padding: 0.25rem;
+    margin: 1rem 0.5rem;
     /* add animation to slide up from bottom as you scroll and have seperate background color for visibility */
 }
 
 #plant-image {
-    display: flex;
-    flex-direction: column;
     /* position: relative; */
     z-index: 999;
     float: left;
@@ -269,8 +273,24 @@ fieldset > .task {
     padding: 10px;
 }
 
-#plant-name {
-    width: 20em;
+#plant-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.gallery {
+    position: relative;
+    border: solid 2px #fffce1;
+    border-radius: 5px;
+    background-color: grey;
+    max-width: 5rem;
+    margin: 0.25rem 1rem;
+    min-height: 3rem;
+
 }
 
 /* Settings area */
@@ -282,7 +302,6 @@ fieldset > .task {
     border: solid 2px gold;
     width: 90vw;
     padding: 1%;
-    
 }
 
 /* RESET SECTION */
@@ -302,7 +321,6 @@ fieldset > .task {
 #reset-confirmed {
     border: none;
 }
-
 
 #settings-section {
     display: flex;
