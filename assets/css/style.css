@@ -136,7 +136,7 @@ nav {
     justify-content: center;
     text-align: center;
     padding: 0.25em;
-    
+    flex-grow: 1;
 }
 
 .info-blocks {
@@ -148,6 +148,8 @@ nav {
     transition: transform 1s, opacity 1s;
     background-color: #fffce1;
     color: #0e100f; 
+    text-align: center;
+    padding: 1rem 1rem;
 }
 
 .section-hidden {
@@ -161,13 +163,15 @@ nav {
     flex-direction: row;
     top: 0;
     font-size: 1.5em;
+    
     font-weight: 400;
     vertical-align: auto;
     justify-content: center;
 }
 
-#block-title-name {
+.block-title-name {
     margin: 0;
+    font-weight: 800;
 }
 
 #block-content {
