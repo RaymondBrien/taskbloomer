@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
                 checkbox.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
+                checkbox.parentElement.parentElement.previousElementSibling.firstChild.style.textDecoration = 'line-through';
             } else {
                 taskComplete(-checkbox.value);
                 checkbox.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';

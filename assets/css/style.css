@@ -215,6 +215,14 @@ fieldset {
     padding: 0.5rem 0.5rem;
 }
 
+.task {
+    text-transform: capitalize;
+}
+
+.task::placeholder {
+    color: aqua;
+}
+
 fieldset > .task {
     width: 88%;
 }
