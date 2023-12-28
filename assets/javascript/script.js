@@ -310,13 +310,3 @@ document.getElementById('task-c').addEventListener('input', function() {
          alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
      }
 });
-
-/**
- * Bootstrap modal 
- */
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
