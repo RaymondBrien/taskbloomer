@@ -275,7 +275,7 @@ document.getElementById('task-a').addEventListener('input', function() {
          count.style.color = 'green';
      } if (input.length >= 25) {
          count.style.color = 'red';
-         alert.window('Woah there hun, try to keep your goals as concise as possible! 25 characters or less!');
+         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
      }
 });
 
@@ -291,7 +291,7 @@ document.getElementById('task-b').addEventListener('input', function() {
          count.style.color = 'green';
      } if (input.length >= 25) {
          count.style.color = 'red';
-         alert.window('Woah there hun, try to keep your goals as concise as possible! 25 characters or less!');
+         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
      }
 });
 
@@ -307,6 +307,16 @@ document.getElementById('task-c').addEventListener('input', function() {
          count.style.color = 'green';
      } if (input.length >= 25) {
          count.style.color = 'red';
-         alert.window('Woah there hun, try to keep your goals as concise as possible! 25 characters or less!');
+         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
      }
 });
+
+/**
+ * Bootstrap modal 
+ */
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
