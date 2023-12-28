@@ -9,14 +9,16 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     let checkboxes = document.getElementsByClassName("checkbox");
-
     
+
     for (let checkbox of checkboxes) {
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
+                checkbox.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
             } else {
                 taskComplete(-checkbox.value);
+                checkbox.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
             }
         });
         
