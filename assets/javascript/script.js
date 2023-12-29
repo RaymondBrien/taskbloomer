@@ -4,6 +4,7 @@
     //   $("#spinner").hide();
     // })
 
+console.group();
 
 // Wait for DOM to finish loading before running the game. Finds checkbox value.
 document.addEventListener("DOMContentLoaded", function() {
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
                 checkbox.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
-                checkbox.parentElement.parentElement.previousElementSibling.firstChild.style.textDecoration = 'line-through';
+                // checkbox.parentElement.parentElement.previousElementSibling.firstChild.style.textDecoration = 'line-through';
             } else {
                 taskComplete(-checkbox.value);
                 checkbox.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
@@ -122,7 +123,7 @@ function growPlant(totalPoints) {
     // loop through array until end.
     for (let i=0; i < growthPoints.length; i++) {
         if (totalPoints >= growthPoints[i]) {
-        plantImage.innerHTML = `<img src="/assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
+        plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image">`; // Concatenates the path to the image file name
         console.log(plantImage);
         findNextGrowthPoint(totalPoints, i);
         } if (totalPoints >= growthPoints[8]) {
