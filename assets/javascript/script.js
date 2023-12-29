@@ -188,9 +188,7 @@ function newDay() {
     for (let input of inputs) {
         input.style.border = 'solid 2px gold'; 
     }
-    
 }
-
 
 /**
  * Triggers new day button at custom time set by user.

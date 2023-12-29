@@ -326,7 +326,6 @@ fieldset > .task {
     max-width: 4rem;
     max-height: 8rem;
     object-fit: contain;
-    right: 50%;
     /* z-index: 999; */
 }
 
