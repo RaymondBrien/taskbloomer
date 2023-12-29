@@ -123,7 +123,7 @@ function growPlant(totalPoints) {
     // loop through array until end.
     for (let i=0; i < growthPoints.length; i++) {
         if (totalPoints >= growthPoints[i]) {
-        plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image" draggable="true">`; // Concatenates the path to the image file name
+        plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image" class="dragging" draggable="true">`; // Concatenates the path to the image file name
         console.log(plantImage);
         findNextGrowthPoint(totalPoints, i);
         } if (totalPoints >= growthPoints[8]) {
@@ -183,7 +183,12 @@ function updateProgress(totalPoints, nextInArray) {
  */
 function newDay() {
     document.getElementById('today-points').innerHTML = 0;
-    console.log("new day");
+    // reset input box borders to unchecked color
+    let inputs = document.getElementsByClassName('main-input');
+    for (let input of inputs) {
+        input.style.border = 'solid 2px gold'; 
+    }
+    
 }
 
 
@@ -317,12 +322,11 @@ document.getElementById('task-c').addEventListener('input', function() {
  * 317 to 371: event handler for drag event on computer (source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event)
  */
 
-
 let dragged;
 /* events fired on the draggable target */
-let source = document.getElementById("draggable");
+let source = document.getElementById("plant-image");
 
-source.addEventListener("drag", (event) => {
+source.addEventListener("dragstart", (event) => {
 console.log("dragging");
 });
 
@@ -345,8 +349,8 @@ for (let target of targets) {
         target.addEventListener(
         "dragover", (event) => {
         // prevent default to allow drop
-        event.preventDefault();
-        }, false,
+            event.preventDefault();
+         }, false,
         );
 
 
