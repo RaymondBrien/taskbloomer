@@ -274,6 +274,8 @@ fieldset > .task {
     background-repeat: no-repeat;
     background-position: center;
     margin: 3rem 0.5rem;
+    /* Prevent the user selecting anything other than the image in the div */
+    /* user-select: none; */
     /* add animation to slide up from bottom as you scroll and have seperate background color for visibility */
 }
 
@@ -308,6 +310,18 @@ fieldset > .task {
     background-size: cover;
     background-position: center;
 
+}
+
+.dropzone {
+    border: solid 10px gold ;
+}
+
+.dropzone.dragover {
+    background-color: yellowgreen;
+}
+
+.dragging {
+    opacity: 0.5;
 }
 
 /* Settings area */
