@@ -123,7 +123,7 @@ function growPlant(totalPoints) {
     // loop through array until end.
     for (let i=0; i < growthPoints.length; i++) {
         if (totalPoints >= growthPoints[i]) {
-        plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image" id="draggable">`; // Concatenates the path to the image file name
+        plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image" draggable="true">`; // Concatenates the path to the image file name
         console.log(plantImage);
         findNextGrowthPoint(totalPoints, i);
         } if (totalPoints >= growthPoints[8]) {
@@ -316,60 +316,68 @@ document.getElementById('task-c').addEventListener('input', function() {
 /**
  * 317 to 371: event handler for drag event on computer (source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event)
  */
+
+
 let dragged;
 /* events fired on the draggable target */
 let source = document.getElementById("draggable");
+
 source.addEventListener("drag", (event) => {
-  console.log("dragging");
+console.log("dragging");
 });
 
 source.addEventListener("dragstart", (event) => {
-  // store a ref. on the dragged elem
-  dragged = event.target;
-  // make it half transparent
-  event.target.classList.add("dragging");
+// store a ref. on the dragged elem
+dragged = event.target;
+// make it half transparent
+event.target.classList.add("dragging");
 });
 
 source.addEventListener("dragend", (event) => {
-  // reset the transparency
-  event.target.classList.remove("dragging");
+// reset the transparency
+event.target.classList.remove("dragging");
 });
 
 /* events fired on the drop targets */
-let target = document.getElementById("droptarget");
-target.addEventListener(
-  "dragover",
-  (event) => {
-    // prevent default to allow drop
-    event.preventDefault();
-  },
-  false,
-);
+let targets = document.getElementsByClassName("droptarget");
 
-target.addEventListener("dragenter", (event) => {
-  // highlight potential drop target when the draggable element enters it
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.add("dragover");
-  }
-});
+for (let target of targets) {
+        target.addEventListener(
+        "dragover", (event) => {
+        // prevent default to allow drop
+        event.preventDefault();
+        }, false,
+        );
 
-target.addEventListener("dragleave", (event) => {
-  // reset background of potential drop target when the draggable element leaves it
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-  }
-});
 
-target.addEventListener("drop", (event) => {
-  // prevent default action (open as link for some elements)
-  event.preventDefault();
-  // move dragged element to the selected drop target
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-    event.target.appendChild(dragged);
-  }
-});
+        target.addEventListener("dragenter", (event) => {
+        // highlight potential drop target when the draggable element enters it
+        if (event.target.classList.contains("dropzone")) {
+            event.target.classList.add("dragover");
+        }
+        });
 
+        target.addEventListener("dragleave", (event) => {
+        // reset styles of potential drop target when the draggable element leaves it
+        if (event.target.classList.contains("dropzone")) {
+            event.target.classList.remove("dragover");
+        }
+        });
+
+        target.addEventListener("drop", (event) => {
+        // prevent default action (open as link for some elements)
+        event.preventDefault();
+        // move dragged element to the selected drop target
+        if (event.target.classList.contains("dropzone")) {
+            event.target.classList.remove("dragover");
+            event.target.appendChild(dragged);
+        }
+        });
+    }
+
+
+
+// PHONE
 
 let draggedPhone;
 /* events fired on the draggable target */

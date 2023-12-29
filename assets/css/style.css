@@ -316,8 +316,9 @@ fieldset > .task {
     border: solid 10px gold ;
 }
 
-.dropzone.dragover {
+.dragover {
     background-color: yellowgreen;
+    border: solid 3px orange;
 }
 
 .dragging {

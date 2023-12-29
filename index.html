@@ -346,18 +346,18 @@
                 <!-- Plant area -->
                 <h6 class="image-titles"><i class="fa-vector-square"></i>&nbsp;NFT:&nbsp;<i class="fa-vector-square"></i></h6>
                 <div id="plant-image-area" class="dropzone">
-                    <span id="plant-image" draggable="true"></span>
+                    <span id="plant-image" id="draggable" ondrag="dragSequence()"></span>
                 </div>
                 <h6 class="image-titles"><i class="fa-vector-square"></i>&nbsp;Gallery:&nbsp;<i class="fa-vector-square"></i></h6>
-                <div class="container-fluid" id="plant-gallery">
-                    <div class="gallery dropzone" id="gallery-1"></div>
-                    <div class="gallery dropzone" id="gallery-2"></div>
-                    <div class="gallery dropzone" id="gallery-3"></div>
-                    <div class="gallery dropzone" id="gallery-4"></div>
-                    <div class="gallery dropzone" id="gallery-5"></div>
-                    <div class="gallery dropzone" id="gallery-6"></div>
-                    <div class="gallery dropzone" id="gallery-7"></div>
-                    <div class="gallery dropzone" id="gallery-8"></div>
+                <div id="plant-gallery">
+                    <div class="gallery dropzone droptarget" id="gallery-0"></div>
+                    <div class="gallery dropzone droptarget" id="gallery-1"></div>
+                    <div class="gallery dropzone droptarget" id="gallery-2"></div>
+                    <div class="gallery dropzone droptarget" id="gallery-3"></div>
+                    <div class="gallery dropzone droptarget" id="gallery-4"></div>
+                    <div class="gallery dropzone droptarget" id="gallery-5"></div>
+                    <div class="gallery dropzone droptarget" id="gallery-6"></div>
+                    <div class="gallery dropzone droptarget" id="gallery-7"></div>
                 </div>
             </form>
         </main>
