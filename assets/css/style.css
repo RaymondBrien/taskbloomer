@@ -96,6 +96,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    padding: 1rem ;
 }
 
 #hero-text {
@@ -109,7 +110,7 @@ nav {
     font-size: 3rem;
     text-align: center;
     padding-top: 17rem;
-    padding-bottom: 8rem;
+    padding-bottom: 18rem;
     text-transform: lowercase;
     letter-spacing: 5px; 
 }
@@ -142,8 +143,8 @@ nav {
     border: solid 1px var(--bs-secondary-color);
     border-radius: 5px;
     display: flex;
-    background-color: #fffce1;
-    color: #0e100f;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
     max-height: 10rem;
     max-width: 10rem;
     flex-wrap: wrap;
