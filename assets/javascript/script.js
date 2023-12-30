@@ -10,7 +10,6 @@ console.group();
 document.addEventListener("DOMContentLoaded", function() {
 
     let checkboxes = document.getElementsByClassName("checkbox");
-    
 
     for (let checkbox of checkboxes) {
         checkbox.addEventListener("change", function() {
@@ -20,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
             } else {
                 taskComplete(-checkbox.value);
+                // to warn them that user ticked task and then left unchecked
                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
+                // restyles input text for readability
                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'none';
             }
         });
@@ -184,14 +185,11 @@ function updateProgress(totalPoints, nextInArray) {
  */
 function newDay() {
     document.getElementById('today-points').innerHTML = 0;
-    // reset input styles and character count
+    // reset input styles
     let inputs = document.getElementsByClassName('main-input');
-    let characters = document.querySelector('.characters span');
-    
-    characters.innerText = 0;
 
     for (let input of inputs) {
-        input.style.border = 'solid 2px gold'; 
+        input.style.border = 'solid 2px grey'; 
         input.style.textDecoration = 'none';
     }
 }
@@ -289,7 +287,9 @@ document.getElementById('task-a').addEventListener('input', function() {
          count.style.color = 'red';
         } if (input.length === 25) {
         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-    }    
+        } else if (input.length === 0) {
+            count.style.display = 'none';
+        }    
 });
 
 /**
@@ -306,7 +306,9 @@ document.getElementById('task-b').addEventListener('input', function() {
      } if (input.length >= 25) {
          count.style.color = 'red';
          alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-     }
+     } else if (input.length === 0) {
+        count.style.display = 'none';
+    } 
 });
 
 /**
@@ -323,7 +325,9 @@ document.getElementById('task-c').addEventListener('input', function() {
      } if (input.length >= 25) {
          count.style.color = 'red';
          alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-     }
+     } else if (input.length === 0) {
+        count.style.display = 'none';
+    } 
 });
 
 /**
