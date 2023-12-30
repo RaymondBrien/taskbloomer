@@ -3,17 +3,18 @@
 
 /* General styles */
 * {
-    /* custom LIGHT theme colors */
-    --light-theme-body-color: #fffce1;
-    --light-theme-text-color: #3D3D3D;
-    --light-theme-emphasis-color: #6D2C3E;
-    --light-theme-secondary-color: #2c2c2c;
+    /* custom LIGHT theme colors
+    --bs-body-color: #fffce1;
+    --bs-text-color: #3D3D3D;
+    --bs-emphasis-color: #93B569;
+    --bs-secondary-color: #2c2c2c; */
 
     /* custom DARK theme colors */
-    --dark-theme-body-color: #0e100f;
-    --dark-theme-text-color: #fffce1;
-    --dark-theme-emphasis-color: #93B569 ;
-    --dark-theme-secondary-color: #BDBDBD ;
+    --bs-body-bg: #0e100f;
+    --bs-body-color: #fffce1;
+    --bs-emphasis-color: #93B569 ;
+    --bs-secondary-color: #BDBDBD ;
+
 }
 
 body {
@@ -59,7 +60,7 @@ a {
 .link-underline {
     display: inline-block;
     padding-bottom:2px;
-    background-image: linear-gradient(white 0 0);
+    background-image: linear-gradient(var(--bs-secondary-color) 0 0);
     background-position: 0 100%; 
     background-size: 0% 2px;
     background-repeat: no-repeat;
@@ -136,7 +137,7 @@ nav {
 }
 
 .hero-block {
-    border: solid 1px gold;
+    border: solid 1px var(--bs-secondary-color);
     border-radius: 5px;
     display: flex;
     background-color: #fffce1;
@@ -158,7 +159,7 @@ nav {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
-    border: solid 2px gold;
+    border: solid 2px var(--bs-emphasis-color);
     transition: 
         transform 1s, opacity 1s;
     background-color: #fffce1;
@@ -177,6 +178,8 @@ nav {
     width: 20rem;
     height: 3rem;
     position: relative;
+    background-color: var(--bs-secondary-color);
+    color: var(--bs-body-bg);
 
 }
 
@@ -233,8 +236,8 @@ table p {
 
 #instructions-button {
     text-decoration: none;
-    color: white;
-    background-color: black;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
 }
 
 /* MAIN PAGE */
@@ -256,7 +259,7 @@ fieldset {
     margin: 0.5rem 0.5rem 3px 0.5rem ;
     padding: 0.5rem;
     width: 100%;
-    border: solid 2px grey;
+    border: solid 2px var(--bs-secondary-color);
     border-radius: 10px;
 }
 
@@ -269,7 +272,7 @@ fieldset label {
 }
 
 .task::placeholder {
-    color: yellow;
+    color: var(--bs-secondary-color);
     opacity: 0.5;;
 }
 
@@ -296,14 +299,14 @@ fieldset > .task {
     display: grid;
     grid-template-columns: 1em auto;
     gap: 0.5em;
-    --form-control-color: purple;
+    background-color: var(--bs-emphasis-color);
 }
 
 input [type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
     /* For iOS < 15 to remove gradient background */
-    background-color: #fff;
+    background-color: var(--bs-body-bg);
     margin: 0;
     font: inherit;
     color: currentColor;
@@ -327,7 +330,7 @@ input[type="checkbox"]::before {
     height: 0.65em;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em var(purple);
+    box-shadow: inset 1em 1em var(--bs-emphasis-color);
 
     /* Windows High Contrast Mode */
     background-color: CanvasText;
@@ -386,12 +389,12 @@ input[type="checkbox"]:checked::before {
     position: relative;
     margin-top: 0.5rem;
     padding: 1rem;
-    border: solid 2px yellowgreen;
+    border: solid 2px var(--bs-emphasis-color);
 }
 
 .gallery {
     position: relative;
-    border: solid 2px #fffce1;
+    border: solid 2px var(--bs-secondary-color);
     border-radius: 5px;
     min-height: 1rem;
     min-width: 1rem;
@@ -404,12 +407,12 @@ input[type="checkbox"]:checked::before {
 }
 
 .dropzone {
-    border: solid 3px gold ;
+    border: solid 3px var(--bs-secondary-color);
 }
 
 .dragover {
-    background-color: yellowgreen;
-    border: solid 3px orange;
+    background-color: var(--bs-secondary-color);
+    border: solid 3px var(--bs-emphasis-color);
     height: 8rem;
     width: 6rem;
 }
@@ -429,7 +432,7 @@ input[type="checkbox"]:checked::before {
     flex-direction: column;
     flex-wrap: wrap;
     padding: 2%;
-    border: solid 2px gold;
+    border: solid 2px var(--bs-secondary-color);
     width: 90vw;
     padding: 1%;
 }
