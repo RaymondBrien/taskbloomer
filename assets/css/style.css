@@ -92,43 +92,41 @@ a {
 }
 
 nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    padding: 1rem 5rem;
-}  
+}
 
 #hero-text {
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 0 2rem;
 }
 
 #hero-text-a {
     font-size: 3rem;
     text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 1rem;
+    padding-top: 17rem;
+    padding-bottom: 8rem;
     text-transform: lowercase;
     letter-spacing: 5px; 
 }
 
 #hero-image img {
-    max-width: 100%;
-    position: relative;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 1rem 4rem 4rem 1rem;
-    order: 5;
+    max-width: 15rem;
+    max-height: 15rem;
+    padding: 1rem;
 }
 
 #slogan {
     position: relative;
+    padding-top: 2rem;
     font-size: 1.3rem;
     text-align: center;
     font-stretch: expanded;
-    animation: 3s alternate slidein;      
+    animation: 1s alternate slidein;      
 }
 
 #hero-blocks {
@@ -136,6 +134,7 @@ nav {
     display: flex;
     flex-direction: row;
     margin: 1rem 0;
+    padding: 6rem 1rem;
     justify-content: center;
 }
 
