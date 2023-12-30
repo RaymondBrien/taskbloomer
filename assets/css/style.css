@@ -350,10 +350,6 @@ input[type="checkbox"]:checked::before {
     align-self: center;
 }
 
-#today-section > p, #next-growth > p {
-    font-weight: 600;
-}
-
 .image-titles {
     display: flex;
     width: 100%;
@@ -362,43 +358,36 @@ input[type="checkbox"]:checked::before {
 }
 
 #plant-image-area, #plant-image  {
-    position: relative;
-    min-height: 8rem;
-    min-width: 16rem;
-    max-height: 16rem;
-    max-width: 16rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 3rem 0.5rem;
+    min-height: 25rem;
+    min-width: 25rem;
+    max-height: 40rem;
+    max-width: 40rem;
 }
 
 #plant-image img { 
-    min-height: 5rem;
-    min-width: 5rem;
-    max-height: 15rem;
-    max-width: 15rem;
-    position: relative;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #plant-gallery {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     width: 90%;
     position: relative;
     margin-top: 0.5rem;
     padding: 1rem;
-    border: solid 2px var(--bs-emphasis-color);
+    border: solid 15px var(--bs-emphasis-color);
 }
 
 .gallery {
     position: relative;
     border: solid 2px var(--bs-secondary-color);
     border-radius: 5px;
-    min-height: 1rem;
-    min-width: 1rem;
-    max-width: 5rem;
+    min-height: 4rem;
+    min-width: 4rem;
+    max-width: 10rem;
     max-height: 10rem;
     padding: 0.5em;
     background-size: contain;
@@ -407,18 +396,21 @@ input[type="checkbox"]:checked::before {
 }
 
 .dropzone {
-    border: solid 3px var(--bs-secondary-color);
+    border: solid 5px var(--bs-secondary-color);
+    min-width: 4rem;
+    min-height: 4rem;
+    margin: 2rem;
 }
 
 .dragover {
     background-color: var(--bs-secondary-color);
     border: solid 3px var(--bs-emphasis-color);
-    height: 8rem;
+    background-color: yellowgreen;
     width: 6rem;
+    height: 6rem;
 }
 
 .dragging {
-    opacity: 0.5;
     position: relative;
     max-width: 4rem;
     max-height: 8rem;
