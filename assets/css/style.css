@@ -208,7 +208,7 @@ fieldset {
     padding: 0.5rem;
     width: 100%;
     border: solid 2px gold;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 fieldset label {
@@ -228,24 +228,64 @@ fieldset > .task {
 }
 
 .subset-field-a, .subset-field-a p {
-    padding: 0;
+    padding: 1rem;
     margin-top: 0.1rem;
     margin-bottom: 3rem;
-    display: flex;
+    display: inline-flex;
+    justify-content: space-between;
     flex-direction: row;
     border: none;
-    font-size: 15px;
+    font-size: 1.23em;
 }
 
-.subset-b {
-    order: 0;
-    align-self: flex-start;
+/*  checkbox styles credit to https://moderncss.dev/pure-css-custom-checkbox-style/ */
+
+.form-control {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    --form-control-color: purple;
 }
 
-.subset-c p {
-    order: 1;
-    align-self: flex-end;
+input [type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
     margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+
+.form-control + .form-control {
+    margin-top: 1em;
+  }
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(purple);
+
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
 }
 
 #new-day {

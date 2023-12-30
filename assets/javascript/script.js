@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
-                checkbox.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
-                checkbox.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
+                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
+                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
             } else {
                 taskComplete(-checkbox.value);
-                checkbox.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
-                checkbox.parentElement.parentElement.previousElementSibling.style.textDecoration = 'none';
+                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
+                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'none';
 
             }
         });
@@ -125,7 +125,7 @@ function growPlant(totalPoints) {
     // loop through array until end.
     for (let i=0; i < growthPoints.length; i++) {
         if (totalPoints >= growthPoints[i]) {
-        plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image" class="dragging" draggable="true">`; // Concatenates the path to the image file name
+        plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image${i}" class="dragging" draggable="true">`; // Concatenates the path to the image file name
         console.log(plantImage);
         findNextGrowthPoint(totalPoints, i);
         } if (totalPoints >= growthPoints[8]) {
@@ -185,10 +185,18 @@ function updateProgress(totalPoints, nextInArray) {
  */
 function newDay() {
     document.getElementById('today-points').innerHTML = 0;
-    // reset input box borders to unchecked color
+    // reset input styles and character count
     let inputs = document.getElementsByClassName('main-input');
+    let characterCount = document.getElementsByClassName('characters');
+
+
     for (let input of inputs) {
         input.style.border = 'solid 2px gold'; 
+        input.style.textDecoration = 'none';
+    }
+
+    for (let characters of characterCount) {
+        characters.style.display = 'none';
     }
 }
 
@@ -276,6 +284,7 @@ document.getElementById('reset-cancelled').addEventListener('click', function() 
 document.getElementById('task-a').addEventListener('input', function() {
     let input = document.getElementById('task-a').value;
     let count = document.getElementById('characters-a');
+    count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
 
      if (input.length <= 21) {
@@ -292,6 +301,7 @@ document.getElementById('task-a').addEventListener('input', function() {
 document.getElementById('task-b').addEventListener('input', function() {
     let input = document.getElementById('task-b').value;
     let count = document.getElementById('characters-b');
+    count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
 
      if (input.length <= 21) {
@@ -308,6 +318,7 @@ document.getElementById('task-b').addEventListener('input', function() {
 document.getElementById('task-c').addEventListener('input', function() {
     let input = document.getElementById('task-c').value;
     let count = document.getElementById('characters-c');
+    count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
 
      if (input.length <= 21) {
