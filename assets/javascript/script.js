@@ -232,7 +232,7 @@ document.getElementById('time-setting').addEventListener('change', function() {
 
     let intervalID = '';
     function setNewDayTrigger(untilCustom) {
-        intervalID = setInterval(newDay(), untilCustom);
+        intervalID = setInterval(newDay, untilCustom);
 
     }
 
@@ -261,9 +261,17 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
     switch (theme) {
         case 'light':
             document.documentElement.setAttribute('data-bs-theme', 'light');
+            document.documentElement.setProperty('--bs-body-color', '#fffce1');
+            document.documentElement.setProperty('--bs-text-color', '#3D3D3D');
+            document.documentElement.setProperty('--bs-emphasis-color', '#93B569');
+            document.documentElement.setProperty('--bs-secondary-color', '#2c2c2c');
             break;
         case 'dark':
             document.documentElement.setAttribute('data-bs-theme', 'dark');
+            document.documentElement.setProperty('--bs-body-color', '#0e100f');
+            document.documentElement.setProperty('--bs-text-color', '#fffce1');
+            document.documentElement.setProperty('--bs-emphasis-color', '#93B569');
+            document.documentElement.setProperty('--bs-secondary-color', '#BDBDBD');
             break;
     }
 });
