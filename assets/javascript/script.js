@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 taskComplete(-checkbox.value);
                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'none';
-
             }
         });
         

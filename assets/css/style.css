@@ -221,6 +221,7 @@ fieldset label {
 
 .task::placeholder {
     color: yellow;
+    opacity: 0.5;;
 }
 
 fieldset > .task {
