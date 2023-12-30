@@ -51,7 +51,7 @@ function getRandomInt(min, max) {
 let randomArray1 = getRandomInt(51, 70);
 let randomArray2 = getRandomInt(70, 100);
 let growthPoints = '';
-let images = ['seed0.PNG' , 'seed1.PNG', 'seed2.PNG' , 'seed3.PNG', 'seed4.PNG', 'seed5.PNG' , 'seed6.PNG', 'seed7.PNG'];
+let images = ['seed0.jpg' , 'seed1.jpg', 'seed2.jpg' , 'seed3.jpg', 'seed4.jpg', 'seed5.jpg' , 'seed6.jpg', 'seed7.jpg'];
 let growthPointsLevel = {
 
     easy: [1, 6, 9, 15, 19, 24, 30, 33, 36],
