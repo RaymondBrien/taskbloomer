@@ -14,6 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let checkbox of checkboxes) {
         // set the checkboxes as disabled until the user adds to input
         checkbox.setAttribute('disabled', true);
+
+        // If a checkbox is disabled, enable popovers on parent element
+        if (checkbox.hasAttribute('disabled')) {
+            checkbox.parentElement.setAttribute('data-bs-toggle', 'popover');
+            checkbox.parentElement.setAttribute('data-bs-trigger', 'hover focus');
+            checkbox.parentElement.setAttribute('data-bs-content', 'disabled popover');
+        }
+
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
@@ -61,6 +69,8 @@ let growthPointsLevel = {
     hard: [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2]
 
 };
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
 
 /**
  * Sets growthPoints variable to relevant growthPointsLevel easy array.
