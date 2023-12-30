@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 taskComplete(-checkbox.value);
                 // to warn them that user ticked task and then left unchecked
-                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
+                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 5px gold';
                 // restyles input text for readability
                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'none';
             }
