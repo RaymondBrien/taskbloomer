@@ -160,6 +160,13 @@ nav {
         translateY(5rem);
   }
   
+ 
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    padding: inherit;
+    margin: 1rem;
+}  
 
 .block-title {
     display: flex;
@@ -230,7 +237,7 @@ fieldset > .task {
 
 .subset-field-a {
     margin-top: 0.1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 8rem;
     display: inline-flex;
     justify-content: space-between;
     flex-direction: row;
