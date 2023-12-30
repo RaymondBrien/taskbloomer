@@ -228,8 +228,7 @@ fieldset > .task {
     width: 88%;
 }
 
-.subset-field-a, .subset-field-a p {
-    padding: 1rem;
+.subset-field-a {
     margin-top: 0.1rem;
     margin-bottom: 3rem;
     display: inline-flex;
@@ -287,6 +286,11 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
     transform: scale(1);
+}
+
+
+.characters span {
+    font-size: 1em;
 }
 
 #new-day {

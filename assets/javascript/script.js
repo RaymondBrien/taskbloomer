@@ -186,16 +186,13 @@ function newDay() {
     document.getElementById('today-points').innerHTML = 0;
     // reset input styles and character count
     let inputs = document.getElementsByClassName('main-input');
-    let characterCount = document.getElementsByClassName('characters');
-
+    let characters = document.querySelector('.characters span');
+    
+    characters.innerText = 0;
 
     for (let input of inputs) {
         input.style.border = 'solid 2px gold'; 
         input.style.textDecoration = 'none';
-    }
-
-    for (let characters of characterCount) {
-        characters.style.display = 'none';
     }
 }
 
@@ -288,10 +285,11 @@ document.getElementById('task-a').addEventListener('input', function() {
 
      if (input.length <= 21) {
          count.style.color = 'green';
-     } if (input.length >= 25) {
+     } if (input.length >= 20) {
          count.style.color = 'red';
-         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-     }
+        } if (input.length === 25) {
+        alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
+    }    
 });
 
 /**
