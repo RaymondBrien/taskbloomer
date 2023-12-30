@@ -183,17 +183,14 @@ nav {
 #stats {
     border-collapse: collapse;
     width: 100%;
+    padding-bottom: 3rem;
 }
 
 th, td {
     border: 1px solid #fffce1;
     padding: 8px;
-    text-align: left;
-    font-size: 2rem;
-}
-
-th {
     text-align: center;
+    font-size: 2rem;
 }
 
 table p {
