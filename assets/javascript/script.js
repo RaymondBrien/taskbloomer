@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let checkboxes = document.getElementsByClassName("checkbox");
 
     for (let checkbox of checkboxes) {
+        // set the checkboxes as disabled until the user adds to input
+        checkbox.setAttribute('disabled', true);
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
@@ -176,18 +178,19 @@ function updateProgress(totalPoints, nextInArray) {
     progressLog.innerHTML = `${progressPercentage}%`;
 }
 
-// $("input[placeholder]").each( function () {
-//     $(this).val( $(this).attr("placeholder") );
-// });
-
 /**
- * On button click, new day resets the day score count, clears goals and unchecks all checkboxes.
+ * Resets day score count, clears goals inputs, unchecks all checkboxes, disables checkboxes until next user input.
  */
 function newDay() {
     document.getElementById('today-points').innerHTML = 0;
-    // reset input styles
     let inputs = document.getElementsByClassName('main-input');
+    let checkboxes = document.querySelectorAll('.checkbox');
 
+    checkboxes.forEach(function(checkbox) {
+        checkbox.setAttribute('disabled', true);        
+    });
+
+    // reset input styles
     for (let input of inputs) {
         input.style.border = 'solid 2px grey'; 
         input.style.textDecoration = 'none';
@@ -274,60 +277,107 @@ document.getElementById('reset-cancelled').addEventListener('click', function() 
 
 /**
  * Displays character count of task A input to user.
+ * Disables checkbox if nothing is written in the input.
  */
 document.getElementById('task-a').addEventListener('input', function() {
-    let input = document.getElementById('task-a').value;
+    let input = this.value;
     let count = document.getElementById('characters-a');
+    let checkbox = document.getElementById('task-a-check');
+
+    // Display character count
     count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
 
-     if (input.length <= 21) {
+    // Once goal inputted, checkbox becomes available
+    checkbox.classList.remove('disabled');
+
+    // Check input length conditions
+     if (input.length <= 19) {
          count.style.color = 'green';
      } if (input.length >= 20) {
          count.style.color = 'red';
-        } if (input.length === 25) {
+    } 
+    
+    // check for specific length conditions
+    if (input.length === 25) {
         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-        } else if (input.length === 0) {
-            count.style.display = 'none';
-        }    
+    } else if (input.length === 0) {
+        // if input is empty, hide character count and disable checkbox
+        count.style.display = 'none';
+        checkbox.setAttribute('disabled', true);
+        checkbox.classList.add('disabled');
+    } else {
+        checkbox.removeAttribute('disabled');
+        checkbox.classList.remove('disabled');
+    }
 });
 
 /**
  * Displays character count of task B input to user.
  */
 document.getElementById('task-b').addEventListener('input', function() {
-    let input = document.getElementById('task-b').value;
+    let input = this.value;
     let count = document.getElementById('characters-b');
+    let checkbox = document.getElementById('task-b-check');
+
     count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
 
-     if (input.length <= 21) {
+    // Once goal inputted, checkbox becomes available
+    checkbox.classList.remove('disabled');
+
+     if (input.length <= 19) {
          count.style.color = 'green';
-     } if (input.length >= 25) {
+     } if (input.length >= 20) {
          count.style.color = 'red';
-         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-     } else if (input.length === 0) {
-        count.style.display = 'none';
     } 
+    
+    // check for specific length conditions
+    if (input.length === 25) {
+        alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
+    } else if (input.length === 0) {
+        // if input is empty, hide character count and disable checkbox
+        count.style.display = 'none';
+        checkbox.setAttribute('disabled', true);
+        checkbox.classList.add('disabled');
+    } else {
+        checkbox.removeAttribute('disabled');
+        checkbox.classList.remove('disabled');
+    }
 });
 
 /**
  * Displays character count of task C input to user.
  */
 document.getElementById('task-c').addEventListener('input', function() {
-    let input = document.getElementById('task-c').value;
+    let input = this.value;
     let count = document.getElementById('characters-c');
+    let checkbox = document.getElementById('task-c-check');
+
     count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
 
-     if (input.length <= 21) {
+    // Once goal inputted, checkbox becomes available
+    checkbox.classList.remove('disabled');
+
+     if (input.length <= 19) {
          count.style.color = 'green';
-     } if (input.length >= 25) {
+    } if (input.length >= 20) {
          count.style.color = 'red';
-         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-     } else if (input.length === 0) {
-        count.style.display = 'none';
     } 
+    
+    // check for specific length conditions
+    if (input.length === 25) {
+        alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
+    } else if (input.length === 0) {
+            // if input is empty, hide character count and disable checkbox
+            count.style.display = 'none';
+            checkbox.setAttribute('disabled', true);
+            checkbox.classList.add('disabled');
+    } else {
+            checkbox.removeAttribute('disabled');
+            checkbox.classList.remove('disabled');
+    }
 });
 
 /**
