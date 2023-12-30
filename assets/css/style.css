@@ -159,14 +159,46 @@ nav {
     transform: 
         translateY(5rem);
   }
-  
- 
+
+#stats-button {
+    width: 20rem;
+    height: 3rem;
+    position: relative;
+
+}
+
+#stats-popover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .offcanvas-body {
     display: flex;
     flex-direction: column;
     padding: inherit;
     margin: 1rem;
 }  
+
+#stats {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #fffce1;
+    padding: 8px;
+    text-align: left;
+    font-size: 2rem;
+}
+
+th {
+    text-align: center;
+}
+
+table p {
+    font-size: 2rem;
+}
 
 .block-title {
     display: flex;
