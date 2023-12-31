@@ -15,7 +15,9 @@
     --bs-emphasis-color: #93B569 ;
     --bs-secondary-color: #BDBDBD ; */
 
-
+* {
+    overflow: scroll;
+}
 
 body {
     display: flex;
@@ -24,12 +26,14 @@ body {
     justify-content: center;
     font-family: 'EB Garamond', serif; 
     font-size: 18px;   
+    max-width: 100vw;
 }
 
 header {
     display: flex;    
     flex-flow: column wrap;
     justify-content: center;
+    max-width: 100vw;
 }
 
 .header-game {
@@ -38,15 +42,17 @@ header {
     justify-content: center;
     position: relative;
     height: 80vh;
-    background: url(/assets/images/background.jpg) top/cover no-repeat;
+    background: rgba(255, 255, 255, 0.5) url(/assets/images/background.jpg) top/cover no-repeat;
     margin-bottom: 10rem;
+    max-width: 100vw;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 4rem 4rem;
+    margin: 2rem 2rem;
+    max-width: 100vw;
 }
 
 #quote {
@@ -61,10 +67,6 @@ a {
     text-decoration: none;
     color: var(--bs-emphasis-color);
     border: none;
-}
-
-.container-fluid {
-    max-width: 100%;
 }
 
 /* Credit for lines 81-96: https://stackoverflow.com/questions/54616139/how-to-animate-underline-from-left-to-right */
@@ -85,18 +87,6 @@ a {
     background-size: 100% 2px;
   }
 
-
-/* #spinner {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    /* z-index: 999; */
-    /* background-color: black;
-    align-items: center;
-    display: none;
-} */
-    
-
 /* HEADER */
 #landing-name {
     letter-spacing: 4px;
@@ -106,8 +96,11 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    padding: 1rem ;
+    max-width: 100vw;
+}
+
+#nav-settings {
+    max-width: 100vw;
 }
 
 #hero-text {
@@ -123,8 +116,6 @@ nav {
 #hero-text-a {
     font-size: 3rem;
     text-align: center;
-    padding-top: 17rem;
-    padding-bottom: 18rem;
     text-transform: lowercase;
     letter-spacing: 5px; 
 }
@@ -132,7 +123,7 @@ nav {
 #hero-image img {
     max-width: 15rem;
     max-height: 15rem;
-    padding: 1rem;
+    max-width: 100vw;
 }
 
 #hero-image-game {
@@ -193,11 +184,6 @@ nav {
     padding: 1rem 1rem;
 }
 
-.section-hidden {
-    opacity: 0;
-    transform: 
-        translateY(5rem);
-  }
 
 #stats-button {
     width: 20rem;
@@ -212,18 +198,27 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 100vw;
+}
+
+#popover-stats {
+  --bs-offcanvas-height: 70vh;
+  align-items: end;
+  max-width: 100vw;
+
 }
 
 .offcanvas-body {
     display: flex;
     flex-direction: column;
     margin: 1rem;
+    max-width: 100vw;
 }  
 
 #stats {
     border-collapse: collapse;
-    width: 100%;
-    padding-bottom: 3rem;
+    max-width: 100vw;
+    
 }
 
 th, td {
@@ -273,6 +268,7 @@ form {
     text-align: center;
     align-items: center;
     z-index: 99;
+    max-width: 100vw;
 }
 
 fieldset {
@@ -281,7 +277,7 @@ fieldset {
     justify-content:  space-around;
     margin: 0.5rem 0.5rem 3px 0.5rem ;
     padding: 0.5rem;
-    width: 100%;
+    max-width: 100vw;
     border: solid 2px var(--bs-secondary-color);
     border-radius: 10px;
 }
@@ -296,7 +292,7 @@ fieldset label {
 
 .task::placeholder {
     color: var(--bs-secondary-color);
-    opacity: 0.5;;
+    opacity: 0.5;
 }
 
 fieldset > .task {
@@ -311,11 +307,12 @@ fieldset > .task {
     flex-direction: row;
     border: none;
     font-size: 1.23em;
+
 }
 
 /*  checkbox styles credit to https://moderncss.dev/pure-css-custom-checkbox-style/ */
 
-.form-control {
+/* .form-control {
     font-size: 2rem;
     font-weight: bold;
     line-height: 1.1;
@@ -323,7 +320,7 @@ fieldset > .task {
     grid-template-columns: 1em auto;
     gap: 0.5em;
     background-color: var(--bs-emphasis-color);
-}
+} */
 
 input [type="checkbox"] {
     -webkit-appearance: none;
@@ -369,13 +366,13 @@ input[type="checkbox"]:checked::before {
 }
 
 #new-day {
-    max-width: 80px;
+    max-width: 4rem;
     align-self: center;
 }
 
 .image-titles {
     display: flex;
-    width: 100%;
+    max-width: 100vw;
     padding: 1rem;
     justify-content: space-evenly;
 }
@@ -449,7 +446,6 @@ input[type="checkbox"]:checked::before {
     padding: 2%;
     border: solid 2px var(--bs-secondary-color);
     width: 90vw;
-    padding: 1%;
 }
 
 /* RESET SECTION */
@@ -458,8 +454,7 @@ input[type="checkbox"]:checked::before {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 6rem;
+    margin: 2rem 6rem 6rem 6rem;
 }
 
 #reset-popover {
@@ -485,10 +480,9 @@ footer {
     display: flex;
     flex-direction: row;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     align-content: center;
-    padding-top: 5px;
     font-size: 15px;
     z-index: 0;
 }
