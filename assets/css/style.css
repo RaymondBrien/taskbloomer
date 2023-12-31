@@ -24,7 +24,6 @@ body {
     justify-content: center;
     margin-left: 4rem;
     margin-right: 4rem;
-    width: 90%;
     font-family: 'EB Garamond', serif; 
     font-size: 18px;   
 }
@@ -51,7 +50,7 @@ p {
 
 a {
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--bs-emphasis-color);
     border: none;
 }
 
