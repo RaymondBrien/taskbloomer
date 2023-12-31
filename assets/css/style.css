@@ -54,6 +54,9 @@ a {
     border: none;
 }
 
+.container-fluid {
+    max-width: 100%;
+}
 
 /* Credit for lines 81-96: https://stackoverflow.com/questions/54616139/how-to-animate-underline-from-left-to-right */
 .link-underline {

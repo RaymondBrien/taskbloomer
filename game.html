@@ -25,57 +25,58 @@
 
             <!-- Navbar with settings section -->
             <nav class="navbar fixed-top bg-body-tertiary" id="nav-settings">
-                <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="/assets/images/icons8-potted-plant-100-light-filled.png" alt="favicon-image-light" width="30" height="24">
-                            <a class="h4" id="landing-name" href="index.html">taskbloomer</a>
-                        </a>
+                <div class="container-fluid p-2">
+                    <a class="" href="index.html">
+                        <img src="assets/images/icons8-potted-plant-100-light-filled.png" alt="favicon-image-light" width="30" height="24">
+                        <a class="h4" id="landing-name" href="index.html">taskbloomer</a>
+                    </a>
                 
                     <button class="navbar-toggler d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-underline" href="instructions.html">Instructions</a>
-                            </li>
-                            <li class="nav-item">
-                                <h5>Settings</h5>
-                            </li>
-                            <!-- Difficulty settings -->
-                            <li>
-                                <div id="levels">
-                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                        <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off">
-                                        <label class="btn btn-outline-success" for="btnradio1">Easy</label>
-                                        
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
-                                        <label class="btn btn-outline-warning" for="btnradio2">Medium</label>
-                                        
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                                        <label class="btn btn-outline-danger" for="btnradio3">Hard</label>
+                        <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link link-underline" href="instructions.html">Instructions</a>
+                                </li>
+                                <hr>
+                                <li class="nav-item text-center">
+                                    <h4 class="display-6">Settings</h4>
+                                </li>
+                                <!-- Difficulty settings -->
+                                <li class="mb-2">
+                                    <div id="levels">
+                                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                            <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off">
+                                            <label class="btn btn-outline-success" for="btnradio1">Easy</label>
+                                            
+                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
+                                            <label class="btn btn-outline-warning" for="btnradio2">Medium</label>
+                                            
+                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                            <label class="btn btn-outline-danger" for="btnradio3">Hard</label>
+                                            </div>
                                         </div>
+                                </li>
+                                <!-- Light Mode Toggle -->
+                                <li class="mb-2">
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                                        <label class="btn btn-outline-warning" for="btn-check-5" id="dark-toggle"><i class="fa-solid fa-lightbulb"></i>&#160;Light Mode</label>
                                     </div>
-                            </li>
-                            <!-- Light Mode Toggle -->
-                            <li>
-                                <div>
-                                    <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
-                                    <label class="btn btn-outline-warning" for="btn-check-5" id="dark-toggle"><i class="fa-solid fa-lightbulb"></i>&#160;Light Mode</label>
-                                </div>
-                            </li>
-                            <!-- Time Setting -->
-                            <li>
-                                <div id="set-time">
-                                    <label for="time-setting">Reset today's goals at:</label>
-                                    <input id="time-setting" type="time" value="20:00">
-                                </div>
-                            </li>   
-                        </ul>
-                    </div>
+                                </li>
+                                <!-- Time Setting -->
+                                <li>
+                                    <div id="set-time">
+                                        <label for="time-setting">Reset today's goals at:</label>
+                                        <input id="time-setting" type="time" value="20:00">
+                                    </div>
+                                </li>   
+                            </ul>
+                        </div>
                 </div>
             </nav>
 
