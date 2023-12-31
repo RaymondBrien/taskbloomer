@@ -15,9 +15,9 @@
     --bs-emphasis-color: #93B569 ;
     --bs-secondary-color: #BDBDBD ; */
 
-* {
+/* * {
     overflow: scroll;
-}
+} */
 
 body {
     display: flex;
@@ -111,6 +111,7 @@ nav {
     display: flex;
     flex-direction: column;
     transform: translate(-50%, -50%);
+    color: #fffce1;
 }
 
 #hero-text-a {
@@ -144,10 +145,10 @@ nav {
 }
 
 #hero-blocks {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    margin: 1rem 0;
+    margin: 40rem 1rem 4rem 1rem;
     padding: 6rem 1rem;
     justify-content: center;
 }
@@ -184,6 +185,27 @@ nav {
     padding: 1rem 1rem;
 }
 
+#play-button {
+    display: flex;
+    width: 14rem;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+}
+
+#play-button:hover {
+    background-color: var(--bs-secondary-color);
+}
+
+#button-container {
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
 
 #stats-button {
     width: 20rem;
@@ -259,6 +281,10 @@ table p {
     background-color: var(--bs-body-bg);
 }
 
+#accordion-whole {
+    margin: 3rem 
+}
+
 /* MAIN PAGE */
 form {
     margin-top: 2rem;
@@ -322,11 +348,11 @@ fieldset > .task {
     background-color: var(--bs-emphasis-color);
 } */
 
-input [type="checkbox"] {
+/* input [type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
     /* For iOS < 15 to remove gradient background */
-    background-color: var(--bs-body-bg);
+    /* background-color: var(--bs-body-bg);
     margin: 0;
     font: inherit;
     color: currentColor;
@@ -337,10 +363,10 @@ input [type="checkbox"] {
     transform: translateY(-0.075em);
     display: grid;
     place-content: center;
-}
+} */ */
 
 
-.form-control + .form-control {
+/* .form-control + .form-control {
     margin-top: 1em;
   }
 
@@ -352,13 +378,13 @@ input[type="checkbox"]::before {
     transition: 120ms transform ease-in-out;
     box-shadow: inset 1em 1em var(--bs-emphasis-color);
 
-    /* Windows High Contrast Mode */
-    background-color: CanvasText;
-}
+    Windows High Contrast Mode
+    background-color: CanvasText; */
+/* } */
 
-input[type="checkbox"]:checked::before {
+/* input[type="checkbox"]:checked::before {
     transform: scale(1);
-}
+} */
 
 
 .characters span {

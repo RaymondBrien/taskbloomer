@@ -22,7 +22,7 @@
 
     <body>
         <header>
-            
+
             <!-- Navbar with settings section -->
             <nav class="navbar fixed-top bg-body-tertiary" id="nav-settings">
                 <div>
@@ -86,9 +86,19 @@
                 </div>
             </div>
         </div>
+        <!-- Let's play BUTTON -->
+        <div id="button-container">
+            <button id="play-button">
+                <i class="fa-solid fa-arrow-right fa-lg"></i>
+                <i class="fa-solid fa-arrow-right fa-lg"></i>
+                <a href="game.html">Task Page</a>
+                <i class="fa-solid fa-arrow-left fa-lg"></i>
+                <i class="fa-solid fa-arrow-left fa-lg"></i>
+            </button>
+        </div>
         <!-- HOW TO PLAY    -->
         <h2 class="text-center display-3 link-underline">How To Play</h2>
-        <section>
+        <section id="accordion-whole">
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -101,82 +111,82 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        <p class="lead">List three concise goals you want to achieve in your day. Make these achievable within your day.</p>
-                        <br>
-                        <p>Remember, be specific and intentional: there’s a character limit for a reason.</p>
-                        <ul>
-                            <li>Task <b>A</b> earns you the big money - 3 points! 
-                                This should be your biggest task of the day, due first or most important.</li>
-                            <li>Task <b>B</b> earns you 2 points.</li>
-                            <li>Task <b>C</b> earns you 1 point.</li>
-                        </ul> 
-                        <p>Can’t think of three? Put an intention instead!</p>
-                        <br>
-                        <div class="border border-secondary-subtle">
-                        <h2 class="text-center">
-                            <i class="fa-solid fa-lightbulb"></i>
-                            <i class="fa-solid fa-lightbulb"></i>
-                            <i class="fa-solid fa-lightbulb"></i>
-                        </h2>
-                        <ul>
-                            <li><kbd>Drink 6 glasses of water today</kbd></li>
-                            <li><kbd>Meditate for 10 minutes</kbd>
-                            <li><kbd>Make time for a walk of at least 15 minutes</kbd></li>
-                        </ul>
-                        </div> 
+                            <p class="lead">List three concise goals you want to achieve in your day. Make these achievable within your day.</p>
+                            <br>
+                            <p>Remember, be specific and intentional: there’s a character limit for a reason.</p>
+                            <ul>
+                                <li>Task <b>A</b> earns you the big money - 3 points! 
+                                    This should be your biggest task of the day, due first or most important.</li>
+                                <li>Task <b>B</b> earns you 2 points.</li>
+                                <li>Task <b>C</b> earns you 1 point.</li>
+                            </ul> 
+                            <p>Can’t think of three? Put an intention instead!</p>
+                            <br>
+                            <div class="border border-secondary-subtle">
+                            <h2 class="text-center">
+                                <i class="fa-solid fa-lightbulb pt-3"></i>
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </h2>
+                            <ul>
+                                <li><kbd>Submit tax return</kbd></li>
+                                <li><kbd>Meditate for 10 minutes</kbd>
+                                <li><kbd>Make time for a walk of at least 15 minutes</kbd></li>
+                            </ul>
+                            </div> 
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    <p class="display-5 text-center">
-                        2
-                        <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
-                        <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
-                    </p>
-                    </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body text-justify">
-                    <p class="lead">Each time you complete a goal, <b>click the checkbox</b> and you earn points. Earn enough points and your plant will grow.</p>
-                    <br> 
-                    <div class="border border-subtle text-center">
-                        <h2 class="large"><i class="fa-solid fa-triangle-exclamation"></i></h2>
-                        <p>Your goals are set to self-destruct at 8pm each night.</p>
-                        <p>You change this to any time you want at the bottom of the main page.</p>
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <p class="display-5 text-center">
+                            2
+                            <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
+                            <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
+                        </p>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body text-justify">
+                        <p class="lead">Each time you complete a goal, <b>click the checkbox</b> and you earn points. Earn enough points and your plant will grow.</p>
+                        <br> 
+                        <div class="border border-subtle text-center">
+                            <h2 class="large"><i class="fa-solid fa-triangle-exclamation pt-3"></i></h2>
+                            <p>Your goals are set to self-destruct at 8pm each night.</p>
+                            <p>You change this to any time you want at the bottom of the main page.</p>
+                        </div>
+                        <br>
                     </div>
-                    <br>
-                </div>
                 </div>
                 <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    <p class="display-5">
-                        3
-                        <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
-                        <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
-                        <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
-                    </p>
-                    </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                    <p class="lead">Take a deep breath and focus on your tasks and watch your plant continue to grow!</p>
-                    <br>
-        
-                    <div>
-                        <p>Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.</p>
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <p class="display-5">
+                            3
+                            <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
+                            <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
+                            <i class="fa-solid fa-leaf" style="color: #4c763d;"></i>
+                        </p>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                        <p class="lead">Take a deep breath and focus on your tasks and watch your plant continue to grow!</p>
+                        <br>
+            
+                        <div>
+                            <p>Never-ending to-do lists and time crunches are exhausting. Focus on your three tasks, one at a time. You deserve to celebrate the little successes on the way to your big wins.</p>
+                        </div>
+                        <div class="border border-subtle text-center">
+                            <h2>
+                            <i class="fa-solid fa-lightbulb pt-3"></i>
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <i class="fa-solid fa-lightbulb"></i>
+                            </h2>
+                            <p><em>Finished them all already? Go you! Celebrate, knowing you’ve done what you set out to do today.</em></p>
+                        </div>  
                     </div>
-                    <div class="border border-subtle text-center">
-                        <h2>
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <i class="fa-solid fa-lightbulb"></i>
-                        </h2>
-                        <p><em>Finished them all already? Go you! Celebrate, knowing you’ve done what you set out to do today.</em></p>
-                    </div>  
-                </div>
                 </div>
             </div>
         </section>
