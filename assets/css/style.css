@@ -259,6 +259,7 @@ nav {
 
 }
 
+
 #stats-button:hover {
     background-color: var(--bs-body-bg);
     border: solid 2px var(--bs-secondary-color);
@@ -374,11 +375,11 @@ fieldset > .task {
     background-color: var(--bs-emphasis-color);
 } 
 
-input [type="checkbox"] {
+input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
     /* For iOS < 15 to remove gradient background */
-     background-color: var(--bs-body-bg);
+    background-color: var(--bs-body-bg);
     margin: 0;
     font: inherit;
     color: currentColor;

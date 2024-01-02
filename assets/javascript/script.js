@@ -7,13 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // set the checkboxes as disabled until the user adds to input
         checkbox.setAttribute('disabled', true);
 
-        // If a checkbox is disabled, enable popovers on parent element
+        // If a checkbox is disabled, 
         if (checkbox.hasAttribute('disabled')) {
-            checkbox.parentElement.setAttribute('data-bs-toggle', 'popover');
-            checkbox.parentElement.setAttribute('data-bs-trigger', 'hover focus');
-            checkbox.parentElement.setAttribute('data-bs-content', 'disabled popover');
-        }
-
+            checkbox.parentElement.style.backgroundColor = 'grey';
+            checkbox.parentElement.style.border = 'solid 5px red';
+        } 
+        
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
@@ -450,5 +449,4 @@ for (let target of targets) {
         }
         });
     }
-
 
