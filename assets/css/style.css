@@ -426,8 +426,20 @@ input[type="checkbox"]:checked::before {
 }
 
 #new-day {
-    max-width: 4rem;
-    align-self: center;
+    width: 20rem;
+    height: 3rem;
+    position: relative;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    margin: auto;
+    border: #4c763d;
+    margin: auto;
+    border: solid 2px ;
+}
+
+#new-day:hover {
+    background-color: var(--bs-emphasis-color);
+    border: solid 2px var(--bs-secondary-color);
 }
 
 .image-titles {
