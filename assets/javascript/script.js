@@ -39,6 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
+ * Triggers newDay() at time set (default set to 20:00)
+ */
+let defaultTimeSource = (document.getElementById('time-setting').value).split(':');
+let defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
+
+setInterval(newDay, defaultMilliseconds);
+
+/**
  * Returns a random number between min (inclusive) and max (exclusive)
  */
 function getRandomInt(min, max) {
@@ -179,6 +187,8 @@ function updateProgress(totalPoints, nextInArray) {
     progressLog.innerHTML = `${progressPercentage}%`;
 }
 
+
+
 /**
  * Resets day score count, clears goals inputs, unchecks all checkboxes, disables checkboxes until next user input.
  */
@@ -198,42 +208,59 @@ function newDay() {
     }
 }
 
+
+
+
 /**
- * Triggers new day button at custom time set by user.
+ * If trigger time value for newDay() changed by user.
 */
 document.getElementById('time-setting').addEventListener('change', function() {
     
+    // reset the newDay interval
+    clearInterval(newDay);
+
     // get custom time value and parse to total minutes
     let customTime = this.value;
     let tValues = customTime.split(':');
     let customMinutes = parseInt(tValues[0])*60+parseInt(tValues[1]);
+    let untilCustom = '';
+
     console.log('custom minutes is ' + customMinutes);
 
     // get current time and parse to integers (todayMinutes will have a max value of 1440)
     let d = new Date();
     let todayMinutes = parseInt((d.getHours()*60)) + parseInt(d.getMinutes());
-    console.log('today minutes is ' + todayMinutes);
+    console.log('today\'s time in minutes is ' + todayMinutes);
 
-    // if custom time later than current time, trigger new day function for same day
-    if (todayMinutes < customMinutes) {
-        // find number of minutes until custom times, convert to milliseconds
-        let untilCustom = ((customMinutes-todayMinutes)*60)*1000;
-        setNewDayTrigger(untilCustom);
-    } 
+    // find number of minutes until custom times, convert to milliseconds
+    untilCustom = (customMinutes-todayMinutes)*60000;
     
+    // if untilCustom is before current time, set for tomorrow
+    if (untilCustom <= 0) {
+        untilCustom = 86400000 + untilCustom;
+        return untilCustom;
+    }
+    
+    console.log(untilCustom + 'milliseconds until custom time for function trigger');
+    // invoke newday at new time
+    setInterval(newDay, untilCustom);
+    
+}); 
+
+/**
+ *  untilCustom 
+ */
+function setNewDayTrigger(untilCustom) {
     let intervalID = '';
+    intervalID = setInterval(newDay, untilCustom);
+
 
     // Clear any previously set intervals
-    clearInterval(intervalID);
+    
     setNewDayTrigger(untilCustom);
+}
+ 
 
-    function setNewDayTrigger(untilCustom) {
-        intervalID = setInterval(newDay, untilCustom);
-
-    }
-
-    newDay;
-}); 
 
 /**
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
