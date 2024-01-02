@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             checkbox.parentElement.style.backgroundColor = 'grey';
             checkbox.parentElement.style.border = 'solid 5px red';
         } 
-        
+
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
@@ -217,16 +217,22 @@ document.getElementById('time-setting').addEventListener('change', function() {
     // if custom time later than current time, trigger new day function for same day
     if (todayMinutes < customMinutes) {
         // find number of minutes until custom times, convert to milliseconds
-        let untilCustom = ((customMinutes-todayMinutes)*60)*100;
+        let untilCustom = ((customMinutes-todayMinutes)*60)*1000;
         setNewDayTrigger(untilCustom);
     } 
-
+    
     let intervalID = '';
+
+    // Clear any previously set intervals
+    clearInterval(intervalID);
+    setNewDayTrigger(untilCustom);
+
     function setNewDayTrigger(untilCustom) {
         intervalID = setInterval(newDay, untilCustom);
 
     }
 
+    newDay;
 }); 
 
 /**
