@@ -39,14 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
- * Triggers newDay() at time set (default set to 20:00)
- */
-let defaultTimeSource = (document.getElementById('time-setting').value).split(':');
-let defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
-
-setInterval(newDay, defaultMilliseconds);
-
-/**
  * Returns a random number between min (inclusive) and max (exclusive)
  */
 function getRandomInt(min, max) {
@@ -188,6 +180,15 @@ function updateProgress(totalPoints, nextInArray) {
 }
 
 
+/**
+ * Triggers newDay() at time set (default set to 20:00)
+ */
+let intervalID = null;
+let defaultTimeSource = (document.getElementById('time-setting').value).split(':');
+let defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
+
+intervalID = setInterval(newDay, defaultMilliseconds);
+
 
 /**
  * Resets day score count, clears goals inputs, unchecks all checkboxes, disables checkboxes until next user input.
@@ -209,15 +210,13 @@ function newDay() {
 }
 
 
-
-
 /**
- * If trigger time value for newDay() changed by user.
+ * Sets new intervalID for newDay() if trigger time is manually changed by user.
 */
 document.getElementById('time-setting').addEventListener('change', function() {
     
     // reset the newDay interval
-    clearInterval(newDay);
+    clearInterval(intervalID);
 
     // get custom time value and parse to total minutes
     let customTime = this.value;
@@ -238,29 +237,13 @@ document.getElementById('time-setting').addEventListener('change', function() {
     // if untilCustom is before current time, set for tomorrow
     if (untilCustom <= 0) {
         untilCustom = 86400000 + untilCustom;
-        return untilCustom;
     }
-    
+
     console.log(untilCustom + 'milliseconds until custom time for function trigger');
     // invoke newday at new time
-    setInterval(newDay, untilCustom);
-    
-}); 
-
-/**
- *  untilCustom 
- */
-function setNewDayTrigger(untilCustom) {
-    let intervalID = '';
     intervalID = setInterval(newDay, untilCustom);
-
-
-    // Clear any previously set intervals
     
-    setNewDayTrigger(untilCustom);
-}
- 
-
+});  
 
 /**
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
