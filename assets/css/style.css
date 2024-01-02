@@ -342,6 +342,7 @@ fieldset label {
 
 .main-input {
     padding: 0.5rem 0.5rem;
+    width: 90%;
 }
 
 .task::placeholder {
@@ -351,6 +352,8 @@ fieldset label {
 
 fieldset > .task {
     width: 88%;
+    height: 5rem;
+    font-size: 2rem;
 }
 
 .subset-field-a {
@@ -416,6 +419,7 @@ input[type="checkbox"]:checked::before {
 
 .characters span {
     font-size: 1em;
+    padding: 1em;
 }
 
 #new-day {
