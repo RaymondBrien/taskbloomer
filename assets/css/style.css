@@ -9,15 +9,18 @@
     --bs-emphasis-color: #93B569;
     --bs-secondary-color: #2c2c2c; */
 
-    /* custom DARK theme colors
-    --bs-body-bg: #0e100f;
-    --bs-body-color: #fffce1;
-    --bs-emphasis-color: #93B569 ;
-    --bs-secondary-color: #BDBDBD ; */
+ /* custom DARK theme colors */
+ 
+* {
+    
+         --bs-body-bg: #0e100f;
+         --bs-body-color: #fffce1;
+         --bs-emphasis-color: #93B569 ;
+         --bs-secondary-color: #BDBDBD ;
 
-/* * {
-    overflow: scroll;
-} */
+} 
+
+ 
 
 body {
     display: flex;
@@ -60,7 +63,7 @@ main {
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 22px;
 }
 
 a {
@@ -206,6 +209,16 @@ nav {
     justify-content: center;
 }
 
+.info-steps {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+.info-steps p {
+    padding: 1rem;
+    border: solid 1px var(--bs-body-color);
+}
+
 .ideas {
     padding: 1em 2em;
     border: solid 1px var(--bs-emphasis-color);
@@ -213,6 +226,7 @@ nav {
     background-color: #4c763d;
     color: #FFFFFF;
     text-align: center;
+    margin: 4rem;
 }
 
 .ideas h6 {
@@ -220,7 +234,7 @@ nav {
 }
 
 .ideas p {
-    font-size: 22px;
+    font-size: 25px;
 }
 
 
@@ -238,6 +252,7 @@ nav {
     position: relative;
     background-color: var(--bs-secondary-color);
     color: var(--bs-body-bg);
+    margin: auto;
 
 }
 
@@ -362,8 +377,7 @@ fieldset > .task {
 }
 
 /*  checkbox styles credit to https://moderncss.dev/pure-css-custom-checkbox-style/ */
-
-/* .form-control {
+.form-control {
     font-size: 2rem;
     font-weight: bold;
     line-height: 1.1;
@@ -371,13 +385,13 @@ fieldset > .task {
     grid-template-columns: 1em auto;
     gap: 0.5em;
     background-color: var(--bs-emphasis-color);
-} */
+} 
 
-/* input [type="checkbox"] {
+input [type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
     /* For iOS < 15 to remove gradient background */
-    /* background-color: var(--bs-body-bg);
+     background-color: var(--bs-body-bg);
     margin: 0;
     font: inherit;
     color: currentColor;
@@ -388,10 +402,10 @@ fieldset > .task {
     transform: translateY(-0.075em);
     display: grid;
     place-content: center;
-} */ */
+}
 
 
-/* .form-control + .form-control {
+.form-control + .form-control {
     margin-top: 1em;
   }
 
@@ -403,13 +417,13 @@ input[type="checkbox"]::before {
     transition: 120ms transform ease-in-out;
     box-shadow: inset 1em 1em var(--bs-emphasis-color);
 
-    Windows High Contrast Mode
-    background-color: CanvasText; */
-/* } */
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+} 
 
-/* input[type="checkbox"]:checked::before {
+input[type="checkbox"]:checked::before {
     transform: scale(1);
-} */
+} 
 
 
 .characters span {
