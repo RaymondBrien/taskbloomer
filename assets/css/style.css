@@ -344,6 +344,11 @@ fieldset label {
     width: 100%;
 }
 
+.task {
+    border-radius: 5px;
+    padding: 5px;
+}
+
 .task::placeholder {
     color: var(--bs-secondary-color);
     opacity: 0.5;
@@ -426,10 +431,15 @@ input[type="checkbox"]:checked::before {
 }
 
 .image-titles {
-    display: flex;
     max-width: 100vw;
-    padding: 1rem;
-    justify-content: space-evenly;
+    padding-top: 5rem;
+}
+
+#plant-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 #plant-image-area {
