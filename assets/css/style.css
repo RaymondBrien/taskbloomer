@@ -200,6 +200,30 @@ nav {
     background-color: var(--bs-secondary-color);
 }
 
+.accordion-body {
+
+    align-items: center;
+    justify-content: center;
+}
+
+.ideas {
+    padding: 1em 2em;
+    border: solid 1px var(--bs-emphasis-color);
+    border-radius: 5px;
+    background-color: #4c763d;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.ideas h6 {
+    font-size: 2em;
+}
+
+.ideas p {
+    font-size: 22px;
+}
+
+
 #button-container {
     width: 100vw;
     height: 5rem;
