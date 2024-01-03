@@ -260,7 +260,8 @@ nav {
 
 }
 
-#stats-button:hover, #stats-button::after {
+#stats-button:hover, #stats-button::after,
+#end-button:hover {
     background-color: var(--bs-emphasis-color);
     border: solid 2px var(--bs-secondary-color);
 }  
