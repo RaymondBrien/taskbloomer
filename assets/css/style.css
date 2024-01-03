@@ -246,7 +246,8 @@ nav {
     padding: 1em;
 }
 
-#stats-button {
+#stats-button,
+#end-button {
     width: 20rem;
     height: 3rem;
     position: relative;
@@ -258,7 +259,6 @@ nav {
     border: solid 2px ;
 
 }
-
 
 #stats-button:hover, #stats-button::after {
     background-color: var(--bs-emphasis-color);
