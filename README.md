@@ -68,8 +68,6 @@ Principally the main ideas are prioritised:
 
 ### Colour Scheme
 
-<!-- Explain your colours and the colour scheme. -->
-
 The default color scheme is a dark theme, consisting of the follwing colors:  
 
 - `#0e100f` used for background.
@@ -98,41 +96,25 @@ I also ensured that for the text and background colors for both dark and light m
 
 ### Typography
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- [EB Garamond](https://fonts.google.com/specimen/EB+Garamond) was used for all text elements, chosen for its readability and established use across platforms.
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the icons for the hero cards on the landing page.
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+<!-- Add favicon source? -->
 
 ## User Stories
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to set goals, so that I can feel more in control of my to-do list for the day.
+- As a new site user, I would like to reduce overwhelm, so that I can feel more productive during my day.
+- As a new site user, I would like to see clean visuals, so that I don't feel overwhelmed with information.
+- As a new site user, I would like to learn how to use the site, so that I can make the most of the application.
+- As a new site user, I would like to track my to-dos, so that I can feel productive.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to grow my gallery, so that I can ____________.
 - As a returning site user, I would like to ____________, so that I can ____________.
 - As a returning site user, I would like to ____________, so that I can ____________.
 - As a returning site user, I would like to ____________, so that I can ____________.
@@ -163,8 +145,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Mobile Wireframes
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+<details>
+<summary> Click here to see the Mobile Wireframes </summary>
 
 Home
   - ![screenshot](documentation/wireframes/mobile-home.png)
@@ -181,12 +163,12 @@ Gallery
 etc.
   - repeat for any remaining mobile wireframes
 
-< / details >
+</details>
 
 ### Tablet Wireframes
 
-< details >
-< summary > Click here to see the Tablet Wireframes < / summary >
+<details>
+<summary> Click here to see the Tablet Wireframes </summary>
 
 Home
   - ![screenshot](documentation/wireframes/tablet-home.png)
@@ -203,7 +185,7 @@ Gallery
 etc.
   - repeat for any remaining tablet wireframes
 
-< / details >
+</details>
 
 ### Desktop Wireframes
 
