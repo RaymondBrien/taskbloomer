@@ -1,35 +1,50 @@
-credit: Erik
-Source for favicon = https://icons8.com/icons/set/plant-favicon
-
 # [TASKBLOOMER](https://raymondbrien.github.io/taskbloomer)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+🚀 TaskBloomer: Where Priorities Blossom. 🚀 
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
+Are you drowning in a sea of tasks, struggling to stay afloat trying to decide which tasks to prioritise? Say goodbye to chaos and hello to clarity with TaskBloomer, the task management app designed reward you for making three concise to-dos which shape your day.
 
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
+🎯 Step 1: Streamline three main goals
+Create three tasks, one big, one medium, one small. Each goal must be no more than 25 characters, so be concise!
 
+Prioritize your tasks with a user-friendly interface that ensures you spend less time managing and more time accomplishing. Say goodbye to scattered to-do lists and hello to efficient, well-organized workflow in three simple steps.
+
+🌟 Step 2: Rank your tasks in order of priority
+Each task is ranked from biggets to smallest, represeted by the amount of points each task earns you.
+
+Task A, your biggest task, earns you three points when you tick it off. 
+Task B earns you 2 points.
+Task C, 1 point.
+
+TaskBloomer understands the toll of decision fatigue on productivity. It's interesting to notice how decision making can become easier when you have points associated with them. That's what we are exploring here. 
+Guide your decision-making process effortlessly with TaskBloomer to leave you with more mental bandwidth for the tasks that truly matter.
+
+🔄 Step 3: Reward yourself with each completed task
+By focussing on what matters most, each time you check off a goal, your points go towards earning you an NFT. With real-time progress tracking and a gallery at the end to look through all the lovely pieces you've collected from all your hard work, you'll always be in the driver's seat, steering towards success without feeling overwhelmed.
+
+Extra goodies:
+Track your progress with helpful stats and beautiful sets of NFTs from artists all over the world.
+
+✨ Simplify Your Life: Unclutter your mind and workspace for enhanced productivity.
+✨ Stay Focused: Say goodbye to decision fatigue and hello to laser-sharp focus.
+✨ Achieve More: Leverage your hard work by earning each time you complete a task, tracking progress to completing your gallery along the way.
+
+🌺 TaskBloomer: Where Priorities Blossom 🌺
+
+
+
+How useful for target
+
+<!-- TODO -->
 Consider adding a mockup image using the "Am I Responsive" website.
 Here's your deployed site as an example:
 https://ui.dev/amiresponsive?url=https://raymondbrien.github.io/taskbloomer
 
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
+
 
 ![screenshot](documentation/mockup.png)
 
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## UX
 
