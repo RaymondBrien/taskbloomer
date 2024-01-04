@@ -45,7 +45,7 @@ TaskBloomer is unique, not only because you earn points for every task you check
 
 The added benefit of including NFTs as part of your earning portfolio each time you hit a point threshold not only gives you the chance to look back at your NFTs and celebrate the work you have done to earn them, but also introduces you to new artists from across the globe!
 
-<!-- TODO -->
+<!-- UPDATE ONCE PHONE MEDIA QUERY ADDED -->
 https://ui.dev/amiresponsive?url=https://raymondbrien.github.io/taskbloomer
 
 <!-- TODO -->
@@ -68,51 +68,33 @@ Principally the main ideas are prioritised:
 
 ### Colour Scheme
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 <!-- Explain your colours and the colour scheme. -->
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The default color scheme is a dark theme, consisting of the follwing colors:  
 
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
+- `#0e100f` used for background.
+- `#fffce1` used for primary text.
+- `#93B569` used for primary highlights.
+- `#BDBDBD` used for secondary highlights.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+If light mode is enabled on the task area by the user, the following custom variables are used: 
 
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
+- `#fffce1` used for background.
+- `#3D3D3D` used for primary text.
+- `#93B569` used for primary highlights.
+- `#2c2c2c` used for secondary highlights.
 
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
 
-Example:
+I used coolors.co to generate my colour palettes.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+[coolors.co](https://coolors.co/0e100f-fffce1-93b569-bdbdbd)
+[coolors.co](https://coolors.co/fffce1-3d3d3d-93b569-2c2c2c)
 
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
+![screenshot](documentation/dark-mode.png)
+![screenshot](documentation/light-mode.png)
 
-![screenshot](documentation/coolors.png)
+I also ensured that for the text and background colors for both dark and light mode were verified accessible through coolors' [coolors.co] (https://coolors.co/contrast-checker/112a46-acc8e5) color contrast checker for maximum accessibility.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
 
 ### Typography
 
