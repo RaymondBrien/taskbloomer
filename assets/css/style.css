@@ -127,9 +127,9 @@ nav {
 }
 
 #hero-image img {
-    max-width: 15rem;
     max-height: 15rem;
     max-width: 100vw;
+    margin: 5rem;
 }
 
 #hero-image-game {
@@ -141,11 +141,8 @@ nav {
 }
 
 #slogan {
-    position: relative;
     padding-top: 2rem;
-    font-size: 1.3rem;
-    text-align: center;
-    font-stretch: expanded;
+    font-size: 1.7rem;
     animation: 1s alternate slidein;      
 }
 
@@ -153,7 +150,8 @@ nav {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    margin: 52rem 1rem 4rem 1rem;
+    margin-top: 78rem;
+    margin-bottom: 4rem;
     justify-content: center;
 }
 
