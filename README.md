@@ -184,84 +184,76 @@ For some/all of your features, you may choose to reference the specific project 
 
 IMPORTANT: Include a screenshot of each individual feature! -->
 
-<!-- Home Features List: -->
-Navbar top
 
-Hero area
-
-Hero boxes 1
-
-Link to task area 
-
-Instructions accordion 
-
-Hero boxes expanded with same icons as before for continuity
-
-<!-- Main Features List: -->
-Navbar top (link to home, dropdown to settings)
-
-Settings:
-- Difficulty (with representative colors as radio button group)
-- Light mode
-- Reset today's goals automatically custom time
-
-Hero area (continuity, opacity)
-
-Your stats: collapsible to avoid overloading page realestate / for good UI and UX
-- table of stats
-- progess bar 
-- info about developer 
-- with links at bottom (with annimation for continuity and clear navigation)
-
-Main input area:
-- autofocus on first input for quick use
-- max characters with note for user if close to max
-- alert window if max characters reached 
-- Done checkbox disabled until text is in input area to avoid cheating
-- Number of points shown for each task
-- Done checkbox animation and color change
-- Input when checked off, changes color and linethrough text decoration
-- If unchecked after checked, yellow border to warn user not finished or unchecked by accident
-- Today's points count
-- New Day button 
-
-NFT area with custom border
-
-Gallery area:
-- responsive sizing 
-- changes when dragging image to show available drag destination for user
-
-Reset game button (popover, main page opacity unfocused)
-
-
-<!-- End Features List: -->
-Gallery 
-Link to home
 
 
 ### Existing Features
 
-- **Title for feature #1**
+- **Navbar**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature01.png)
-
-- **Title for feature #2**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature02.png)
-
-- **Title for feature #3**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature03.png)
+    - The navbar is a different color shade to the main background for improved visibility. It spans the entire width of page for a standard UI that users will likely expect. There is letter spacing styling consistent across whole navbar for improved UX. 
+    The task page link includes an animation to show the user on mouse hover that the link is clickable. Task page link also has a border to immediately visually differentiate it from the app title on the left. 
 
 
+![screenshot](documentation/screenshots/feature01.jpeg)
+
+- **Hero Boxes**
+
+    - Three justified boxes in the center of the page are used to immediately capture the user's eye and succinctly inform the user some of the main features of the app. Using consistent icons and coloring, these boxes then come with further information if the user scrolls down where each catchword is explained in mored detail about the app's features.
+
+![screenshot](documentation/screenshots/feature02.jpeg)
+
+- **Instructions Accordion**
+
+    - A collapsable accordion with three tabs (demarkated with both numbers and the respective amount of leaf icons colored the same as the emphasis text for continuity) on click expand to reveal step by step guidelines for how to use and make the most of the app. They first appear closed to ensure the page is not overwhelming for the user and improve page naviation. There are arrows at the right of each section to signal that they are openable to the user. 
+
+![screenshot](documentation/screenshots/feature03.jpeg)
 
 
+
+- **Feature**
+
+    - 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+
+- **Feature**
+
+    - 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+- **Feature**
+
+    - 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+- **Feature**
+
+    - 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+- **Feature**
+
+    - 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+- **Feature**
+
+    - 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **Feature**
+
+    - 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+- **Feature**
+
+    - 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
 
 
 
