@@ -114,17 +114,14 @@ I also ensured that for the text and background colors for both dark and light m
 
 ### Returning Site Users
 
-- As a returning site user, I would like to grow my gallery, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to track my progress, so that I can to remain motivated and engaged with my tasks.
+- As a returning site user, I would like to make sure that if any tasks have been accidentally marked uncomplete, I can see that has happened and fix it, to make sure I earn all my points for the day.
+- As a returning site user, I would like to have my tasks clear automatically, so that I can avoid unneccessary extra menial tasks.
+- As a returning site user, I would like to be able to switch the colorscheme, so that I can improve the accessibility of my tasks area.
 
 ## Wireframes
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, display your wireframe screenshots using a Markdown `table`.
+<!-- In this section, display your wireframe screenshots using a Markdown `table`.
 Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
 
 Alternatively, dropdowns are a way to condense several wireframes into a collapsible menu to save space.
@@ -141,7 +138,7 @@ for the Mobile, Tablet, and Desktop wireframes.
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes. -->
 
 ### Mobile Wireframes
 
