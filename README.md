@@ -191,7 +191,7 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 
 - **Navbar**
 
-    - The navbar is a different color shade to the main background for improved visibility. It spans the entire width of page for a standard UI that users will likely expect. There is letter spacing styling consistent across whole navbar for improved UX. 
+    - The home navbar is a different color shade to the main background for improved visibility. It spans the entire width of page for a standard UI that users will likely expect. There is letter spacing styling consistent across whole navbar for improved UX. 
     The task page link includes an animation to show the user on mouse hover that the link is clickable. Task page link also has a border to immediately visually differentiate it from the app title on the left. 
 
 
@@ -199,13 +199,13 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 
 - **Hero Boxes**
 
-    - Three justified boxes in the center of the page are used to immediately capture the user's eye and succinctly inform the user some of the main features of the app. Using consistent icons and coloring, these boxes then come with further information if the user scrolls down where each catchword is explained in mored detail about the app's features.
+    - Three justified boxes in the center of the home page are used to immediately capture the user's eye and succinctly inform the user some of the main features of the app. Using consistent icons and coloring, these boxes then come with further information if the user scrolls down where each catchword is explained in mored detail about the app's features.
 
 ![screenshot](documentation/screenshots/feature02.jpeg)
 
 - **Instructions Accordion**
 
-    - A collapsable accordion with three tabs (demarkated with both numbers and the respective amount of leaf icons colored the same as the emphasis text for continuity) on click expand to reveal step by step guidelines for how to use and make the most of the app. They first appear closed to ensure the page is not overwhelming for the user and improve page naviation. There are arrows at the right of each section to signal that they are openable to the user. 
+    - A collapsable accordion with three tabs (demarkated with both numbers and the respective amount of leaf icons colored the same as the emphasis text for continuity) on click expand on the home page to reveal step by step guidelines for how to use and make the most of the app. They first appear closed to ensure the page is not overwhelming for the user and improve page naviation. There are arrows at the right of each section to signal that they are openable to the user. 
 
 ![screenshot](documentation/screenshots/feature03.jpeg)
 
