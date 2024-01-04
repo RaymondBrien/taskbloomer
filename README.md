@@ -1,17 +1,16 @@
 # [TASKBLOOMER](https://raymondbrien.github.io/taskbloomer)
 
-
-🚀 TaskBloomer: Where Priorities Blossom. 🚀 
+# 🚀 TaskBloomer: Where Priorities Blossom. 🚀 
 
 Are you drowning in a sea of tasks, struggling to stay afloat trying to decide which tasks to prioritise? Say goodbye to chaos and hello to clarity with TaskBloomer, the task management app designed reward you for making three concise to-dos which shape your day.
 
-🎯 Step 1: Streamline three main goals
+## 🎯 Step 1: Streamline three main goals
 
-Create three tasks, one big, one medium, one small. Each goal must be no more than 25 characters, so be concise!
+Create three tasks, one big, one medium, one small. Each goal must be no more than 25 characters, so aim for something concise and intentional.
 
 Prioritize your tasks with a user-friendly interface that ensures you spend less time managing and more time accomplishing. Say goodbye to scattered to-do lists and hello to efficient, well-organized workflow in three simple steps.
 
-🌟 Step 2: Rank your tasks in order of priority
+## 🌟 Step 2: Rank your tasks in order of priority
 
 Each task is ranked from biggets to smallest, represeted by the amount of points each task earns you.
 
@@ -22,11 +21,11 @@ Task C, 1 point.
 TaskBloomer understands the toll of decision fatigue on productivity. It's interesting to notice how decision making can become easier when you have points associated with them. That's what we are exploring here. 
 Guide your decision-making process effortlessly with TaskBloomer to leave you with more mental bandwidth for the tasks that truly matter.
 
-🔄 Step 3: Reward yourself with each completed task
+## 🏆 Step 3: Reward yourself with each completed task
 
 By focussing on what matters most, each time you check off a goal, your points go towards earning you an NFT. With real-time progress tracking and a gallery at the end to look through all the lovely pieces you've collected from all your hard work, you'll always be in the driver's seat, steering towards success without feeling overwhelmed.
 
-Extra goodies:
+### Extra goodies:
 1 - Track your progress with helpful stats and beautiful sets of NFTs from artists all over the world.
 2 - Set the difficulty rating: choose if the amounts of points you need for each NFT are easier (less points needed per NFT), medium (a few more needed for each) or hard (for those who like a challenge).
 3 - New lightmode feature for your tasks area.
@@ -47,27 +46,31 @@ TaskBloomer is unique, not only because you earn points for every task you check
 The added benefit of including NFTs as part of your earning portfolio each time you hit a point threshold not only gives you the chance to look back at your NFTs and celebrate the work you have done to earn them, but also introduces you to new artists from across the globe!
 
 <!-- TODO -->
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
 https://ui.dev/amiresponsive?url=https://raymondbrien.github.io/taskbloomer
 
-
+<!-- TODO -->
 ![screenshot](documentation/mockup.png)
 
 
 ## UX
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+TaskBloomer's design has been inspired by productivity sites such as Notion, featuring a deluxe yet visually simple aethetic to avoid overstimulation, with the main interactive areas clear and consise.
 
-In this section, you will briefly explain your design processes.
+TaskBloomer is made up intentionally of two main pages (landing page with instructions, and the main task area) to make navigation feel clean and simple to use. All bonus features such as the stats area and gallery are included with user needs in mind. 
+Principally the main ideas are prioritised:
+- How to play 
+- Setting consise task descriptions 
+- Earning NFTs 
+- Checking your stats
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+*Your feedback is crucial, so please share your thoughts to help us refine and enhance our user-centric approach. Let's make every click count! * 🚀 
+
 
 ### Colour Scheme
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-Explain your colours and the colour scheme.
+<!-- Explain your colours and the colour scheme. -->
 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
