@@ -146,19 +146,13 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <summary> Click here to see the Mobile Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+  - ![screenshot](documentation/wireframes/mob-home.jpg)
 
-About
-  - ![screenshot](documentation/wireframes/mobile-about.png)
+Tasks Area
+  - ![screenshot](documentation/wireframes/mob-main.jpg)
 
-Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
-
-Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
-
-etc.
-  - repeat for any remaining mobile wireframes
+End Page
+  - ![screenshot](documentation/wireframes/mob-end.jpg)
 
 </details>
 
@@ -168,43 +162,31 @@ etc.
 <summary> Click here to see the Tablet Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/tablet-home.png)
+  - ![screenshot](documentation/wireframes/tab-home.jpg)
 
-About
-  - ![screenshot](documentation/wireframes/tablet-about.png)
+Tasks Area
+  - ![screenshot](documentation/wireframes/tab-main.jpg)
 
-Contact
-  - ![screenshot](documentation/wireframes/tablet-contact.png)
-
-Gallery
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
-
-etc.
-  - repeat for any remaining tablet wireframes
+End Page
+  - ![screenshot](documentation/wireframes/tab-end.jpg)
 
 </details>
 
 ### Desktop Wireframes
 
-< details >
-< summary > Click here to see the Desktop Wireframes < / summary >
+<details>
+<summary> Click here to see the Desktop Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/desktop-home.png)
+  - ![screenshot](documentation/wireframes/desk-home.jpg)
 
-About
-  - ![screenshot](documentation/wireframes/desktop-about.png)
+Tasks Area
+  - ![screenshot](documentation/wireframes/desk-main.jpg)
 
-Contact
-  - ![screenshot](documentation/wireframes/desktop-contact.png)
+End Page
+  - ![screenshot](documentation/wireframes/desk-end.jpg)
 
-Gallery
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
-
-etc.
-  - repeat for any remaining desktop wireframes
-
-< / details >
+</details>
 
 ## Features
 
