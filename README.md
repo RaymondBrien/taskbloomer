@@ -121,25 +121,6 @@ I also ensured that for the text and background colors for both dark and light m
 
 ## Wireframes
 
-<!-- In this section, display your wireframe screenshots using a Markdown `table`.
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-Alternatively, dropdowns are a way to condense several wireframes into a collapsible menu to save space.
-Dropdowns in Markdown are considered some of the only acceptable HTML components that are allowed for assessment purposes.
-
-**IMPORTANT**! **IMPORTANT**! **IMPORTANT**!
-The example below uses the `details` and `summary` code elements.
-However, for these scripts to work, I've had to add spaces within the `< >` elements.
-
-You MUST remove these spaces for it to work properly on your own README/TESTING files.
-Remove the spaces within the `< >` brackets for the `details` and `summary` code elements,
-for the Mobile, Tablet, and Desktop wireframes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes. -->
-
 ### Mobile Wireframes
 
 <details>
@@ -190,20 +171,73 @@ End Page
 
 ## Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+<!-- List different parts of your project.
 
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
+Describe each in a sentence or so.
 
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
+Explain what value each for the user:
+ - who this website is for
+ - what user want to achieve,
+ - how your project is the best way to help them achieve these things.
 
 For some/all of your features, you may choose to reference the specific project files that implement them.
 
-IMPORTANT: Remember to always include a screenshot of each individual feature!
+IMPORTANT: Include a screenshot of each individual feature! -->
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+<!-- Home Features List: -->
+Navbar top
+
+Hero area
+
+Hero boxes 1
+
+Link to task area 
+
+Instructions accordion 
+
+Hero boxes expanded with same icons as before for continuity
+
+<!-- Main Features List: -->
+Navbar top (link to home, dropdown to settings)
+
+Settings:
+- Difficulty (with representative colors as radio button group)
+- Light mode
+- Reset today's goals automatically custom time
+
+Hero area (continuity, opacity)
+
+Your stats: collapsible to avoid overloading page realestate / for good UI and UX
+- table of stats
+- progess bar 
+- info about developer 
+- with links at bottom (with annimation for continuity and clear navigation)
+
+Main input area:
+- autofocus on first input for quick use
+- max characters with note for user if close to max
+- alert window if max characters reached 
+- Done checkbox disabled until text is in input area to avoid cheating
+- Number of points shown for each task
+- Done checkbox animation and color change
+- Input when checked off, changes color and linethrough text decoration
+- If unchecked after checked, yellow border to warn user not finished or unchecked by accident
+- Today's points count
+- New Day button 
+
+NFT area with custom border
+
+Gallery area:
+- responsive sizing 
+- changes when dragging image to show available drag destination for user
+
+Reset game button (popover, main page opacity unfocused)
+
+
+<!-- End Features List: -->
+Gallery 
+Link to home
+
 
 ### Existing Features
 
@@ -225,13 +259,13 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ![screenshot](documentation/feature03.png)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-Repeat as necessary for as many features as your site contains.
 
-Hint: the more, the merrier!
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+
+
+
+
 
 ### Future Features
 
