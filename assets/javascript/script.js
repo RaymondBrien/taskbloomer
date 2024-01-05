@@ -275,7 +275,7 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
             break;
         case 'dark':
             document.documentElement.setAttribute('data-bs-theme', 'dark');
-            document.documentElement.style.setProperty('--bs-body-color', '#0e100f');
+            document.documentElement.style.setProperty('--bs-body-bg', '#0e100f');
             document.documentElement.style.setProperty('--bs-body-color', '#fffce1');
             document.documentElement.style.setProperty('--bs-emphasis-color', '#93B569');
             document.documentElement.style.setProperty('--bs-secondary-color', '#BDBDBD');
