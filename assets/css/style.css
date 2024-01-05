@@ -118,6 +118,14 @@ nav {
     justify-content: space-between;
 }
 
+#nav-settings p {
+    font-size: 1.25em;
+}
+
+#dark-toggle {
+    width: 12rem;
+}
+
 #hero-text {
     /* position: absolute; */
     text-align: center;
