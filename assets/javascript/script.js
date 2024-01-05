@@ -268,17 +268,17 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
     switch (theme) {
         case 'light':
             document.documentElement.setAttribute('data-bs-theme', 'light');
-            document.documentElement.setAttribute('--bs-body-color', '#fffce1');
-            document.documentElement.setAttribute('--bs-text-color', '#3D3D3D');
-            document.documentElement.setAttribute('--bs-emphasis-color', '#93B569');
-            document.documentElement.setAttribute('--bs-secondary-color', '#2c2c2c');
+            document.documentElement.style.setProperty('--bs-body-bg', '#fffce1');
+            document.documentElement.style.setProperty('--bs-body-color', '#3D3D3D');
+            document.documentElement.style.setProperty('--bs-emphasis-color', '#93B569');
+            document.documentElement.style.setProperty('--bs-secondary-color', '#2c2c2c');
             break;
         case 'dark':
             document.documentElement.setAttribute('data-bs-theme', 'dark');
-            document.documentElement.setAttribute('--bs-body-color', '#0e100f');
-            document.documentElement.setAttribute('--bs-text-color', '#fffce1');
-            document.documentElement.setAttribute('--bs-emphasis-color', '#93B569');
-            document.documentElement.setAttribute('--bs-secondary-color', '#BDBDBD');
+            document.documentElement.style.setProperty('--bs-body-color', '#0e100f');
+            document.documentElement.style.setProperty('--bs-body-color', '#fffce1');
+            document.documentElement.style.setProperty('--bs-emphasis-color', '#93B569');
+            document.documentElement.style.setProperty('--bs-secondary-color', '#BDBDBD');
             break;
     }
 });
