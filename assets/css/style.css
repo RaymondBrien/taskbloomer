@@ -591,3 +591,11 @@ footer {
     z-index: 0;
 }
 
+#game-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+#game-footer p {
+    font-size: 15px;
+}
