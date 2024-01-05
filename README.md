@@ -260,6 +260,18 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 
 ![screenshot](documentation/screenshots/featureX.jpeg)
 
+- **Button Hover Styles**
+
+    - For YOUR STATS and New Day to highlight functionality and clickability for user, as well as promote discoverability and accessibility for new users less familiar with the app.
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **Input Autofocus**
+
+    - Autofocus for new page for returning users to efficiently start adding their goals to the tasks area.
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
 - **Checkbox disabled**
 
     - Disabled until goal written, with different color
