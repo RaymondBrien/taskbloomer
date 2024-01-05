@@ -244,13 +244,31 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 
 - **Progress Bar**
 
-    - 
+    - The progress bar allows users to quickly see their progress to the next NFT in a visual way rather than a numerical way as with the table of stats. This will help motivate both new and returning users alike to continue completing their tasks on the way to earning the next NFT.
 
 ![screenshot](documentation/screenshots/feature08.jpeg)
 
-- **Feature**
+- **Goals Character Count**
 
-    - 
+    - The character counter only appears after the first time a user starts putting goals into the input areas. It reminds the user to keep their goals consise and appears green with their character count until the user comes very close to the maximum character limit of 25 characters. If the user hits 25 characters, an alert will pop up stopping the user to type further and remind them to keep their goals under 25 characters.
+
+![screenshot](documentation/screenshots/feature09.jpeg)
+
+- **Completed Tasks**
+
+    - green, strickthrough 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **Checkbox disabled**
+
+    - Disabled until goal written, with different color
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **Subtle Accident Warning**
+
+    - Yellow if checked, then unchecked.
 
 ![screenshot](documentation/screenshots/featureX.jpeg)
 
@@ -259,6 +277,44 @@ IMPORTANT: Include a screenshot of each individual feature! -->
     - 
 
 ![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **New Day Button**
+
+    - 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **NFT Area**
+
+    - Custom border to direct attention, largest. Drag and drop.
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **Gallery Area**
+
+    - Responsive sizing and colors for drag destination highlight
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **Reset Game Button**
+
+    - Popover 
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **End Gallery**
+
+    - Carousel for user to look through all their NFTs once they have all been collected.
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+- **Links to Home Page**
+
+    - end page, logo top left on game page.
+
+![screenshot](documentation/screenshots/featureX.jpeg)
+
+<!-- END OF FEATURES -->
 
 
 
