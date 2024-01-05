@@ -175,7 +175,7 @@ End Page
 
 Describe each in a sentence or so.
 
-Explain what value each for the user:
+Explain value of each for the user:
  - who this website is for
  - what user want to achieve,
  - how your project is the best way to help them achieve these things.
@@ -183,8 +183,6 @@ Explain what value each for the user:
 For some/all of your features, you may choose to reference the specific project files that implement them.
 
 IMPORTANT: Include a screenshot of each individual feature! -->
-
-
 
 
 ### Existing Features
@@ -211,44 +209,51 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 
 
 
+
+
+- **Difficulty Settings**
+
+    - An apppropriately colored set of radio buttons show the user three difficulty settings: easy, medium and hard. As is explained in the instructions, these affect the amount of points until your next NFT. Only one can be clicked at a time, and the settings have colors associated with their corresponding level type for ease of use and discoverability.
+
+![screenshot](documentation/screenshots/feature04.jpeg)
+
+
+- **Light Mode**
+
+    - Light mode toggles the task area theme between dark and light bootstrap themes with further added custom color variables added for improved visibility. This enables the user to optimise the task area of the app to suit their needs best for improved visibility.
+
+![screenshot](documentation/screenshots/feature05.jpeg)
+
+- **Custom Reset Time**
+
+    - The custom reset time allows the user to change the default time that their goals are automatically cleared each day, not only to give users a deadline and motivation, but also to further customise their task area workspace and avoid unneccessary menial work. This is particularly useful for returning users wanting to customise their workspace better for how they use the app.
+
+![screenshot](documentation/screenshots/feature06.jpeg)
+
+- **Your Stats Area Toggle**
+
+    - This area is toggled open and closed by the 'Your Stats' button near the top of the task area, to improve the UI and UX for the user by ensuring it does not take up more real estate than is needed. A returning user may find its information helpful but a first time user may find it overwhelming, hence it first loads as untoggled. 
+
+![screenshot](documentation/screenshots/feature07.jpeg)
+
+- **Table of Stats**
+
+    - Within the table of stats, there are three main important pieces of information, particularly useful to returning users who are familiar with how the app works. First is the 'next growth point' which demonstrates the user's next total points goal in order to earn the next NFT. Underneath this, there is a counter in brackets which shows how many points the user needs to earn before they reach that next NFT goal. Their total points is displayed below this to continue to motivate the user and inform them of their current progress.
+
+![screenshot](documentation/screenshots/feature07.jpeg)
+
+- **Progress Bar**
+
+    - 
+
+![screenshot](documentation/screenshots/feature08.jpeg)
+
 - **Feature**
 
     - 
 
 ![screenshot](documentation/screenshots/featureX.jpeg)
 
-
-- **Feature**
-
-    - 
-
-![screenshot](documentation/screenshots/featureX.jpeg)
-- **Feature**
-
-    - 
-
-![screenshot](documentation/screenshots/featureX.jpeg)
-- **Feature**
-
-    - 
-
-![screenshot](documentation/screenshots/featureX.jpeg)
-- **Feature**
-
-    - 
-
-![screenshot](documentation/screenshots/featureX.jpeg)
-- **Feature**
-
-    - 
-
-![screenshot](documentation/screenshots/featureX.jpeg)
-
-- **Feature**
-
-    - 
-
-![screenshot](documentation/screenshots/featureX.jpeg)
 - **Feature**
 
     - 
