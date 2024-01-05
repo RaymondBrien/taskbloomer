@@ -235,6 +235,11 @@ nav {
     border: solid 1px var(--bs-body-color);
 }
 
+.border-hover:hover {
+    background-color: var(--bs-emphasis-color);
+    color: var(--bs-body-bg);
+}
+
 .ideas {
     padding: 1em 2em;
     border: solid 1px var(--bs-emphasis-color);
