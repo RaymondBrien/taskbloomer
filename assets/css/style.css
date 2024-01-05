@@ -44,11 +44,11 @@ header {
     justify-content: center;
     position: relative;
     height: 80vh;
-    background: rgba(255, 255, 255, 0.5) url(/assets/images/background.jpg) top/cover no-repeat;
-    margin-bottom: 10rem;
+    background: rgba(255, 255, 255, 0.5) url(/assets/images/background2.png) top/cover no-repeat;
+    margin-bottom: 3rem;
     max-width: 100vw;
     margin-top: 0;
-    z-index: 99;
+    box-shadow: 0 0 10px 0 white;
 }
 
 main {
@@ -66,7 +66,8 @@ main {
 }
 
 p {
-    font-size: 22px;
+    font-size: 1em;
+    
 }
 
 a {
@@ -141,6 +142,7 @@ nav {
     text-align: center;
     text-transform: lowercase;
     letter-spacing: 5px; 
+    padding: 0 1em;
 }
 
 #hero-image img {
@@ -306,13 +308,13 @@ nav {
 
 th, td {
     border: 1px solid #fffce1;
-    padding: 8px;
+    padding: 1em;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1em;
 }
 
 table p {
-    font-size: 2rem;
+    font-size: 1em;
 }
 
 .block-title {
@@ -358,9 +360,6 @@ form {
 }
 
 fieldset {
-    display: flex;
-    flex-direction: row;
-    justify-content:  space-around;
     margin: 0.5rem 0.5rem 3px 0.5rem ;
     padding: 0.5rem;
     max-width: 100vw;
@@ -374,7 +373,7 @@ fieldset label {
 
 .main-input {
     padding: 0.5rem 0.5rem;
-    width: 100%;
+
 }
 
 .task {
@@ -383,8 +382,10 @@ fieldset label {
 }
 
 .task::placeholder {
-    color: var(--bs-secondary-color);
-    opacity: 0.5;
+    color: var(--bs-body-color);
+    opacity: 0.8;
+    font-size: 0.7em;
+    text-align: center;
 }
 
 fieldset > .task {
@@ -494,8 +495,8 @@ input[type="checkbox"]:checked::before {
 }
 
 #plant-image-area, #plant-image  {
-    min-height: 25rem;
-    min-width: 25rem;
+    min-height: 10rem;
+    min-width: 10rem;
     max-height: 40rem;
     max-width: 40rem;
 }
