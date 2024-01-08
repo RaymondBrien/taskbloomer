@@ -277,7 +277,7 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
  */
 document.getElementById('reset-game').addEventListener('click', function() {
     document.body.style.opacity = 0.15;
-    const popover = document.getElementById('reset-popover');
+    
 
     
 });
@@ -384,7 +384,7 @@ document.getElementById('task-c').addEventListener('input', function() {
     // Check input length conditions
     if (input.length <= 19) {
         count.style.color = 'green';
-        label.classList.remove('disabled');
+        // label.classList.remove('disabled');
    } if (input.length >= 20) {
         count.style.color = 'red';
    } if (input.length === 25) {
