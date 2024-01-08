@@ -1,34 +1,30 @@
 // Wait for DOM to finish loading before running the game. Finds checkbox value.
 document.addEventListener("DOMContentLoaded", function() {
 
-    let checkboxes = document.getElementsByClassName("checkbox");
-
-    for (let checkbox of checkboxes) {
-        // set the checkboxes as disabled until the user adds to input
+     let checkboxes = document.querySelectorAll('.checkbox');
+     checkboxes.forEach(function(checkbox) {
         checkbox.setAttribute('disabled', true);
-
-        // If a checkbox is disabled, 
-        if (checkbox.hasAttribute('disabled')) {
-            checkbox.parentElement.style.backgroundColor = 'grey';
-            checkbox.parentElement.style.border = 'solid 5px red';
-        } 
-
-        checkbox.addEventListener("change", function() {
-            if (checkbox.checked) {
-                taskComplete(parseInt(checkbox.value));
-                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
-                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
-            } else {
-                taskComplete(-checkbox.value);
-                // to warn them that user ticked task and then left unchecked
-                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 5px gold';
-                // restyles input text for readability
-                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'none';
-            }
-        });
-        
-    }
+    });
+     
+     for (let checkbox of checkboxes) {
+     
+         checkbox.addEventListener("change", function() {
+             console.log('checkbox change');
+             if (checkbox.checked) {
+                 taskComplete(parseInt(checkbox.value));
+                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
+                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
+             } else {
+                 taskComplete(-checkbox.value);
+                 // to warn them that user ticked task and then left unchecked
+                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 5px gold';
+                 // restyles input text for readability
+                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'none';
+             }
+         });
+     }
 }); 
+
 
 /**
  * Automatically sets difficulty to medium. User can change if desired.
@@ -195,20 +191,10 @@ intervalID = setInterval(newDay, defaultMilliseconds);
  */
 function newDay() {
     document.getElementById('today-points').innerHTML = 0;
-    let inputs = document.getElementsByClassName('main-input');
-    let checkboxes = document.querySelectorAll('.checkbox');
+    document.querySelectorAll('.main-input').style.border = 'solid 2px grey';
+    document.querySelectorAll('.checkbox').setAttribute('disabled'. true);
 
-    checkboxes.forEach(function(checkbox) {
-        checkbox.setAttribute('disabled', true);        
-    });
-
-    // reset input styles
-    for (let input of inputs) {
-        input.style.border = 'solid 2px grey'; 
-        input.style.textDecoration = 'none';
-    }
 }
-
 
 /**
  * Sets new intervalID for newDay() if trigger time is manually changed by user.
@@ -309,32 +295,26 @@ document.getElementById('task-a').addEventListener('input', function() {
     let count = document.getElementById('characters-a');
     let checkbox = document.getElementById('task-a-check');
 
+    // Once goal inputted, checkbox becomes available
+    checkbox.disabled = false;
+
     // Display character count
     count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
 
-    // Once goal inputted, checkbox becomes available
-    checkbox.classList.remove('disabled');
-
     // Check input length conditions
      if (input.length <= 19) {
          count.style.color = 'green';
-     } if (input.length >= 20) {
+    } if (input.length >= 20) {
          count.style.color = 'red';
-    } 
-    
-    // check for specific length conditions
-    if (input.length === 25) {
-        alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
+    } if (input.length === 25) {
+         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
     } else if (input.length === 0) {
         // if input is empty, hide character count and disable checkbox
         count.style.display = 'none';
-        checkbox.setAttribute('disabled', true);
-        checkbox.classList.add('disabled');
-    } else {
-        checkbox.removeAttribute('disabled');
-        checkbox.classList.remove('disabled');
+        checkbox.setAttribute('disabled', true);    
     }
+
 });
 
 /**
