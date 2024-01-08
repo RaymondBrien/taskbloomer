@@ -5,31 +5,31 @@ document.addEventListener("DOMContentLoaded", function() {
      checkboxes.forEach(function(checkbox) {
         checkbox.setAttribute('disabled', true);
     });
-     
-     for (let checkbox of checkboxes) {
-     
-         checkbox.addEventListener("change", function() {
-             console.log('checkbox change');
-             if (checkbox.checked) {
-                 taskComplete(parseInt(checkbox.value));
-                //  add styles
-                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
-                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
-                
-                
-             } else {
-                 taskComplete(-checkbox.value);
-                //  add styles
-                 // warn them that user ticked task and then left unchecked
-                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 5px gold';
-                 // restyles input text for readability
-                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'none';
-                 //  style inner span of checkbox disabled check to red
-                 this.querySelector('.disabled-check').innerHTML.style.color = 'red';
 
-             }
-         });
-     }
+    
+
+    for (let checkbox of checkboxes) {
+    
+        let correspondingTextInput = document.getElementById(`task-${checkbox.id.slice(5,6)}`);
+
+        checkbox.addEventListener("change", function() {
+             console.log('checkbox change');
+            if (checkbox.checked) {
+                taskComplete(parseInt(checkbox.value));
+                //  add styles
+                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
+                correspondingTextInput.style.textDecoration = 'line-through';
+            
+                
+            } else {
+                taskComplete(-checkbox.value);
+                //  add styles
+                // warn them that user ticked task and then left unchecked
+                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
+                correspondingTextInput.style.textDecoration = 'none';
+            }
+        });
+    }
 }); 
 
 
