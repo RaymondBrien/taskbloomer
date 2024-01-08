@@ -275,29 +275,42 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
  * Blurs the rest of the body when the 
  * reset game popover is triggered to appear.
  */
-document.getElementById('reset-game').addEventListener('click', function() {
+document.getElementById('reset-game').addEventListener('click', function(event) {
+    
+    const options = document.getElementById('reset-options')
+    let popoverShowing = true;
+
     document.body.style.opacity = 0.15;
     
+    try {
+        
+        if (popoverShowing) {
+            // Event listener for clicks on the document body
+            document.body.addEventListener("click", function (event) {
+                // Check if the clicked element is a descendant of popover
+                
+                 alert('oops hun, pick an option');
+                
+                })
 
-    
-});
-
-document.body.addEventListener("click", function (event) {
-    // Check if the clicked element is within the popover or not
-    if (event.target !== popover) {
-        this.hidePopover;
-        document.body.style.opacity = 1;
-        console.log("Clicked outside the popover");
+        }   else {
+            event.preventDefault;
+        }
+    } catch (error) {
+        alert(error);
     }
+
+        
+    // If reset is cancelled, body returns to normal opacity for visibility.
+    document.getElementById('reset-cancelled').addEventListener('click', function() {
+        console.log('resetting body to normal!');
+        document.body.style.opacity = 1;
+        
+    });
+
 });
 
-/**
- * If reset is cancelled, body returns to normal opacity for visibility.
- */
-document.getElementById('reset-cancelled').addEventListener('click', function() {
-    console.log('resetting body to normal!');
-    document.body.style.opacity = 1;
-});
+
 
 /**
  * Displays character count of task A input to user.

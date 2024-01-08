@@ -575,6 +575,7 @@ input[type="checkbox"]:checked::before {
 
 #reset-confirmed {
     border: none;
+    background: none;
 }
 
 #settings-section {
