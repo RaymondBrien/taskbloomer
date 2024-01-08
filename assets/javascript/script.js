@@ -12,14 +12,21 @@ document.addEventListener("DOMContentLoaded", function() {
              console.log('checkbox change');
              if (checkbox.checked) {
                  taskComplete(parseInt(checkbox.value));
+                //  add styles
                  checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
                  checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'line-through';
+                
+                
              } else {
                  taskComplete(-checkbox.value);
-                 // to warn them that user ticked task and then left unchecked
+                //  add styles
+                 // warn them that user ticked task and then left unchecked
                  checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 5px gold';
                  // restyles input text for readability
                  checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.textDecoration = 'none';
+                 //  style inner span of checkbox disabled check to red
+                 this.querySelector('.disabled-check').innerHTML.style.color = 'red';
+
              }
          });
      }
@@ -179,30 +186,15 @@ function updateProgress(totalPoints, nextInArray) {
 /**
  * Triggers newDay() at time set (default set to 20:00)
  */
-let intervalID = null;
-let defaultTimeSource = (document.getElementById('time-setting').value).split(':');
-let defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
+// let intervalID = null;
+const defaultTimeSource = (document.getElementById('time-setting').value).split(':');
+const defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
+let intervalID = defaultMilliseconds;
+newDay(intervalID);
+
+
 
 // intervalID = setInterval(newDay, defaultMilliseconds);
-
-
-/**
- * Resets day score count, clears goals inputs, unchecks all checkboxes, disables checkboxes until next user input.
- */
-function newDay() {
-    document.getElementById('today-points').innerHTML = 0;
-
-    // restyle inputs to default
-    let mainInputs = document.querySelectorAll('.main-input');
-    mainInputs.forEach(function(mainInput) {
-        mainInput.style.border = 'solid 2px grey';
-    });
-    let checkboxes = document.querySelectorAll('checkboxes');
-
-    // document.querySelectorAll('.main-input').style.border = 'solid 2px grey';
-    // document.getElementsByClassName('checkbox').setAttribute('disabled', true);
-
-}
 
 /**
  * Sets new intervalID for newDay() if trigger time is manually changed by user.
@@ -233,11 +225,28 @@ document.getElementById('time-setting').addEventListener('change', function() {
         untilCustom = 86400000 + untilCustom;
     }
 
-    console.log(untilCustom + 'milliseconds until custom time for function trigger');
-    // invoke newday at new time
+    console.log(`${untilCustom} milliseconds until custom time for function trigger`);
+
+    // set interval ID for newDay function
     intervalID = setInterval(newDay, untilCustom);
     
 });  
+
+/**
+ * Resets day score count, clears goals inputs, unchecks all checkboxes, disables checkboxes until next user input.
+ */
+function newDay(intervalID) {
+    // reset day's points
+    document.getElementById('today-points').innerHTML = 0;
+
+    this.setInterval(intervalID);
+
+    // restyle inputs to default
+    let mainInputs = document.querySelectorAll('.main-input');
+    mainInputs.forEach(function(mainInput) {
+        mainInput.style.border = 'solid 2px grey';
+    });
+}
 
 /**
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
@@ -284,6 +293,7 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
 document.getElementById('reset-game').addEventListener('click', function() {
     console.log('blurring body!');
     document.body.style.opacity = 0.15;
+    document.body.clickable = false;
 });
 
 /**
@@ -302,9 +312,15 @@ document.getElementById('task-a').addEventListener('input', function() {
     let input = this.value;
     let count = document.getElementById('characters-a');
     let checkbox = document.getElementById('task-a-check');
+    const disabled = document.querySelector('.disabled-check').firstChild;
+
 
     // Once goal inputted, checkbox becomes available
     checkbox.disabled = false;
+    document.getElementById('a-check-enabled').innerHTML = ' enabled';
+    
+
+
 
     // Display character count
     count.style.display = 'block';
@@ -337,7 +353,8 @@ document.getElementById('task-b').addEventListener('input', function() {
     count.innerHTML = `${input.length}/25 characters`;
 
     // Once goal inputted, checkbox becomes available
-    checkbox.classList.remove('disabled');
+    checkbox.disabled = false;
+    document.getElementById('b-check-enabled').innerHTML = ' enabled';
 
      if (input.length <= 19) {
          count.style.color = 'green';
@@ -371,7 +388,8 @@ document.getElementById('task-c').addEventListener('input', function() {
     count.innerHTML = `${input.length}/25 characters`;
 
     // Once goal inputted, checkbox becomes available
-    checkbox.classList.remove('disabled');
+    checkbox.disabled = false;
+    document.getElementById('c-check-enabled').innerHTML = ' enabled';
 
      if (input.length <= 19) {
          count.style.color = 'green';

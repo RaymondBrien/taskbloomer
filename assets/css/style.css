@@ -434,7 +434,6 @@ input[type="checkbox"] {
     z-index: 333;
 }
 
-
  .form-control + .form-control {
     margin-top: 1em;
   } 
@@ -455,12 +454,8 @@ input[type="checkbox"]:checked::before {
     transform: scale(1);
 }  
 
-
-
-
 .characters span {
     font-size: 1em;
-
 }
 
 #new-day {
