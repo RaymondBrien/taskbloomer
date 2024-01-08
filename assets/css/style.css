@@ -458,6 +458,11 @@ input[type="checkbox"]:checked::before {
     font-size: 1em;
 }
 
+.disabled {
+    background-color: grey;
+    opacity: 0.5;
+}
+
 #new-day {
     width: 20rem;
     height: 3rem;

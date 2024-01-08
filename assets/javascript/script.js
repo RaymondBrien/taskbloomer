@@ -310,18 +310,13 @@ document.getElementById('reset-cancelled').addEventListener('click', function() 
  */
 document.getElementById('task-a').addEventListener('input', function() {
     let input = this.value;
-    let count = document.getElementById('characters-a');
-    let checkbox = document.getElementById('task-a-check');
-    const disabled = document.querySelector('.disabled-check').firstChild;
-
-
+    const label = document.getElementById('label-a');
+    const count = document.getElementById('characters-a');
+    const checkbox = document.getElementById('task-a-check');
+    
     // Once goal inputted, checkbox becomes available
     checkbox.disabled = false;
-    document.getElementById('a-check-enabled').innerHTML = ' enabled';
     
-
-
-
     // Display character count
     count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
@@ -329,6 +324,7 @@ document.getElementById('task-a').addEventListener('input', function() {
     // Check input length conditions
      if (input.length <= 19) {
          count.style.color = 'green';
+         label.classList.remove('disabled');
     } if (input.length >= 20) {
          count.style.color = 'red';
     } if (input.length === 25) {
@@ -336,44 +332,44 @@ document.getElementById('task-a').addEventListener('input', function() {
     } else if (input.length === 0) {
         // if input is empty, hide character count and disable checkbox
         count.style.display = 'none';
-        checkbox.setAttribute('disabled', true);    
+        checkbox.setAttribute('disabled', true); 
+        this.placeholder = 'Enter a goal before clicking \'Done\'';  
+        label.classList.add('disabled');
     }
-
 });
+
 
 /**
  * Displays character count of task B input to user.
  */
 document.getElementById('task-b').addEventListener('input', function() {
     let input = this.value;
-    let count = document.getElementById('characters-b');
-    let checkbox = document.getElementById('task-b-check');
+
+    const label = document.getElementById('label-b');
+    const count = document.getElementById('characters-b');
+    const checkbox = document.getElementById('task-b-check');
 
     count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
 
     // Once goal inputted, checkbox becomes available
     checkbox.disabled = false;
-    document.getElementById('b-check-enabled').innerHTML = ' enabled';
 
-     if (input.length <= 19) {
-         count.style.color = 'green';
-     } if (input.length >= 20) {
-         count.style.color = 'red';
-    } 
-    
-    // check for specific length conditions
-    if (input.length === 25) {
+    // Check input length conditions
+    if (input.length <= 19) {
+        count.style.color = 'green';
+        label.classList.remove('disabled');
+   } if (input.length >= 20) {
+        count.style.color = 'red';
+   } if (input.length === 25) {
         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-    } else if (input.length === 0) {
-        // if input is empty, hide character count and disable checkbox
-        count.style.display = 'none';
-        checkbox.setAttribute('disabled', true);
-        checkbox.classList.add('disabled');
-    } else {
-        checkbox.removeAttribute('disabled');
-        checkbox.classList.remove('disabled');
-    }
+   } else if (input.length === 0) {
+       // if input is empty, hide character count and disable checkbox
+       count.style.display = 'none';
+       checkbox.setAttribute('disabled', true); 
+       this.placeholder = 'Enter a goal before clicking \'Done\'';  
+       label.classList.add('disabled');
+   }
 });
 
 /**
@@ -389,26 +385,22 @@ document.getElementById('task-c').addEventListener('input', function() {
 
     // Once goal inputted, checkbox becomes available
     checkbox.disabled = false;
-    document.getElementById('c-check-enabled').innerHTML = ' enabled';
 
-     if (input.length <= 19) {
-         count.style.color = 'green';
-    } if (input.length >= 20) {
-         count.style.color = 'red';
-    } 
-    
-    // check for specific length conditions
-    if (input.length === 25) {
+    // Check input length conditions
+    if (input.length <= 19) {
+        count.style.color = 'green';
+        label.classList.remove('disabled');
+   } if (input.length >= 20) {
+        count.style.color = 'red';
+   } if (input.length === 25) {
         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-    } else if (input.length === 0) {
-            // if input is empty, hide character count and disable checkbox
-            count.style.display = 'none';
-            checkbox.setAttribute('disabled', true);
-            checkbox.classList.add('disabled');
-    } else {
-            checkbox.removeAttribute('disabled');
-            checkbox.classList.remove('disabled');
-    }
+   } else if (input.length === 0) {
+       // if input is empty, hide character count and disable checkbox
+       count.style.display = 'none';
+       checkbox.setAttribute('disabled', true); 
+       this.placeholder = 'Enter a goal before clicking \'Done\'';  
+       label.classList.add('disabled');
+   }
 });
 
 /**
