@@ -6,32 +6,25 @@ document.addEventListener("DOMContentLoaded", function() {
         checkbox.setAttribute('disabled', true);
     });
 
-    
+    for (let checkbox of checkboxes) {    
 
-    for (let checkbox of checkboxes) {
-    
         let correspondingTextInput = document.getElementById(`task-${checkbox.id.slice(5,6)}`);
-
+        
         checkbox.addEventListener("change", function() {
-             console.log('checkbox change');
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
                 //  add styles
                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
                 correspondingTextInput.style.textDecoration = 'line-through';
-            
-                
             } else {
                 taskComplete(-checkbox.value);
                 //  add styles
-                // warn them that user ticked task and then left unchecked
                 checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
                 correspondingTextInput.style.textDecoration = 'none';
             }
         });
     }
 }); 
-
 
 /**
  * Automatically sets difficulty to medium. User can change if desired.
@@ -50,7 +43,6 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
   
-
 // global variable
 let randomArray1 = getRandomInt(51, 70);
 let randomArray2 = getRandomInt(70, 100);
@@ -118,7 +110,6 @@ function taskComplete(value) {
     
 }
 
-
 /**
  * Checks if total points are equal or greater to any of the growth points defined.
  * Displays relevant plant image respectively.
@@ -141,7 +132,6 @@ function growPlant(totalPoints) {
     } 
 }
      
-
 /**
  * Finds the next integer in array and display to user.
  */
@@ -159,7 +149,6 @@ function findNextGrowthPoint(totalPoints, i) {
     updateProgress(totalPoints, nextInArray);
 
 }
-
 
 /**
  * Finds the distance to the next growth points value from total points and displays to user.
@@ -182,7 +171,6 @@ function updateProgress(totalPoints, nextInArray) {
     progressLog.innerHTML = `${progressPercentage}%`;
 }
 
-
 /**
  * Triggers newDay() at time set (default set to 20:00)
  */
@@ -191,8 +179,6 @@ const defaultTimeSource = (document.getElementById('time-setting').value).split(
 const defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
 let intervalID = defaultMilliseconds;
 newDay(intervalID);
-
-
 
 // intervalID = setInterval(newDay, defaultMilliseconds);
 
@@ -256,7 +242,6 @@ function newDay(intervalID) {
         window.location.href = "end.html";
     }
 
-
 /**
  * BS light theme set to document if user clicks light mode button on index.html
  */
@@ -291,9 +276,19 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
  * reset game popover is triggered to appear.
  */
 document.getElementById('reset-game').addEventListener('click', function() {
-    console.log('blurring body!');
     document.body.style.opacity = 0.15;
-    document.body.clickable = false;
+    const popover = document.getElementById('reset-popover');
+
+    
+});
+
+document.body.addEventListener("click", function (event) {
+    // Check if the clicked element is within the popover or not
+    if (event.target !== popover) {
+        this.hidePopover;
+        document.body.style.opacity = 1;
+        console.log("Clicked outside the popover");
+    }
 });
 
 /**
