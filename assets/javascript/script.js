@@ -183,7 +183,7 @@ let intervalID = null;
 let defaultTimeSource = (document.getElementById('time-setting').value).split(':');
 let defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
 
-intervalID = setInterval(newDay, defaultMilliseconds);
+// intervalID = setInterval(newDay, defaultMilliseconds);
 
 
 /**
@@ -191,8 +191,16 @@ intervalID = setInterval(newDay, defaultMilliseconds);
  */
 function newDay() {
     document.getElementById('today-points').innerHTML = 0;
-    document.querySelectorAll('.main-input').style.border = 'solid 2px grey';
-    document.querySelectorAll('.checkbox').setAttribute('disabled'. true);
+
+    // restyle inputs to default
+    let mainInputs = document.querySelectorAll('.main-input');
+    mainInputs.forEach(function(mainInput) {
+        mainInput.style.border = 'solid 2px grey';
+    });
+    let checkboxes = document.querySelectorAll('checkboxes');
+
+    // document.querySelectorAll('.main-input').style.border = 'solid 2px grey';
+    // document.getElementsByClassName('checkbox').setAttribute('disabled', true);
 
 }
 
