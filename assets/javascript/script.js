@@ -55,8 +55,6 @@ let growthPointsLevel = {
     hard: [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2]
 
 };
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
 
 /**
  * Sets growthPoints variable to relevant growthPointsLevel easy array.
@@ -174,13 +172,9 @@ function updateProgress(totalPoints, nextInArray) {
 /**
  * Triggers newDay() at time set (default set to 20:00)
  */
-// let intervalID = null;
 const defaultTimeSource = (document.getElementById('time-setting').value).split(':');
 const defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
-let intervalID = defaultMilliseconds;
-newDay(intervalID);
-
-// intervalID = setInterval(newDay, defaultMilliseconds);
+let intervalID = setInterval(newDay, defaultMilliseconds);
 
 /**
  * Sets new intervalID for newDay() if trigger time is manually changed by user.
@@ -231,6 +225,7 @@ function newDay(intervalID) {
     let mainInputs = document.querySelectorAll('.main-input');
     mainInputs.forEach(function(mainInput) {
         mainInput.style.border = 'solid 2px grey';
+        mainInput.firstChild.style.textDecoration = 'none';
     });
 }
 
