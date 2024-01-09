@@ -1,0 +1,80 @@
+/* Bootstrap link */
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css);
+
+/* General styles */
+
+/* custom dark theme colors to override BS variables */
+:root {
+    
+         --bs-body-bg: #0e100f;
+         --bs-body-color: #fffce1;
+         --bs-emphasis-color: #5c822e ;
+         --bs-secondary-color: #BDBDBD ;
+
+} 
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'EB Garamond', serif; 
+    font-size: 90%;   
+    width: 90vw;
+    max-width: 100%;
+    margin: auto;
+}
+
+body[type=text] {
+    color: var(--bs-body-bg);
+}
+
+header {
+    display: flex;    
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    max-height: 70rem;
+    text-align: center;
+}
+
+main {
+    background-color: var(--bs-body-bg);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+    max-width: 95%;
+    z-index: 2;
+}
+
+p {
+    font-size: 90%;
+    
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Section elements */
+#end-button {
+    width: 50%;
+    max-width: 80%;
+    height: 3rem;
+    position: relative;
+    background-color: var(--bs-body-bg);
+    margin: auto;
+    margin: auto;
+    border: solid 2px ;
+
+}
+
+#end-button:hover {
+    background-color: var(--bs-emphasis-color);
+    border: solid 2px var(--bs-secondary-color);
+}  

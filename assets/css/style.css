@@ -280,7 +280,6 @@ nav {
 }
 
 #stats-button,
-#end-button,
 #new-day {
     width: 50%;
     max-width: 80%;
@@ -295,8 +294,7 @@ nav {
 
 }
 
-#stats-button:hover, #stats-button::after,
-#end-button:hover {
+#stats-button:hover, #stats-button::after {
     background-color: var(--bs-emphasis-color);
     border: solid 2px var(--bs-secondary-color);
 }  
