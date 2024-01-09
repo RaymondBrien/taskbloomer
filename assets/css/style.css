@@ -295,6 +295,7 @@ nav {
 
 #stats-button:hover, #stats-button::after {
     background-color: var(--bs-emphasis-color);
+    color: #0e100f;
     border: solid 2px var(--bs-secondary-color);
 }  
 
@@ -417,6 +418,8 @@ fieldset > .task {
     grid-template-columns: 1em auto;
     gap: 0.5em;
     background-color: var(--bs-emphasis-color);
+    color: #0e100f;
+    font-weight: 500;
 } 
 
 input[type="checkbox"] {
