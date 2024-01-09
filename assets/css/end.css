@@ -78,3 +78,20 @@ a {
     background-color: var(--bs-emphasis-color);
     border: solid 2px var(--bs-secondary-color);
 }  
+
+.carousel-caption {
+    background-color: #0e100f;
+    color: #fffce1;
+    opacity: 0.75;
+    border-radius: 10px 10px 0 0;
+}
+
+.control {
+    background-color: #0e100f;
+    color: #fffce1;
+    border-radius: 20px;
+}
+
+.control:hover {
+    opacity: 1;
+}
