@@ -206,20 +206,22 @@ nav {
 
 #play-button {
     display: flex;
-    width: 21rem;
+    max-width: 80%;
     text-align: center;
     align-items: center;
     justify-content: space-around;
     color: var(--bs-body-bg);
     background-color: var(--bs-body-color);
     border-radius: 20px;
-    max-width: 50%;
+    font-size: 1.5em;
+    padding: 1em;
     
 }
 
 #play-button a {
     color: var(--bs-body-bg);
     font-size: 1.3em;
+    padding: 1em;
 }
 
 #play-button:hover {
