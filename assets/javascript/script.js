@@ -270,42 +270,45 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
  * Blurs the rest of the body when the 
  * reset game popover is triggered to appear.
  */
-document.getElementById('reset-game').addEventListener('click', function(event) {
-    
-    const options = document.getElementById('reset-options')
-    let popoverShowing = true;
-
-    document.body.style.opacity = 0.15;
+document.getElementById('reset-game').addEventListener('click', function() {
     
     try {
-        
-        if (popoverShowing) {
-            // Event listener for clicks on the document body
-            document.body.addEventListener("click", function (event) {
-                // Check if the clicked element is a descendant of popover
-                
-                 alert('oops hun, pick an option');
-                
-                })
-
-        }   else {
-            event.preventDefault;
-        }
+        document.body.style.opacity = 0.15;   
+        catchClicks(); 
     } catch (error) {
-        alert(error);
+        console.log(error);
+        alert('oops, there\'s an error on our side. Try clicking the reset button again.');
+        
     }
-
-        
-    // If reset is cancelled, body returns to normal opacity for visibility.
-    document.getElementById('reset-cancelled').addEventListener('click', function() {
-        console.log('resetting body to normal!');
-        document.body.style.opacity = 1;
-        
-    });
-
+    
 });
 
+// If reset is cancelled, body returns to normal opacity for visibility.
+document.getElementById('reset-cancelled').addEventListener('click', function() {
+    console.log('resetting opacity to normal!');
+    document.body.style.opacity = 1; 
+});
 
+/**
+ * To stop user from clicking outside the reset popover
+ */
+function catchClicks() {
+
+    try {
+        document.addEventListener('click', function(event) {
+            
+            const options = document.getElementById('reset-options')
+            var isClickInside = options.contains(event.target);
+
+            // If the click is outside the target element, trigger error
+            if (!isClickInside) {
+                console.log('Clicked outside the element');
+            }})
+        } catch (error) {
+            alert('please choose an option');
+            console.log(error);
+    }
+};
 
 /**
  * Displays character count of task A input to user.
