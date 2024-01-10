@@ -226,7 +226,9 @@ function newDay(intervalID) {
     mainInputs.forEach(function(mainInput) {
         // mainInput.style.border = 'solid 2px grey';
         // mainInput.firstChild.style.textDecoration = 'none';
-    });
+      
+    })
+    
 }
 
 /**
@@ -270,15 +272,25 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
  * Blurs the rest of the body when the 
  * reset game popover is triggered to appear.
  */
-document.getElementById('reset-game').addEventListener('click', function() {
+document.getElementById('reset-game').addEventListener('click', function(e) {
     
+    const options = document.getElementById('reset-popover')
+    var message = document.getElementById('popover-message');
+
     try {
         document.body.style.opacity = 0.15;   
-        catchClicks(); 
+        // message to user if they try to click outside popover
+        if (options.contains()) {
+            console.log(isClickInside);
+            console.log(e.target);
+            message.innerHTML = 'please choose an option';
+            message.style.color = 'red';
+        } else {
+            -message;
+            message.style.display.hide;
+        }
     } catch (error) {
         console.log(error);
-        alert('oops, there\'s an error on our side. Try clicking the reset button again.');
-        
     }
     
 });
@@ -288,27 +300,6 @@ document.getElementById('reset-cancelled').addEventListener('click', function() 
     console.log('resetting opacity to normal!');
     document.body.style.opacity = 1; 
 });
-
-/**
- * To stop user from clicking outside the reset popover
- */
-function catchClicks() {
-
-    try {
-        document.addEventListener('click', function(event) {
-            
-            const options = document.getElementById('reset-options')
-            var isClickInside = options.contains(event.target);
-
-            // If the click is outside the target element, trigger error
-            if (!isClickInside) {
-                console.log('Clicked outside the element');
-            }})
-        } catch (error) {
-            alert('please choose an option');
-            console.log(error);
-    }
-};
 
 /**
  * Displays character count of task A input to user.

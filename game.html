@@ -245,13 +245,14 @@
         <!-- Reset The Game -->
         <div id="reset">
             <button type="button" class="btn btn-danger" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
-            <div id="reset-popover" popover>
+            <div id="reset-popover" popover="manual">
                 <p class="display-5">Would you like to reset the game?</p>
                 <p>
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     <b class="h4">This will reset your total points to 0</b>
                     <i class="fa-solid fa-triangle-exclamation"></i>
                 </p>
+                <span id="popover-message"></span>
                 <br>
                 <div id="reset-options">
                     <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide"><a href="index.html" class="btn btn-secondary">Yes</a></button>
