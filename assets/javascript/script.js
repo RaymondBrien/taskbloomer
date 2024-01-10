@@ -174,7 +174,7 @@ function updateProgress(totalPoints, nextInArray) {
  */
 const defaultTimeSource = (document.getElementById('time-setting').value).split(':');
 const defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
-let intervalID = setInterval(newDay, defaultMilliseconds);
+// let intervalID = setInterval(newDay, defaultMilliseconds); - unclear if this currently actually calls the function at the right time.
 
 /**
  * Sets new intervalID for newDay() if trigger time is manually changed by user.
@@ -208,28 +208,41 @@ document.getElementById('time-setting').addEventListener('change', function() {
     console.log(`${untilCustom} milliseconds until custom time for function trigger`);
 
     // set interval ID for newDay function
-    intervalID = setInterval(newDay, untilCustom);
+    // intervalID = setInterval(newDay, untilCustom); - does this need to actually be stored in intervalID? The untilCustom values are reading correct.
     
 });  
 
 /**
  * Resets day score count, clears goals inputs, unchecks all checkboxes, disables checkboxes until next user input.
  */
-function newDay(intervalID) {
+function newDay() {
     // reset day's points
     document.getElementById('today-points').innerHTML = 0;
 
-    this.setInterval(intervalID);
+    // hide all character count
+     let characters = document.getElementsByClassName('characters');
+     for (let i = 0; i < characters.length; i++) {
+         characters[i].style.display = 'none';
+         console.log(characters[i]);
+     }
 
-    // restyle inputs to default
-    let mainInputs = document.querySelectorAll('.main-input');
-    mainInputs.forEach(function(mainInput) {
-        // mainInput.style.border = 'solid 2px grey';
-        // mainInput.firstChild.style.textDecoration = 'none';
-      
-    })
-    
-}
+    //  restyle inputs to default
+     let mainInputs = document.getElementsByClassName('main-input');
+    //  for (let mainInput of mainInputs) {
+    //      mainInput.style.border = 'solid 2px grey';
+    //  }
+
+    for (let i = 0; i < mainInputs.length; i++) {
+        mainInputs[i].style.border = 'solid 2px grey';
+        let tasks = mainInputs[i].querySelector('.task');
+        tasks.style.textDecoration = 'none';
+    }
+
+    let checkboxes = document.querySelectorAll('.checkbox');
+    checkboxes.forEach(function(checkbox) {
+       checkbox.setAttribute('disabled', true);
+   });
+} 
 
 /**
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
@@ -293,7 +306,7 @@ document.getElementById('reset-game').addEventListener('click', function(event) 
         }, 15000);
 
     } catch (error) {
-        console.log(error);
+        console.log(`Error is: ${error}`);
     }
 
 });
@@ -317,18 +330,20 @@ document.getElementById('task-a').addEventListener('input', function() {
     // Once goal inputted, checkbox becomes available
     checkbox.disabled = false;
     
-    // Display character count
+    // Format character count
     count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
 
     // Check input length conditions
      if (input.length <= 19) {
-         count.style.color = 'green';
-         label.classList.remove('disabled');
+        count.style.display = 'block';
+        count.style.color = 'green';
+        label.classList.remove('disabled');
     } if (input.length >= 20) {
-         count.style.color = 'red';
+        count.style.display = 'block';
+        count.style.color = 'red';
     } if (input.length === 25) {
-         alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
+        alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
     } else if (input.length === 0) {
         // if input is empty, hide character count and disable checkbox
         count.style.display = 'none';
