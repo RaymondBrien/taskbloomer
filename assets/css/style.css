@@ -300,13 +300,13 @@ nav {
     transition: background-color 0.3s ease;
 }
 
-#stats-button:hover, #stats-button::after {
+#stats-button:hover {
     background-color: var(--bs-emphasis-color);
     color: #0e100f;
     border: solid 2px var(--bs-secondary-color);
 }  
 
-#stats-button:active {
+.active-button {
     background-color: #93B569;
     color: #0e100f;
 }

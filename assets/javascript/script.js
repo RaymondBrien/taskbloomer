@@ -34,14 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('difficulty level default initiated (medium): ' + growthPoints);
 });
 
-function changeBackgroundColor(element) {    
-     let currentColor = element.style.backgroundColor;
-     const color1 = 'green';
-     const color2 = 'blue';
-     currentColor === 'green' ? color1 : color2;
-
-}
-
 /**
  * Returns a random number between min (inclusive) and max (exclusive)
  */
@@ -232,8 +224,8 @@ function newDay(intervalID) {
     // restyle inputs to default
     let mainInputs = document.querySelectorAll('.main-input');
     mainInputs.forEach(function(mainInput) {
-        mainInput.style.border = 'solid 2px grey';
-        mainInput.firstChild.style.textDecoration = 'none';
+        // mainInput.style.border = 'solid 2px grey';
+        // mainInput.firstChild.style.textDecoration = 'none';
     });
 }
 
