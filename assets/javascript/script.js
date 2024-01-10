@@ -272,27 +272,30 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
  * Blurs the rest of the body when the 
  * reset game popover is triggered to appear.
  */
-document.getElementById('reset-game').addEventListener('click', function(e) {
+document.getElementById('reset-game').addEventListener('click', function(event) {
     
-    const options = document.getElementById('reset-popover')
-    var message = document.getElementById('popover-message');
+    const popoverMessage = document.getElementById('popover-message');
+    const options = document.getElementById('reset-popover');
 
+    document.body.style.opacity = 0.15;   
+   
     try {
-        document.body.style.opacity = 0.15;   
-        // message to user if they try to click outside popover
-        if (options.contains()) {
-            console.log(isClickInside);
-            console.log(e.target);
-            message.innerHTML = 'please choose an option';
-            message.style.color = 'red';
-        } else {
-            -message;
-            message.style.display.hide;
-        }
+        // prompts user to pick an option
+        setTimeout(() => {
+            popoverMessage.innerText = 'please choose an option';
+            console.log('writting message in popoover');
+        }, 10000);
+        // closes popover after total of 20 seconds 
+        setTimeout(() => {
+            console.log("closing popover");
+            document.body.style.opacity = 1; 
+            options.hidePopover(); 
+        }, 15000);
+
     } catch (error) {
         console.log(error);
     }
-    
+
 });
 
 // If reset is cancelled, body returns to normal opacity for visibility.

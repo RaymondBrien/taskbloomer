@@ -593,6 +593,18 @@ input[type="checkbox"]:checked::before {
     background: none;
 }
 
+@keyframes warning {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#popover-message {
+    color: #dc143c;
+    padding-bottom: 1em;
+    border: whitesmoke;
+    animation: warning 2s ease-in;
+}
+
 #settings-section {
     display: flex;
     flex-direction: column;
