@@ -423,7 +423,7 @@ document.getElementById('task-c').addEventListener('input', function() {
 // Source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event
 let dragged;
 /* events fired on the draggable target */
-let source = document.getElementById("plant-image");
+var source = document.getElementById("plant-image");
 source.addEventListener("dragstart", (event) => {
     console.log("dragging");
 });
@@ -431,49 +431,60 @@ source.addEventListener("dragstart", (event) => {
 source.addEventListener("dragstart", (event) => {
     // store a ref. on the dragged elem
     dragged = event.target;
+    console.log(`dragged event at ${event.target} ln 434`);
     // make it half transparent
     event.target.classList.add("dragging");
 });
 
 source.addEventListener("dragend", (event) => {
     // reset the transparency
+    console.log('dragging ended ln441');
     event.target.classList.remove("dragging");
 });
 
 /* events fired on the drop targets */
 let targets = document.getElementsByClassName("droptarget");
 for (let target of targets) {
-        target.addEventListener("dragover", (event) => {
-            // prevent default to allow drop
-            event.preventDefault();
-        }, 
-        false,
+    target.addEventListener("dragover", (event) => {
+        // prevent default to allow drop
+        console.log('dragover');
+        event.preventDefault();
+    }, 
+    false,
     );
 }
 
-target.addEventListener("dragenter", (event) => {
-    // highlight potential drop target when the draggable element enters it
-    if (event.target.classList.contains("dropzone")) {
-        event.target.classList.add("dragover");
-    }
-});
+for (let target of targets) {
+    target.addEventListener("dragenter", (event) => {
+        console.log('dragenter');
+        // highlight potential drop target when the draggable element enters it
+        if (event.target.classList.contains("dropzone")) {
+            event.target.classList.add("dragover");
+        }
+    });
+};
 
-target.addEventListener("dragleave", (event) => {
-    // reset styles of potential drop target when the draggable element leaves it
-    if (event.target.classList.contains("dropzone")) {
-        event.target.classList.remove("dragover");
-    }
-});
+for (let target of targets) {
+    target.addEventListener("dragleave", (event) => {
+        console.log('dragleave event')
+        // reset styles of potential drop target when the draggable element leaves it
+        if (event.target.classList.contains("dropzone")) {
+            event.target.classList.remove("dragover");
+        }
+    });
+}
 
-target.addEventListener("drop", (event) => {
-    // prevent default action (open as link for some elements)
-    event.preventDefault();
-    // move dragged element to the selected drop target
-    if (event.target.classList.contains("dropzone")) {
-        event.target.classList.remove("dragover");
-        event.target.appendChild(dragged);
-    }
-});
+for (let target of targets) {
+    target.addEventListener("drop", (event) => {
+        // prevent default action (open as link for some elements)
+        event.preventDefault();
+        // move dragged element to the selected drop target
+        if (event.target.classList.contains("dropzone")) {
+            event.target.classList.remove("dragover");
+            event.target.appendChild(dragged);
+        }
+    });
+}
 
 //Drag event handling (with touch/phone)
 // Source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event
