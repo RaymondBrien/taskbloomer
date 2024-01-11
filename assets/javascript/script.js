@@ -436,6 +436,8 @@ source.addEventListener("dragstart", (event) => {
     event.target.classList.add("dragging");
 });
 
+//see line 506 - check if dragMove styles worth trying?
+
 source.addEventListener("dragend", (event) => {
     // reset the transparency
     console.log('dragging ended ln441');
@@ -449,8 +451,7 @@ for (let target of targets) {
         // prevent default to allow drop
         console.log('dragover');
         event.preventDefault();
-    }, 
-    false,
+    }, false,
     );
 }
 
@@ -490,12 +491,11 @@ for (let target of targets) {
 // Source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event
 let draggedPhone;
 /* events fired on the draggable target */
-let sourcePhone = document.getElementById("plant-image");
-sourcePhone.addEventListener("touchstart", (event) => {
+source.addEventListener("touchstart", (event) => {
     console.log("dragging");
 });
 
-sourcePhone.addEventListener("touchstart", (event) => {
+source.addEventListener("touchstart", (event) => {
     // store a ref. on the dragged elem
     dragged = event.target;
     // make it half transparent
@@ -511,41 +511,19 @@ function touchMove(e) {
     draggableElement.style.top = currentY + 'px';
 }
 
-sourcePhone.addEventListener("touchend", (event) => {
+source.addEventListener("touchend", (event) => {
     // reset the transparency
     event.target.classList.remove("dragging");
 });
 
 /* events fired on the drop targets */
-let targetPhone = document.getElementById("droptarget");
-targetPhone.addEventListener(touchmove, (event) => {
-    // prevent default to allow drop
-        event.preventDefault();
-    }, false,
-);
-
-targetPhone.addEventListener("dragenter", (event) => {
-// highlight potential drop target when the draggable element enters it
-if (event.target.classList.contains("dropzone")) {
-    event.target.classList.add("dragover");
-    }
-});
-
-targetPhone.addEventListener("dragleave", (event) => {
-// reset background of potential drop target when the draggable element leaves it
-if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-    }
-});
-
-targetPhone.addEventListener("drop", (event) => {
-    // prevent default action (open as link for some elements)
-    event.preventDefault();
-    // move dragged element to the selected drop target
-    if (event.target.classList.contains("dropzone")) {
-        event.target.classList.remove("dragover");
-        event.target.appendChild(dragged);
-    }
-});
+for (let target of targets) {
+    target.addEventListener("touchmove", (event) => {
+        // prevent default to allow drop
+            console.log('touchmove');
+            event.preventDefault();
+        }, false,
+    );
+}
 
 
