@@ -328,7 +328,8 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 
 <!-- END OF FEATURES -->
 
-
+Include try-catch for error handling
+User prompt and auto close on reset popup 
 
 🛑🛑🛑🛑🛑 <!-- REMEMBER TO ADD SCREENSHOTS FOR ALL FEATURES --> 🛑🛑🛑🛑🛑
 
@@ -347,6 +348,19 @@ Consider adding any helpful links or notes to help remind you in the future, if 
 - Title for future feature #3
     - Any additional notes about this feature.
 
+toggle option for automatic reset off
+add individual timers for goals with deadlines 
+add losing points in hard mode if goal not achieved by end of day when goals are reset.
+inspo Notion and Motion aesthetic
+spellcheck for goal inputs
+style nicer clock input
+reminder of when tasks self destruct
+more nft collections - choose on signing up to the app
+log in and password to access from anywhere
+local high score cache storage
+end of month data log show - average time to complete each type of task
+Look back at all tasks completed at the end of each week to celebrate your successes
+lock private / personal tasks with a password
 
 
 ## Tools & Technologies Used

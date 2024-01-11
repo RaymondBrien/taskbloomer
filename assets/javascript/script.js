@@ -419,9 +419,9 @@ document.getElementById('task-c').addEventListener('input', function() {
 });
 
 /**
- * 317 to 371: event handler for drag event on computer (source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event)
+ * Drag event handling (with mouse)
+ * (source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event)
  */
-
 let dragged;
 /* events fired on the draggable target */
 let source = document.getElementById("plant-image");
@@ -453,29 +453,92 @@ for (let target of targets) {
          }, false,
         );
 
+target.addEventListener("dragenter", (event) => {
+// highlight potential drop target when the draggable element enters it
+if (event.target.classList.contains("dropzone")) {
+    event.target.classList.add("dragover");
+}
+});
 
-        target.addEventListener("dragenter", (event) => {
-        // highlight potential drop target when the draggable element enters it
-        if (event.target.classList.contains("dropzone")) {
-            event.target.classList.add("dragover");
-        }
-        });
+target.addEventListener("dragleave", (event) => {
+// reset styles of potential drop target when the draggable element leaves it
+if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
+}
+});
 
-        target.addEventListener("dragleave", (event) => {
-        // reset styles of potential drop target when the draggable element leaves it
-        if (event.target.classList.contains("dropzone")) {
-            event.target.classList.remove("dragover");
-        }
-        });
+target.addEventListener("drop", (event) => {
+// prevent default action (open as link for some elements)
+event.preventDefault();
+// move dragged element to the selected drop target
+if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
+    event.target.appendChild(dragged);
+}
+});
+}
 
-        target.addEventListener("drop", (event) => {
-        // prevent default action (open as link for some elements)
-        event.preventDefault();
-        // move dragged element to the selected drop target
-        if (event.target.classList.contains("dropzone")) {
-            event.target.classList.remove("dragover");
-            event.target.appendChild(dragged);
-        }
-        });
-    }
 
+/**
+ * Drag event handling (with touch/phone)
+ * (source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event)
+ */
+let draggedPhone;
+/* events fired on the draggable target */
+let sourcePhone = document.getElementById("plant-image");
+sourcePhone.addEventListener("touchstart", (event) => {
+console.log("dragging");
+});
+
+sourcePhone.addEventListener("touchstart", (event) => {
+// store a ref. on the dragged elem
+dragged = event.target;
+// make it half transparent
+event.target.classList.add("dragging");
+});
+
+function touchMove(e) {
+e.preventDefault();
+var currentX = e.touches[0].clientX - initialX;
+var currentY = e.touches[0].clientY - initialY;
+
+draggableElement.style.left = currentX + 'px';
+draggableElement.style.top = currentY + 'px';
+}
+
+sourcePhone.addEventListener("touchend", (event) => {
+// reset the transparency
+event.target.classList.remove("dragging");
+});
+
+/* events fired on the drop targets */
+let targetPhone = document.getElementById("droptarget");
+targetPhone.addEventListener(touchmove, (event) => {
+// prevent default to allow drop
+    event.preventDefault();
+}, false,
+);
+
+targetPhone.addEventListener("dragenter", (event) => {
+// highlight potential drop target when the draggable element enters it
+if (event.target.classList.contains("dropzone")) {
+event.target.classList.add("dragover");
+}
+});
+
+targetPhone.addEventListener("dragleave", (event) => {
+// reset background of potential drop target when the draggable element leaves it
+if (event.target.classList.contains("dropzone")) {
+event.target.classList.remove("dragover");
+}
+});
+
+targetPhone.addEventListener("drop", (event) => {
+// prevent default action (open as link for some elements)
+event.preventDefault();
+// move dragged element to the selected drop target
+if (event.target.classList.contains("dropzone")) {
+event.target.classList.remove("dragover");
+event.target.appendChild(dragged);
+}
+});
