@@ -544,8 +544,12 @@ input[type="checkbox"]:checked::before {
 /* DRAG INTERACTIONS */
 .dropzone {
     border: solid 5px var(--bs-secondary-color);
-    min-width: 30%;
+    min-width: 50px;
+    min-height: 50px;
     margin: 2%;
+    object-fit: contain;
+    box-sizing: border-box;
+    max-width: fit-content;
 }
 
 .dragover {
