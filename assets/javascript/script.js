@@ -436,8 +436,6 @@ source.addEventListener("dragstart", (event) => {
     event.target.classList.add("dragging");
 });
 
-//see line 506 - check if dragMove styles worth trying?
-
 source.addEventListener("dragend", (event) => {
     // reset the transparency
     console.log('dragging ended ln441');
@@ -525,5 +523,6 @@ for (let target of targets) {
         }, false,
     );
 }
+
 
 
