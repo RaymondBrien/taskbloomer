@@ -25,7 +25,7 @@ Guide your decision-making process effortlessly with TaskBloomer to leave you wi
 
 By focussing on what matters most, each time you check off a goal, your points go towards earning you an NFT. With real-time progress tracking and a gallery at the end to look through all the lovely pieces you've collected from all your hard work, you'll always be in the driver's seat, steering towards success without feeling overwhelmed.
 
-### Extra goodies:
+### 🍬 Extra goodies:
 1 - Track your progress with helpful stats and beautiful sets of NFTs from artists all over the world.
 2 - Set the difficulty rating: choose if the amounts of points you need for each NFT are easier (less points needed per NFT), medium (a few more needed for each) or hard (for those who like a challenge).
 3 - New lightmode feature for your tasks area.
@@ -45,11 +45,10 @@ TaskBloomer is unique, not only because you earn points for every task you check
 
 The added benefit of including NFTs as part of your earning portfolio each time you hit a point threshold not only gives you the chance to look back at your NFTs and celebrate the work you have done to earn them, but also introduces you to new artists from across the globe!
 
-<!-- UPDATE ONCE PHONE MEDIA QUERY ADDED -->
+
 https://ui.dev/amiresponsive?url=https://raymondbrien.github.io/taskbloomer
 
-<!-- TODO -->
-![screenshot](documentation/mockup.png)
+![screenshot](documentation/mockup.jpeg)
 
 
 ## UX
