@@ -188,7 +188,7 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 - **Navbar**
 
     - The home navbar is a different color shade to the main background for improved visibility. It spans the entire width of page for a standard UI that users will likely expect. There is letter spacing styling consistent across whole navbar for improved UX. 
-    The task page link includes an animation to show the user on mouse hover that the link is clickable. Task page link also has a border to immediately visually differentiate it from the app title on the left. 
+    The task page link includes a hover animation for mouse users to communicate to users a clickable link. The task page link also has a border to visually differentiate it from the app title on the left for improved discoverability. 
 
 
 ![screenshot](documentation/screenshots/feature01.jpeg)
