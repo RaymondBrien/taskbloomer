@@ -243,8 +243,8 @@
         
         <!-- Reset The Game -->
         <div id="reset">
-            <button type="button" class="btn btn-danger" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
-            <div id="reset-popover" popover="manual" class="p-5">
+            <button type="button" class="btn btn-danger" id="reset-game" data-popover-target="reset-popover"><strong>Reset Game</strong></button>
+            <div id="reset-popover" data-popover="manual" class="p-5">
                 <p class="display-5">Would you like to reset the game?</p>
                 <p>
                     <i class="fa-solid fa-triangle-exclamation"></i>
@@ -254,12 +254,12 @@
                 <span id="popover-message" class="fs-1"></span>
                 <br>
                 <div id="reset-options" class="pt-4">
-                    <button type="button" id="reset-confirmed" name="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide" class="btn btn-secondary">Yes</button>
-                    <button type="button" id="reset-cancelled" name="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide" class="btn btn-secondary">No, return to game</button>
+                    <button type="button" id="reset-confirmed" name="reset-confirmed" data-popover-target="reset-popover" data-popover-target-action="hide" class="btn btn-secondary" autofocus>Yes</button>
+                    <button type="button" id="reset-cancelled" name="reset-cancelled" data-popover-target="reset-popover" data-popover-target-action="hide" class="btn btn-secondary">No, return to game</button>
                 </div>
             </div>
         </div>
-                 
+
         <footer>
             <div class="container-fluid text-center ts-1" id="game-footer">
                 <a class="navbar-brand link-underline" href="index.html#accordion-whole">Instructions</a>
