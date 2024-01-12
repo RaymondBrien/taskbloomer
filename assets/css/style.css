@@ -592,11 +592,6 @@ input[type="checkbox"]:checked::before {
     max-width: 80%;
 }
 
-#reset-confirmed {
-    border: none;
-    background: none;
-}
-
 @keyframes warning {
     from {opacity: 0;}
     to {opacity: 1;}

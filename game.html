@@ -39,21 +39,20 @@
                                 <li class="nav-item">
                                     <a class="nav-link link-underline fs-3" href="index.html">Instructions</a>
                                 </li>
-                                <hr>
-                                <li class="nav-item text-center">
+                                <li class="nav-item text-center pt-5">
                                     <h4 class="display-6 pb-4">Settings</h4>
                                 </li>
                                 <!-- Difficulty settings -->
                                 <li class="mb-2 pb-3">
                                     <div id="levels">
                                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                            <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off">
+                                            <input type="radio" class="btn-check " name="btnradio" id="btnradio1">
                                             <label class="btn btn-outline-success" for="btnradio1">Easy</label>
                                             
-                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
+                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" checked>
                                             <label class="btn btn-outline-warning" for="btnradio2">Medium</label>
                                             
-                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
                                             <label class="btn btn-outline-danger" for="btnradio3">Hard</label>
                                             </div>
                                         </div>
@@ -61,7 +60,7 @@
                                 <!-- Light Mode Toggle -->
                                 <li class="mb-2">
                                     <div>
-                                        <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                                        <input type="checkbox" class="btn-check" id="btn-check-5">
                                         <label class="btn btn-outline-warning" for="btn-check-5" id="dark-toggle"><i class="fa-solid fa-lightbulb"></i>&#160;Light Mode</label>
                                     </div>
                                 </li>
@@ -131,9 +130,9 @@
                     </table>
                     <!-- Progress bar until next growth point -->
                     <div class="p-5">
-                        <p class="fs-2 text-center td-underline" for="progress-log">Progress to next painting:</p>
+                        <p class="fs-3 text-center td-underline">Progress to next painting:</p>
                         <div class="progress mb-4 mt-4" role="progressbar" aria-label="Until next art" aria-valuenow="0"  aria-valuemin="0" aria-valuemax="8">
-                            <div class="progress-bar bg-success" id="progress-log" style="width: 0%" style="min-width: 20%">0%</div>
+                            <div class="progress-bar bg-success" id="progress-log" style="min-width: 2%; color: black; font-size: 15px;">0%</div>
                         </div>
                     </div>
                     <hr>
@@ -151,8 +150,8 @@
                         <!-- Add links to github and LinkedIn as icons -->
                         <p class="display-4">Links</p>
                         <div>
-                            <a href="https://www.linkedin.com/in/raymond-brien-97861a97/" target="_blank"  class="p-2"><i class="fa-brands fa-linkedin fs-1" aria-label="LinkedIn"></i></a>
-                            <a href="https://github.com/RaymondBrien" target="_blank"  class="p-2"><i class="fa-brands fa-square-github fs-1" aria-label="GitHub"></i></a>
+                            <a href="https://www.linkedin.com/in/raymond-brien-97861a97/" target="_blank"  class="p-2" aria-label="LinkedIn-Link"><i class="fa-brands fa-linkedin fs-1"></i></a>
+                            <a href="https://github.com/RaymondBrien" target="_blank"  class="p-2" aria-label="GitHub"><i class="fa-brands fa-square-github fs-1"></i></a>
                         </div>
                     </div>            
                 </div>
@@ -189,7 +188,7 @@
                             <input type="checkbox" id="task-b-check" class="checkbox" name="checkbox" value="2">
                             Done
                         </label>
-                        <span id="b-check-enabled"></span></p>
+                        <span id="b-check-enabled"></span>
                     </div>
                     <div class="subset-c">
                         <p><span class="characters" id="characters-b"></span>
@@ -245,18 +244,18 @@
         <!-- Reset The Game -->
         <div id="reset">
             <button type="button" class="btn btn-danger" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
-            <div id="reset-popover" popover="manual">
+            <div id="reset-popover" popover="manual" class="p-5">
                 <p class="display-5">Would you like to reset the game?</p>
                 <p>
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     <b class="h4">This will reset your total points to 0</b>
                     <i class="fa-solid fa-triangle-exclamation"></i>
                 </p>
-                <span id="popover-message"></span>
+                <span id="popover-message" class="fs-1"></span>
                 <br>
-                <div id="reset-options">
-                    <button id="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide"><a href="index.html" class="btn btn-secondary">Yes</a></button>
-                    <button id="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide" class="btn btn-secondary">No, return to game</button>
+                <div id="reset-options" class="pt-4">
+                    <button type="button" id="reset-confirmed" name="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide" class="btn btn-secondary">Yes</button>
+                    <button type="button" id="reset-cancelled" name="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide" class="btn btn-secondary">No, return to game</button>
                 </div>
             </div>
         </div>

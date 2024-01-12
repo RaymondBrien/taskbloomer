@@ -312,6 +312,14 @@ document.getElementById('reset-game').addEventListener('click', function(event) 
 });
 
 // If reset is cancelled, body returns to normal opacity for visibility.
+document.getElementById('reset-confirmed').addEventListener('click', function() {
+    console.log('resetting opacity to normal!');
+    document.body.style.opacity = 1; 
+    window.location.href="index.html";
+
+});
+
+// If reset is cancelled, body returns to normal opacity for visibility.
 document.getElementById('reset-cancelled').addEventListener('click', function() {
     console.log('resetting opacity to normal!');
     document.body.style.opacity = 1; 
