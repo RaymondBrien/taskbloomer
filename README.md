@@ -373,29 +373,23 @@ Certainly! Here's the additional goal in the same format:
 
 ## Tools & Technologies Used
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
-- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
+- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout for checkboxes.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
-
+- [HTML Validator](https://validator.w3.org/) for ensuring HTML code validity.
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) for validating CSS code.
+- [JS Validator](https://jshint.com/) for checking and validating JavaScript code.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-
+- [Favicon] (https://favicon.io/favicon-converter/) used to convert my PNG hero element into the respective favicons.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-https://favicon.io/favicon-converter/
+- [Adobe Express - Image Resize Feature](https://www.adobe.com/express/feature/image/resize)
+
 
 ## Testing
 
@@ -453,39 +447,42 @@ Use this space to discuss any differences between the local version you've devel
 
 ## Credits
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 In this section you need to reference where you got your content, media, and extra help from.
 It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
+however, it is important to be very specific about these sources to avoid plagiarism. -->
+
+| Support ----| Link ----|
+|-----------------------------------|----------------------------------------------------------------------------|
+| General support                   | [Erikas Ramanauskas](https://github.com/Erikas-Ramanauskas) |
+
+
+| Artist or Library ---| Link ---|
+|-----------------|------------------------------------------|
+| Shubham Dhage   | [Shubham Dhage](https://unsplash.com/@theshubhamdhage)    |
+| Davi Moreira    | [Davi Moreira](https://unsplash.com/@me_dave)             |
+| Chris Lee       | [Chris Lee](https://unsplash.com/@chrisleeiam)            |
+| Caleb George    | [Caleb George](https://unsplash.com/@seemoris)            |
+| Annie Spratt    | [Annie Spratt](https://unsplash.com/@anniespratt)         |
+| Marjan Blan     | [Marjan Blan](https://unsplash.com/@europeana)            |
+| Europeana       | [Europeana](https://unsplash.com/@marjan_blan)            |
+| New Artist      | [Czapp Botond](https://unsplash.com/@czapp_botond)        |
+| Hero png and favicon | [Adobe Stock (Free)](https://stock.adobe.com/uk/images/rosemary-plant-branch-hand-draw-realistic-illustration/495247185prev_url=detailasset_id=495247185) |
+
 
 
 
 ### Content
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
 | [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [StackOverflow](https://stackoverflow.com/questions/54616139/how-to-animate-underline-from-left-to-right) | entire site | animations for link hover |
+| [StackOverflow](https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily) | game page | temporary scrolling functions |
+| [MDN Web Docs - Drag Event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event) | game page | drag events |
+| [Modern CSS](https://moderncss.dev/pure-css-custom-checkbox-style/) | game page | custom checkbox styling |
 
 ### Media
 
