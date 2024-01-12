@@ -447,32 +447,6 @@ Use this space to discuss any differences between the local version you've devel
 
 ## Credits
 
-<!-- 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism. -->
-
-| Support ----| Link ----|
-|-----------------------------------|----------------------------------------------------------------------------|
-| General support                   | [Erikas Ramanauskas](https://github.com/Erikas-Ramanauskas) |
-
-
-| Artist or Library ---| Link ---|
-|-----------------|------------------------------------------|
-| Shubham Dhage   | [Shubham Dhage](https://unsplash.com/@theshubhamdhage)    |
-| Davi Moreira    | [Davi Moreira](https://unsplash.com/@me_dave)             |
-| Chris Lee       | [Chris Lee](https://unsplash.com/@chrisleeiam)            |
-| Caleb George    | [Caleb George](https://unsplash.com/@seemoris)            |
-| Annie Spratt    | [Annie Spratt](https://unsplash.com/@anniespratt)         |
-| Marjan Blan     | [Marjan Blan](https://unsplash.com/@europeana)            |
-| Europeana       | [Europeana](https://unsplash.com/@marjan_blan)            |
-| New Artist      | [Czapp Botond](https://unsplash.com/@czapp_botond)        |
-| Hero png and favicon | [Adobe Stock (Free)](https://stock.adobe.com/uk/images/rosemary-plant-branch-hand-draw-realistic-illustration/495247185prev_url=detailasset_id=495247185) |
-
-
-
-
 ### Content
 
 | Source | Location | Notes |
@@ -486,43 +460,22 @@ however, it is important to be very specific about these sources to avoid plagia
 
 ### Media
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Source                                           | Location                                       | Type   | Notes |
+| ------------------------------------------------ | ---------------------------------------------- | ------ | ----- |
+| [Shubham Dhage](https://unsplash.com/@theshubhamdhage) | game page | image | used as collectable 'nft' for game gallery |
+| [Davi Moreira](https://unsplash.com/@me_dave)          | game page | image | used as collectable 'nft' for game gallery |
+| [Chris Lee](https://unsplash.com/@chrisleeiam)         | game page | image | used as collectable 'nft' for game gallery |
+| [Caleb George](https://unsplash.com/@seemoris)         | game page | image | used as collectable 'nft' for game gallery |
+| [Annie Spratt](https://unsplash.com/@anniespratt)      | game page | image | used as collectable 'nft' for game gallery |
+| [Marjan Blan](https://unsplash.com/@europeana)         | game page | image | used as collectable 'nft' for game gallery |
+| [Europeana](https://unsplash.com/@marjan_blan)         | game page | image | used as collectable 'nft' for game gallery |
+| [Czapp Botond](https://unsplash.com/@czapp_botond)     | game page | image | used as collectable 'nft' for game gallery |
+| [Adobe Stock (Free)](https://stock.adobe.com/uk/images/rosemary-plant-branch-hand-draw-realistic-illustration/495247185prev_url=detailasset_id=495247185) | entire site | hero image, and favicon | originally png, changed to favicon with [Favicon] (https://favicon.io/favicon-converter/) |
 
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-| Source | Location | Type | Notes |
-| --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
 
 ### Acknowledgements
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
+- I would like to thank my Code Institute mentor, [Rory Patrick Sheridan](https://github.com/Ri-Dearg) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank Erikas Ramanauskas [Erikas Ramanauskas](https://github.com/Erikas-Ramanauskas) for his support in my JavaScript development. 
