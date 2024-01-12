@@ -80,13 +80,13 @@ a {
 #end-button {
     width: 50%;
     max-width: 80%;
-    height: 3rem;
     position: relative;
     background-color: var(--bs-body-bg);
     margin: auto;
-    margin: auto;
     border: solid 2px white;
     color: #fffce1;
+    display: flex;
+    justify-content: center;
 }
 
 #end-button:hover {
