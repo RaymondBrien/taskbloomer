@@ -208,9 +208,6 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 ![screenshot](documentation/screenshots/feature03.jpeg)
 
 
-
-
-
 - **Difficulty Settings**
 
     - An apppropriately colored set of radio buttons show the user three difficulty settings: easy, medium and hard. As is explained in the instructions, these affect the amount of points until your next NFT. Only one can be clicked at a time, and the settings have colors associated with their corresponding level type for ease of use and discoverability.
@@ -256,111 +253,122 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 
 - **Completed Tasks**
 
-    - green, strickthrough 
+    -Completed tasks are shown with a green border and strickthrough text for a positive UX and ease of navigation for users to identify uncompleted tasks.
 
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature10.jpeg)
 
 - **Button Hover Styles**
 
-    - For YOUR STATS and New Day to highlight functionality and clickability for user, as well as promote discoverability and accessibility for new users less familiar with the app.
+    - For Stats and New Day buttons, hovers or clicks highlight functionality and clickability for user through color changes, as well as promote discoverability and accessibility for new users less familiar with the app.
 
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature11.jpeg)
 
 - **Input Autofocus**
 
-    - Autofocus for new page for returning users to efficiently start adding their goals to the tasks area.
+    - Autofocus is enabled on the first goal input on page load for new page for returning users to efficiently start adding their goals to the tasks area and direct the eye to the main area of the page. 
 
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature12.jpeg)
 
 - **Checkbox disabled**
 
-    - Disabled until goal written, with different color
+    - Checkboxes are disabled until goals are written in the input areas to ensure users cannot cheat.
 
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature13.jpeg)
 
 - **Subtle Accident Warning**
 
-    - Yellow if checked, then unchecked.
+    - Goal input areas are yellow if checked, then unchecked. This provides user feedback for cases of accidental checkbox toggles. 
 
-![screenshot](documentation/screenshots/featureX.jpeg)
-
-- **Feature**
-
-    - 
-
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature14.jpeg)
 
 - **New Day Button**
 
-    - 
+    - The New Day button resets each input text area's styles for users to manually click if they complete all the goals they could. The button deletes any previously written goals and reset's the day's points to zero so new goals can be written for a fresh day. The total score is still logged in the stats area. 
 
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature15.jpeg)
 
 - **NFT Area**
 
-    - Custom border to direct attention, largest. Drag and drop.
+    - An area with a custom border to direct attention, the largest of all the art pieces. Drag and drop functionality is enabled for users to drop their newly earned NFT into the gallery area below it.
 
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature16.jpeg)
 
 - **Gallery Area**
 
-    - Responsive sizing and colors for drag destination highlight
+    - Responsive sizing and colors for drag destination highlight for a positive UI.
 
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature17.jpeg)
 
 - **Reset Game Button**
 
-    - Popover 
+    - Popover with body opacity dim to highlight the popover text. After 5 seconds the user is prompted to click a button on the popover which either takes the user to the index.html page or closes the popover and remains on the unchanged game page. After 15 seconds the popover closes automatically and resets the body opacity to default for visibility if the user does not choose an option, to ensure the user is always directed back to the main game page.  
 
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature18.jpeg)
 
 - **End Gallery**
 
-    - Carousel for user to look through all their NFTs once they have all been collected.
+    - Carousel for user to look through all their NFTs once they have all been collected and the end of the game has been reached at the final growth point (progress is tracked in the stats area).
 
-![screenshot](documentation/screenshots/featureX.jpeg)
+![screenshot](documentation/screenshots/feature19.jpeg)
+
+- **Try-Catch Error Handling**
+
+    - Relevant JavaScript functions have been given try-catch error handling to app maintainability and future development. Any user errors are shown if required by an alert box if absolutely necessary.
+
+![screenshot](documentation/screenshots/feature20.jpeg)
 
 - **Links to Home Page**
 
-    - end page, logo top left on game page.
+    - The taskbloomer logo is always visible on the navbar which links directly back to the index.html page. 
 
-![screenshot](documentation/screenshots/featureX.jpeg)
-
-<!-- END OF FEATURES -->
-
-Include try-catch for error handling
-User prompt and auto close on reset popup 
+![screenshot](documentation/screenshots/feature21.jpeg)
 
 🛑🛑🛑🛑🛑 <!-- REMEMBER TO ADD SCREENSHOTS FOR ALL FEATURES --> 🛑🛑🛑🛑🛑
 
 ### Future Features
 
-<!-- Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years. -->
+- **Toggle Option for Automatic Reset**
+    - To turn automatic goal self destruct on or off - this may be useful for user goals which take a few days rather than just one day.
 
+- **Add Individual Timers for Goals with Deadlines**
+    - Each goal could have its own timer with respective notifications via email if a goal is not complete 1 hour before its set deadline.
 
-- Title for future feature #1
-    - Any additional notes about this feature.
-- Title for future feature #2
-    - Any additional notes about this feature.
-- Title for future feature #3
-    - Any additional notes about this feature.
+- **Add Losing Points in Hard Mode**
+    - If the goal is not achieved by the end of the day when goals are reset, users will lose points.
 
-toggle option for automatic reset off
-add individual timers for goals with deadlines 
-add losing points in hard mode if goal not achieved by end of day when goals are reset.
-inspo Notion and Motion aesthetic
-spellcheck for goal inputs
-style nicer clock input
-reminder of when tasks self destruct
-more nft collections - choose on signing up to the app
-log in and password to access from anywhere
-local high score cache storage
-end of month data log show - average time to complete each type of task
-Look back at all tasks completed at the end of each week to celebrate your successes
-lock private / personal tasks with a password
+- **Add improved CSS animations**
+    - Drawing inspiration from the [Notion](https://www.notion.so/) aesthetic for design and functionality, add further animations for a positive UI without being too busy on the page.  
+
+- **Spellcheck for Goal Inputs**
+    - Implement spellcheck functionality for goal inputs to enhance user experience.
+
+- **Style Nicer Clock Input**
+    - Enhance the visual style of the clock input for a more aesthetically pleasing appearance.
+
+- **Reminder of Task Self-Destruction**
+    - Implement reminders for tasks that self-destruct to ensure users are aware of expiring tasks.
+
+- **More NFT Collections**
+    - Allow users to choose NFT collections upon signing up to the app, expanding options for personalisation.
+
+- **Login and Password Access Anywhere**
+    - Introduce a login and password system to enable access to the app from anywhere.
+
+- **Local High Score Cache Storage**
+    - Implement local high score cache storage to track and display user achievements. Show how many people are using the app and allow their achievements to be broadcast to their friends or colleagues to inspire each other.
+
+- **End of Month Data Log Display**
+    - Display an end-of-month data log showing the average time to complete each type of task.
+
+- **Weekly Task Review**
+    - Provide a feature to look back at all tasks completed at the end of each week, celebrating user successes.
+
+- **Private Task Lock with Password**
+    - Enable users to lock private/personal tasks with a password for added security and privacy.
+Certainly! Here's the additional goal in the same format:
+
+- **Add Subgoals to Complete a Main Goal**
+    - Allow users to create subgoals within a main goal, providing a more granular approach to task management and accomplishment, with links and a pinboard for relevant strings of information.
 
 
 ## Tools & Technologies Used

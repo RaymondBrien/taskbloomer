@@ -343,7 +343,7 @@ document.getElementById('task-a').addEventListener('input', function() {
         count.style.display = 'block';
         count.style.color = 'red';
     } if (input.length === 25) {
-        alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
+        alert('Hold your horses hun, try to keep your goals as concise as possible! (25 characters or less)');
     } else if (input.length === 0) {
         // if input is empty, hide character count and disable checkbox
         count.style.display = 'none';
