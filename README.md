@@ -254,75 +254,75 @@ IMPORTANT: Include a screenshot of each individual feature! -->
 
     -Completed tasks are shown with a green border and strickthrough text for a positive UX and ease of navigation for users to identify uncompleted tasks.
 
-![screenshot](documentation/screenshots/feature10.jpeg)
+![screenshot](documentation/screenshots/feature10.png)
 
 - **Button Hover Styles**
 
     - For Stats and New Day buttons, hovers or clicks highlight functionality and clickability for user through color changes, as well as promote discoverability and accessibility for new users less familiar with the app.
 
-![screenshot](documentation/screenshots/feature11.jpeg)
+![screenshot](documentation/screenshots/feature11.png)
 
 - **Input Autofocus**
 
     - Autofocus is enabled on the first goal input on page load for new page for returning users to efficiently start adding their goals to the tasks area and direct the eye to the main area of the page. 
 
-![screenshot](documentation/screenshots/feature12.jpeg)
+![screenshot](documentation/screenshots/feature12.png)
 
 - **Checkbox disabled**
 
     - Checkboxes are disabled until goals are written in the input areas to ensure users cannot cheat.
 
-![screenshot](documentation/screenshots/feature13.jpeg)
+![screenshot](documentation/screenshots/feature13.png)
 
 - **Subtle Accident Warning**
 
     - Goal input areas are yellow if checked, then unchecked. This provides user feedback for cases of accidental checkbox toggles. 
 
-![screenshot](documentation/screenshots/feature14.jpeg)
+![screenshot](documentation/screenshots/feature14.png)
 
 - **New Day Button**
 
     - The New Day button resets each input text area's styles for users to manually click if they complete all the goals they could. The button deletes any previously written goals and reset's the day's points to zero so new goals can be written for a fresh day. The total score is still logged in the stats area. 
 
-![screenshot](documentation/screenshots/feature15.jpeg)
+![screenshot](documentation/screenshots/feature15.png)
 
 - **NFT Area**
 
     - An area with a custom border to direct attention, the largest of all the art pieces. Drag and drop functionality is enabled for users to drop their newly earned NFT into the gallery area below it.
 
-![screenshot](documentation/screenshots/feature16.jpeg)
+![screenshot](documentation/screenshots/feature16.png)
 
 - **Gallery Area**
 
     - Responsive sizing and colors for drag destination highlight for a positive UI.
 
-![screenshot](documentation/screenshots/feature17.jpeg)
+![screenshot](documentation/screenshots/feature17.png)
 
 - **Reset Game Button**
 
     - Popover with body opacity dim to highlight the popover text. After 5 seconds the user is prompted to click a button on the popover which either takes the user to the index.html page or closes the popover and remains on the unchanged game page. After 15 seconds the popover closes automatically and resets the body opacity to default for visibility if the user does not choose an option, to ensure the user is always directed back to the main game page.  
 
-![screenshot](documentation/screenshots/feature18.jpeg)
+![screenshot](documentation/screenshots/feature18.png)
 
 - **End Gallery**
 
     - Carousel for user to look through all their NFTs once they have all been collected and the end of the game has been reached at the final growth point (progress is tracked in the stats area).
 
-![screenshot](documentation/screenshots/feature19.jpeg)
+![screenshot](documentation/screenshots/feature19.png)
 
 - **Try-Catch Error Handling**
 
     - Relevant JavaScript functions have been given try-catch error handling to app maintainability and future development. Any user errors are shown if required by an alert box if absolutely necessary.
 
-![screenshot](documentation/screenshots/feature20.jpeg)
+![screenshot](documentation/screenshots/feature20.png)
 
 - **Links to Home Page**
 
     - The taskbloomer logo is always visible on the navbar which links directly back to the index.html page. 
 
-![screenshot](documentation/screenshots/feature21.jpeg)
+![screenshot](documentation/screenshots/feature21.png)
 
-🛑🛑🛑🛑🛑 <!-- REMEMBER TO ADD SCREENSHOTS FOR ALL FEATURES --> 🛑🛑🛑🛑🛑
+
 
 ### Future Features
 
