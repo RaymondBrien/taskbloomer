@@ -99,7 +99,6 @@ I also ensured that for the text and background colors for both dark and light m
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the icons for the hero cards on the landing page.
 
-<!-- Add favicon source? -->
 
 ## User Stories
 
