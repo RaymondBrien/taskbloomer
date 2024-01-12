@@ -439,10 +439,7 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on GitHub Pages.
-
+I am aware that the local and deployment versions differ minorly in sizing. The deployed public version fills the screen more fully, though this does not negatively affect any responsivity or formatting issues to my knowledge. 
 
 ## Credits
 
