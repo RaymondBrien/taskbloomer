@@ -295,7 +295,6 @@ nav {
     margin: auto;
     border: solid 2px;
     font-size: 1.5em;
-    /* padding: 1em; */
 }
 
 .btn {
@@ -605,6 +604,11 @@ input[type="checkbox"]:checked::before {
 @keyframes warning {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+#reset-container {
+    align-self: center;
+    max-width: 30%;
 }
 
 #popover-message {
