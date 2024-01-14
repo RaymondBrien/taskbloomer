@@ -295,13 +295,12 @@ document.getElementById('reset-game').addEventListener('click', function(event) 
         setTimeout(() => {
             popoverMessage.innerText = 'please choose an option';
         }, 10000);
-        // closes popover after total of 20 seconds 
-        setTimeout(() => {
-            console.log("closing popover");
-            options.classList.remove('show');
-            options.classList.add('hide');
-
-        }, 15000);
+        // // closes popover after total of 20 seconds 
+        // setTimeout(() => {
+        //     console.log("closing popover");
+        //     options.classList.remove('show');
+        //     options.classList.add('hide');
+        // }, 15000);
 
     } catch (error) {
         console.log(`Error is: ${error}`);
