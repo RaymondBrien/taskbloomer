@@ -79,7 +79,8 @@ a {
 .link-underline {
     display: inline-block;
     padding-bottom:2px;
-    background-image: linear-gradient(var(--bs-secondary-color) 0 0);
+    background-image: linear-gradient(0.25turn, var(--bs-secondary-color), whitesmoke 50%, #93B569 90%);
+    
     background-position: 0 100%; 
     background-size: 0% 2px;
     background-repeat: no-repeat;
@@ -333,9 +334,7 @@ table p {
     flex-direction: row;
     top: 0;
     font-size: 1.5em;
-    
     font-weight: 400;
-    vertical-align: auto;
     justify-content: center;
 }
 
@@ -435,7 +434,6 @@ fieldset > .task {
 } 
 
 input[type="checkbox"] {
-    -webkit-appearance: none;
     appearance: none; 
     /* For iOS < 15 to remove gradient background */
     background-color: var(--bs-body-bg);
@@ -497,9 +495,9 @@ input[type="checkbox"]:checked::before {
 }
 
 #plant-image-area {
-    border-style: solid;
+    border-style: solid 2px;
     /* 	border-image: linear-gradient(to bottom, #ccc, #555 66%, #181818) 1 100%; */
-        border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
+    border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
 }
 
 #plant-image-area, #plant-image  {
