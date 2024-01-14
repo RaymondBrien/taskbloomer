@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     for (let checkbox of checkboxes) {    
-
         let correspondingTextInput = document.getElementById(`task-${checkbox.id.slice(5,6)}`);
-        
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
                 taskComplete(parseInt(checkbox.value));
@@ -34,15 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('difficulty level default initiated (medium): ' + growthPoints);
 });
 
-/**
- * Returns a random number between min (inclusive) and max (exclusive)
- */
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-  }
-  
 // global variable
 let randomArray1 = getRandomInt(51, 70);
 let randomArray2 = getRandomInt(70, 100);
@@ -55,6 +44,22 @@ let growthPointsLevel = {
     hard: [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2]
 
 };
+
+/**
+ * Returns a random number between min (inclusive) and max (exclusive)
+ */
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    try {
+        return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+        
+    } catch (error) {
+        console.log(error);
+        // define backup values for entier array should settings fail
+        growthPointsLevel.hard = [6, 12, 18, 26, 33, 40, 50, 62, 70];
+    }
+}
 
 /**
  * Sets growthPoints variable to relevant growthPointsLevel easy array.
@@ -242,15 +247,19 @@ function newDay() {
     let labels =[document.querySelector('#label-a'), document.querySelector('#label-b'), document.querySelector('#label-c')];
     for (let label of labels) {
         label.classList.add('disabled');
-     };
+    };
 } 
 
 /**
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
  */
     function endOfGame() {
-        console.log('end of game running');
-        window.location.href = "end.html";
+        try {
+            console.log('end of game running');
+            window.location.href = "end.html";
+        } catch (error) {
+            console.log(error);
+        }
     }
 
 /**
@@ -264,21 +273,25 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
 
     console.log('currently theme is: ' + theme);
 
-    switch (theme) {
-        case 'light':
-            document.documentElement.setAttribute('data-bs-theme', 'light');
-            document.documentElement.style.setProperty('--bs-body-bg', '#fffce1');
-            document.documentElement.style.setProperty('--bs-body-color', '#3D3D3D');
-            document.documentElement.style.setProperty('--bs-emphasis-color', '#93B569');
-            document.documentElement.style.setProperty('--bs-secondary-color', '#2c2c2c');
-            break;
-        case 'dark':
-            document.documentElement.setAttribute('data-bs-theme', 'dark');
-            document.documentElement.style.setProperty('--bs-body-bg', '#0e100f');
-            document.documentElement.style.setProperty('--bs-body-color', '#fffce1');
-            document.documentElement.style.setProperty('--bs-emphasis-color', '#93B569');
-            document.documentElement.style.setProperty('--bs-secondary-color', '#BDBDBD');
-            break;
+    try {
+        switch (theme) {
+            case 'light':
+                document.documentElement.setAttribute('data-bs-theme', 'light');
+                document.documentElement.style.setProperty('--bs-body-bg', '#fffce1');
+                document.documentElement.style.setProperty('--bs-body-color', '#3D3D3D');
+                document.documentElement.style.setProperty('--bs-emphasis-color', '#93B569');
+                document.documentElement.style.setProperty('--bs-secondary-color', '#2c2c2c');
+                break;
+            case 'dark':
+                document.documentElement.setAttribute('data-bs-theme', 'dark');
+                document.documentElement.style.setProperty('--bs-body-bg', '#0e100f');
+                document.documentElement.style.setProperty('--bs-body-color', '#fffce1');
+                document.documentElement.style.setProperty('--bs-emphasis-color', '#93B569');
+                document.documentElement.style.setProperty('--bs-secondary-color', '#BDBDBD');
+                break;
+        }        
+    } catch (error) {
+     console.log(error);   
     }
 });
 
