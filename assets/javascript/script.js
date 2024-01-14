@@ -288,7 +288,7 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
 document.getElementById('reset-game').addEventListener('click', function(event) {
     
     const popoverMessage = document.getElementById('popover-message');
-    const options = document.getElementById('reset-popover');
+    const options = document.getElementById('staticBackdrop');
    
     try {
         // prompts user to pick an option
@@ -298,7 +298,9 @@ document.getElementById('reset-game').addEventListener('click', function(event) 
         // closes popover after total of 20 seconds 
         setTimeout(() => {
             console.log("closing popover");
-            options.hidePopover(); 
+            options.classList.remove('show');
+            options.classList.add('hide');
+
         }, 15000);
 
     } catch (error) {

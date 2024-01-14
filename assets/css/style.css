@@ -592,8 +592,6 @@ input[type="checkbox"]:checked::before {
 
 #popover-message {
     color: var(--bs-body-color);
-    padding-bottom: 1em;
-    border: whitesmoke;
     animation: warning 2s ease-in;
 }
 
