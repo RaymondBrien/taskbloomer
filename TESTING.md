@@ -2,26 +2,14 @@
 
 Return back to the [README.md](README.md) file.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ## Code Validation
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use the space to discuss code validation for any of your own code files (where applicable).
-You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc.
+<!-- Use the space to discuss code validation for any of your own code files (where applicable).
+You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc. -->
 
 **IMPORTANT**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Always validate the live site pages, not your local code. There could be subtle/hidden differences.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+<!-- 
+**PRO TIP**: Always validate the live site pages, not your local code. There could be subtle/hidden differences. -->
 
 ### HTML
 
@@ -71,7 +59,7 @@ The URL will look something like this:
 If you have multiple CSS files, then individual [validation by input](https://jigsaw.w3.org/css-validator/#validate_by_input)
 is recommended for the additional CSS files.
 
-**IMPORTANT**: Third-Party tools
+<!-- **IMPORTANT**: Third-Party tools
 
 If you're using extras like Bootstrap, Materialize, Font Awesome, then sometimes the validator
 will attempt to also validate this code, even if it's not part of your own actual code.
@@ -79,7 +67,7 @@ You are not required to validate the external libraries or frameworks!
 
 Sample CSS code validation documentation (tables are extremely helpful!):
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
@@ -105,7 +93,7 @@ If you are also including jQuery (`$`), then the updated format will be:
 This allows the JShint validator to recognize modern ES6 methods, such as:
 `let`, `const`, `template literals`, `arrow functions (=>)`, etc.
 
-**IMPORTANT**: External resources
+<!-- **IMPORTANT**: External resources
 
 Sometimes we'll write JavaScript that imports variables from other files, such as an array of questions
 from `questions.js`, which are used within the main `script.js` file elsewhere.
@@ -118,9 +106,8 @@ To instantiate these components, we need to use their respective declarator.
 Again, the JShint validation tool would flag these as undefined/unused variables.
 These warnings are acceptable to showcase on your screenshots.
 
-Sample JS code validation documentation (tables are extremely helpful!):
+Sample JS code validation documentation (tables are extremely helpful!): -->
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
@@ -134,9 +121,9 @@ Sample JS code validation documentation (tables are extremely helpful!):
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-Use this space to discuss testing the live/deployed site on various browsers.
+<!-- Use this space to discuss testing the live/deployed site on various browsers.
 
-Consider testing at least 3 different browsers, if available on your system.
+Consider testing at least 3 different browsers, if available on your system. -->
 
 Recommended browsers to consider:
 - [Chrome](https://www.google.com/chrome)
@@ -146,15 +133,11 @@ Recommended browsers to consider:
 - [Brave](https://brave.com/download)
 - [Opera](https://www.opera.com/download)
 
-**IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
+<!-- **IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
 
 Please note, there are services out there that can test multiple browser compatibilities at the same time.
 Some of these are paid services, but some are free.
-If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
-Sample browser testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results. -->
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
@@ -170,15 +153,13 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Responsiveness
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site on various device sizes.
+<!-- Use this space to discuss testing the live/deployed site on various device sizes. -->
 
 The minimum requirement is for the following 3 tests:
 - Mobile
 - Tablet
 - Desktop
-
+<!-- 
 **IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
 
 Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
@@ -189,7 +170,7 @@ It showcases a higher level of manual tests, and can be seen as a positive inclu
 
 Sample responsiveness testing documentation:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
@@ -205,23 +186,14 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | repeat for any other tested browsers | x | x | x | x | x |
 
 ## Lighthouse Audit
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
+<!-- 
 Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
 Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
 
 Don't just test the home page (unless it's a single-page application).
 Make sure to test the Lighthouse Audit results for all of your pages.
 
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them. -->
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
@@ -234,9 +206,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Defensive programming (defensive design) is extremely important!
+<!-- Defensive programming (defensive design) is extremely important!
 
 When building projects that accept user inputs or forms, you should always test the level of security for each.
 Examples of this could include (not limited to):
@@ -244,22 +214,6 @@ Examples of this could include (not limited to):
 Forms:
 - Users cannot submit an empty form
 - Users must enter valid email addresses
-
-PP3 (Python-only):
-- Users must enter a valid letter/word/string when prompted
-- Users must choose from a specific list only
-
-MS3 (Flask) | MS4/PP4/PP5 (Django):
-- Users cannot brute-force a URL to navigate to a restricted page
-- Users cannot perform CRUD functionality while logged-out
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers
-
-You'll want to test all functionality on your application, whether it's a standard form,
-or uses CRUD functionality for data manipulation on a database.
-Make sure to include the `required` attribute on any form-fields that should be mandatory.
-Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
 
 You should include any manual tests performed, and the expected results/outcome.
 
@@ -283,9 +237,8 @@ Expected Outcome / Test Performed / Result Received / Fixes Implemented
 - (or) **Result**: "The feature did not respond to A, B, or C."
 - **Fix**: "I did Z to the code because something was missing."
 
-Use the table below as a basic start, and expand on it using the logic above.
+Use the table below as a basic start, and expand on it using the logic above. -->
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 Defensive programming was manually tested with the below user acceptance testing:
 
@@ -305,15 +258,13 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
 | repeat for all remaining pages | x | x | x | x | x |
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-Another way of performing defensive testing is a simple Pass/Fail for each test.
-The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases.
+<!-- Another way of performing defensive testing is a simple Pass/Fail for each test.
+The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases. -->
 
-When in doubt, use the above method instead, and delete the table below.
+<!-- When in doubt, use the above method instead, and delete the table below. -->
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
+<!-- 
 | Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
 | Home | | | | |
@@ -347,26 +298,13 @@ When in doubt, use the above method instead, and delete the table below.
 | | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
 | | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
 | | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| repeat for all remaining pages | x | x | x | x |
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| repeat for all remaining pages | x | x | x | x | -->
 
 ## User Story Testing
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
+<!-- Most of your project's **features** should already align with the **user stories**,
 so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+from the respective feature. -->
 
 | User Story | Screenshot |
 | --- | --- |
@@ -383,17 +321,13 @@ from the respective feature.
 
 ## Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-This section is primarily used for JavaScript and Python applications,
+<!-- This section is primarily used for JavaScript and Python applications,
 but feel free to use this section to document any HTML/CSS bugs you might run into.
 
 It's very important to document any bugs you've discovered while developing the project.
 Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
 
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way! -->
 
 - JS Uncaught ReferenceError: `foobar` is undefined/not defined
 
@@ -407,40 +341,19 @@ Make sure to include any necessary steps you've implemented to fix the bug(s) as
 
     - To fix this, I _____________________.
 
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
-
-    ![screenshot](documentation/bug03.png)
-
-    - To fix this, I _____________________.
-
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
-
-- Python `E501 line too long` (93 > 79 characters)
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
 
 ## Unfixed Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-You will need to mention unfixed bugs and why they were not fixed.
+<!-- You will need to mention unfixed bugs and why they were not fixed.
 This section should include shortcomings of the frameworks or technologies used.
 Although time can be a big variable to consider, paucity of time and difficulty understanding
 implementation is not a valid reason to leave bugs unfixed.
 
 If you've identified any unfixed bugs, no matter how small, be sure to list them here.
 It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
+they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them. -->
 
 Some examples:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
 
@@ -460,10 +373,7 @@ Some examples:
 
     - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
+<!-- 
 If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-There are no remaining bugs that I am aware of.
+There are no remaining bugs that I am aware of. -->

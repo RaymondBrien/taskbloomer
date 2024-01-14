@@ -529,9 +529,7 @@ for (let target of targets) {
 
 //Drag event handling (with touch/phone)
 // Source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event
-
 let draggedPhone;
-
 /* events fired on the draggable target */
 source.addEventListener("touchstart", (event) => {
     console.log("dragging");

@@ -411,7 +411,6 @@ fieldset label {
 
 /* Media Query for narrow phones (up to 300px pixels) */
 @media (max-width: 300px) {
-    /* Your styles for phones go here */
     .task::placeholder {
       font-size: 50%;
     }
@@ -520,7 +519,6 @@ input[type="checkbox"]:checked::before {
 
 #plant-image-area {
     border-style: solid 2px;
-    /* 	border-image: linear-gradient(to bottom, #ccc, #555 66%, #181818) 1 100%; */
     border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
 }
 
@@ -587,7 +585,6 @@ input[type="checkbox"]:checked::before {
     max-width: 4rem;
     max-height: 8rem;
     object-fit: contain;
-    /* z-index: 999; */
 }
 
 #settings-section {
@@ -685,6 +682,7 @@ footer {
     }
 } 
 
+/* media query for small mobile devices */
 @media (max-width: 300px) {  
     #task-page-link {
         display: none;
