@@ -249,7 +249,7 @@ function newDay() {
     document.getElementById('main-input-a').scrollIntoView();
 }
 
-// New Day user click confirmation
+// New Day user click confirmation text (fade in and out)
 document.getElementById('new-day').addEventListener('click', function() {
     console.log('new-day-clicked');
     let newDayText = document.getElementById('new-day-text');
@@ -362,6 +362,8 @@ document.getElementById('task-a').addEventListener('input', function() {
         count.style.fontSize = '15px';
         count.style.color = 'green';
         count.style.background = 'none';
+        // show done checkbox as active
+        label.classList.remove('disabled');
     } if (input.length >= 20) {
         count.style.background = 'none';
         count.style.color = 'red';
@@ -402,6 +404,8 @@ document.getElementById('task-b').addEventListener('input', function() {
         count.style.fontSize = '15px';
         count.style.color = 'green';
         count.style.background = 'none';
+        // show done checkbox as active
+        label.classList.remove('disabled');
     } if (input.length >= 20) {
         count.style.background = 'none';
         count.style.color = 'red';
@@ -439,6 +443,8 @@ document.getElementById('task-c').addEventListener('input', function() {
         count.style.fontSize = '15px';
         count.style.color = 'green';
         count.style.background = 'none';
+        // show done checkbox as active
+        label.classList.remove('disabled');
     } if (input.length >= 20) {
         count.style.background = 'none';
         count.style.color = 'red';

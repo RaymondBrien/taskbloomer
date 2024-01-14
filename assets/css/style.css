@@ -366,14 +366,22 @@ form {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    max-width: 95%;
+    max-width: 90%;
 }
 
 fieldset {
-    margin: 0.5rem 0.5rem 3px 0.5rem ;
+    margin: 0.5rem 0.5rem 3rem 0.5rem ;
     padding: 0.5rem;
     border: solid 2px var(--bs-secondary-color);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media screen {
+    max-width: 100%;
 }
 
 fieldset label {
