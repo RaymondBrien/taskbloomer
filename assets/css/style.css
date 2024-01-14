@@ -66,7 +66,6 @@ main {
 
 p {
     font-size: 1.5em;
-    
 }
 
 a {
@@ -232,7 +231,6 @@ nav {
 }
 
 .accordion-body {
-
     align-items: center;
     justify-content: center;
 }
@@ -368,6 +366,13 @@ form {
     max-width: 90%;
 }
 
+@media (min-width: 1025px) {
+    form {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+} 
+
 fieldset {
     margin: 0.5rem 0.5rem 3rem 0.5rem ;
     padding: 0.5rem;
@@ -377,10 +382,6 @@ fieldset {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-}
-
-@media screen {
-    max-width: 100%;
 }
 
 fieldset label {
@@ -494,7 +495,10 @@ input[type="checkbox"]:checked::before {
 
 #new-day-text {
     opacity: 0;
-    margin-top: 1em;
+    font-size: 20px;
+    border-radius: 10px;
+    color: var(--bs-body-color);
+    padding-top: 1em;
 } 
 
 .fade-in-out {
@@ -652,3 +656,20 @@ footer {
 #game-footer p {
     font-size: 15px;
 }
+
+/* media query for mobile devices */
+@media (max-width: 480px) {
+    
+    p {
+        font-size: 15px;
+    }
+    
+    a {
+        font-size: 20px;
+    }
+    
+    #accordion-whole {
+      width: 100%;
+      margin: 0 auto;
+    }
+} 
