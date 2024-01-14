@@ -124,6 +124,10 @@ nav {
     font-size: 1.25em;
 }
 
+#home-game-icon {
+    display: none;
+}
+
 #dark-toggle {
     width: 12rem;
 }
@@ -657,9 +661,8 @@ footer {
     font-size: 15px;
 }
 
-/* media query for mobile devices */
-@media (max-width: 480px) {
-    
+/* media query for larger mobile devices */
+@media (max-width: 480px) {    
     p {
         font-size: 15px;
     }
@@ -668,8 +671,26 @@ footer {
         font-size: 20px;
     }
     
+    #nav-settings a {
+        font-size: 15px;
+    }
+
+    #play-button a {
+        font-size: 20px;
+    }
+
     #accordion-whole {
       width: 100%;
       margin: 0 auto;
     }
 } 
+
+@media (max-width: 300px) {  
+    #task-page-link {
+        display: none;
+    }
+
+    #home-game-icon {
+        display: block;
+    }
+}
