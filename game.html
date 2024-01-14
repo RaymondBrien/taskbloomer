@@ -240,22 +240,32 @@
                 </div>
             </form>
         </main>
+       
+        <!-- Button trigger reset modal -->
+        <button type="button" id="reset-game" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            RESET GAME
+        </button>
         
-        <!-- Reset The Game -->
-        <div id="reset">
-            <button type="button" name="reset-game" id="reset-game" popovertarget="reset-popover"><strong>Reset Game</strong></button>
-            <div id="reset-popover" popover="manual">
-                <p class="display-5">Would you like to reset the game?</p>
-                <p>
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    <b class="h4">This will reset your total points to 0</b>
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                </p>
-                <span id="popover-message" class="fs-1"></span>
-                <br>
-                <div id="reset-options" class="pt-4">
-                    <button type="button" id="reset-confirmed" name="reset-confirmed" popovertarget="reset-popover" popovertargetaction="hide">Yes</button>
-                    <button type="button" id="reset-cancelled" name="reset-cancelled" popovertarget="reset-popover" popovertargetaction="hide">No, return to game</button>
+        <!-- Reset game modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Reset the game?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <b class="h4">This will reset your total points to 0</b>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <span id="popover-message" class="fs-4"></span>
+                        <button type="button" class="btn btn-secondary" id="reset-cancelled" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="reset-confirmed">Yes!</button>
+                    </div>
                 </div>
             </div>
         </div>
