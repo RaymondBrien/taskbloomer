@@ -518,7 +518,7 @@ input[type="checkbox"]:checked::before {
 }
 
 #plant-image-area {
-    border-style: solid 2px;
+    border-style: solid;
     border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
 }
 
