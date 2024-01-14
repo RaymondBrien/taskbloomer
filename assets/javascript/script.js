@@ -247,7 +247,22 @@ function newDay() {
     };
     // take user back to top of page
     document.getElementById('main-input-a').scrollIntoView();
-} 
+}
+
+// New Day user click confirmation
+document.getElementById('new-day').addEventListener('click', function() {
+    console.log('new-day-clicked');
+    let newDayText = document.getElementById('new-day-text');
+    // Fade in
+    setTimeout(function() {
+        newDayText.style.opacity = '1';
+        }, 0);
+    
+        // Fade out after 2 seconds
+        setTimeout(function() {
+        newDayText.style.opacity = '0';
+        }, 2000);
+});
 
 /**
  * Once last growth point has been reached, plant is fully grown. Brings up new html page.
