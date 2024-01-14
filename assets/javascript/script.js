@@ -220,28 +220,29 @@ function newDay() {
     document.getElementById('today-points').innerHTML = 0;
 
     // hide all character count
-     let characters = document.getElementsByClassName('characters');
-     for (let i = 0; i < characters.length; i++) {
+    let characters = document.getElementsByClassName('characters');
+    for (let i = 0; i < characters.length; i++) {
          characters[i].style.display = 'none';
-         console.log(characters[i]);
-     }
+    }
 
     //  restyle inputs to default
-     let mainInputs = document.getElementsByClassName('main-input');
-    //  for (let mainInput of mainInputs) {
-    //      mainInput.style.border = 'solid 2px grey';
-    //  }
-
+    let mainInputs = document.getElementsByClassName('main-input');
     for (let i = 0; i < mainInputs.length; i++) {
-        mainInputs[i].style.border = 'solid 2px grey';
         let tasks = mainInputs[i].querySelector('.task');
         tasks.style.textDecoration = 'none';
+        tasks.style.border = 'solid 2px grey';
     }
 
     let checkboxes = document.querySelectorAll('.checkbox');
-    checkboxes.forEach(function(checkbox) {
-       checkbox.setAttribute('disabled', true);
-   });
+    
+    for (let checkbox of checkboxes) {
+        checkbox.setAttribute('disabled', true);
+    };
+    
+    let labels =[document.querySelector('#label-a'), document.querySelector('#label-b'), document.querySelector('#label-c')];
+    for (let label of labels) {
+        label.classList.add('disabled');
+     };
 } 
 
 /**
