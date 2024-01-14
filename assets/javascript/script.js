@@ -341,15 +341,19 @@ document.getElementById('task-a').addEventListener('input', function() {
     count.innerHTML = `${input.length}/25 characters`;
 
     // Check input length conditions
+    // Style character count depending on length
      if (input.length <= 19) {
         count.style.display = 'block';
+        count.style.fontSize = '15px';
         count.style.color = 'green';
-        label.classList.remove('disabled');
+        count.style.background = 'none';
     } if (input.length >= 20) {
-        count.style.display = 'block';
+        count.style.background = 'none';
         count.style.color = 'red';
     } if (input.length === 25) {
-        alert('Hold your horses hun, try to keep your goals as concise as possible! (25 characters or less)');
+        count.style.color = 'black';
+        count.style.backgroundColor = 'yellow';
+        count.innerHTML = 'Hold your horses hun, try to keep your goals as concise as possible! (25 characters or less)';
     } else if (input.length === 0) {
         // if input is empty, hide character count and disable checkbox
         count.style.display = 'none';
@@ -377,20 +381,26 @@ document.getElementById('task-b').addEventListener('input', function() {
     checkbox.disabled = false;
 
     // Check input length conditions
+    // Style character count depending on length
     if (input.length <= 19) {
+        count.style.display = 'block';
+        count.style.fontSize = '15px';
         count.style.color = 'green';
-        label.classList.remove('disabled');
-   } if (input.length >= 20) {
+        count.style.background = 'none';
+    } if (input.length >= 20) {
+        count.style.background = 'none';
         count.style.color = 'red';
-   } if (input.length === 25) {
-        alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-   } else if (input.length === 0) {
-       // if input is empty, hide character count and disable checkbox
-       count.style.display = 'none';
-       checkbox.setAttribute('disabled', true); 
-       this.placeholder = 'Enter a goal before clicking \'Done\'';  
-       label.classList.add('disabled');
-   }
+    } if (input.length === 25) {
+        count.style.color = 'black';
+        count.style.backgroundColor = 'yellow';
+        count.innerHTML = 'Hold your horses hun, try to keep your goals as concise as possible! (25 characters or less)';
+    } else if (input.length === 0) {
+        // if input is empty, hide character count and disable checkbox
+        count.style.display = 'none';
+        checkbox.setAttribute('disabled', true); 
+        this.placeholder = 'Enter a goal before clicking \'Done\'';  
+        label.classList.add('disabled');
+    }
 });
 
 /**
@@ -408,20 +418,26 @@ document.getElementById('task-c').addEventListener('input', function() {
     checkbox.disabled = false;
 
     // Check input length conditions
+    // Style character count depending on length
     if (input.length <= 19) {
+        count.style.display = 'block';
+        count.style.fontSize = '15px';
         count.style.color = 'green';
-        // label.classList.remove('disabled');
-   } if (input.length >= 20) {
+        count.style.background = 'none';
+    } if (input.length >= 20) {
+        count.style.background = 'none';
         count.style.color = 'red';
-   } if (input.length === 25) {
-        alert('Woah there hun, try to keep your goals as concise as possible! (25 characters or less)');
-   } else if (input.length === 0) {
-       // if input is empty, hide character count and disable checkbox
-       count.style.display = 'none';
-       checkbox.setAttribute('disabled', true); 
-       this.placeholder = 'Enter a goal before clicking \'Done\'';  
-       label.classList.add('disabled');
-   }
+    } if (input.length === 25) {
+        count.style.color = 'black';
+        count.style.backgroundColor = 'yellow';
+        count.innerHTML = 'Hold your horses hun, try to keep your goals as concise as possible! (25 characters or less)';
+    } else if (input.length === 0) {
+        // if input is empty, hide character count and disable checkbox
+        count.style.display = 'none';
+        checkbox.setAttribute('disabled', true); 
+        this.placeholder = 'Enter a goal before clicking \'Done\'';  
+        label.classList.add('disabled');
+    }
 });
 
 
