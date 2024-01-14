@@ -585,21 +585,20 @@ input[type="checkbox"]:checked::before {
     max-width: 30%;
 }
 
-#reset-popover {
-    text-align: center;
-    max-width: 80%;
-}
-
 @keyframes warning {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
 #popover-message {
-    color: #dc143c;
+    color: var(--bs-body-color);
     padding-bottom: 1em;
     border: whitesmoke;
     animation: warning 2s ease-in;
+}
+
+.modal-backdrop.in {
+    opacity: 0.5;
 }
 
 #settings-section {

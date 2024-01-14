@@ -289,41 +289,32 @@ document.getElementById('reset-game').addEventListener('click', function(event) 
     
     const popoverMessage = document.getElementById('popover-message');
     const options = document.getElementById('reset-popover');
-
-    document.body.style.opacity = 0.15;   
    
     try {
         // prompts user to pick an option
         setTimeout(() => {
             popoverMessage.innerText = 'please choose an option';
-            console.log('writting message in popoover');
         }, 10000);
         // closes popover after total of 20 seconds 
         setTimeout(() => {
             console.log("closing popover");
-            document.body.style.opacity = 1; 
             options.hidePopover(); 
         }, 15000);
 
     } catch (error) {
         console.log(`Error is: ${error}`);
+        alert('Something went wrong, please try again');
+        options.hidePopover;
     }
 
 });
 
 // If reset is cancelled, body returns to normal opacity for visibility.
 document.getElementById('reset-confirmed').addEventListener('click', function() {
-
-    document.body.style.opacity = 1; 
     window.location.href="index.html";
 
 });
 
-// If reset is cancelled, body returns to normal opacity for visibility.
-document.getElementById('reset-cancelled').addEventListener('click', function() {
-    console.log('resetting opacity to normal!');
-    document.body.style.opacity = 1; 
-});
 
 /**
  * Displays character count of task A input to user.
