@@ -295,13 +295,6 @@ document.getElementById('reset-game').addEventListener('click', function(event) 
         setTimeout(() => {
             popoverMessage.innerText = 'please choose an option';
         }, 10000);
-        // // closes popover after total of 20 seconds 
-        // setTimeout(() => {
-        //     console.log("closing popover");
-        //     options.classList.remove('show');
-        //     options.classList.add('hide');
-        // }, 15000);
-
     } catch (error) {
         console.log(`Error is: ${error}`);
         alert('Something went wrong, please try again');
@@ -424,14 +417,13 @@ document.getElementById('task-c').addEventListener('input', function() {
 let dragged;
 /* events fired on the draggable target */
 var source = document.getElementById("plant-image");
-source.addEventListener("dragstart", (event) => {
-    console.log("dragging");
-});
 
 source.addEventListener("dragstart", (event) => {
+    console.log("dragging");
+    enableScroll();
     // store a ref. on the dragged elem
     dragged = event.target;
-    console.log(`dragged event at ${event.target} ln 434`);
+    console.log(`dragged event at ${dragged}`);
     // make it half transparent
     event.target.classList.add("dragging");
 });
@@ -487,21 +479,24 @@ for (let target of targets) {
 
 //Drag event handling (with touch/phone)
 // Source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event
+
 let draggedPhone;
+
 /* events fired on the draggable target */
 source.addEventListener("touchstart", (event) => {
     console.log("dragging");
-});
-
-source.addEventListener("touchstart", (event) => {
+    // disableScroll();
     // store a ref. on the dragged elem
     dragged = event.target;
     // make it half transparent
     event.target.classList.add("dragging");
-});
+    }
+    // , Modernizr.passiveeventlisteners ? {passive: true} : false
+);
 
 function touchMove(e) {
     e.preventDefault();
+    // disableScroll();
     var currentX = e.touches[0].clientX - initialX;
     var currentY = e.touches[0].clientY - initialY;
 
@@ -512,14 +507,16 @@ function touchMove(e) {
 source.addEventListener("touchend", (event) => {
     // reset the transparency
     event.target.classList.remove("dragging");
+    // enableScroll();
 });
 
 /* events fired on the drop targets */
 for (let target of targets) {
     target.addEventListener("touchmove", (event) => {
-        // prevent default to allow drop
+            // disableScroll();
+            // prevent default to allow drop
             console.log('touchmove');
-            event.preventDefault();
+            // event.preventDefault();
         }, false,
     );
 }
@@ -527,18 +524,18 @@ for (let target of targets) {
 //https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+// var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
-function preventDefault(e) {
-  e.preventDefault();
-}
+// function preventDefault(e) {
+//   e.preventDefault();
+// }
 
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
+// function preventDefaultForScrollKeys(e) {
+//   if (keys[e.keyCode]) {
+//     preventDefault(e);
+//     return false;
+//   }
+// }
 
 // // modern Chrome requires { passive: false } when adding event
 // var supportsPassive = false;
@@ -546,10 +543,17 @@ function preventDefaultForScrollKeys(e) {
 //   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
 //     get: function () { supportsPassive = true; } 
 //   }));
-// } catch(e) {}
+// } catch(e) {
+//     console.log(e);
+// }
 
-// var wheelOpt = supportsPassive ? { passive: false } : false;
+// window.addEventListener('touchstart', fn,
+//     detectIt.passiveEvents ? {passive:true} : false);
+    
+
+// // var wheelOpt = supportsPassive ? { passive: false } : false;
 // var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
 
 // // call this to Disable
 // function disableScroll() {

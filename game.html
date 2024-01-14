@@ -162,53 +162,56 @@
             <form action="POST" id="tasks-area">
                 <!-- 3 point task -->
                 <fieldset class="main-input" id="main-input-a">
-                    <input name="task-a" type="text" class="task" id="task-a" maxlength="25" placeholder="Write today's biggest goal here:" autofocus>
-                    <label for="task-a">3 Points</label>
-                </fieldset>
-                <fieldset class="subset-field-a">
-                    <div class="subset-b">
-                        <label for="task-a-check" class="form-control" id="label-a">
-                            <input type="checkbox" class="checkbox" id="task-a-check" name="checkbox" value="3">
-                            Done
-                        </label>
-                        <span id="a-check-enabled"></span>
-                    </div>
-                    <div class="subset-c">
-                        <p><span class="characters" id="characters-a"></span></p>
+                    <legend>3 Point Task</legend>
+                    <label for="task-a">What's today's top priority?</label>
+                    <input name="task-a" type="text" class="task" id="task-a" maxlength="25" aria-label="3 Point Task" placeholder="Write your goal here:" autofocus>
+                    <div class="subset-field-a">
+                        <div class="subset-b">
+                            <label for="task-a-check" class="form-control" id="label-a">
+                                <input type="checkbox" class="checkbox" id="task-a-check" name="checkbox" value="3">
+                                Done
+                            </label>
+                            <span id="a-check-enabled"></span>
+                            <div class="subset-c">
+                                <p><span class="characters" id="characters-a"></span></p>
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
                 <!-- 2 point task -->
                 <fieldset class="main-input" id="main-input-b">
-                    <input name="task-b" type="text" class="task" id="task-b" maxlength="25" placeholder="Write today's second goal here:">
-                    <label for="task-b">2 Points</label>
-                </fieldset>
-                <fieldset class="subset-field-a">
-                    <div class="subset-b">
-                        <label for="task-b-check" class="form-control" id="label-b">
-                            <input type="checkbox" id="task-b-check" class="checkbox" name="checkbox" value="2">
-                            Done
-                        </label>
-                        <span id="b-check-enabled"></span>
-                    </div>
-                    <div class="subset-c">
-                        <p><span class="characters" id="characters-b"></span>
+                    <legend>2 Point Task</legend>
+                    <label for="task-b">What would be good to also get done today?</label>
+                    <input name="task-b" type="text" class="task" id="task-b" maxlength="25" placeholder="Write your goal here:">
+                    <div class="subset-field-a">
+                        <div class="subset-b">
+                            <label for="task-b-check" class="form-control" id="label-b">
+                                <input type="checkbox" id="task-b-check" class="checkbox" name="checkbox" value="2">
+                                Done
+                            </label>
+                            <span id="b-check-enabled"></span>
+                            <div class="subset-c">
+                                <p><span class="characters" id="characters-b"></span>
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
                 <!-- 1 point task -->
                 <fieldset class="main-input" id="main-input-c">
-                    <input name="task-c" type="text" class="task" id="task-c" maxlength="25" placeholder="Write today's third goal here:">
-                    <label for="task-c">1 Point</label>
-                </fieldset>
-                <fieldset class="subset-field-a">
-                    <div class="subset-b">
-                        <label for="task-c-check" class="form-control" id="label-c">
-                            <input type="checkbox" class="checkbox" id="task-c-check" name="checkbox" value="1">  
-                            Done
-                        </label>
-                    </div>
-                    <div class="subset-c">
-                        <p><span class="characters" id="characters-c"></span></p>
-                        <span id="c-check-enabled"></span>
+                    <legend>1 Point Task</legend>
+                    <label for="task-c">What's a nice extra you'd like to get done today?</label>
+                    <input name="task-c" type="text" class="task" id="task-c" maxlength="25" placeholder="Write your goal here:">
+                    <div class="subset-field-a">
+                        <div class="subset-b">
+                            <label for="task-c-check" class="form-control" id="label-c">
+                                <input type="checkbox" class="checkbox" id="task-c-check" name="checkbox" value="1">  
+                                Done
+                            </label>
+                            <span id="c-check-enabled"></span>
+                            <div class="subset-c">
+                                <p><span class="characters" id="characters-c"></span></p>
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
             

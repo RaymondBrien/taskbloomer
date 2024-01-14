@@ -98,6 +98,7 @@ a {
 #landing-name,
 #task-page-link {
     letter-spacing: 4px;
+    margin-bottom: 0;
 }
 
 #task-page-link {
@@ -294,7 +295,7 @@ nav {
     margin: auto;
     border: solid 2px;
     font-size: 1.5em;
-    padding: 1em;
+    /* padding: 1em; */
 }
 
 .btn {
@@ -412,7 +413,6 @@ fieldset > .task {
 
 .subset-field-a {
     margin-top: 0.1rem;
-    margin-bottom: 3rem;
     display: inline-flex;
     justify-content: space-between;
     flex-direction: row;
