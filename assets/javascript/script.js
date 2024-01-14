@@ -237,17 +237,16 @@ function newDay() {
         tasks.style.textDecoration = 'none';
         tasks.style.border = 'solid 2px grey';
     }
-
     let checkboxes = document.querySelectorAll('.checkbox');
-    
     for (let checkbox of checkboxes) {
         checkbox.setAttribute('disabled', true);
     };
-    
     let labels =[document.querySelector('#label-a'), document.querySelector('#label-b'), document.querySelector('#label-c')];
     for (let label of labels) {
         label.classList.add('disabled');
     };
+    // take user back to top of page
+    document.getElementById('main-input-a').scrollIntoView();
 } 
 
 /**
