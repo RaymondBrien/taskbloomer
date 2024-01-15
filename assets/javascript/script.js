@@ -175,11 +175,31 @@ function updateProgress(totalPoints, nextInArray) {
 }
 
 /**
- * Triggers newDay() at time set (default set to 20:00)
+ * Triggers newDay() at default time (default set to 20:00)
  */
 const defaultTimeSource = (document.getElementById('time-setting').value).split(':');
-const defaultMilliseconds = (parseInt(defaultTimeSource[0])*60+parseInt(defaultTimeSource[1])*60000);
-// let intervalID = setInterval(newDay, defaultMilliseconds); - unclear if this currently actually calls the function at the right time.
+console.log(defaultTimeSource);
+// convert defaultTimeSource to total milliseconds
+const defaultMilliseconds = (((parseInt(defaultTimeSource[0])*60)+parseInt(defaultTimeSource[1]))*60000);
+console.log(`defaultMilliseconds: ${defaultMilliseconds}`);
+//get current time in milliseconds
+let d = new Date()
+console.log(d);
+let todayMilliseconds = ((parseInt(d.getHours()*60))+(parseInt(d.getMinutes())))*60000;
+console.log('today\'s time in milliseconds is ' + todayMilliseconds);
+let intervalLength = '';
+
+// check if current time is before or after default trigger time
+// assign interval time accordingly
+if (todayMilliseconds < defaultMilliseconds) {
+    intervalLength = defaultMilliseconds - todayMilliseconds;
+    console.log(`Reset time is in: ${intervalLength}`);
+} else if (todayMilliseconds > defaultMilliseconds) {
+    intervalLength = 86700000 - (todayMilliseconds-defaultMilliseconds);
+}   
+console.log(intervalLength);
+// trigger newDay() at intervalLength
+let intervalID = setInterval(() => newDay(), intervalLength);
 
 /**
  * Sets new intervalID for newDay() if trigger time is manually changed by user.
@@ -213,7 +233,7 @@ document.getElementById('time-setting').addEventListener('change', function() {
     console.log(`${untilCustom} milliseconds until custom time for function trigger`);
 
     // set interval ID for newDay function
-    // intervalID = setInterval(newDay, untilCustom); - does this need to actually be stored in intervalID? The untilCustom values are reading correct.
+    setInterval(newDay, untilCustom); 
     
 });  
 

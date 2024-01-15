@@ -11,7 +11,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fraymondbrien.github.io%2Ftaskbloomer%2F) | ![screenshot](documentation/screenshots/testing/html-validation-home.png) | Pass: no errors or warnings |
-| Game | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fraymondbrien.github.io%2Ftaskbloomer%2Fgame.html) | ![screenshot](documentation/screenshots/testing/html-validation-game.png)| Heading warning for section element. |
+| Game | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fraymondbrien.github.io%2Ftaskbloomer%2Fgame.html) | ![screenshot](documentation/screenshots/testing/html-validation-game.png)| Heading warning for section element. No changes required. |
 | End | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FRaymondBrien.github.io%2Ftaskbloomer%2Fquiz.html) | ![screenshot](documentation/screenshots/testing/html-validation-end.png) | Pass: no errors or warnings |
 |
 
