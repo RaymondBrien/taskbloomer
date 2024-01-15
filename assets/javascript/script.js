@@ -1,30 +1,36 @@
 /* jshint esversion: 11 */
 
-// Wait for DOM to finish loading before running the game. Finds checkbox value.
+// Wait for DOM to finish loading before running the game. 
 document.addEventListener("DOMContentLoaded", function() {
-
      let checkboxes = document.querySelectorAll('.checkbox');
      checkboxes.forEach(function(checkbox) {
         checkbox.setAttribute('disabled', true);
-    });
+    
+        let labels =[document.querySelector('#label-a'), document.querySelector('#label-b'), document.querySelector('#label-c')];
+        for (let label of labels) {
+            label.classList.add('disabled');
+        }
+    })
+});
 
-    for (let checkbox of checkboxes) {    
-        let correspondingTextInput = document.getElementById(`task-${checkbox.id.slice(5,6)}`);
-        checkbox.addEventListener("change", function() {
-            if (checkbox.checked) {
-                taskComplete(parseInt(checkbox.value));
-                //  add styles
-                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
-                correspondingTextInput.style.textDecoration = 'line-through';
-            } else {
-                taskComplete(-checkbox.value);
-                //  add styles
-                checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
-                correspondingTextInput.style.textDecoration = 'none';
-            }
-        });
-    }
-}); 
+// Handles checkbox values, styles appropriately
+let checkboxes = document.querySelectorAll('.checkbox');
+for (let checkbox of checkboxes) {    
+    let correspondingTextInput = document.getElementById(`task-${checkbox.id.slice(5,6)}`);
+    checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+            taskComplete(parseInt(checkbox.value));
+            //  add styles
+            checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px green';
+            correspondingTextInput.style.textDecoration = 'line-through';
+        } else {
+            taskComplete(-checkbox.value);
+            //  add styles
+            checkbox.parentElement.parentElement.parentElement.previousElementSibling.style.border = 'solid 2px gold';
+            correspondingTextInput.style.textDecoration = 'none';
+        }
+    });
+}
 
 /**
  * Automatically sets difficulty to medium. User can change if desired.
@@ -44,7 +50,6 @@ let growthPointsLevel = {
     easy: [1, 6, 9, 15, 19, 24, 30, 33, 36],
     medium: [3, 6, 9, 15, 18, 24, 30, 40, 52],
     hard: [6, 12, 18, 26, 33, 40, 50, randomArray1, randomArray2]
-
 };
 
 /**
@@ -133,7 +138,7 @@ function growPlant(totalPoints) {
 function findNextGrowthPoint(totalPoints, i) {
 
     let nextGrowthPoint = document.getElementById('next-growth-point');
-    let nextInArray = growthPoints[i + 1];;
+    let nextInArray = growthPoints[i + 1];
     
     nextGrowthPoint.innerHTML = nextInArray;
     untilNextGrowth(totalPoints, nextInArray);
@@ -154,8 +159,9 @@ function untilNextGrowth(totalPoints, nextInArray) {
  * as percentage to progress bar for user.
  */
 function updateProgress(totalPoints, nextInArray) {
-    progressPercentage = parseInt((totalPoints/nextInArray) * 100);
+    let progressPercentage = parseInt((totalPoints/nextInArray) * 100);
     let progressLog = document.getElementById('progress-log');
+
     progressLog.setAttribute('style', `width: ${progressPercentage}%`);
     progressLog.innerHTML = `${progressPercentage}%`;
 }
@@ -167,7 +173,7 @@ const defaultTimeSource = (document.getElementById('time-setting').value).split(
 // convert defaultTimeSource to total milliseconds
 const defaultMilliseconds = (((parseInt(defaultTimeSource[0])*60)+parseInt(defaultTimeSource[1]))*60000);
 //get current time in milliseconds
-let d = new Date()
+let d = new Date();
 let todayMilliseconds = ((parseInt(d.getHours()*60))+(parseInt(d.getMinutes())))*60000;
 let intervalLength = '';
 let intervalID = '';
@@ -206,7 +212,7 @@ document.getElementById('time-setting').addEventListener('change', function() {
         console.log(`Reset time is in: ${intervalLength/60000} minutes`);
     } else if (todayMilliseconds > customMilliseconds) {
         intervalLength = 86700000 - (todayMilliseconds-customMilliseconds);
-        console.log(`Reset time is in: ${intervalLength/60000} minutes`)
+        console.log(`Reset time is in: ${intervalLength/60000} minutes`);
     }   
 
     // set interval ID for custom newDay function time
@@ -237,11 +243,11 @@ function newDay(intervalID) {
     let checkboxes = document.querySelectorAll('.checkbox');
     for (let checkbox of checkboxes) {
         checkbox.setAttribute('disabled', true);
-    };
+    }
     let labels =[document.querySelector('#label-a'), document.querySelector('#label-b'), document.querySelector('#label-c')];
     for (let label of labels) {
         label.classList.add('disabled');
-    };
+    }
     // take user back to top of page
     document.getElementById('main-input-a').scrollIntoView();
     document.querySelector('form').reset();
@@ -315,7 +321,6 @@ document.getElementById('btn-check-5').addEventListener('change', function() {
 document.getElementById('reset-game').addEventListener('click', function(event) {
     
     const popoverMessage = document.getElementById('popover-message');
-    const options = document.getElementById('staticBackdrop');
    
     try {
         // prompts user to pick an option
@@ -325,9 +330,7 @@ document.getElementById('reset-game').addEventListener('click', function(event) 
     } catch (error) {
         console.log(`Error is: ${error}`);
         alert('Something went wrong, please try again');
-        options.hidePopover;
     }
-
 });
 
 // If reset is cancelled, body returns to normal opacity for visibility.
@@ -465,7 +468,7 @@ document.getElementById('task-c').addEventListener('input', function() {
 let dragged;
 /* events fired on the draggable target */
 var source = document.getElementById("plant-image");
-// Works
+
 source.addEventListener("dragstart", (event) => {
     console.log("dragging");
     // store a ref. on the dragged elem
@@ -474,14 +477,13 @@ source.addEventListener("dragstart", (event) => {
     // make it half transparent
     event.target.classList.add("dragging");
 });
-// Works
+
 source.addEventListener("dragend", (event) => {
     // reset the transparency
     console.log('dragging ended');
     event.target.classList.remove("dragging");
     event.target.appendChild(dragged);
 });
-// Works
 /* events fired on the drop targets */
 let targets = document.getElementsByClassName("droptarget");
 for (let target of targets) {
@@ -492,7 +494,7 @@ for (let target of targets) {
     }, false,
     );
 }
-// Works
+
 for (let target of targets) {
     target.addEventListener("dragenter", (event) => {
         console.log('dragenter');
@@ -502,11 +504,11 @@ for (let target of targets) {
             event.target.classList.add("dragover");
         }
     });
-};
-// Works
+}
+
 for (let target of targets) {
     target.addEventListener("dragleave", (event) => {
-        console.log('dragleave event')
+        console.log('dragleave event');
         event.preventDefault();
         // reset styles of potential drop target when the draggable element leaves it
         if (event.target.classList.contains("dropzone")) {
@@ -528,7 +530,8 @@ for (let target of targets) {
 }
 
 //Drag event handling (with touch/phone)
-// Source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event
+// Source/inspiration https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event
+
 /* events fired on the draggable target */
 source.addEventListener("onpointerdown", (event) => {
     console.log("dragging");
@@ -542,13 +545,16 @@ source.addEventListener("onpointerdown", (event) => {
 );
 
 function touchMove(event) {
-    event.preventDefault();
-    // disableScroll();
-    var currentX = e.touches[0].clientX - initialX;
-    var currentY = e.touches[0].clientY - initialY;
+    var initialX;
+    var initialY;
+    var draggableElement = document.querySelector('#plant-image img');
+    var currentX = event.touches[0].clientX - initialX;
+    var currentY = event.touches[0].clientY - initialY;
 
     draggableElement.style.left = currentX + 'px';
     draggableElement.style.top = currentY + 'px';
+
+    event.preventDefault();
 }
 
 /* events fired on the drop targets */
@@ -557,6 +563,7 @@ for (let target of targets) {
             console.log('touchmove');
             // prevent default to allow drop
             event.preventDefault();
+            touchMove(event);
         }, false,
     );
 }

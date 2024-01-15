@@ -30,14 +30,6 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
 <!-- **IMPORTANT**: External resources
-
-Sometimes we'll write JavaScript that imports variables from other files, such as an array of questions
-from `questions.js`, which are used within the main `script.js` file elsewhere.
-If that's the case, the JShint validation tool doesn't know how to recognize unused variables
-that would normally be imported locally in your code.
-These warnings are acceptable to showcase on your screenshots.
-
-The same thing applies when using external libraries such as Stripe, Leaflet, Bootstrap, Materialize, etc..
 To instantiate these components, we need to use their respective declarator.
 Again, the JShint validation tool would flag these as undefined/unused variables.
 These warnings are acceptable to showcase on your screenshots.
