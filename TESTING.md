@@ -29,21 +29,10 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
-<!-- **IMPORTANT**: External resources
-To instantiate these components, we need to use their respective declarator.
-Again, the JShint validation tool would flag these as undefined/unused variables.
-These warnings are acceptable to showcase on your screenshots.
-
-Sample JS code validation documentation (tables are extremely helpful!): -->
-
-
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | ![screenshot](documentation/js-validation-script.png) | Unused variables from external files |
-| questions.js | ![screenshot](documentation/js-validation-questions.png) | Pass: No Errors |
-| quiz.js | ![screenshot](documentation/js-validation-quiz.png) | Unused variables from external files |
-| stripe_elements.js | ![screenshot](documentation/js-validation-stripe.png) | Undefined Stripe variable |
-| x | x | x | repeat for all remaining JavaScript files |
+| script.js | ![screenshot](documentation/js-validation-script.png) | Warning about global variables |
+
 
 ## Browser Compatibility
 

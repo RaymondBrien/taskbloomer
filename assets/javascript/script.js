@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let label of labels) {
             label.classList.add('disabled');
         }
-    })
+    });
 });
 
 // Handles checkbox values, styles appropriately
