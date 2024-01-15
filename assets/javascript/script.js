@@ -188,6 +188,7 @@ console.log(d);
 let todayMilliseconds = ((parseInt(d.getHours()*60))+(parseInt(d.getMinutes())))*60000;
 console.log('today\'s time in milliseconds is ' + todayMilliseconds);
 let intervalLength = '';
+let intervalID = '';
 
 // check if current time is before or after default trigger time
 // assign interval time accordingly
@@ -199,7 +200,7 @@ if (todayMilliseconds < defaultMilliseconds) {
 }   
 console.log(intervalLength);
 // trigger newDay() at intervalLength
-let intervalID = setInterval(() => newDay(), intervalLength);
+intervalID = setInterval(() => newDay(), intervalLength);
 
 /**
  * Sets new intervalID for newDay() if trigger time is manually changed by user.
@@ -212,37 +213,31 @@ document.getElementById('time-setting').addEventListener('change', function() {
     // get custom time value and parse to total minutes
     let customTime = this.value;
     let tValues = customTime.split(':');
-    let customMinutes = parseInt(tValues[0])*60+parseInt(tValues[1]);
-    let untilCustom = '';
+    let customMilliseconds = (parseInt(tValues[0])*60+parseInt(tValues[1]))*60000;
 
-    console.log('custom minutes is ' + customMinutes);
 
-    // get current time and parse to integers (todayMinutes will have a max value of 1440)
-    let d = new Date();
-    let todayMinutes = parseInt((d.getHours()*60)) + parseInt(d.getMinutes());
-    console.log('today\'s time in minutes is ' + todayMinutes);
+    // check if current time is before or after custom trigger time
+    // assign interval time accordingly
+    if (todayMilliseconds < customMilliseconds) {
+        intervalLength = customMilliseconds - todayMilliseconds;
+        console.log(`Reset time is in: ${intervalLength/60000} minutes`);
+    } else if (todayMilliseconds > customMilliseconds) {
+        intervalLength = 86700000 - (todayMilliseconds-customMilliseconds);
+        console.log(`Reset time is in: ${intervalLength/60000} minutes`)
+    }   
 
-    // find number of minutes until custom times, convert to milliseconds
-    untilCustom = (customMinutes-todayMinutes)*60000;
-    
-    // if untilCustom is before current time, set for tomorrow
-    if (untilCustom <= 0) {
-        untilCustom = 86400000 + untilCustom;
-    }
-
-    console.log(`${untilCustom} milliseconds until custom time for function trigger`);
-
-    // set interval ID for newDay function
-    setInterval(newDay, untilCustom); 
+    // set interval ID for custom newDay function time
+    intervalID = setInterval(() => newDay(), intervalLength);
     
 });  
 
 /**
  * Resets day score count, clears goals inputs, unchecks all checkboxes, disables checkboxes until next user input.
  */
-function newDay() {
+function newDay(intervalID) {
     // reset day's points
     document.getElementById('today-points').innerHTML = 0;
+    console.log('It is a new day!');
 
     // hide all character count
     let characters = document.getElementsByClassName('characters');
@@ -291,6 +286,8 @@ document.getElementById('new-day').addEventListener('click', function() {
         try {
             console.log('end of game running');
             window.location.href = "end.html";
+            // stop newDay function being called
+            intervalID = null;
         } catch (error) {
             console.log(error);
         }
