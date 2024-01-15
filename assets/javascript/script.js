@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 // Wait for DOM to finish loading before running the game. Finds checkbox value.
 document.addEventListener("DOMContentLoaded", function() {
 
