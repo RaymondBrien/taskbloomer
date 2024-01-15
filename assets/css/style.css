@@ -489,6 +489,7 @@ input[type="checkbox"]:checked::before {
 .disabled {
     background-color: grey;
     opacity: 0.5;
+    color: #BDBDBD;
 }
 
 #new-day:hover {
