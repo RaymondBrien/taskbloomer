@@ -102,7 +102,6 @@ function taskComplete(value) {
     totalPointsElement.innerHTML = totalPoints;
     dayScoreElement.innerHTML = dayScore;
 
-    console.log('total points are' + totalPoints)
     growPlant(totalPoints);
 }
 
@@ -226,7 +225,6 @@ function newDay(intervalID) {
     for (let i = 0; i < characters.length; i++) {
          characters[i].style.display = 'none';
     }
-
     //  restyle inputs to default
     let mainInputs = document.getElementsByClassName('main-input');
     for (let i = 0; i < mainInputs.length; i++) {
@@ -244,6 +242,7 @@ function newDay(intervalID) {
     };
     // take user back to top of page
     document.getElementById('main-input-a').scrollIntoView();
+    document.querySelector('form').reset();
 }
 
 // New Day user click confirmation text (fade in and out)
@@ -342,9 +341,9 @@ document.getElementById('reset-confirmed').addEventListener('click', function() 
  */
 document.getElementById('task-a').addEventListener('input', function() {
     let input = this.value;
-    const label = document.getElementById('label-a');
-    const count = document.getElementById('characters-a');
-    const checkbox = document.getElementById('task-a-check');
+    var label = document.getElementById('label-a');
+    var count = document.getElementById('characters-a');
+    var checkbox = document.getElementById('task-a-check');
     
     // Once goal inputted, checkbox becomes available
     checkbox.disabled = false;
@@ -385,9 +384,9 @@ document.getElementById('task-a').addEventListener('input', function() {
 document.getElementById('task-b').addEventListener('input', function() {
     let input = this.value;
 
-    const label = document.getElementById('label-b');
-    const count = document.getElementById('characters-b');
-    const checkbox = document.getElementById('task-b-check');
+    var label = document.getElementById('label-b');
+    var count = document.getElementById('characters-b');
+    var checkbox = document.getElementById('task-b-check');
 
     count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
@@ -425,8 +424,9 @@ document.getElementById('task-b').addEventListener('input', function() {
  */
 document.getElementById('task-c').addEventListener('input', function() {
     let input = this.value;
-    let count = document.getElementById('characters-c');
-    let checkbox = document.getElementById('task-c-check');
+    var count = document.getElementById('characters-c');
+    var checkbox = document.getElementById('task-c-check');
+    var label = document.getElementById('label-c');
 
     count.style.display = 'block';
     count.innerHTML = `${input.length}/25 characters`;
@@ -465,23 +465,23 @@ document.getElementById('task-c').addEventListener('input', function() {
 let dragged;
 /* events fired on the draggable target */
 var source = document.getElementById("plant-image");
-
+// Works
 source.addEventListener("dragstart", (event) => {
     console.log("dragging");
-    enableScroll();
     // store a ref. on the dragged elem
     dragged = event.target;
     console.log(`dragged event at ${dragged}`);
     // make it half transparent
     event.target.classList.add("dragging");
 });
-
+// Works
 source.addEventListener("dragend", (event) => {
     // reset the transparency
-    console.log('dragging ended ln441');
+    console.log('dragging ended');
     event.target.classList.remove("dragging");
+    event.target.appendChild(dragged);
 });
-
+// Works
 /* events fired on the drop targets */
 let targets = document.getElementsByClassName("droptarget");
 for (let target of targets) {
@@ -492,20 +492,22 @@ for (let target of targets) {
     }, false,
     );
 }
-
+// Works
 for (let target of targets) {
     target.addEventListener("dragenter", (event) => {
         console.log('dragenter');
+        event.preventDefault();
         // highlight potential drop target when the draggable element enters it
         if (event.target.classList.contains("dropzone")) {
             event.target.classList.add("dragover");
         }
     });
 };
-
+// Works
 for (let target of targets) {
     target.addEventListener("dragleave", (event) => {
         console.log('dragleave event')
+        event.preventDefault();
         // reset styles of potential drop target when the draggable element leaves it
         if (event.target.classList.contains("dropzone")) {
             event.target.classList.remove("dragover");
@@ -527,21 +529,20 @@ for (let target of targets) {
 
 //Drag event handling (with touch/phone)
 // Source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event
-let draggedPhone;
 /* events fired on the draggable target */
-source.addEventListener("touchstart", (event) => {
+source.addEventListener("onpointerdown", (event) => {
     console.log("dragging");
-    // disableScroll();
+    // stop the scoll behaviour
+    event.preventDefault();
     // store a ref. on the dragged elem
     dragged = event.target;
     // make it half transparent
     event.target.classList.add("dragging");
     }
-    // , Modernizr.passiveeventlisteners ? {passive: true} : false
 );
 
-function touchMove(e) {
-    e.preventDefault();
+function touchMove(event) {
+    event.preventDefault();
     // disableScroll();
     var currentX = e.touches[0].clientX - initialX;
     var currentY = e.touches[0].clientY - initialY;
@@ -550,7 +551,8 @@ function touchMove(e) {
     draggableElement.style.top = currentY + 'px';
 }
 
-source.addEventListener("touchend", (event) => {
+ source.addEventListener("touchend", (event) => {
+    event.preventDefault();
     // reset the transparency
     event.target.classList.remove("dragging");
     // enableScroll();
@@ -559,60 +561,77 @@ source.addEventListener("touchend", (event) => {
 /* events fired on the drop targets */
 for (let target of targets) {
     target.addEventListener("touchmove", (event) => {
-            // disableScroll();
-            // prevent default to allow drop
             console.log('touchmove');
-            // event.preventDefault();
+            // prevent default to allow drop
+            event.preventDefault();
         }, false,
     );
 }
 
-//https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
-// left: 37, up: 38, right: 39, down: 40,
-// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-// var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
-// function preventDefault(e) {
-//   e.preventDefault();
-// }
+  
+//  var dragImage = document.getElementById('plant-image');
 
-// function preventDefaultForScrollKeys(e) {
-//   if (keys[e.keyCode]) {
-//     preventDefault(e);
-//     return false;
-//   }
-// }
-
-// // modern Chrome requires { passive: false } when adding event
-// var supportsPassive = false;
-// try {
-//   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-//     get: function () { supportsPassive = true; } 
-//   }));
-// } catch(e) {
-//     console.log(e);
-// }
-
-// window.addEventListener('touchstart', fn,
-//     detectIt.passiveEvents ? {passive:true} : false);
-    
-
-// // var wheelOpt = supportsPassive ? { passive: false } : false;
-// var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-
-// // call this to Disable
-// function disableScroll() {
-//   window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-//   window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-//   window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-//   window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-// }
-
-// // call this to Enable
-// function enableScroll() {
-//     window.removeEventListener('DOMMouseScroll', preventDefault, false);
-//     window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-//     window.removeEventListener('touchmove', preventDefault, wheelOpt);
-//     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+//  dragImage.addEventListener('touchmove', function(e) {
+//  e.preventDefault();
+//      // grab the location of touch
+//  var touchLocation = e.targetTouches[0];
+//  // assign box new coordinates based on the touch.
+//  dragImage.style.left = touchLocation.pageX + 'px';
+//  dragImage.style.top = touchLocation.pageY + 'px';
+//  })
+  
+// // Start by iterating through all the cards that we want to add the interaction too
+// for (const card of document.querySelectorAll('.projectCard')) {
+//     // Keep track of where interactions started, remember that this is scoped for each card
+//     let startPosition = null
+  
+//     // Listen for "pointerdown" events, when a touch/click starts on that element
+//     card.onpointerdown = (event) => {
+//       // Ignore this event if it is not a left-click or touch
+//       // or if clicking an anchor tag on the back of the card
+//       // https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events#determining_button_states
+//       if (event.button !== 0) return
+//       if (event.target instanceof HTMLAnchorElement) return
+  
+//       // This stops normal browser' drag behaviour
+//       // Note: It can cause trouble if you have an anchor on the card
+//       event.preventDefault()
+  
+//       // This is the key bit, it binds this `PointerEvent` to the element until you tell it to stop
+//       // So if the pointer leaves the element, it still receives the relevant events.
+//       card.setPointerCapture(event.pointerId)
+  
+//       // Lets remember where the card started to track if the pointer moved or not
+//       startPosition = [event.screenX, event.screenY]
+  
+//       // Only add the "move" event handler once the interaction has started
+//       // Using the "on" method means we can easily remove it later
+//       card.onpointermove = (event) => {
+//         // In this setup the cards are positioned absolutely in a container
+//         // so setting the top/left will move them about in their container
+//         // It adds the "movement" from the event to it's existing offset in that direction
+//         card.style.left = `${card.offsetLeft + event.movementX}px`
+//         card.style.top = `${card.offsetTop + event.movementY}px`
+//       }
+//     }
+  
+//     // Listen for "pointerup" events, when a touch/click that started on the element and was captured ended
+//     card.onpointerup = (event) => {
+//       let dx = event.screenX - startPosition[0]
+//       let dy = event.screenY - startPosition[1]
+  
+//       // If the pointer didn't move at all since it started, treat it as a click
+//       // I used css elsewhere to do a flip animation based on the `data-side="front"` vs back property.
+//       // Ideally it would be a vector distance algorithm (A^2 + B^2 = C^2 stuff)
+//       if (dx === 0 && dy === 0) {
+//         card.dataset.side = card.dataset.side === 'front' ? 'back' : 'front'
+//       }
+  
+//       // Remove the "move" event now
+//       card.onpointermove = null
+  
+//       // Important! remember to release the pointer from the element
+//       card.releasePointerCapture(event.pointerId)
+//     }
 //   }
