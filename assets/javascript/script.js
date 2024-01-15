@@ -551,13 +551,6 @@ function touchMove(event) {
     draggableElement.style.top = currentY + 'px';
 }
 
- source.addEventListener("touchend", (event) => {
-    event.preventDefault();
-    // reset the transparency
-    event.target.classList.remove("dragging");
-    // enableScroll();
-});
-
 /* events fired on the drop targets */
 for (let target of targets) {
     target.addEventListener("touchmove", (event) => {
@@ -568,18 +561,15 @@ for (let target of targets) {
     );
 }
 
-
-  
-//  var dragImage = document.getElementById('plant-image');
-
-//  dragImage.addEventListener('touchmove', function(e) {
-//  e.preventDefault();
-//      // grab the location of touch
-//  var touchLocation = e.targetTouches[0];
-//  // assign box new coordinates based on the touch.
-//  dragImage.style.left = touchLocation.pageX + 'px';
-//  dragImage.style.top = touchLocation.pageY + 'px';
-//  })
+source.addEventListener("touchend", (event) => {
+    event.preventDefault();
+    // reset the transparency
+    event.target.classList.remove("dragging");
+    // enableScroll();
+    if (event.target.classList.includes('droptarget')) {
+        event.target.appendChild(dragged);
+    }
+});
   
 // // Start by iterating through all the cards that we want to add the interaction too
 // for (const card of document.querySelectorAll('.projectCard')) {
@@ -634,4 +624,22 @@ for (let target of targets) {
 //       // Important! remember to release the pointer from the element
 //       card.releasePointerCapture(event.pointerId)
 //     }
-//   }
+//   
+
+
+   
+function moveImageToFirstEmptyDiv() {
+    // Get the current image element within the span
+    const currentImage = document.querySelector('#plant-image img');
+    // Get all div elements within the gallery area
+    const divElements = document.querySelectorAll('.gallery');
+    // Find the first empty div element
+    const firstEmptyDiv = Array.from(divElements).find(div => div.childElementCount === 0);
+    // If there's a current image and an empty div, move the image
+    if (currentImage && firstEmptyDiv) {
+        // Remove the image from the span
+        document.querySelector('#plant-image').removeChild(currentImage);
+        // Append the image to the first empty div
+        firstEmptyDiv.appendChild(currentImage);
+    }
+}

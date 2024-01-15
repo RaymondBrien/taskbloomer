@@ -152,9 +152,12 @@
                 <div id="plant-area">
                     <!-- Plant area -->
                     <h1 class="image-titles pt-5">NFT:</h1>
-                    <p>Drag each new image into your gallery below!</p>
+                    <p>Add each new image into your gallery below!</p>
+                    <button type="button" id="move-image-button" onclick="moveImageToFirstEmptyDiv()">Move Image to Gallery</button>
                     <div id="plant-image-area" class="dropzone">
-                        <span id="plant-image" draggable="true"></span>
+                        <span id="plant-image" draggable="true">
+                            <img src="" alt="" draggable="true">
+                        </span>
                     </div>
                     <h2 class="image-titles">Gallery:</h2>
                     <div id="plant-gallery">
