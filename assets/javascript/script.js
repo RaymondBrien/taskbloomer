@@ -249,8 +249,12 @@ function newDay(intervalID) {
         label.classList.add('disabled');
     }
     // take user back to top of page
-    document.getElementById('main-input-a').scrollIntoView();
+    function userConfirmationBeforeScroll() {
+        document.getElementById('main-input-a').scrollIntoView();
+    }
+    // reset form to ensure inputs are cleared and checkboxes are unchecked
     document.querySelector('form').reset();
+    setTimeout(userConfirmationBeforeScroll, 3000);
 }
 
 // New Day user click confirmation text (fade in and out)
