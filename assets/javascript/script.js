@@ -75,7 +75,6 @@ document.getElementById('btnradio1').addEventListener('click', function() {
  */
 document.getElementById('btnradio2').addEventListener('click', function() {
     growthPoints = growthPointsLevel.medium;
-    console.log("Medium level is" + growthPoints);
     return growthPoints;
 });
 
@@ -84,7 +83,6 @@ document.getElementById('btnradio2').addEventListener('click', function() {
  */
 document.getElementById('btnradio3').addEventListener('click', function() {
     growthPoints = growthPointsLevel.hard;
-    console.log("Hard level is" + growthPoints);
     return growthPoints;
 });
 
@@ -93,24 +91,19 @@ document.getElementById('btnradio3').addEventListener('click', function() {
 */
 function taskComplete(value) {
     
-    console.log(value);
     let totalPointsElement = document.getElementById('total-points');
     let totalPoints = parseInt(totalPointsElement.innerHTML);
     let dayScoreElement = document.getElementById('today-points');
     let dayScore = parseInt(dayScoreElement.innerHTML);
     
-
     totalPoints += value;
     dayScore += value;
-    
     
     totalPointsElement.innerHTML = totalPoints;
     dayScoreElement.innerHTML = dayScore;
 
     console.log('total points are' + totalPoints)
     growPlant(totalPoints);
-
-    
 }
 
 /**
@@ -121,12 +114,10 @@ function growPlant(totalPoints) {
     
     let plantImage = document.getElementById('plant-image');
   
-    console.log('growPlant invoked, totalPoints : ', totalPoints);
     // loop through array until end.
     for (let i=0; i < growthPoints.length; i++) {
         if (totalPoints >= growthPoints[i]) {
         plantImage.innerHTML = `<img src="assets/images/${images[i]}" alt="seed-image${i}" class="dragging" draggable="true">`; // Concatenates the path to the image file name
-        console.log(plantImage);
         findNextGrowthPoint(totalPoints, i);
         } if (totalPoints >= growthPoints[8]) {
             console.log('end of array, triggering endOfGame()');
@@ -140,24 +131,18 @@ function growPlant(totalPoints) {
  */
 function findNextGrowthPoint(totalPoints, i) {
 
-    console.log('findNextGrowthPoint invoked', totalPoints, i);
-
     let nextGrowthPoint = document.getElementById('next-growth-point');
-    let nextInArray = growthPoints[i + 1];
-    console.log(`next in array is ${nextInArray}`);
+    let nextInArray = growthPoints[i + 1];;
     
     nextGrowthPoint.innerHTML = nextInArray;
     untilNextGrowth(totalPoints, nextInArray);
-    console.log('triggering updateProgress function');
     updateProgress(totalPoints, nextInArray);
-
 }
 
 /**
  * Finds the distance to the next growth points value from total points and displays to user.
  */
 function untilNextGrowth(totalPoints, nextInArray) {
-    console.log('untilNextGrowth reached!');
     let nextGrowth = document.getElementById('next-growth-in');
     nextGrowth.innerHTML = `(in ${(nextInArray - totalPoints)} points)`;
     // (change to event listeners for values of the html so always updated?)
@@ -178,15 +163,11 @@ function updateProgress(totalPoints, nextInArray) {
  * Triggers newDay() at default time (default set to 20:00)
  */
 const defaultTimeSource = (document.getElementById('time-setting').value).split(':');
-console.log(defaultTimeSource);
 // convert defaultTimeSource to total milliseconds
 const defaultMilliseconds = (((parseInt(defaultTimeSource[0])*60)+parseInt(defaultTimeSource[1]))*60000);
-console.log(`defaultMilliseconds: ${defaultMilliseconds}`);
 //get current time in milliseconds
 let d = new Date()
-console.log(d);
 let todayMilliseconds = ((parseInt(d.getHours()*60))+(parseInt(d.getMinutes())))*60000;
-console.log('today\'s time in milliseconds is ' + todayMilliseconds);
 let intervalLength = '';
 let intervalID = '';
 
@@ -197,8 +178,9 @@ if (todayMilliseconds < defaultMilliseconds) {
     console.log(`Reset time is in: ${intervalLength}`);
 } else if (todayMilliseconds > defaultMilliseconds) {
     intervalLength = 86700000 - (todayMilliseconds-defaultMilliseconds);
+    console.log(`Reset time is in: ${intervalLength}`);
 }   
-console.log(intervalLength);
+
 // trigger newDay() at intervalLength
 intervalID = setInterval(() => newDay(), intervalLength);
 
@@ -297,7 +279,6 @@ document.getElementById('new-day').addEventListener('click', function() {
  * BS light theme set to document if user clicks light mode button on index.html
  */
 document.getElementById('btn-check-5').addEventListener('change', function() {
-    console.log('checkbox clicked');
 
     let colorCheckbox = document.getElementById("btn-check-5");
     let theme = colorCheckbox.checked ? 'light' : 'dark';
