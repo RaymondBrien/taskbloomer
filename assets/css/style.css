@@ -292,6 +292,10 @@ nav {
     margin: auto;
 }
 
+#game-header em, #game-header p {
+    font-size: 15px;
+}
+
 #stats-button,
 #new-day {
     max-width: 100%;
