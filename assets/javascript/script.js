@@ -377,7 +377,6 @@ document.getElementById('task-a').addEventListener('input', function() {
     }
 });
 
-
 /**
  * Displays character count of task B input to user.
  */
@@ -458,7 +457,6 @@ document.getElementById('task-c').addEventListener('input', function() {
         label.classList.add('disabled');
     }
 });
-
 
 //Drag event handling (with mouse)
 // Source https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event
