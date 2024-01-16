@@ -70,105 +70,206 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page  | Mobile | Desktop | Notes                               |
 | ----- | ------ | ---- | ----------------------------------- |
-| Home  | ![screenshot](documentation/screenshots/testing/lighthouse-home-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-home-desktop.png) | Slower response time than expected due to large hero logo |
+| Home  | ![screenshot](documentation/screenshots/testing/lighthouse-home-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-home-desktop.png) | Slower response time than expected due to large hero logo. Can be easily fixed for v2.0 |
 | Game | ![screenshot](documentation/screenshots/testing/lighthouse-about-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-about-desktop.png) | Some minor warnings for mobile only |
-| End   | ![screenshot](documentation/screenshots/testing/lighthouse-gallery-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-gallery-desktop.png) | Minor issues for response time due to large images |
+| End   | ![screenshot](documentation/screenshots/testing/lighthouse-gallery-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-gallery-desktop.png) | Minor issues for response time due to large images. Can be easily fixed for v2.0. SEO score can be improved with meta descriptions being improved.|
 
 ## Defensive Programming
 
-<!-- Defensive programming (defensive design) is extremely important!
-
-When building projects that accept user inputs or forms, you should always test the level of security for each.
-Examples of this could include (not limited to):
-
-Forms:
-- Users cannot submit an empty form
-- Users must enter valid email addresses
-
-You should include any manual tests performed, and the expected results/outcome.
-
-Testing should be replicable.
-Ideally, tests cases should focus on each individual section of every page on the website.
-Each test case should be specific, objective, and step-wise replicable.
-
-Instead of adding a general overview saying that everything works fine,
-consider documenting tests on each element of the page
-(ie. button clicks, input box validation, navigation links, etc.) by testing them in their happy flow,
-and also the bad/exception flow, mentioning the expected and observed results,
-and drawing a parallel between them where applicable.
-
-Consider using the following format for manual test cases:
-
-Expected Outcome / Test Performed / Result Received / Fixes Implemented
-
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
-
-Use the table below as a basic start, and expand on it using the logic above. -->
-
-
 Defensive programming was manually tested with the below user acceptance testing:
-
-| Page | Expectation | Test | Result | Fix | Screenshot |
-| --- | --- | --- | --- | --- | --- |
-| Home | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature01.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature02.png) |
-| About | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature04.png) |
-| Gallery | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature05.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature06.png) |
-| Contact | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
-| repeat for all remaining pages | x | x | x | x | x |
-
-
-<!-- Another way of performing defensive testing is a simple Pass/Fail for each test.
-The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases. -->
-
-<!-- When in doubt, use the above method instead, and delete the table below. -->
-
 <!-- 
-| Page | User Action | Expected Result | Pass/Fail | Comments |
-| --- | --- | --- | --- | --- |
-| Home | | | | |
-| | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| repeat for all remaining pages | x | x | x | x | -->
+COMPLETE TESTING see google sheets 
+TAKE AND UPLOAD ALL SCREENSHOTS
+NAME ALL SCREENSHOTS WITH A CODE/NUMBER
+ASSIGN RELEVANT NUMBER TO GOOGLE SHEETS TABLE
+PUT GOOGLE SHEETS TABLE IN AS A PHOTO INTO TESTING DOC
+ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUMBER ASSIGNED IN THE WORKSPACE AND GOOGLE SHEETS (USE GPT TO ORGANISE) -->
+
+
+# Tasks - Sheet1.csv
+
+## Home
+
+### task page button (nav)
+
+- **Expectation**: Link to game page with mouse hover / click animation
+- **Test**: Clicked and tapped for 3 tests
+- **Result**: Test concluded and passed
+- **Fix**: n/a
+- **Screenshot**:
+
+### task page button (page)
+
+- **Expectation**: Link to game page with mouse hover / click animation
+- **Test**: Clicked and tapped for 3 tests
+- **Result**: Test concluded and passed
+- **Fix**: n/a
+- **Screenshot**:
+
+### accordion
+
+- **Expectation**: accordion tabs open and close correctly
+- **Test**: Open and close 3 times
+- **Result**: Test concluded and passed
+- **Fix**: n/a
+- **Screenshot**:
+
+### Game
+
+### name logo
+
+- **Expectation**: links back to home page
+- **Test**: Tried 3 times
+- **Result**: Test concluded and passed
+- **Fix**: n/a
+- **Screenshot**:
+
+### navbar toggle
+
+- **Expectation**: opens and closes with smooth animation to display settings area
+- **Test**: Opens 5 times.
+- **Result**: Works as expected - if viewport width is abnormally large (1573px or wider) the toggle button is shifted to right. No functionality affected
+- **Fix**: n/a
+- **Screenshot**:
+
+### Settings Easy/Medium/Hard
+
+- **Expectation**: Changes difficulty level and displays which level has been chosen by the user. Default option shown as selected on load is medium
+- **Test**: Reloaded page 3 times, each time, medium was automatically selected, logged in the consol. Everything was running as expected when trying the easy or hard modes.
+- **Result**: All modes work as expected. Progress bar is dynamically changed depending on which mode is used and how much progress is currently logged
+- **Fix**: n/a
+- **Screenshot**:
+
+### Light Mode
+
+- **Expectation**: Toggles page theme with custom css color variables. Visibility throughout the site should still be maintained for all elements including links
+- **Test**: Turned off and on 3 times, checking each time for different visibility issues.
+- **Result**: All elements are changed as expected, all links and colored elements remain fully visible.
+- **Fix**: n/a
+- **Screenshot**:
+
+### Reset custom time
+
+- **Expectation**: Custom link time should toggle the newDay button automatically at the user's selected time. On first page load, this should default to 8pm; changes to this time will log how long until the function triggers in the console, based on the user's local time
+- **Test**: Checked by changing the reset time to one minute later than current time. 
+- **Result**: Works as expected
+- **Fix**: n/a
+- **Screenshot**:
+
+### Instructions link in settings area
+
+- **Expectation**: Should redirect to index page and scroll instructions accordion into view
+- **Test**: Tried 4 times
+- **Result**: Hover animation works and redirects to home page as expected. 
+- **Fix**: n/a
+- **Screenshot**:
+
+### task checkboxes
+
+- **Expectation**: Checkboxes should remain diabled until goals are written in the input boxes, reset to disabled at each New Day
+- **Test**: Tested on each task checkbox 3 times, two after NewDay was triggered
+- **Result**: Test concluded and passed. Checkboxes are always disabled if there is no text and done is not clicked. You cannot click the 3 points checkbox more than once per day, as intended.
+- **Fix**: n/a
+- **Screenshot**:
+
+### New Day
+
+- **Expectation**: Shows user confirmation with text appearing logging the new day, sets the day's point collection to zero without affecting the total score. Checkboxes should be disabled and the first input box should be scrolled into view after 3 seconds.
+- **Test**: Tested each input box to try and cheat - before and after new day button is clicked, even with nothing written in input boxes
+- **Result**: Each new day button click works as expected, clearing the form, disabling checkboxes, providing user confirmation of click and scrolling the first task box into view after 3 seconds. Third checkbox did not get restyled to show it was enabled, even though the disabled/enabled functionality was working.
+- **Fix**: CHECK third checkbox
+- **Screenshot**:
+
+### Input box
+
+- **Expectation**: Character limit shown - max limit shows text if maximum character limit of 25 characters reached. If goal is deleted, the input box is highlighted yellow and changes placeholder text, disabling checkbox until a new goal is written inside. Styles of the text should pertain only to the relevant values
+- **Test**: Tried to cheat 4 times on each checkbox.
+- **Result**: Works as expected
+- **Fix**: n/a
+- **Screenshot**:
+
+### Move image to gallery button
+
+- **Expectation**: Should move any image that is currently in the NFT area into the gallery and resize the image appropriately. If there is no image, nothing occurs
+- **Test**: Tried on multiple devices
+- **Result**: If first frame is not filled, it is possible to click new day without adding the first image, and skipping the first frame
+- **Fix**: FIX
+- **Screenshot**:
+
+### Drag image functionality
+
+- **Expectation**: Users can drag the large NFT image into the gallery, which will highlight the draggable area when near or just over it as a drop target - on drop the image will be appended as a child of the container (frame) element
+- **Test**: Tried on multiple devices
+- **Result**: Cannot drag image to append itself to a new frame in the gallery once it has been assigned its frame in the gallery but I consider this to be a good solution to what would otherwise be a chaotic solution of assigning each image only to a specific box which would need a large amount of user guidance text for which there is no real estate available within that section without overcrowding the page
+- **Fix**: n/a
+- **Screenshot**:
+
+### Game reset button
+
+- **Expectation**: Should open a modal that you cannot click off but clicking outside the modal box - only the close button will close the modal
+- **Test**: Tried three times during game and two on new page loads
+- **Result**: works as expected
+- **Fix**: n/a
+- **Screenshot**:
+
+### Game reset popover YES
+
+- **Expectation**: Redirect user back to index.html page and reset entire game. It was preferred to take users back to home page to always allow the users to check the instructions again before using - this was found to be useful in early development for new users to remind them how the game works
+- **Test**: Tried three times during game and two on new page loads
+- **Result**: works as expected
+- **Fix**: n/a
+- **Screenshot**:
+
+### Game reset popover NO
+
+- **Expectation**: Closes popover with no affect to the game, reestablishes opacity of body for page visibility to continue use as expected
+- **Test**: Opened and closed whilst also trying to overload the page with the settings and stats tabs open.
+- **Result**: Works as expected, always loads the modal above all other elements and is not dismissable unless the close button is clicked. If user clicks outside the modal body, an animation directing focus to the modal box plays as expected, via bootstrap js.
+- **Fix**: n/a
+- **Screenshot**:
+
+### Stats toggle
+
+- **Expectation**: Should open and close with relevant information displayed and updated dynamically via script.js for progress bar, and stats table. Links to
+- **Test**: Open and close at 3 different times during using the app after 1, 2 and 3 new days were logged via clicking the new day button
+- **Result**: Works as expected
+- **Fix**: n/a
+- **Screenshot**:
+
+### Stats toggle links
+
+- **Expectation**: Links in the links section at the bottom of the stats section and as hyperlinks in text area within developer description. Links are to github repo and developer github profile and developer linkedIn.
+- **Test**: Clicked on links 3 times each
+- **Result**: Link always opens in new tab and lands on each page as expected without affecting the game page. Each has the hover animation for text links as expected for UI.
+- **Fix**: n/a
+- **Screenshot**:
+
+### Instructions link in footer
+
+- **Expectation**: Href back to index.html; should scroll instructions accordion immediately into view. Github link should send user to github repo for the project
+- **Test**: Clicked 3 times
+- **Result**: Works as expected 
+- **Fix**: n/a
+- **Screenshot**:
+
+## End
+
+### Carousel
+
+- **Expectation**: Autoplays through the images within the carousel container; users can click on a particular point within the carousel progress bar to show a particular image
+- **Test**: tested with mouse clicks for all image slide points
+- **Result**: image resizes larger when animating to the next slide, very briefly covering the clickable carousel elements and the home button underneath
+- **Fix**: This appears to be a bootstrap issue - I have tried to fix the issue by reducing image size though this does not solve the issue.
+- **Screenshot**:
+
+### Back to Start Page button
+
+- **Expectation**: Returns the user back to the home page where the game can be started again. Progress should not remain within the game cache.
+- **Test**: Tested 3 times
+- **Result**: Works as expected. Reduce padding top for body element on end.html to make the home button more discoverable.
+- **Fix**: ADD MARGIN BOTTOM TO BUTTON
+- **Screenshot**:
+
 
 ## User Story Testing
 
@@ -230,12 +331,6 @@ Some examples:
     ![screenshot](documentation/unfixed-bug01.png)
 
     - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.png)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
 
 - When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
 
