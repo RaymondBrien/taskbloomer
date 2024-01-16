@@ -36,30 +36,21 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 ## Browser Compatibility
 
-<!-- Use this space to discuss testing the live/deployed site on various browsers.
-
-Consider testing at least 3 different browsers, if available on your system. -->
-
-Recommended browsers to consider:
+The browsers I have used to test with are:
 - [Chrome](https://www.google.com/chrome)
 - [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
 - [Safari](https://support.apple.com/downloads/safari)
 - [Opera](https://www.opera.com/download)
 
-<!-- **IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
+I've tested my deployed project on the browsers listed to check for compatibility issues. No major issues were found.
 
-Please note, there are services out there that can test multiple browser compatibilities at the same time.
-Some of these are paid services, but some are free.
-If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results. -->
+| Browser | Home                                             | Game                                             | End                                             | Notes                  |
+| ------- | ------------------------------------------------ | ------------------------------------------------- | ----------------------------------------------- | ---------------------- |
+| Chrome  | ![screenshot](documentation/screenshots/testing/browser-chrome-home.png) | ![screenshot](documentation/screenshots/testing/browser-chrome-game.png) | ![screenshot](documentation/screenshots/testing/browser-chrome-end.png) | Works as expected      |
+| Firefox | ![screenshot](documentation/screenshots/testing/browser-firefox-home.png) | ![screenshot](documentation/screenshots/testing/browser-firefox-game.png) | ![screenshot](documentation/screenshots/testing/browser-firefox-end.png) | Works as expected      |
+| Safari  | ![screenshot](documentation/screenshots/testing/browser-safari-home.png) | ![screenshot](documentation/screenshots/testing/browser-safari-game.png) | ![screenshot](documentation/screenshots/testing/browser-safari-end.png) | Works as expected  |
+| Opera   | ![screenshot](documentation/screenshots/testing/browser-opera-home.png) | ![screenshot](documentation/screenshots/testing/browser-opera-game.png) | ![screenshot](documentation/screenshots/testing/browser-opera-end.png) | Minor differences, but works as expected     |
 
-I've tested my deployed project on multiple browsers to check for compatibility issues.
-
-| Browser | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browser-chrome-home.png) | ![screenshot](documentation/browser-chrome-about.png) | ![screenshot](documentation/browser-chrome-contact.png) | ![screenshot](documentation/browser-chrome-etc.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browser-firefox-home.png) | ![screenshot](documentation/browser-firefox-about.png) | ![screenshot](documentation/browser-firefox-contact.png) | ![screenshot](documentation/browser-firefox-etc.png) | Works as expected |
-| Safari | ![screenshot](documentation/browser-safari-home.png) | ![screenshot](documentation/browser-safari-about.png) | ![screenshot](documentation/browser-safari-contact.png) | ![screenshot](documentation/browser-safari-etc.png) | Minor CSS differences |
-| Opera | ![screenshot](documentation/browser-opera-home.png) | ![screenshot](documentation/browser-opera-about.png) | ![screenshot](documentation/browser-opera-contact.png) | ![screenshot](documentation/browser-opera-etc.png) | Minor differences |
 
 ## Responsiveness
 
