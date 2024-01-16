@@ -262,35 +262,11 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## Bugs
 
-<!-- This section is primarily used for JavaScript and Python applications,
-but feel free to use this section to document any HTML/CSS bugs you might run into.
+- Added non-passive event listener to a scroll-blocking 'touchmove' event.
 
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
+    ![screenshot](documentation/screenshots/testing/bug01.jpeg)
 
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way! -->
-
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
-
-    ![screenshot](documentation/bug01.png)
-
-    - To fix this, I _____________________.
-
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
-
-    ![screenshot](documentation/bug02.png)
-
-    - To fix this, I _____________________.
-
-
-### Move image to gallery button
-
-- **Expectation**: Should move any image that is currently in the NFT area into the gallery and resize the image appropriately. If there is no image, nothing occurs
-- **Test**: Tried on multiple devices
-- **Result**: If first frame is not filled, it is possible to click new day without adding the first image, and skipping the first frame
-- **Fix**: FIX
-- **Screenshot**:
-
+    - To fix this, I implemented a new method (see script.js line 588) which automatically assigns the image to an available container within the gallery. This not only improved the user experience, as there was limited real estate with the larger photos on mobile devices anyways, but also created a cleaner solution to the problem, rather than having to ensure for chrome there was extra javascript listing event listeners as passive explicitly, due to their scroll API requirements. 
 
 ## Unfixed Bugs
 
@@ -303,30 +279,16 @@ If you've identified any unfixed bugs, no matter how small, be sure to list them
 It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
 they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them. -->
 
-Some examples:
+- On devices larger than 1550px wide, the page starts to have `overflow-x` scrolling or blocking clickable items in the top right of the screen.
 
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.png)
+    ![screenshot](documentation/screenshots/testing/unfixed-bug01.png)
 
     - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
 
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
+- End carousel images resizes larger when animating to the next slide very briefly before returning to standard size.
+    
+    ![screenshot](documentation/screenshots/testing/unfixed-bug02.png)
 
-    ![screenshot](documentation/unfixed-bug03.png)
+    - Attempted fix: I tried to change the photo sizes, positioning and padding in case this was causing issues with the transitions. These did not make a difference, nor did changing the css for the carousel container elements by overriding the variables from BS for the containers. 
+    I believe this is a Bootstrap issue.
 
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-
-### Carousel
-
-- **Expectation**: Autoplays through the images within the carousel container; users can click on a particular point within the carousel progress bar to show a particular image
-- **Test**: tested with mouse clicks for all image slide points
-- **Result**: image resizes larger when animating to the next slide, very briefly covering the clickable carousel elements and the home button underneath
-- **Fix**: This appears to be a bootstrap issue - I have tried to fix the issue by reducing image size though this does not solve the issue.
-- **Screenshot**:
-
-<!-- 
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
-
-There are no remaining bugs that I am aware of. -->
