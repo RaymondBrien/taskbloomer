@@ -54,36 +54,15 @@ I've tested my deployed project on the browsers listed to check for compatibilit
 
 ## Responsiveness
 
-<!-- Use this space to discuss testing the live/deployed site on various device sizes. -->
+I've tested my deployed project on multiple devices to check for responsiveness issues, functionality, touch/click events and formatting for different screen sizes.
 
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
-<!-- 
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
+| Device | Home | Game | End | Notes |
+| --- | --- | --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/screenshots/testing/responsive-mobile-home.png) | ![screenshot](documentation/screenshots/testing/responsive-mobile-game.png) | ![screenshot](documentation/screenshots/testing/responsive-mobile-end.png) | Game touch-drag issues for image lead to the implementation of the 'Move Image to Gallery' button which solves this issue and actually creates an improved user experience and more satisfying UI. All other touch events work fully as expected. |
+| Tablet (Real iPad 12.9" Device Used) | ![screenshot](documentation/screenshots/testing/responsive-tablet-home.png) | ![screenshot](documentation/screenshots/testing/responsive-tablet-game.png) | ![screenshot](documentation/screenshots/testing/responsive-tablet-end.png) | Works as expected. Touch-drag issues less prominent, if user were to drag the image into the gallery. However, as with the phone documentation, the 'Move Image to Gallery' button solves this issue and greatly improves the UI and UX for desktop and touch-enabled devices alike. All other touch events work fully as expected. |
+| Desktop | ![screenshot](documentation/screenshots/testing/responsive-desktop-home.png) | ![screenshot](documentation/screenshots/testing/responsive-desktop-game.png) | ![screenshot](documentation/screenshots/testing/responsive-desktop-end.png) | Works as expected |
+| iPhone 11 (Real Device Used) | ![screenshot](documentation/screenshots/testing/responsive-iphone-home.png) | ![screenshot](documentation/screenshots/testing/responsive-iphone-game.png) | ![screenshot](documentation/screenshots/testing/responsive-iphone-end.png) | Works as expected, minor image sizing issues |
 
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-Sample responsiveness testing documentation:
- -->
-
-I've tested my deployed project on multiple devices to check for responsiveness issues.
-
-| Device | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile-home.png) | ![screenshot](documentation/responsive-mobile-about.png) | ![screenshot](documentation/responsive-mobile-contact.png) | ![screenshot](documentation/responsive-mobile-etc.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-home.png) | ![screenshot](documentation/responsive-tablet-about.png) | ![screenshot](documentation/responsive-tablet-contact.png) | ![screenshot](documentation/responsive-tablet-etc.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop-home.png) | ![screenshot](documentation/responsive-desktop-about.png) | ![screenshot](documentation/responsive-desktop-contact.png) | ![screenshot](documentation/responsive-desktop-etc.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl-home.png) | ![screenshot](documentation/responsive-xl-about.png) | ![screenshot](documentation/responsive-xl-contact.png) | ![screenshot](documentation/responsive-xl-etc.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k-home.png) | ![screenshot](documentation/responsive-4k-about.png) | ![screenshot](documentation/responsive-4k-contact.png) | ![screenshot](documentation/responsive-4k-etc.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel-home.png) | ![screenshot](documentation/responsive-pixel-about.png) | ![screenshot](documentation/responsive-pixel-contact.png) | ![screenshot](documentation/responsive-pixel-etc.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone-home.png) | ![screenshot](documentation/responsive-iphone-about.png) | ![screenshot](documentation/responsive-iphone-contact.png) | ![screenshot](documentation/responsive-iphone-etc.png) | Works as expected |
-| repeat for any other tested browsers | x | x | x | x | x |
 
 ## Lighthouse Audit
 <!-- 
