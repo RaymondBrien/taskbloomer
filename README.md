@@ -169,20 +169,6 @@ End Page
 
 ## Features
 
-<!-- List different parts of your project.
-
-Describe each in a sentence or so.
-
-Explain value of each for the user:
- - who this website is for
- - what user want to achieve,
- - how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Include a screenshot of each individual feature! -->
-
-
 ### Existing Features
 
 - **Navbar**

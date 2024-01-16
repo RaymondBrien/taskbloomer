@@ -247,22 +247,18 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-<!-- Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature. -->
-
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a new site user, I would like to set goals, so that I can feel more in control of my to-do list for the day. | ![screenshot](documentation/screenshots/feature15.png) |
+| As a new site user, I would like to reduce overwhelm, so that I can feel more productive during my day. | ![screenshot](documentation/screenshots/feature21.png) |
+| As a new site user, I would like to see clean visuals, so that I don't feel overwhelmed with information. | ![screenshot](documentation/screenshots/feature03.jpeg) |
+| As a new site user I would like to learn how to use the site, so that I can make the most of the application. | ![screenshot](documentation/screenshots/feature01.jpeg) |
+| As a new site user, I would like to track my to-dos, so that I can feel productive. | ![screenshot](documentation/screenshots/feature10.png) |
+| As a returning site user, I would like to track my progress, so that I can to remain motivated and engaged with my tasks. | ![screenshot](documentation/screenshots/feature08.jpeg) |
+| As a returning site user, I would like to make sure that if any tasks have been accidentally marked uncomplete, I can see that has happened   fix it, to make sure I earn all my points for the day. | ![screenshot](documentation/screenshots/feature14.png) |
+| As a returning site user, I would like to have my tasks clear automatically, so that I can avoid unneccessary extra menial tasks. | ![screenshot](documentation/screenshots/feature15.png) |
+| As a returning site user, I would like to be able to switch the colorscheme, so that I can improve the accessibility of my tasks area. | ![screenshot](documentation/screenshots/feature05.jpeg) |
+
 
 ## Bugs
 
