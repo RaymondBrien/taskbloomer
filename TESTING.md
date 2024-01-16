@@ -77,16 +77,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 ## Defensive Programming
 
 Defensive programming was manually tested with the below user acceptance testing:
-<!-- 
-COMPLETE TESTING see google sheets 
-TAKE AND UPLOAD ALL SCREENSHOTS
-NAME ALL SCREENSHOTS WITH A CODE/NUMBER
-ASSIGN RELEVANT NUMBER TO GOOGLE SHEETS TABLE
-PUT GOOGLE SHEETS TABLE IN AS A PHOTO INTO TESTING DOC
-ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUMBER ASSIGNED IN THE WORKSPACE AND GOOGLE SHEETS (USE GPT TO ORGANISE) -->
-
-
-# Tasks - Sheet1.csv
 
 ## Home
 
@@ -96,7 +86,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Clicked and tapped for 3 tests
 - **Result**: Test concluded and passed
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/feature01.jpeg)
 
 ### task page button (page)
 
@@ -104,7 +94,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Clicked and tapped for 3 tests
 - **Result**: Test concluded and passed
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/feature01.jpeg)
 
 ### accordion
 
@@ -112,7 +102,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Open and close 3 times
 - **Result**: Test concluded and passed
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/feature03.jpeg)
 
 ### Game
 
@@ -122,7 +112,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Tried 3 times
 - **Result**: Test concluded and passed
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-1.png)
 
 ### navbar toggle
 
@@ -130,7 +120,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Opens 5 times.
 - **Result**: Works as expected - if viewport width is abnormally large (1573px or wider) the toggle button is shifted to right. No functionality affected
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-1.png)
 
 ### Settings Easy/Medium/Hard
 
@@ -138,7 +128,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Reloaded page 3 times, each time, medium was automatically selected, logged in the consol. Everything was running as expected when trying the easy or hard modes.
 - **Result**: All modes work as expected. Progress bar is dynamically changed depending on which mode is used and how much progress is currently logged
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/feature05.jpeg)
 
 ### Light Mode
 
@@ -146,7 +136,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Turned off and on 3 times, checking each time for different visibility issues.
 - **Result**: All elements are changed as expected, all links and colored elements remain fully visible.
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/feature05.jpeg)
 
 ### Reset custom time
 
@@ -154,15 +144,15 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Checked by changing the reset time to one minute later than current time. 
 - **Result**: Works as expected
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/feature06.jpeg)
 
 ### Instructions link in settings area
 
-- **Expectation**: Should redirect to index page and scroll instructions accordion into view
+- **Expectation**: Should redirect to index page 
 - **Test**: Tried 4 times
 - **Result**: Hover animation works and redirects to home page as expected. 
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-1.png)
 
 ### task checkboxes
 
@@ -170,15 +160,15 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Tested on each task checkbox 3 times, two after NewDay was triggered
 - **Result**: Test concluded and passed. Checkboxes are always disabled if there is no text and done is not clicked. You cannot click the 3 points checkbox more than once per day, as intended.
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/feature13.jpeg)
 
 ### New Day
 
 - **Expectation**: Shows user confirmation with text appearing logging the new day, sets the day's point collection to zero without affecting the total score. Checkboxes should be disabled and the first input box should be scrolled into view after 3 seconds.
 - **Test**: Tested each input box to try and cheat - before and after new day button is clicked, even with nothing written in input boxes
-- **Result**: Each new day button click works as expected, clearing the form, disabling checkboxes, providing user confirmation of click and scrolling the first task box into view after 3 seconds. Third checkbox did not get restyled to show it was enabled, even though the disabled/enabled functionality was working.
-- **Fix**: CHECK third checkbox
-- **Screenshot**:
+- **Result**: Each new day button click works as expected, clearing the form, disabling checkboxes, providing user confirmation of click and scrolling the first task box into view after 3 seconds. 
+- **Fix**: n/a
+- **Screenshot**: ![screenshot](documentation/screenshots/feature15.jpeg)
 
 ### Input box
 
@@ -186,15 +176,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Tried to cheat 4 times on each checkbox.
 - **Result**: Works as expected
 - **Fix**: n/a
-- **Screenshot**:
-
-### Move image to gallery button
-
-- **Expectation**: Should move any image that is currently in the NFT area into the gallery and resize the image appropriately. If there is no image, nothing occurs
-- **Test**: Tried on multiple devices
-- **Result**: If first frame is not filled, it is possible to click new day without adding the first image, and skipping the first frame
-- **Fix**: FIX
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/feature14.jpeg)
 
 ### Drag image functionality
 
@@ -202,7 +184,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Tried on multiple devices
 - **Result**: Cannot drag image to append itself to a new frame in the gallery once it has been assigned its frame in the gallery but I consider this to be a good solution to what would otherwise be a chaotic solution of assigning each image only to a specific box which would need a large amount of user guidance text for which there is no real estate available within that section without overcrowding the page
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-3.png)
 
 ### Game reset button
 
@@ -210,7 +192,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Tried three times during game and two on new page loads
 - **Result**: works as expected
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-4.png)
 
 ### Game reset popover YES
 
@@ -218,7 +200,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Tried three times during game and two on new page loads
 - **Result**: works as expected
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-4.png)
 
 ### Game reset popover NO
 
@@ -226,7 +208,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Opened and closed whilst also trying to overload the page with the settings and stats tabs open.
 - **Result**: Works as expected, always loads the modal above all other elements and is not dismissable unless the close button is clicked. If user clicks outside the modal body, an animation directing focus to the modal box plays as expected, via bootstrap js.
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-4.png)
 
 ### Stats toggle
 
@@ -234,7 +216,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Open and close at 3 different times during using the app after 1, 2 and 3 new days were logged via clicking the new day button
 - **Result**: Works as expected
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-5.png)
 
 ### Stats toggle links
 
@@ -242,7 +224,7 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Clicked on links 3 times each
 - **Result**: Link always opens in new tab and lands on each page as expected without affecting the game page. Each has the hover animation for text links as expected for UI.
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-6.png)
 
 ### Instructions link in footer
 
@@ -250,25 +232,17 @@ ADD MD TABLE TO TESTING WITH EACH SCREENSHOT LISTED IN ORDER RELATING TO THE NUM
 - **Test**: Clicked 3 times
 - **Result**: Works as expected 
 - **Fix**: n/a
-- **Screenshot**:
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-7.png)
 
 ## End
-
-### Carousel
-
-- **Expectation**: Autoplays through the images within the carousel container; users can click on a particular point within the carousel progress bar to show a particular image
-- **Test**: tested with mouse clicks for all image slide points
-- **Result**: image resizes larger when animating to the next slide, very briefly covering the clickable carousel elements and the home button underneath
-- **Fix**: This appears to be a bootstrap issue - I have tried to fix the issue by reducing image size though this does not solve the issue.
-- **Screenshot**:
 
 ### Back to Start Page button
 
 - **Expectation**: Returns the user back to the home page where the game can be started again. Progress should not remain within the game cache.
 - **Test**: Tested 3 times
-- **Result**: Works as expected. Reduce padding top for body element on end.html to make the home button more discoverable.
-- **Fix**: ADD MARGIN BOTTOM TO BUTTON
-- **Screenshot**:
+- **Result**: Works as expected. Button could be more visible due to padding issue.
+- **Fix**: Reduce padding top for body element on end.html to make the home button more discoverable.
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-8.png)
 
 
 ## User Story Testing
@@ -313,6 +287,15 @@ Make sure to include any necessary steps you've implemented to fix the bug(s) as
     - To fix this, I _____________________.
 
 
+### Move image to gallery button
+
+- **Expectation**: Should move any image that is currently in the NFT area into the gallery and resize the image appropriately. If there is no image, nothing occurs
+- **Test**: Tried on multiple devices
+- **Result**: If first frame is not filled, it is possible to click new day without adding the first image, and skipping the first frame
+- **Fix**: FIX
+- **Screenshot**:
+
+
 ## Unfixed Bugs
 
 <!-- You will need to mention unfixed bugs and why they were not fixed.
@@ -337,6 +320,15 @@ Some examples:
     ![screenshot](documentation/unfixed-bug03.png)
 
     - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
+
+
+### Carousel
+
+- **Expectation**: Autoplays through the images within the carousel container; users can click on a particular point within the carousel progress bar to show a particular image
+- **Test**: tested with mouse clicks for all image slide points
+- **Result**: image resizes larger when animating to the next slide, very briefly covering the clickable carousel elements and the home button underneath
+- **Fix**: This appears to be a bootstrap issue - I have tried to fix the issue by reducing image size though this does not solve the issue.
+- **Screenshot**:
 
 <!-- 
 If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
