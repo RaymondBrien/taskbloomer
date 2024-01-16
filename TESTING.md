@@ -31,7 +31,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | ![screenshot](documentation/js-validation-script.png) | Warning about global variables |
+| script.js | ![screenshot](documentation/screenshots/testing/js-validation-script.png) | Warning about global variables |
 
 
 ## Browser Compatibility
@@ -71,8 +71,8 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Page  | Mobile | Desktop | Notes                               |
 | ----- | ------ | ---- | ----------------------------------- |
 | Home  | ![screenshot](documentation/screenshots/testing/lighthouse-home-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-home-desktop.png) | Slower response time than expected due to large hero logo. Can be easily fixed for v2.0 |
-| Game | ![screenshot](documentation/screenshots/testing/lighthouse-about-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-about-desktop.png) | Some minor warnings for mobile only |
-| End   | ![screenshot](documentation/screenshots/testing/lighthouse-gallery-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-gallery-desktop.png) | Minor issues for response time due to large images. Can be easily fixed for v2.0. SEO score can be improved with meta descriptions being improved.|
+| Game | ![screenshot](documentation/screenshots/testing/lighthouse-game-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-game-desktop.png) | Some minor warnings for mobile only |
+| End   | ![screenshot](documentation/screenshots/testing/lighthouse-end-mobile.png) | ![screenshot](documentation/screenshots/testing/lighthouse-end-desktop.png) | Minor issues for response time due to large images. Can be easily fixed for v2.0. SEO score can be improved with meta descriptions being improved.|
 
 ## Defensive Programming
 
@@ -160,7 +160,7 @@ Defensive programming was manually tested with the below user acceptance testing
 - **Test**: Tested on each task checkbox 3 times, two after NewDay was triggered
 - **Result**: Test concluded and passed. Checkboxes are always disabled if there is no text and done is not clicked. You cannot click the 3 points checkbox more than once per day, as intended.
 - **Fix**: n/a
-- **Screenshot**: ![screenshot](documentation/screenshots/feature13.jpeg)
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-9.png)
 
 ### New Day
 
@@ -168,7 +168,7 @@ Defensive programming was manually tested with the below user acceptance testing
 - **Test**: Tested each input box to try and cheat - before and after new day button is clicked, even with nothing written in input boxes
 - **Result**: Each new day button click works as expected, clearing the form, disabling checkboxes, providing user confirmation of click and scrolling the first task box into view after 3 seconds. 
 - **Fix**: n/a
-- **Screenshot**: ![screenshot](documentation/screenshots/feature15.jpeg)
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-10.png)
 
 ### Input box
 
@@ -176,7 +176,7 @@ Defensive programming was manually tested with the below user acceptance testing
 - **Test**: Tried to cheat 4 times on each checkbox.
 - **Result**: Works as expected
 - **Fix**: n/a
-- **Screenshot**: ![screenshot](documentation/screenshots/feature14.jpeg)
+- **Screenshot**: ![screenshot](documentation/screenshots/testing/testing-11.png)
 
 ### Drag image functionality
 

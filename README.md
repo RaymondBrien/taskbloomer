@@ -370,7 +370,7 @@ Certainly! Here's the additional goal in the same format:
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-- [Favicon] (https://favicon.io/favicon-converter/) used to convert my PNG hero element into the respective favicons.
+- [Favicon](https://favicon.io/favicon-converter/) used to convert my PNG hero element into the respective favicons.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [Adobe Express - Image Resize Feature](https://www.adobe.com/express/feature/image/resize)
 
